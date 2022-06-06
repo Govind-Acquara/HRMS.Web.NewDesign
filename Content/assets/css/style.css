@@ -1,0 +1,278 @@
+/*================================================================================
+	Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+	Version: 2.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+
+.btn-group, .btn-group-vertical {
+  position: relative;
+  
+}
+
+
+
+
+@media screen and (max-width: 360px) {
+    div#example1_wrapper .btn-group {
+      width: 100%;
+  }
+
+  }
+
+
+#example1_wrapper .row .col-sm-12.col-md-6:first-child {
+    max-width: 100%;
+    width: 70%;
+    flex: 0 0 70%;
+}
+
+#example1_wrapper .row .col-sm-12.col-md-6:nth-child(2) {
+  max-width: 100%;
+  width: 30%;
+  flex: 0 0 30%;
+}
+
+@media screen and (max-width: 680px) {
+  #example1_wrapper .row .col-sm-12.col-md-6:first-child {
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+#example1_wrapper .row .col-sm-12.col-md-6:nth-child(2) {
+  max-width: 100%;
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+
+}
+
+@media screen and (max-width: 830px) {
+	#example1_wrapper .row .col-sm-12.col-md-6:first-child {
+	  max-width: 100%;
+	  width: 100%;
+	  flex: 0 0 100%;}
+  #example1_wrapper .dt-buttons {
+	width: 100%;}
+	#example1_wrapper .row .col-sm-12.col-md-6:nth-child(2) {
+		max-width: 100%;
+		width: 30%;
+		flex: 0 0 100%;
+	  }
+  }
+
+  @media screen and (max-width: 540px) {
+	.btn-group:not(:first-child), .btn-group:not(:first-child) {
+    width: 100%;
+}
+  }
+
+
+@media screen and (max-width: 444px) {
+	.content-wrapper .content-header.row {
+		margin-top: 14%;
+	}
+ }
+  
+ #example1_wrapper .btn
+ {
+   padding: 0.9rem 1.2rem;
+ 
+ }
+ 
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-group:not(:last-child) > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.btn-group > .btn:not(:first-child), .btn-group > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+/*Nav header colour */
+
+.header-navbar .navbar-container {
+ background-color: #3B3D55;
+ }
+
+ .user-nav.d-sm-flex.d-none {
+  color: white;
+}
+
+.header-navbar .navbar-container ul.nav li i.ficon {
+  font-size: 1.5rem;
+  color:white;
+}
+
+.my_sort_cut {
+  padding: 0.5rem;
+  min-height: 70px;
+  display: block;
+  text-align: center;
+  color:#646467;
+  }
+  
+  .card {
+   
+    border-radius: 1.0rem;
+    
+}
+
+.clearfix .col-6.col-sm-4.col-lg-2 {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.col-lg-2 .card .card-body {
+  padding: 0.5rem;
+}
+
+a.feather.icon-trash {
+    color: red;
+}
+a.feather.icon-edit {
+  color: black;
+}
+
+i.fa.fa-eye.pl-2 {
+  color: black;
+}
+
+a.fa.fa-eye.pl-2 {
+  color:black;
+}
+
+.tag {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: .75rem;
+  color:white;
+  font-weight: 400;
+  background-color: #D1D3D4;
+  padding: 0 0.5rem;
+  line-height: 2em;
+  display: inline-flex;
+  cursor: default;
+  user-select: none;
+}
+
+.tag-danger {
+  background: #4c494a;
+}
+
+.tag-info {
+  background: #1A5089;
+}
+
+.tag-success {
+  background: #E21E32;
+}
+
+
+html body {
+  background-image: url('../../app-assets/images/pages/vuexy-login-bg.jpg');
+ }
+
+ .btn-secondary {
+  background-color: #656565 !important;
+ }
+
+ .btn.btn-secondary:hover {
+  background-color: #454546 !important;
+ }
+
+ .dropdown-item.active, .dropdown-item:active {
+ background-color: #656565;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+ background-color: #454546;
+}
+
+/* 02/06/22 Yash */
+.main-menu.menu-fixed.menu-dark.menu-accordion {
+background-color: #3B3D55;
+}
+
+ul#main-menu-navigation {
+background-color: #3B3D55;
+}
+
+.main-menu.menu-dark .navigation > li .active {
+  background: #3B3D55;
+} 
+
+body.semi-dark-layout .main-menu-content .navigation-main .nav-item .menu-content li:not(.active) a {
+  background-color: #3B3D55;
+}
+body.semi-dark-layout .main-menu-content .navigation-main .nav-item .menu-content {
+  background-color: #3B3D55;
+}
+
+.main-menu .navbar-header .navbar-brand .brand-text {
+  color: #ffffff;
+}
+
+.navbar-header {
+  background-color:#3B3D55;
+}
+
+#example1_wrapper .dropdown-menu {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-container .search-input.open input {
+ background: #3b3d55;
+}
+
+.main-menu.menu-dark .navigation > li.active > a {
+  background-color: #7367f0;
+    box-shadow: 4 0 0px 0px rgb(115 103 240 / 70%);
+    
+}
+body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu .navigation > li > a > i {
+ background-color: transparent;
+}
+
+/* June 3  */
+a.dt-button.dropdown-item.buttons-columnVisibility.active:first-child {
+
+  display: none;
+  }
+  a.dt-button.dropdown-item.buttons-columnVisibility.active:nth-child(2) {
+
+    display: none;
+    }
+
+.required:after {
+    content: " *";
+    color: red;
+}
+
+/* .card-body .detail {
+  height: 40vh;
+} */
+
+/* div.dataTables_wrapper div.dataTables_filter input {
+    width: 100%;
+} */
+
+/* div.dataTables_wrapper div.dataTables_filter label {
+    float: left;
+} */
