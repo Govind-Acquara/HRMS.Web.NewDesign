@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>User List - Vuexy - Bootstrap HTML admin template</title>
+    <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+     <!-- BEGIN: Vendor CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
+     <!-- END: Vendor CSS-->
+ 
+     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+ 
+     <!-- BEGIN: Theme CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
+ 
+     <!-- BEGIN: Page CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
+ 
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+     <!-- END: Page CSS-->
+ 
+     <!-- BEGIN: Custom CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+     <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
+
+
+  <!-- BEGIN: Header-->
+  <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow" id="nav-head">
+        
+</nav>
+
+
+<!-- END: Header-->
+<!-- BEGIN: Main Menu-->
+<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto">
+                <a class="navbar-brand" href="">
+                    <!-- <div class="brand-logo"></div> -->
+                    <h2 class="brand-text mb-0">HRMS Portal</h2>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="shadow-bottom"></div>
+    <div class="main-menu-content" id="main-menu">
+        
+    </div>
+</div>
+<!-- END: Main Menu-->
+
+
+<!-- BEGIN: Content-->
+    <section class="app-content content" id="column-selectors">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-1">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Timezone Master</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Master
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="content-body">
+                
+                
+                    <div class="card">
+                        <div class="card-header pb-1">
+                            <h5 class="card-basic">Add Timezone Name</h5>
+                            <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content collapse show">
+                            <div class="card-body pt-0 pb-0">
+                                <form class="form-horizontal" novalidate>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Timezone Id</label>
+                                                    <input type="text"  class="form-control"  placeholder="Timezone Id">
+                                               </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                            <label>Timezone Name</label>
+                                            <input type="text"  class="form-control"  placeholder="Timezone Name" required data-validation-required-message="This Timezone Name field is required">
+                                            </div>
+                                         </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-lg-4">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label for="users-list-status">Country Name</label>
+                                                    <fieldset class="form-group">
+                                                        <select class="form-control" id="users-list-status">
+                                                            <option value="">Select Country Name</option>
+                                                            <option value="Active">IND</option>
+                                                            <option value="Blocked">UAE</option>
+                                                            <option value="deactivated">USA</option>
+                                                        </select>
+                                                    </fieldset>
+                                            </div>
+                                         </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                        <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Submit</button>
+                                        <button type="reset" class="btn btn-outline-dark mb-1 mt-0.5">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                              <div class="card-body card-dashboard">
+
+                                  <div class="table-responsive">
+                                      <table class="table border-secondary table-striped dataex-html5-selectors">
+                                          <thead>
+                                              <tr>
+                                                <th>Timezone Id</th>
+                                                <th>Timezone Name</th>
+                                                <th>Country Code</th>
+                                                <th>IsActive</th>
+                                                <th>Action</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                               <td>7</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                               <td>8</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>India</td>
+                                                <td>IND</td>
+                                                <td>Yes</td>
+                                                <td >
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                   
+              
+
+           
+                
+                   
+                           
+                 
+
+
+            </div>
+           
+        </div>
+    </section>
+    
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+  <footer class="footer footer-static footer-light">
+    <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2022<a class="text-bold-800 grey darken-2" href="" target="_blank">Acquara,</a>All rights Reserved</span>
+        <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
+    </p>
+</footer>
+<!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../Content/app-assets/js/custom-js.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
+    <script src="../../Content/app-assets/js/core/app.js"></script>
+    <script src="../../Content/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../Content/app-assets/js/scripts/datatables/datatable.js"></script>
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script
+    <!-- END: Page JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>

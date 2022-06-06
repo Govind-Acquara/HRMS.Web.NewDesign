@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Acquara HRMS</title>
+    <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
+    <!-- END: Page CSS-->
+
+<!-- BEGIN: Custom CSS-->
+<link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+<!-- END: Custom CSS-->
+<!-- Code for asterik on required fields -->
+    <style>
+        .required:after {
+        content:" *";
+        color: red;}
+      </style>
+<!-- Yash Sharma 21/05/2022-->
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item nav-toggle">
+                                <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
+                                    <i class="feather icon-menu d-block d-xl-none font-medium-4 primary toggle-icon"></i>
+                                    <i class="toggle-icon feather icon-menu font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav">
+                            
+                                <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
+                                    <option value="">Select Office Location</option>
+                                    <option value="Active">Gurgaon</option>
+                                    <option value="Blocked">Mumbai</option>
+                                    <option value="deactivated">Abu Dhabi</option>
+                                    <option value="deactivated">Other</option>
+                                </select>
+                            
+                         
+                        </ul>
+                        
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="nav-item nav-search">
+                            <a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                <input class="input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="template-list">
+                                <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                <ul class="search-list search-list-main"></ul>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-notification nav-item">
+                            <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <li class="dropdown-menu-header">
+                                    <div class="dropdown-header m-0 p-2">
+                                        <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
+                                    </div>
+                                </li>
+                                <li class="scrollable-container media-list">
+                                    <a class="d-flex justify-content-between" href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-plus-square font-medium-5 primary"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="primary media-heading">You have new order!</h6><small class="notification-text"> Are your going to meet me tonight?</small>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">9 hours ago</time>
+                                            </small>
+                                        </div>
+                                    </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-download-cloud font-medium-5 success"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="success media-heading red darken-1">99% Server load</h6><small class="notification-text">You got new order of goods.</small>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">5 hour ago</time>
+                                            </small>
+                                        </div>
+                                    </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-alert-triangle font-medium-5 danger"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="danger media-heading yellow darken-3">Warning notifixation</h6><small class="notification-text">Server have 99% CPU usage.</small>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Today</time>
+                                            </small>
+                                        </div>
+                                    </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-check-circle font-medium-5 info"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="info media-heading">Complete the task</h6><small class="notification-text">Cake sesame snaps cupcake</small>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last week</time>
+                                            </small>
+                                        </div>
+                                    </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                        <div class="media d-flex align-items-start">
+                                            <div class="media-left"><i class="feather icon-file font-medium-5 warning"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="warning media-heading">Generate monthly report</h6><small class="notification-text">Chocolate cake oat cake tiramisu marzipan</small>
+                                            </div><small>
+                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last month</time>
+                                            </small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../Content/app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="/User/Index"><i class="feather icon-user"></i> Edit Profile</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="/Home/Index"><i class="feather icon-power"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <ul class="main-search-list-defaultlist d-none">
+        <li class="d-flex align-items-center">
+            <a class="pb-25" href="#">
+                <h6 class="text-primary mb-0">Files</h6>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between w-100" href="#">
+                <div class="d-flex">
+                    <div class="mr-50"><img src="../../Content/app-assets/images/icons/xls.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
+                    </div>
+                </div><small class="search-data-size mr-50 text-muted">&apos;17kb</small>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between w-100" href="#">
+                <div class="d-flex">
+                    <div class="mr-50"><img src="../../Content/app-assets/images/icons/jpg.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
+                    </div>
+                </div><small class="search-data-size mr-50 text-muted">&apos;11kb</small>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between w-100" href="#">
+                <div class="d-flex">
+                    <div class="mr-50"><img src="../../Content/app-assets/images/icons/pdf.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
+                    </div>
+                </div><small class="search-data-size mr-50 text-muted">&apos;150kb</small>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between w-100" href="#">
+                <div class="d-flex">
+                    <div class="mr-50"><img src="../../Content/app-assets/images/icons/doc.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
+                    </div>
+                </div><small class="search-data-size mr-50 text-muted">&apos;256kb</small>
+            </a>
+        </li>
+        <li class="d-flex align-items-center">
+            <a class="pb-25" href="#">
+                <h6 class="text-primary mb-0">Members</h6>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+                <div class="d-flex align-items-center">
+                    <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+                <div class="d-flex align-items-center">
+                    <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+                <div class="d-flex align-items-center">
+                    <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+                <div class="d-flex align-items-center">
+                    <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="main-search-list-defaultlist-other-list d-none">
+        <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between w-100 py-50">
+                <div class="d-flex justify-content-start"><span class="mr-75 feather icon-alert-circle"></span><span>No results found.</span></div>
+            </a>
+        </li>
+    </ul>
+    <!-- END: Header-->
+       <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="">
+                        <!-- <div class="brand-logo"></div> -->
+                        <h2 class="brand-text mb-0">HRMS Portal</h2>
+                    </a>
+                </li>
+               
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item">
+                    <a href="/Dashboard/Index"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2">2</span></a>
+                </li>
+                <li class=" navigation-header">
+                    <span>Menu</span>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/Master/Index"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/CountryMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Country Master</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/StateMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">State Master</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/TimezoneMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Timezone Master</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/CurrencyMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/DeparmentMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Deparment Master</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/DesignationMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/DocumentMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Document Master</span></a>
+                        </li>
+                        
+                        <li>
+                            <a href="/Master/ProbationMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/RefrenceCodeMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Refrence Code Master</span></a>
+                        </li>
+                        <li>
+                            <a href="/Master/EmpCodeMaster"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Code Master</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">Employee </span></a>
+                    <ul class="menu-content">
+                        <li><a href="../Emp-Master/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
+                        </li>
+                        <li><a href="../Emp-Master/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Employee</span></a>
+                        </li>
+                        <li><a href="../Emp-Master/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Edit Employee</span></a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User</span></a>
+                    <ul class="menu-content">
+                        <li><a href="../Other/HRMS_User_Profile.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New User </span></a>
+                        </li>
+                        <li><a href="../Other/HRMS_User_Profile_List.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View User</span></a>
+                        </li>
+                        <li><a href="../Other/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission</span></a>
+                        </li>
+                    </ul>
+                </li>
+    
+    
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/Others/Index"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
+                        </li>
+                        <li>
+                            <a href="/Others/CompanyDetails"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
+                        </li>
+    
+                    </ul>
+                </li>
+    
+            
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-lock"></i><span class="menu-title" data-i18n="User">Role & Permission</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="/RolePermission/Index"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Role</span></a>
+                        </li>
+                        <li>
+                            <a href="/RolePermission/RoleList"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role List</span></a>
+                        </li>
+                        <li>
+                            <a href="/RolePermission/PermissionList"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Permission List</span></a>
+                        </li>
+    
+                    </ul>
+                </li>
+    
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Employee</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="../Dashboard/HRMS_Index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">Employee Details</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!-- users edit start -->
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-basic">Employee</h4>
+                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body pt-0 pb-0">
+                            <form class="form-horizontal" novalidate>
+
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-lg-1">
+
+                                        <div class="media ">
+                                   
+                                            <div class="mb-1">
+                                                <a class="mr-2 my-25" href="#" for="UserImage">
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg"  class="users-avatar-shadow rounded" height="70" width="70">
+                                                </a>
+                                                <input type="file" id="UserImage" hidden>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-6 col-lg-11">
+                                     <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-6">
+                                         <div class="controls">
+                                           <label>Employee Code :</label>
+                                         </div>
+                                        </div>
+                                       <div class="col-12 col-sm-6 col-lg-6">
+                                         <div class="controls">
+                                          <label>Designation :</label>
+                                        </div>
+                                       </div>
+                                    </div>
+                                        
+                                    <div class="row">
+                                      <div class="col-12 col-sm-6 col-lg-6">
+                                        <div class="controls">
+                                          <label>Name :</label>
+                                        </div>
+                                      </div>
+                                      <div class="col-12 col-sm-6 col-lg-6">
+                                        <div class="controls">
+                                         <label>Company :</label>
+                                        </div>
+                                     </div>
+                                   </div>
+        
+                                    <div class="row mb-0">
+                                     <div class="col-12 col-sm-6 col-lg-6">
+                                         <div class="controls">
+                                            <label>City :</label>
+                                        </div>
+                                     </div>
+                                    
+                                    </div>
+
+                                </div >
+                            </div>
+                         </form>
+                        </div>
+                    </div>
+                </div>
+                <section class="users-edit">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <ul class="nav nav-pills mb-3" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center active" id="account-tab" data-toggle="tab" href="#account" aria-controls="account" role="tab" aria-selected="true">
+                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Official</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center " id="information-tab" data-toggle="tab" href="#information" aria-controls="account" role="tab" aria-selected="true">
+                                            <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">Personal</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" id="social-tab" data-toggle="tab" href="#social" aria-controls="social" role="tab" aria-selected="false">
+                                            <i class="feather icon-book mr-25"></i><span class="d-none d-sm-block">Passport/Visa </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" id="qualification-tab" data-toggle="tab" href="#qualification" aria-controls="social" role="tab" aria-selected="false">
+                                            <i class="feather icon-award mr-25"></i><span class="d-none d-sm-block">Qualification</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" id="history-tab" data-toggle="tab" href="#history" aria-controls="social" role="tab" aria-selected="false">
+                                            <i class="fa fa-history mr-25"></i><span class="d-none d-sm-block">Previous Job</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" id="documents-tab" data-toggle="tab" href="#documents" aria-controls="social" role="tab" aria-selected="false">
+                                            <i class="feather icon-sidebar mr-25"></i><span class="d-none d-sm-block">Documents</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
+                                        <!-- users edit account form start -->
+
+                                        <div class="media mb-2">
+                                   
+                                            <div class="mt-50">
+                                                <a class="mr-2 my-25" href="#" for="UserImage">
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg"  class="users-avatar-shadow rounded" height="150" width="160">
+                                                </a>
+                                                <input type="file" id="UserImage" hidden>
+                                            </div>
+                                            <div style="margin-top: 77px;">
+                                                <a class="mr-2 my-25" href="#">
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-19.jpg"  class="users-avatar-shadow rounded" height="80" width="180">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <form novalidate>
+                                            <div class="row"> 
+                                                <div class="col-12 mt-1">
+                                                    <div class=" border rounded px-1 ">
+                                                        <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-user mr-50 "></i>Official Details</h6>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Emp. Id</label>
+                                                                        <input type="text" class="form-control" placeholder="Emp. Id" value="0" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Ref. Id</label>
+                                                                        <input type="text" class="form-control" placeholder="Ref. Id" value="0" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label class="required">First Name</label>
+                                                                        <input type="text" class="form-control" placeholder="First Name" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Last Name</label>
+                                                                        <input type="text" class="form-control" placeholder="Last Name" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label class="required">Emp. Code</label>
+                                                                        <input type="text" class="form-control" placeholder="Emp. Code" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <label for="users-list-status" class="required">Status</label>
+                                                                <fieldset class="form-group">
+                                                                    <select class="form-control" id="users-list-status">
+                                                                        <option value="">Select Status</option>
+                                                                        <option value="Active">Active</option>
+                                                                        <option value="Blocked">Not-Active</option>
+                                                                    </select>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label class="required">Date of Join</label>
+                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Date of Join" data-validation-required-message="This birthdate field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <label for="users-list-status" class="required">Designation</label>
+                                                            <fieldset class="form-group">
+                                                                <select class="form-control" id="users-list-status">
+                                                                    <option value="">Select Designation</option>
+                                                                    <option value="0">HR</option>
+                                                                    <option value="1">Accountant</option>
+                                                                </select>
+                                                            </fieldset>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <label for="users-list-status" class="required">Department</label>
+                                                            <fieldset class="form-group">
+                                                                <select class="form-control" id="users-list-status">
+                                                                    <option value="">Select Department</option>
+                                                                    <option value="Active">Sales</option>
+                                                                    <option value="Blocked">Accounts</option>
+                                                                </select>
+                                                            </fieldset>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <label for="users-list-status" class="required">Reporting Person Name</label>
+                                                            <fieldset class="form-group">
+                                                                <select class="form-control" id="users-list-status">
+                                                                    <option value="">Select Person Name</option>
+                                                                    <option value="0">Demor 1</option>
+                                                                    <option value="1">Demo 2</option>
+                                                                </select>
+                                                            </fieldset>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Mobile No.</label>
+                                                                        <input type="text" class="form-control" placeholder="Mobile No." required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Regulation Date</label>
+                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Regulation Date" data-validation-required-message="This birthdate field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <label for="users-list-status" class="required">Office Location</label>
+                                                           <fieldset class="form-group">
+                                                                <select class="form-control" id="users-list-status">
+                                                                    <option value="">Select Office Location</option>
+                                                                    <option value="Active">Gurgaon</option>
+                                                                    <option value="Blocked">Mumbai</option>
+                                                                    <option value="deactivated">Abu Dhabi</option>
+                                                                    <option value="deactivated">Other</option>
+                                                                </select>
+                                                           </fieldset>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label class="required">Office Email</label>
+                                                                        <input type="email" class="form-control" placeholder="Office Email" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <label for="users-list-status" class="required">Employee Category</label>
+                                                                <fieldset class="form-group">
+                                                                <select class="form-control" id="users-list-status">
+                                                                <option value="">Select Category</option>
+                                                                <option value="Active">Probation</option>
+                                                                <option value="Blocked">Regularisation</option>
+                                                                </select>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Probation End Date</label>
+                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Probation End Date" data-validation-required-message="This birthdate field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mt-1">
+                                                    <div class=" border rounded px-1 ">
+                                                        <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-credit-card mr-50 "></i>Bank Details</h6>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label class="required">Bank Name</label>
+                                                                        <input type="text" class="form-control" placeholder="Bank Name" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Bank Account No.</label>
+                                                                        <input type="text" class="form-control" placeholder="Bank Account No." required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>IFSC Code</label>
+                                                                        <input type="text" class="form-control" placeholder="IFSC Code" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Branch Name</label>
+                                                                        <input type="text" class="form-control" placeholder="Branch Name" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 mt-1">
+                                                    <div class=" border rounded px-1 ">
+                                                        <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-credit-card mr-50 "></i>Document Details</h6>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>PAN Number</label>
+                                                                        <input type="text" class="form-control" placeholder="PAN Number" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Aadhar Number</label>
+                                                                        <input type="text" class="form-control" placeholder="Aadhar Number" required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
+                                                    
+                                                    <button type="submit" class="btn btn-primary glow  mr-1 mt-1 mb-1">Submit</button>
+                                                    <button type="reset" class="btn btn-outline-dark mb-1 mt-1">Reset</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <!-- users edit account form ends -->
+                                    </div>
+                                    <div class="tab-pane" id="information" aria-labelledby="information-tab" role="tabpanel">
+                                        <!-- users edit Info form start -->
+                                        <form novalidate>
+                                            <div class="col-12 mt-1">
+                                                <div class="border rounded px-1">
+                                                    <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-info mr-50 "></i>Personal Details</h6>
+
+
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Personal Id</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Personal Id" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Gender</label>
+                                                                <select class="form-control" id="users-list-status" >
+                                                                    <option value="">Select Gender</option>
+                                                                    <option value="1">Male</option>
+                                                                    <option value="2">Female+</option>
+                                                                    <option value="3">Other</option>
+                                                                </select>
+                                                           </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Date of Birth</label>
+                                                            <input type="text" class="form-control birthdate-picker">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Place Of Birth</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Place Of Birth" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Nationality</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Nationality" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Personal Mobile No.</label>
+                                                            <input type="text"  class="form-control" placeholder="Personal Mobile No." required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                            </div>
+
+                                            <div class="row">
+                                                
+                                                
+                                                
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Personal Email</label>
+                                                            <input type="text"  class="form-control" placeholder="Personal Email" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Marital Status</label>
+                                                            
+                                                                <select class="form-control" id="users-list-status" >
+                                                                    <option value="">Select Marital Status</option>
+                                                                    <option value="Active">Maried</option>
+                                                                    <option value="Blocked">Unmarried</option>
+                                                                    <option value="deactivated">Other</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                               
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Citizenship</label>
+                                                            <input type="text"  class="form-control" placeholder="Citizenship" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Blood Group</label>
+                                                            
+                                                                <select class="form-control" id="users-list-status" >
+                                                                    <option value="">Select Blood Group</option>
+                                                                    <option value="Active">A+</option>
+                                                                    <option value="Blocked">B+</option>
+                                                                    <option value="deactivated">AB+</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </div>
+
+                                            <div class="col-12 mt-1">
+                                            <div class="border rounded  px-1">
+                                                <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-users mr-50 "></i>Family Contact Details</h6>
+                                                        
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Emergency Contact No.</label>
+                                                            <input type="text"  class="form-control" placeholder="Emergency Contact No." required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label> Contact Name</label>
+                                                            <input type="text"  class="form-control" placeholder="Contact Name" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Relation Mailing Address</label>
+                                                            <input type="text"  class="form-control" placeholder="Relation Mailing Address" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Family Member Name</label>
+                                                            <input type="text"  class="form-control" placeholder="Family Member Name" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Family Member Relation</label>
+                                                            <input type="text"  class="form-control" placeholder="Family Member Relation" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Family Member Contact</label>
+                                                            <input type="text"  class="form-control" placeholder="Family Member Contact" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mt-1">
+                                        <div class="border rounded  px-1">
+                                            <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="fa fa-address-book-o mr-50 "></i>Present Address</h6>
+                                                    
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Present Address</label>
+                                                        <input type="text"  class="form-control" placeholder="Present Address" required data-validation-required-message="This field is required">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Present Country</label>
+                                                        <input type="text"  class="form-control" placeholder="Present Country" required data-validation-required-message="This field is required">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Present State</label>
+                                                        <input type="text"  class="form-control" placeholder="Present State" required data-validation-required-message="This field is required">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Present City</label>
+                                                        <input type="text"  class="form-control" placeholder="Present City" required data-validation-required-message="This field is required">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Present Pin</label>
+                                                        <input type="text"  class="form-control" placeholder="Present Pin" required data-validation-required-message="This field is required">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Present Mobile No.</label>
+                                                        <input type="text"  class="form-control" placeholder="Present Mobile No." required data-validation-required-message="This field is required">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                           
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Present PhoneNo.</label>
+                                                        <input type="text"  class="form-control" placeholder="Present PhoneNo." required data-validation-required-message="This field is required">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                
+
+
+                                <div class="col-12">
+                                    
+                                    <div class="border rounded  px-1 mt-1">
+                                        
+                                        <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="fa fa-address-book-o mr-50 "></i>Permanent Address</h6>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-lg-12  mb-1">
+                                                
+                                                    <fieldset>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck2">
+                                                            <label class="custom-control-label" for="customCheck2">Same as Present Address</label>
+                                                        </div>
+                                                    </fieldset>
+                                                
+                                                </div>
+                                        </div>
+                                        
+                                                
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Permanent Address</label>
+                                                    <input type="text"  class="form-control" placeholder="Permanent Address" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12 col-sm-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Permanent Country</label>
+                                                    <input type="text"  class="form-control" placeholder="Permanent Country" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Permanent State</label>
+                                                    <input type="text"  class="form-control" placeholder="Permanent State" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Permanent City</label>
+                                                    <input type="text"  class="form-control" placeholder="Permanent City" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-12 col-sm-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Permanent Pin</label>
+                                                    <input type="text"  class="form-control" placeholder="Permanent Pin" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Permanent Mobile No.</label>
+                                                    <input type="text"  class="form-control" placeholder="Permanent Mobile No." required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                       
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Permanent PhoneNo.</label>
+                                                    <input type="text"  class="form-control" placeholder="Permanent PhoneNo." required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                                <button type="submit" class="btn btn-primary glow  mr-1 mt-1 mb-1">Submit</button>
+                                                <button type="reset" class="btn btn-outline-dark mb-1 mt-1">Reset</button>
+                                            </div>
+                                        </form>
+                                        <!-- users edit Info form ends -->
+                                    </div>
+                                    <div class="tab-pane" id="social" aria-labelledby="social-tab" role="tabpanel">
+                                        <!-- users edit socail form start -->
+                                        <form novalidate>
+                                            <div class="col-12 mt-1">
+                                                <div class="border rounded px-1">
+                                                <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-book mr-50 "></i>Visa Details</h6>
+
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <fieldset class="form-group">
+                                                            <label>Visa Type</label>
+                                                            <select class="form-control" id="users-list-status">
+                                                                <option value="">Select Visa Type</option>
+                                                                <option value="Active">Limited</option>
+                                                                <option value="InActive">Un-limited</option>
+                                                            </select>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+
+                                                
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Visa No.</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Visa No." required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Visa Issue Place</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Visa Issue Place" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Visa Issue/Start Date</label>
+                                                            <input type="text" class="form-control birthdate-picker" placeholder="Visa Issue Date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Visa Expiry Date</label>
+                                                            <input type="text" class="form-control birthdate-picker" placeholder="Visa Expiry Date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            
+                                            </div>
+                                            </div>
+
+                                            <div class="col-12 mt-1">
+                                            <div class="border rounded  px-1">
+                                                <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-book mr-50 "></i>Passport Details</h6>
+                                                        
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Passport No.</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Passport No." required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Passport Expiry Date</label>
+                                                            <input type="text" class="form-control birthdate-picker" placeholder="Passport Expiry Date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Labour No.</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Labour No." required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Labour Expiry Date</label>
+                                                            <input type="text" class="form-control birthdate-picker" placeholder="Labour Expiry Date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+
+                                        </div>
+                                    </div>
+
+                                    
+
+                               
+
+
+
+
+
+
+                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                                <button type="submit" class="btn btn-primary glow  mr-1 mt-1 mb-1">Submit</button>
+                                                <button type="reset" class="btn btn-outline-dark mb-1 mt-1">Reset</button>
+                                            </div>
+                                        </form>
+                                        <!-- users edit socail form ends -->
+                                    </div>
+
+                                    <div class="tab-pane" id="qualification" aria-labelledby="qualification-tab" role="tabpanel">
+
+                                        <form class="form-horizontal" novalidate>
+                                            
+                                            <div class="col-12 mt-1">
+                                            <div class="border rounded   px-1"> 
+                                                <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-award"></i> Qualification Details</h6>                    
+                                            <div class="row">
+                                                
+
+                                                
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <fieldset class="form-group">
+                                                        <label>Highest Qualification</label>
+                                                        <select class="form-control" id="users-list-status">
+                                                            <option>Select Qualification</option>
+                                                            <option value="1">PostGraduation</option>
+                                                            <option value="2">Graduation</option>
+                                                            <option value="3">Intermediate</option>
+
+                                                            
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>University Name</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="University Name" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                            </div>
+
+                                            <div class="row">
+
+                                                
+
+                                                
+                                                
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Institute Name</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Institute Name" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                   
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Year of Passing</label>
+                                                            <input type="text" id="datepicker" class="form-control" placeholder="Year Of Passing " required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                               
+
+
+                                            </div>
+                                        </div>
+
+
+                                            <div class="row">
+
+                                                
+
+                                                
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                   
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Duration</label>
+                                                            <input type="text" class="form-control" placeholder="Duration" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                               
+
+
+                                               </div>
+
+                                               <div class="col-12 col-sm-12 col-lg-6">
+                                                <label>Status</label>
+                                             <fieldset class="form-group">
+                                                 <select class="form-control" id="users-list-status" required data-validation-required-message="This field is required">
+                                                     <option value="">Select Status</option>
+                                                     <option value="Active">Active</option>
+                                                     <option value="Blocked">InActive</option>
+                                                     
+                                                 </select>
+                                             </fieldset>
+                                              </div>
+
+
+
+
+                                            </div>
+
+                                            <div class="row">
+                                               
+
+                                              
+
+
+                                                 <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                    <label>Country</label>
+                                                    <input type="text" class="form-control" placeholder="Country" required data-validation-required-message="This field is required">
+                                                    
+                                                </div>
+                                            </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                    <label>State</label>
+                                                    <input type="text" class="form-control" placeholder="State" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                               
+
+                                               
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                    <label>City</label>
+                                                    <input type="text" class="form-control" placeholder="City" required data-validation-required-message="This field is required">
+                                               
+                                                    
+                                                </div>
+                                            </div>
+
+
+                                            </div>
+
+                                       </div>
+                                       </div>
+                                       </div>   
+
+                                       <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                        <button type="submit" class="btn btn-primary glow  mr-1 mt-1 mb-1">Submit</button>
+                                        <button type="reset" class="btn btn-outline-dark mb-1 mt-1">Reset</button>
+                                    </div>
+                                </form>
+
+                                       </div>
+
+                                       
+                                    
+                                    <div class="tab-pane" id="history" aria-labelledby="history-tab" role="tabpanel">
+                                        <div class="col-12 mt-1">
+                                            <div class="border rounded  px-1">
+                                                <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="fa fa-history"></i>Previous Job Details</h6>
+                                        <form class="form-horizontal" novalidate>
+                                                                    
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Job Start Date</label>
+                                                            <input type="text" placeholder="Job Start Date " class="form-control birthdate-picker">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Job End Date</label>
+                                                            <input type="text" placeholder="Job End Date" class="form-control birthdate-picker">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Salary</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Salary" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Job Description</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Job Description" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Position</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Position" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Previous Company Name</label>
+                                                            <input type="text" name="text" class="form-control" placeholder="Previous Company Name" required data-validation-required-message="This field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                            </div>
+                                        </div>   
+                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                                    <button type="submit" class="btn btn-primary glow  mr-1 mt-1 mb-1">Submit</button>
+                                                    <button type="reset" class="btn btn-outline-dark mb-1 mt-1">Reset</button>
+                                                </div>
+                                            </form>
+                                                
+
+                                                
+                                              
+                                                
+                                            
+                                            </div>
+                                                
+                                        
+
+                                           
+
+                                            
+
+                                            
+                                    
+
+                                           
+
+                                            
+
+                                            
+                                        
+
+                                    
+                                    
+                                    <div class="tab-pane" id="documents" aria-labelledby="documents-tab" role="tabpanel">
+
+                                        <div class="card border-secondary">
+                                            <div class="card-header py-1">
+                                                <h5 class="card-basic primary"><i class="feather icon-sidebar"></i>Employee Documents</h5>
+                                                <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                                                <div class="heading-elements">
+                                                    <ul class="list-inline mb-0">
+                                                        <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-content collapse show">
+                                                <div class="card-body pt-0 pb-0">
+                                                    <form class="form-horizontal" novalidate>
+                                                        <div class="row">
+
+                                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                <label>Document Name</label>
+                                                                <input type="text"  class="form-control"  placeholder="Document Name" required data-validation-required-message="This field is required">
+                                                                </div>
+                                                             </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Document Type</label>
+                                                                        <fieldset class="form-group">
+                                                                            <select class="form-control" id="users-list-status" >
+                                                                                <option value="">Select Document Type</option>
+                                                                                <option value="Active">Aadhar card</option>
+                                                                                <option value="Blocked">Pan Card</option>
+                                                                                <option value="deactivated">Passport</option>
+                                                                                <option value="deactivated">Visa</option>
+                                                                                <option value="deactivated">Labour Card</option>
+                                                                                <option value="deactivated">Educational Certificates</option>
+                                                                                <option value="deactivated">Relieving Letter</option>
+                                                                                <option value="deactivated">Feedback Copy</option>
+                                                                                <option value="deactivated">Salary Slip</option>
+                                                                                <option value="deactivated">Bank Statement</option>
+                                                                                <option value="deactivated">Appointment Letter</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                   </div>
+                                                            </div>
+                                                            </div>
+                    
+                                                            
+                                                           
+                    
+                    
+                                                        </div> 
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                <label>Document No.</label>
+                                                                <input type="text"  class="form-control"  placeholder="Document No." required data-validation-required-message="This field is required">
+                                                                </div>
+                                                             </div>
+                                                            </div>
+
+                                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                <label>Valid Upto</label>
+                                                                <input type="text"  class="form-control birthdate-picker"  placeholder="Valid Upto" required data-validation-required-message="This field is required">
+                                                                </div>
+                                                             </div>
+                                                            </div>
+
+
+                                                            
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                <label>Remark</label>
+                                                                <input type="text"  class="form-control"  placeholder="Remark" required data-validation-required-message="This field is required">
+                                                                </div>
+                                                             </div>
+                                                            </div>
+
+                                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                <label>Attach</label>
+                                                                <input type="file"  class="form-control"  placeholder="Remark" required data-validation-required-message="This field is required">
+                                                                </div>
+                                                             </div>
+                                                            </div>
+
+                                                        </div>
+                                                        
+                                                        <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                                            
+                                                            <label class="btn btn-primary glow  mr-1 mt-0.5 mb-1 cursor-pointer" for="document-upload">Save</label>
+                                                           <input type="file" id="document-upload" hidden>
+                                                            <button type="reset" class="btn btn-outline-dark mb-1 mt-0.5">Reset</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="card">
+                                            <div class="card-content">
+                                                  <div class="card-body card-dashboard">
+                                                    
+                    
+                                                        <div class="table-responsive">
+                                                          <table class="table border-secondary table-striped dataex-html5-selectors">
+                                                              <thead>
+                                                                  <tr>
+                                                                      <th>SrNo.</th>
+                                                                      <th>Document Type</th>
+                                                                      <th>Remark</th>
+                                                                      <th>Action</th>
+                                                                  </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                  <tr>
+                                                                    <td>1</td>
+                                                                    <td>Aadhar Card</td>
+                                                                    <td>Test</td>
+                                                                    <td >
+                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
+                                                                        <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>Aadhar Card</td>
+                                                                    <td>Test</td>
+                                                                    <td >
+                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
+                                                                        <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>Aadhar Card</td>
+                                                                    <td>Test</td>
+                                                                    <td >
+                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
+                                                                        <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>Aadhar Card</td>
+                                                                    <td>Test</td>
+                                                                    <td >
+                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
+                                                                        <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>Aadhar Card</td>
+                                                                    <td>Test</td>
+                                                                    <td >
+                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
+                                                                        <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>Aadhar Card</td>
+                                                                    <td>Test</td>
+                                                                    <td >
+                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
+                                                                        <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+                                                             </tbody>
+                                                                 
+                                                                
+                                                          </table>
+                                                          
+                                                        </div>
+                    
+                                                     
+                                                  </div>
+                                              </div>
+                                          </div>
+
+
+                                    </div>
+                                    
+                                    </div>
+                                    
+                                        
+                                            
+                                           
+                                                
+
+
+                                               
+                                           
+
+
+                                           
+                                    
+
+
+
+
+                                       
+
+
+
+
+                                           
+                                            
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- users edit ends -->
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2022<a class="text-bold-800 grey darken-2" href="" target="_blank">Acquara,</a>All rights Reserved</span>
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
+    <script src="../../Content/app-assets/js/core/app.js"></script>
+    <script src="../../Content/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../Content/app-assets/js/scripts/datatables/datatable.js"></script>
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/navs/navs.js"></script>
+    <!-- END: Page JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>
