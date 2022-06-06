@@ -14,7 +14,7 @@
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/charts/apexcharts.css">
+    <!--<link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/charts/apexcharts.css">-->
     <!-- END: Vendor CSS-->
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
@@ -30,6 +30,8 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+
+    
     <!-- END: Page CSS-->
     <!-- BEGIN: Custom CSS-->
     <!-- END: Custom CSS-->
@@ -48,7 +50,7 @@
                                 </a>
                             </li>
                         </ul>
-                        
+
                         <ul class="nav">
                             <li>
                                 <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
@@ -62,7 +64,7 @@
                         </ul>
                     </div>
                     <ul class="nav navbar-nav float-right">
-                      <li class="nav-item nav-search">
+                        <li class="nav-item nav-search">
                             <a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
                             <div class="search-input">
                                 <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
@@ -79,7 +81,7 @@
                                         <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
                                     </div>
                                 </li>
-                               
+
                                 <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
                             </ul>
                         </li>
@@ -103,8 +105,8 @@
                 <h6 class="text-primary mb-0">Files</h6>
             </a>
         </li>
-        
-        
+
+
     </ul>
     <ul class="main-search-list-defaultlist-other-list d-none">
         <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
@@ -130,10 +132,11 @@
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item active">
-                    <a href="../Dashboard/Index.html"><i class=" active feather icon-home"></i>
+                    <a href="../Dashboard/Index.html">
+                        <i class=" active feather icon-home"></i>
                         <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
                         <!-- <span class="badge badge badge-warning badge-pill float-right mr-2">2</span> -->
-                        </a>
+                    </a>
                 </li>
                 <li class=" navigation-header">
                     <span>Menu</span>
@@ -182,6 +185,15 @@
                     <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                     <ul class="menu-content">
                         <li>
+                            <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/LeaveTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type Master </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
+                        </li>
+                        <li>
                             <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                         </li>
                         <li>
@@ -226,7 +238,7 @@
                         </li>
                     </ul>
                 </li>
-               <li class=" nav-item">
+                <li class=" nav-item">
                     <a href="#"><i class="feather icon-lock"></i><span class="menu-title" data-i18n="User">Role & Permission</span></a>
                     <ul class="menu-content">
                         <li>
@@ -264,8 +276,8 @@
                             <div class="card" id="mycard">
                                 <div class="card-body">
                                     <a href="../Users/Dashboar_User_Profile_List.html" class="my_sort_cut">
-                                    <i class="fa fa-users fa-2x warning"></i><br>
-                                    <span>Users</span>
+                                        <i class="fa fa-users fa-2x warning"></i><br>
+                                        <span>Users</span>
                                     </a>
                                 </div>
                             </div>
@@ -274,8 +286,8 @@
                             <div class="card" id="mycard">
                                 <div class="card-body">
                                     <a href="../Holiday/Holidays.html" class="my_sort_cut">
-                                    <i class="feather icon-thumbs-up fa-2x danger"></i><br>
-                                    <span>Holidays</span>
+                                        <i class="feather icon-thumbs-up fa-2x danger"></i><br>
+                                        <span>Holidays</span>
                                     </a>
                                 </div>
                             </div>
@@ -284,8 +296,8 @@
                             <div class="card" id="mycard">
                                 <div class="card-body">
                                     <a href="#" class="my_sort_cut">
-                                    <i class="fa fa-calendar fa-2x info"></i><br>
-                                    <span>Events</span>
+                                        <i class="fa fa-calendar fa-2x info"></i><br>
+                                        <span>Events</span>
                                     </a>
                                 </div>
                             </div>
@@ -294,8 +306,8 @@
                             <div class="card" id="mycard">
                                 <div class="card-body">
                                     <a href="#" class="my_sort_cut">
-                                    <i class="fa fa-laptop fa-2x success"></i><br>
-                                    <span>Assets</span>
+                                        <i class="fa fa-laptop fa-2x success"></i><br>
+                                        <span>Assets</span>
                                     </a>
                                 </div>
                             </div>
@@ -304,41 +316,41 @@
                             <div class="card" id="mycard">
                                 <div class="card-body">
                                     <a href="#" class="my_sort_cut">
-                                    <i class="fa fa-money fa-2x danger"></i><br>
-                                    <span>Reimbursement</span>
+                                        <i class="fa fa-money fa-2x danger"></i><br>
+                                        <span>Reimbursement</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-sm-4 col-lg-2">
                             <div class="card" id="mycard">
-                                <div class="card-body" >
+                                <div class="card-body">
                                     <a href="#" class="my_sort_cut">
-                                    <i class="feather icon-pie-chart fa-2x warning"></i><br>
-                                    <span>Report</span>
+                                        <i class="feather icon-pie-chart fa-2x warning"></i><br>
+                                        <span>Report</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
 
                     <div class="row">
                         <div class="col-md-6 col-12">
                             <div class="card">
                                 <div class="card-content" style="height:335px;">
-                                    <div class="card-body" >
+                                    <div class="card-body">
                                         <div class="row pb-50">
                                             <div class="col-lg-12 col-12 order-lg-1 order-2 mt-lg-0 mt-2">
                                                 <div class="justify-content-between">
                                                     <h2 class="text-bold-700 mb-25">220</h2>
                                                     <p class="text-bold-500 mb-75">Total Employees</p>
-                                                    
+
                                                 </div>
                                                 <div class="mt-1" style="float: right;">
-                                                <a href="#" class="btn btn-primary shadow">View Details <i class="feather icon-chevrons-right"></i></a>
+                                                    <a href="#" class="btn btn-primary shadow">View Details <i class="feather icon-chevrons-right"></i></a>
+                                                </div>
                                             </div>
-                                            </div>
-                                            
+
                                         </div>
                                         <hr />
                                         <div class="row avg-sessions pt-50">
@@ -377,109 +389,113 @@
                                 <div class="card-content">
                                     <div class="card-body">
                                         <ul class="nav nav-pills mb-3" role="tablist">
-                                           
-        
+
+
                                             <li class="nav-item">
                                                 <a class="nav-link d-flex align-items-center active " id="information-tab" data-toggle="tab" href="#information" aria-controls="account" role="tab" aria-selected="true">
                                                     <i class="fa fa-birthday-cake  mr-25" style="color:deeppink;"></i><span class="d-none d-sm-block">Birthday</span>
                                                 </a>
                                             </li>
-        
+
                                             <li class="nav-item">
                                                 <a class="nav-link d-flex align-items-center" id="social-tab" data-toggle="tab" href="#social" aria-controls="social" role="tab" aria-selected="false">
                                                     <i class="fa fa-history mr-25"></i><span class="d-none d-sm-block">Leave </span>
                                                 </a>
                                             </li>
-        
+
                                             <li class="nav-item">
                                                 <a class="nav-link d-flex align-items-center" id="joining-tab" data-toggle="tab" href="#joining" aria-controls="social" role="tab" aria-selected="false">
                                                     <i class="fa fa-users mr-25" style="color:orange"></i><span class="d-none d-sm-block">New Joinees</span>
                                                 </a>
                                             </li>
-        
-                                           
-                                            
+
+
+
                                         </ul>
                                         <div class="tab-content">
 
                                             <div class="tab-pane active" id="information" aria-labelledby="information-tab" role="tabpanel">
-                                               <h6 class="font-weight-bold">Current Month Birthday's</h6>
-                                                <div class="table-responsive border-secondary " style="height: 200px;overflow-x: auto;" >
+                                                <h6 class="font-weight-bold">Current Month Birthday's</h6>
+                                                <div class="table-responsive border-secondary " style="height: 200px;overflow-x: auto;">
                                                     <table class="table data-thumb-view">
                                                         <thead>
                                                             <tr>
-                                                                
+
                                                                 <th>Image</th>
                                                                 <th>Name</th>
-                                                                
+
                                                                 <th>Date Of Join</th>
-                                                                
+
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+
+                                                                <td>
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
                                                                 </td>
-                                                                <td >ABC</td>
+                                                                <td>ABC</td>
                                                                 <td>18/05/2022</td>
-                                                                
-                                                                
-                                                                
+
+
+
                                                                 <td>
                                                                     <span class="action-edit"><i class="fa fa-eye pl-2"></i></span>
-                                                                   
+
                                                                 </td>
                                                             </tr>
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
-                                                                </td>
-                                                                <td >ABC</td>
-                                                                
-                                                                <td>18/05/2022</td>
-                                                                
-                                                                
+
                                                                 <td>
-                                                                   
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+                                                                </td>
+                                                                <td>ABC</td>
+
+                                                                <td>18/05/2022</td>
+
+
+                                                                <td>
+
                                                                     <span class="action-delete"><i class="fa fa-eye pl-2"></i></span>
                                                                 </td>
                                                             </tr>
 
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
-                                                                </td>
-                                                                <td >ABC</td>
-                                                                <td>18/05/2022</td>
-                                                                
-                                                                
-                                                                
+
                                                                 <td>
-                                                                    
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+                                                                </td>
+                                                                <td>ABC</td>
+                                                                <td>18/05/2022</td>
+
+
+
+                                                                <td>
+
                                                                     <span class="action-delete"><i class="fa fa-eye pl-2"></i></span>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
-                                                                </td>
-                                                                <td >ABC</td>
-                                                                
-                                                                <td>18/05/2022</td>
-                                                                
-                                                                
+
                                                                 <td>
-                                                                    
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+                                                                </td>
+                                                                <td>ABC</td>
+
+                                                                <td>18/05/2022</td>
+
+
+                                                                <td>
+
                                                                     <span class="action-delete"><i class="fa fa-eye pl-2"></i></span>
                                                                 </td>
                                                             </tr>
 
-                                                           
+
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -488,54 +504,58 @@
 
                                             <div class="tab-pane" id="social" aria-labelledby="social-tab" role="tabpanel">
                                                 <h6 class="font-weight-bold">Current Month Leave</h6>
-                                                <div class="table-responsive border-secondary"  style="height: 200px; overflow-x: auto;">
-                                                    
+                                                <div class="table-responsive border-secondary" style="height: 200px; overflow-x: auto;">
+
                                                     <table class="table data-thumb-view ">
                                                         <thead>
                                                             <tr>
-                                                                
-                                                                <th >Image</th>
+
+                                                                <th>Image</th>
                                                                 <th>Name</th>
-                                                                
+
                                                                 <th>Date Of Join</th>
-                                                                
+
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+
+                                                                <td>
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
                                                                 </td>
-                                                                <td >ABC</td>
+                                                                <td>ABC</td>
                                                                 <td>20/05/2022</td>
                                                                 <td><span class="action-edit"><i class="fa fa-eye pl-2"></i></span></td>
                                                             </tr>
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+
+                                                                <td>
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
                                                                 </td>
-                                                                <td >ABC</td>
+                                                                <td>ABC</td>
                                                                 <td>20/05/2022</td>
                                                                 <td><span class="action-delete"><i class="fa fa-eye pl-2"></i></span></td>
                                                             </tr>
 
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+
+                                                                <td>
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
                                                                 </td>
-                                                                <td >ABC</td>
+                                                                <td>ABC</td>
                                                                 <td>20/05/2022</td>
                                                                 <td><span class="action-delete"><i class="fa fa-eye pl-2"></i></span></td>
                                                             </tr>
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+
+                                                                <td>
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
                                                                 </td>
-                                                                <td >ABC</td>
+                                                                <td>ABC</td>
                                                                 <td>20/05/2022</td>
                                                                 <td> <span class="action-delete"><i class="fa fa-eye pl-2"></i></span></td>
                                                             </tr>
@@ -547,81 +567,85 @@
                                             <div class="tab-pane" id="joining" aria-labelledby="joining-tab" role="tabpanel">
                                                 <h6 class="font-weight-bold">Current Month Joinings</h6>
                                                 <div class="table-responsive border-secondary" style="height: 200px ; overflow-x:auto;">
-                                                    
+
                                                     <table class="table data-thumb-view">
                                                         <thead>
                                                             <tr>
-                                                                
+
                                                                 <th>Image</th>
                                                                 <th>Name</th>
-                                                                
+
                                                                 <th>Date Of Join</th>
-                                                                
+
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
-                                                                </td>
-                                                                <td >ABC</td>
-                                                                
-                                                                
-                                                                <td>19/05/2022</td>
-                                                                
+
                                                                 <td>
-                                                                    
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+                                                                </td>
+                                                                <td>ABC</td>
+
+
+                                                                <td>19/05/2022</td>
+
+                                                                <td>
+
                                                                     <span class="action-delete"><i class="fa fa-eye pl-2"></i></span>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
-                                                                </td>
-                                                                <td >ABC</td>
-                                                                
-                                                                <td>19/05/2022</td>
-                                                                
-                                                                
+
                                                                 <td>
-                                                                    
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+                                                                </td>
+                                                                <td>ABC</td>
+
+                                                                <td>19/05/2022</td>
+
+
+                                                                <td>
+
                                                                     <span class="action-delete"><i class="fa fa-eye pl-2"></i></span>
                                                                 </td>
                                                             </tr>
 
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
-                                                                </td>
-                                                                <td >ABC</td>
-                                                                
-                                                                <td>19/05/2022</td>
-                                                                
-                                                                
+
                                                                 <td>
-                                                                    
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+                                                                </td>
+                                                                <td>ABC</td>
+
+                                                                <td>19/05/2022</td>
+
+
+                                                                <td>
+
                                                                     <span class="action-delete"><i class="fa fa-eye pl-2"></i></span>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>
-                                                                
-                                                                <td><img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
+
+                                                                <td>
+                                                                    <img class="rounded-circle" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="Img placeholder" width="50" height="50">
                                                                 </td>
-                                                                <td >ABC</td>
-                                                                
-                                                                
+                                                                <td>ABC</td>
+
+
                                                                 <td>19/05/2022</td>
-                                                                
+
                                                                 <td>
                                                                     <span class="action-delete"><i class="fa fa-eye pl-2"></i></span>
                                                                 </td>
                                                             </tr>
 
-                                                           
+
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -633,7 +657,7 @@
 
 
                         </div>
-                        
+
                     </div>
                 </section>
                 <!-- Dashboard Ecommerce ends -->
@@ -652,10 +676,10 @@
     </footer>
     <!-- END: Footer-->
     <!-- BEGIN: Vendor JS-->
-    
+
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
     <script src="../../Content/app-assets/js/custom-js.js"></script>
-   
+
     <!-- BEGIN Vendor JS-->
     <!-- BEGIN: Page Vendor JS-->
     <script src="../../Content/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
@@ -668,7 +692,7 @@
     <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
     <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
     <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-    <script src="../../Content/app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <!--<script src="../../Content/app-assets/vendors/js/charts/apexcharts.min.js"></script>-->
     <!-- END: Page Vendor JS-->
     <!-- BEGIN: Theme JS-->
     <script src="../../Content/app-assets/js/core/app-menu.js"></script>
@@ -676,11 +700,13 @@
     <script src="../../Content/app-assets/js/scripts/components.js"></script>
     <!-- END: Theme JS-->
     <!-- BEGIN: Page JS-->
-    <script src="../../Content/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+    <!--<script src="../../Content/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>-->
     <script src="../../Content/app-assets/js/scripts/datatables/datatable.js"></script>
     <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script><!-- END: Page JS-->
+
     
+
 </body>
 <!-- END: Body-->
 </html>

@@ -51,224 +51,233 @@
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
 
-   
-<!-- BEGIN: Header-->
-<nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
-    <div class="navbar-wrapper">
-        <div class="navbar-container content">
-            <div class="navbar-collapse" id="navbar-mobile">
-                <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item mobile-menu  mr-auto">
-                            <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
-                                <i class="ficon feather icon-menu"></i>
-                            </a>
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu  mr-auto">
+                                <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
+                                    <i class="ficon feather icon-menu"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav">
+                            <li>
+                                <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
+                                    <option value="">Select Office Location</option>
+                                    <option value="Active">Gurgaon</option>
+                                    <option value="Blocked">Mumbai</option>
+                                    <option value="deactivated">Abu Dhabi</option>
+                                    <option value="deactivated">Other</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="nav-item nav-search">
+                            <a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                <input class="input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="template-list">
+                                <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                <ul class="search-list search-list-main"></ul>
+                            </div>
                         </li>
-                    </ul>
-                    
-                    <ul class="nav">
-                        <li>
-                            <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
-                                <option value="">Select Office Location</option>
-                                <option value="Active">Gurgaon</option>
-                                <option value="Blocked">Mumbai</option>
-                                <option value="deactivated">Abu Dhabi</option>
-                                <option value="deactivated">Other</option>
-                            </select>
+                        <li class="dropdown dropdown-notification nav-item">
+                            <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <li class="dropdown-menu-header">
+                                    <div class="dropdown-header m-0 p-2">
+                                        <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
+                                    </div>
+                                </li>
+
+                                <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avatar" height="40" width="40"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="../Users/HRMS_User_Profile.html"><i class="feather icon-user"></i> Edit Profile</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="../../Index.html"><i class="feather icon-power"></i> Logout</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <ul class="nav navbar-nav float-right">
-                  <li class="nav-item nav-search">
-                        <a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
-                        <div class="search-input">
-                            <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
-                            <input class="input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="template-list">
-                            <div class="search-input-close"><i class="feather icon-x"></i></div>
-                            <ul class="search-list search-list-main"></ul>
-                        </div>
-                    </li>
-                    <li class="dropdown dropdown-notification nav-item">
-                        <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
-                        <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
-                            <li class="dropdown-menu-header">
-                                <div class="dropdown-header m-0 p-2">
-                                    <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
-                                </div>
-                            </li>
-                           
-                            <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown dropdown-user nav-item">
-                        <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                            <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avatar" height="40" width="40"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="../Users/HRMS_User_Profile.html"><i class="feather icon-user"></i> Edit Profile</a>
-                            <div class="dropdown-divider"></div><a class="dropdown-item" href="../../Index.html"><i class="feather icon-power"></i> Logout</a>
-                        </div>
-                    </li>
-                </ul>
             </div>
         </div>
-    </div>
-</nav>
-<ul class="main-search-list-defaultlist d-none">
-    <li class="d-flex align-items-center">
-        <a class="pb-25" href="#">
-            <h6 class="text-primary mb-0">Files</h6>
-        </a>
-    </li>
-    
-    
-</ul>
-<ul class="main-search-list-defaultlist-other-list d-none">
-    <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between w-100 py-50">
-            <div class="d-flex justify-content-start"><span class="mr-75 feather icon-alert-circle"></span><span>No results found.</span></div>
-        </a>
-    </li>
-</ul>
-<!-- END: Header-->
-<!-- BEGIN: Main Menu-->
-<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
-    <div class="navbar-header">
-        <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mr-auto">
-                <a class="navbar-brand" href="">
-                    <!-- <div class="brand-logo"></div> -->
-                    <h2 class="brand-text mb-0">HRMS Portal</h2>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="shadow-bottom"></div>
-    <div class="main-menu-content">
-        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item">
-                <a href="../Dashboard/Index.html"><i class="feather icon-home"></i>
-                    <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
-                    <!-- <span class="badge badge badge-warning badge-pill float-right mr-2">2</span> -->
-                    </a>
-            </li>
-            <li class=" navigation-header">
-                <span>Menu</span>
-            </li>
-            <li class=" nav-item">
-                <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
-                    </li>
-                    
-                    <li>
-                        <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
-                    </li>
-                    <li>
-                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
-                    </li>
-                    <li>
-                        <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
-                    </li>
-                    <li>
-                        <a href="../Master/HRMS_DocumentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Document Master</span></a>
-                    </li>
-                    <li>
-                        <a href="../Master/HRMS_EmployeeTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
-                    </li>
-                   <li>
-                        <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item">
-                <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
-                    </li>
-                    <li>
-                        <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
-                    </li>
-                    <li>
-                        <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item">
-                <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
-                    </li>
-                    <li>
-                        <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Leave </span></a>
-                    </li>
-                    <li>
-                        <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
-                    </li>
-                    <li>
-                        <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item">
-                <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a href="../Users/HRMS_User_Profile.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New User </span></a>
-                    </li>
-                    <li>
-                        <a href="../Users/HRMS_User_Profile_List.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View User </span></a>
-                    </li>
-                    <li>
-                        <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission </span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item">
-                <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a href="../Company/HRMS_CompanyDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
-                    </li>
-                    <li>
-                        <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
-                    </li>
-                    <li>
-                        <a href="../Company/HRMS_BranchDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Branch</span></a>
-                    </li>
-                    <li>
-                        <a href="../Company/HRMS_BranchDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Branch List</span></a>
-                    </li>
-                </ul>
-            </li>
-           <li class=" nav-item">
-                <a href="#"><i class="feather icon-lock"></i><span class="menu-title" data-i18n="User">Role & Permission</span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a href="../Role/HRMS_Role.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Role</span></a>
-                    </li>
-                    <li>
-                        <a href="../Role/HRMS_RoleList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role List</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item">
-                <a href="#"><i class="fa fa-codepen"></i><span class="menu-title" data-i18n="User">Subscription</span></a>
-                <ul class="menu-content">
-                    <li>
-                        <a href="../Subscription/AddSubscription.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">My Subscription</span></a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- END: Main Menu-->
+    </nav>
+    <ul class="main-search-list-defaultlist d-none">
+        <li class="d-flex align-items-center">
+            <a class="pb-25" href="#">
+                <h6 class="text-primary mb-0">Files</h6>
+            </a>
+        </li>
 
-<!-- BEGIN: Content-->
+
+    </ul>
+    <ul class="main-search-list-defaultlist-other-list d-none">
+        <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between w-100 py-50">
+                <div class="d-flex justify-content-start"><span class="mr-75 feather icon-alert-circle"></span><span>No results found.</span></div>
+            </a>
+        </li>
+    </ul>
+    <!-- END: Header-->
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="">
+                        <!-- <div class="brand-logo"></div> -->
+                        <h2 class="brand-text mb-0">HRMS Portal</h2>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item">
+                    <a href="../Dashboard/Index.html">
+                        <i class="feather icon-home"></i>
+                        <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
+                        <!-- <span class="badge badge badge-warning badge-pill float-right mr-2">2</span> -->
+                    </a>
+                </li>
+                <li class=" navigation-header">
+                    <span>Menu</span>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DocumentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Document Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_EmployeeTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item" id="Employee">
+                    <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
+                        </li>
+                        <li id="ViewEmployee">
+                            <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
+                        </li>
+                        <li>
+                            <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/LeaveTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type Master </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Leave </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Users/HRMS_User_Profile.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New User </span></a>
+                        </li>
+                        <li>
+                            <a href="../Users/HRMS_User_Profile_List.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View User </span></a>
+                        </li>
+                        <li>
+                            <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Company/HRMS_CompanyDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
+                        </li>
+                        <li>
+                            <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
+                        </li>
+                        <li>
+                            <a href="../Company/HRMS_BranchDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Branch</span></a>
+                        </li>
+                        <li>
+                            <a href="../Company/HRMS_BranchDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Branch List</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-lock"></i><span class="menu-title" data-i18n="User">Role & Permission</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Role/HRMS_Role.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Role</span></a>
+                        </li>
+                        <li>
+                            <a href="../Role/HRMS_RoleList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role List</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-codepen"></i><span class="menu-title" data-i18n="User">Subscription</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Subscription/AddSubscription.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">My Subscription</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+    <!-- BEGIN: Content-->
     <section class="app-content content" id="column-selectors">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
@@ -280,247 +289,252 @@
                             <h2 class="content-header-title float-left mb-0">Employee List</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="../Dashboard/HRMS_Index.html">Dashboard</a>
+                                    <li class="breadcrumb-item">
+                                        <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Master
+                                    <li class="breadcrumb-item active">
+                                        Master
                                     </li>
                                 </ol>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="content-body">
-                
-                
-                  
-                    <div class="card">
-                        <div class="card-content">
-                              <div class="card-body card-dashboard">
 
-                                  <div class="table-responsive">
-                                      <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
-                                          <thead>
-                                              <tr>
-                                                  <th>SrNo.</th>
-                                                  <th>Name</th>
-                                                  <th>Department</th>
-                                                  <th>Designation</th>
-                                                  <th>Date Of Join</th>
-                                                  <th>Email</th>
-                                                  <th>City</th>
-                                                  
-                                                  
-                                                  
-                                                  <th>Status</th>
-                                                  
-                                                  <th>Action</th>
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                              <tr>
-                                                <td>1</td>
-                                                <td>ABC</td>
-                                                <td>IT</td>
-                                                <td>Software Developer</td>
-                                                <td>17/05/22</td>
-                                                <td>abc@gmail.com</td>
-                                                <td>Noida</td>
-                                                
-                                                <td>
 
-                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
 
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                                        
-                                                        <label class="custom-control-label" for="customSwitch1">
-                                                        
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body card-dashboard">
+
+                            <div class="table-responsive">
+                                <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                    <thead>
+                                        <tr>
+                                            <th>SrNo.</th>
+                                            <th>Name</th>
+                                            <th>Department</th>
+                                            <th>Designation</th>
+                                            <th>Date Of Join</th>
+                                            <th>Email</th>
+                                            <th>City</th>
+
+
+
+                                            <th>Status</th>
+
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>ABC</td>
+                                            <td>IT</td>
+                                            <td>Software Developer</td>
+                                            <td>17/05/22</td>
+                                            <td>abc@gmail.com</td>
+                                            <td>Noida</td>
+
+                                            <td>
+
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+
+                                                    <label class="custom-control-label" for="customSwitch1">
+
                                                         <span class="switch-text-left">Active</span>
-                                                        
+
                                                         <span class="switch-text-right">InActive</span>
-                                                        
-                                                        </label>
-                                                        
-                                                        </div>
-                                                </td>
-                                                <td >
-                                                    <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>2</td>
-                                                <td>PQR</td>
-                                                <td>IT</td>
-                                                <td>Software Developer</td>
-                                                <td>17/05/22</td>
-                                                <td>pqr@gmail.com</td>
-                                                <td>Noida</td>
-                                                
-                                                <td>
 
-                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                    </label>
 
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                                        
-                                                        <label class="custom-control-label" for="customSwitch2">
-                                                        
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>PQR</td>
+                                            <td>IT</td>
+                                            <td>Software Developer</td>
+                                            <td>17/05/22</td>
+                                            <td>pqr@gmail.com</td>
+                                            <td>Noida</td>
+
+                                            <td>
+
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+
+                                                    <label class="custom-control-label" for="customSwitch2">
+
                                                         <span class="switch-text-left">Active</span>
-                                                        
+
                                                         <span class="switch-text-right">InActive</span>
-                                                        
-                                                        </label>
-                                                        
-                                                        </div>
-                                                </td>
-                                                <td >
-                                                    <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>3</td>
-                                                <td>XYZ</td>
-                                                <td>HR</td>
-                                                <td>Manager</td>
-                                                <td>17/05/22</td>
-                                                <td>xyz@gmail.com</td>
-                                                <td>Mumbai</td>
-                                                
-                                                <td>
 
-                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                    </label>
 
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                                                        
-                                                        <label class="custom-control-label" for="customSwitch3">
-                                                        
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>XYZ</td>
+                                            <td>HR</td>
+                                            <td>Manager</td>
+                                            <td>17/05/22</td>
+                                            <td>xyz@gmail.com</td>
+                                            <td>Mumbai</td>
+
+                                            <td>
+
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+
+                                                    <label class="custom-control-label" for="customSwitch3">
+
                                                         <span class="switch-text-left">Active</span>
-                                                        
+
                                                         <span class="switch-text-right">InActive</span>
-                                                        
-                                                        </label>
-                                                        
-                                                        </div>
-                                                </td>
-                                                <td >
-                                                    <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>4</td>
-                                                <td>ZXC</td>
-                                                <td>HR</td>
-                                                <td>Manager</td>
-                                                <td>17/05/22</td>
-                                                <td>zxc@gmail.com</td>
-                                                <td>Gurgaon</td>
-                                                
-                                                <td>
 
-                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                    </label>
 
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                                        
-                                                        <label class="custom-control-label" for="customSwitch4">
-                                                        
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>ZXC</td>
+                                            <td>HR</td>
+                                            <td>Manager</td>
+                                            <td>17/05/22</td>
+                                            <td>zxc@gmail.com</td>
+                                            <td>Gurgaon</td>
+
+                                            <td>
+
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
+
+                                                    <label class="custom-control-label" for="customSwitch4">
+
                                                         <span class="switch-text-left">Active</span>
-                                                        
-                                                        <span class="switch-text-right">InActive</span>
-                                                        
-                                                        </label>
-                                                        
-                                                        </div>
-                                                </td>
-                                                <td >
-                                                    
-                                                    <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
-                                                </td>
-                                              </tr>
-                                              
-                                            </tbody>
-                                             
-                                          
-                                      </table>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                   
-              
 
-           
-                
-                   
-                           
-                 
+                                                        <span class="switch-text-right">InActive</span>
+
+                                                    </label>
+
+                                                </div>
+                                            </td>
+                                            <td>
+
+                                                <span class="action-delete"><a href="../Employee/HRMS_CreateEmployee.html" class="fa fa-eye pl-2"></a></span>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
 
 
             </div>
-           
+
         </div>
     </section>
-    
+
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
     <!-- BEGIN: Footer-->
-  <footer class="footer footer-static footer-light">
-    <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2022<a class="text-bold-800 grey darken-2" href="" target="_blank">Acquara,</a>All rights Reserved</span>
-        <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
-    </p>
-</footer>
-<!-- END: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix blue-grey lighten-2 mb-0">
+            <span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2022<a class="text-bold-800 grey darken-2" href="" target="_blank">Acquara,</a>All rights Reserved</span>
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
 
 
-<script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
-<script src="../../Content/app-assets/js/custom-js.js"></script>
-<!-- BEGIN Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../Content/app-assets/js/custom-js.js"></script>
+    <!-- BEGIN Vendor JS-->
 
 
-<script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
-<script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-<!-- END: Page Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Theme JS-->
+    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
+    <script src="../../Content/app-assets/js/core/app.js"></script>
+    <script src="../../Content/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+    <!-- BEGIN: Page JS-->
 
-<!-- BEGIN: Theme JS-->
-<script src="../../Content/app-assets/js/core/app-menu.js"></script>
-<script src="../../Content/app-assets/js/core/app.js"></script>
-<script src="../../Content/app-assets/js/scripts/components.js"></script>
-<!-- END: Theme JS-->
-
-<!-- BEGIN: Page JS-->
-
-<script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
-<script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-<!-- END: Page JS-->
-
-
-<!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
-<script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
-<script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
+    <!-- END: Page JS-->
+    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+    <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
     <!-- END: Page JS-->
 
     <script>
         $(function () {
-        $("#example1").DataTable({
-          "responsive": true, "lengthChange": false, "autoWidth": true,
-          
-          
-          "buttons": ["excel","print", "copy","pdf","colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": true,
+
+
+                "buttons": ["excel", "print", "copy", "pdf", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
         });
-        </script>
+    </script>
+    <script>
+        window.onload = function () {
+            document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("ViewEmployee").className = 'active';
+        }
+    </script>
 
 </body>
 <!-- END: Body-->
