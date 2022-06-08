@@ -265,6 +265,20 @@ a.dt-button.dropdown-item.buttons-columnVisibility.active:first-child {
     color: red;
 }
 
+/* 07/06/22 Yash  */
+
+
+  
+
+i.fa.fa-birthday-cake.mr-25 {
+  color: deeppink;
+}
+i.fa.fa-users.mr-25 {
+  color: orange;
+}
+
+/* end*/ 
+
 /* .card-body .detail {
   height: 40vh;
 } */
