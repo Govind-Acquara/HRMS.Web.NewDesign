@@ -15,31 +15,34 @@
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-
-    <!-- END: Vendor CSS-->
-
-    <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
-
-    <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
-
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
-    <!-- END: Page CSS-->
-
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+     <!-- BEGIN: Vendor CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+     <!-- END: Vendor CSS-->
+ 
+     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+ 
+     <!-- BEGIN: Theme CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
+ 
+     <!-- BEGIN: Page CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
+ 
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+     <!-- END: Page CSS-->
+ 
+     <!-- BEGIN: Custom CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
 </head>
@@ -277,7 +280,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="attendance">
                     <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                     <ul class="menu-content">
                         <li>
@@ -293,12 +296,12 @@
                             <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                         </li>
                         <li>
-                            <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Leave </span></a>
+                            <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Leave Apply </span></a>
                         </li>
                         <li>
                             <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                         </li>
-                        <li>
+                        <li id="attendance_mark">
                             <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
                         </li>
                     </ul>
@@ -456,7 +459,12 @@
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
 
     <!-- END: Page JS-->
-
+    <script>
+        window.onload = function () {
+            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("attendance_mark").className = 'active';
+        }
+    </script>
 </body>
 <!-- END: Body-->
 
