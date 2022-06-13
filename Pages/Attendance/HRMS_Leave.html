@@ -10,36 +10,39 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Leave</title>
+    <title>Leave Apply</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-
-    <!-- END: Vendor CSS-->
-
-    <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
-
-    <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
-
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
-    <!-- END: Page CSS-->
-
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+     <!-- BEGIN: Vendor CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+     <!-- END: Vendor CSS-->
+ 
+     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+ 
+     <!-- BEGIN: Theme CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
+ 
+     <!-- BEGIN: Page CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
+ 
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+     <!-- END: Page CSS-->
+ 
+     <!-- BEGIN: Custom CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
 </head>
@@ -278,13 +281,22 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item">
+            <li class=" nav-item" id="attendance">
                 <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
                     <li>
-                        <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
+                        <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
                     <li>
+                        <a href="../Attendance/LeaveTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type Master </span></a>
+                    </li>
+                    <li>
+                        <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
+                    </li>
+                    <li>
+                        <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
+                    </li>
+                    <li id="leave">
                         <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Leave </span></a>
                     </li>
                     <li>
@@ -352,7 +364,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Apply Leave</h2>
+                            <h2 class="content-header-title float-left mb-0">Leave Apply</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
@@ -422,7 +434,7 @@
                                     <div class="col-12 col-sm-6 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
-                                                <label>From</label>
+                                                <label>From Date</label>
                                                 <input type="text" id="test" class="form-control birthdate-picker">
                                             </div>
                                         </div>
@@ -430,7 +442,7 @@
                                      <div class="col-12 col-sm-6 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
-                                                <label>To</label>
+                                                <label>To Date</label>
                                                 <input type="text" id="test2" class="form-control birthdate-picker">
                                             </div>
                                         </div>
@@ -444,6 +456,16 @@
                                    </div>
                                    </div>
                                  
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                              <label>Attachment</label>
+                                               <input type="file"  class="form-control"  required data-validation-required-message="This Currency Name field is required">
+                                            </div>
+                                           </div>
+                                    </div>
                                 </div>
 
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
@@ -461,7 +483,7 @@
                         <div class="card-content">
                               <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table class="table border-secondary table-striped dataex-html5-selectors">
+                                    <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
                                         <thead>
                                             <tr>
                                               <td>Sr. No.</td>
@@ -582,33 +604,58 @@
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
     <script src="../../Content/app-assets/js/custom-js.js"></script>
     <!-- BEGIN Vendor JS-->
-
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
+    
+    
     <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
     <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
     <!-- END: Page Vendor JS-->
-
+    
     <!-- BEGIN: Theme JS-->
     <script src="../../Content/app-assets/js/core/app-menu.js"></script>
     <script src="../../Content/app-assets/js/core/app.js"></script>
     <script src="../../Content/app-assets/js/scripts/components.js"></script>
     <!-- END: Theme JS-->
-
+    
     <!-- BEGIN: Page JS-->
-    <script src="../../Content/app-assets/js/scripts/datatables/datatable.js"></script>
+    
     <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-
+    
+    <!-- END: Page JS-->
+    
+    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+    <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
+    <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    
+    <script>
+        $(function () {
+        $("#example1").DataTable({
+          "responsive": true, "lengthChange": false, "autoWidth": true,
+          
+          
+          "buttons": ["excel","print", "copy","pdf","colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        
+        });
+        </script>
+    
+    <script>
+        window.onload = function () {
+            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("leave").className = 'active';
+        }
+    </script>
     <!-- END: Page JS-->
 <script>
     $('#test').pickadate({

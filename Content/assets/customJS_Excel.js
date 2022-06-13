@@ -1,39 +1,35 @@
   
-  $("#btnExport").click(function () {
-    
-    var tempTable = $("#testExportId").html();
+  $(".btnExport,.btnMonth,.btnDOJ").click(function () {
+    var $this = $(this);
+    var tempTable = $("tab-pane .active").find("table").html();
+    if($this.hasClass('btnExport'))
+    {
+     
+       $("#testExportId .excludeExport").remove();
+       tableToExcel("testExportId", "Sheet", "CurrentMonthBirthday");
+      
+       $("#testExportId").html(tempTable);
 
-    $("#testExportId .excludeExport").remove();
-    tableToExcel("testExportId", "Sheet", "CurrentBirthdayMonth");
+    }
+    if($this.hasClass('btnMonth'))
+    {
+      $("#month_leave .excludeExport").remove();
+      tableToExcel("month_leave", "Sheet", "CurrentMonthLeave");
 
-    $("#testExportId").html(tempTable);
-    
-    
-  }); 
+      $("#month_leave").html(tempTable);
+    }
+    if($this.hasClass('btnDOJ'))
+    {
+      $("#current_month_doj .excludeExport").remove();
+      tableToExcel("current_month_doj", "Sheet", "CurrentMonthJoining");
+  
+       $("#current_month_doj").html(tempTable);
 
-  $("#ExportLeave").click(function () {
+    }
     
-    var tempTable = $("#MonthLeave").html();
+    
+}); 
 
-    $("#MonthLeave .excludeExport").remove();
-    tableToExcel("MonthLeave", "Sheet", "CurrentMonthLeave");
-
-    $("#MonthLeave").html(tempTable);
-    
-    
-  }); 
-
-  $("#btnDOJ").click(function () {
-    
-    var tempTable = $("#current_month_doj").html();
-
-    $("#current_month_doj .excludeExport").remove();
-    tableToExcel("current_month_doj", "Sheet", "CurrentMonthJoining");
-
-    $("#current_month_doj").html(tempTable);
-    
-    
-  }); 
   
 
   
@@ -64,5 +60,8 @@
     element.click();
     document.body.removeChild(element);
 
+    
+
     $("tbody > tr[data-level='0']").hide();
 }
+
