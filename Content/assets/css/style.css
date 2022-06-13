@@ -279,7 +279,60 @@ i.fa.fa-users.mr-25 {
 
 /* end*/ 
 
-/* .card-body .detail {
+/*13/06/022 pooja(For img upload part)*/
+
+.avatar-wrapper{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  /* box-shadow: 1px 1px 15px -5px black; */
+  transition: all .3s ease;
+  }
+    .avatar-wrapper1{
+  position: relative;
+  height: 100px;
+  width: 200px;
+  margin: 0;
+    padding-left: 2%;
+    margin-top: 8.5%;
+  border-radius: 0;
+  overflow: hidden;
+  /* box-shadow: 1px 1px 15px -5px black; */
+  transition: all .3s ease;
+  }
+    
+  .profile-pic {
+        height: 100%;
+    width: 100%;
+    transition: all .3s ease;
+  
+  }
+  .upload-button {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    }
+     .profile-pic1 {
+        height: 100%;
+    width: 100%;
+    transition: all .3s ease;
+  
+  }
+  .upload-button1 {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+         
+  }
+  /* end  */
+
+
+  /* .card-body .detail {
   height: 40vh;
 } */
 

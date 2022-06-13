@@ -419,7 +419,7 @@
 
                                         <div class="row mb-2">
 
-                                            <div class="col-lg-2 mt-50">
+                                            <!-- <div class="col-lg-2 mt-50">
                                                 <a class=" my-25" href="#" for="UserImage">
                                                     <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="150" width="160">
                                                 </a>
@@ -431,6 +431,24 @@
                                                 <a class="mr-2 my-25" href="#">
                                                     <img src="../../Content/app-assets/images/portrait/small/avatar-s-19.jpg" class="users-avatar-shadow rounded" height="80" width="180">
                                                 </a>
+                                            </div> -->
+
+                                            <div class="avatar-wrapper">
+                                                <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="profile-pic" height="150" width="160">
+                                                <div class="upload-button">
+                                                 <!-- <i class="fa-arrow-up" aria-hidden="true"></i>  -->
+                                                </div>
+                                                <input class="file-upload" type="file" accept="image/*"/>
+                                            </div>
+
+                                            <div class="avatar-wrapper1">
+                                                <!-- <a class="mr-2 my-25" href="#"> -->
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-19.jpg" class="profile-pic1" height="80" width="180">
+                                                <!-- </a>                                               -->
+                                                  <div class="upload-button1">
+                                                 <!-- <i class="fa-arrow-up" aria-hidden="true"></i>  -->
+                                                </div>
+                                                <input class="file-upload1" type="file" accept="image/*"/>
                                             </div>
                                         </div>
                                         <form novalidate>
@@ -1748,6 +1766,58 @@
             document.getElementById("createemp").className = 'active';
         }
     </script>
+
+    
+        <script type="text/javascript">
+ $(document).ready(function() {
+	
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.profile-pic').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+   
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+    
+    $(".upload-button").on('click', function() {
+       $(".file-upload").click();
+    });
+});
+
+</script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+       
+       var readURL = function(input) {
+           if (input.files && input.files[0]) {
+               var reader = new FileReader();
+   
+               reader.onload = function (e) {
+                   $('.profile-pic1').attr('src', e.target.result);
+               }
+       
+               reader.readAsDataURL(input.files[0]);
+           }
+       }
+      
+       $(".file-upload1").on('change', function(){
+           readURL(this);
+       });
+       
+       $(".upload-button1").on('click', function() {
+          $(".file-upload1").click();
+       });
+   });
+   </script> 
+    
 
 
 </body>
