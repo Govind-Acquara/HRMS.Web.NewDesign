@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Holiday List Master</title>
+    <title>Employee WHF Master</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -40,6 +40,7 @@
  
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
  
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
@@ -198,7 +199,7 @@
             <li class=" nav-item" id="attendance">
                 <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
-                    <li id="holiday_list">
+                    <li>
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
                     <li>
@@ -219,8 +220,8 @@
                     <li>
                         <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
                     </li>
-                    <li>
-                        <a href="../Attendance/EmployeeWFH_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Work from Home </span></a>
+                    <li id="wfh">
+                        <a href="../Attendance/EmployeeWFH_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Work From Home</span></a>
                     </li>
                 </ul>
             </li>
@@ -287,7 +288,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Holiday Master</h2>
+                            <h2 class="content-header-title float-left mb-0">WFH Master</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="../Dashboard/Index.html">Dashboard</a>
@@ -306,7 +307,7 @@
                 
                     <div class="card">
                         <div class="card-header pb-1">
-                            <h5 class="card-basic">Add Holiday</h5>
+                            <h5 class="card-basic">Add WFH</h5>
                             <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
                             <div class="heading-elements">
                                 <ul class="list-inline mb-0">
@@ -317,38 +318,91 @@
                         <div class="card-content collapse show">
                             <div class="card-body pt-0 pb-0">
                                 <form class="form-horizontal" novalidate>
-                                    <div class="row">
-                                        <div class="col-12 col-sm-4 col-lg-4">
-                                            <div class="form-group">
-                                             <div class="controls">
-                                             <label>Holiday Id</label>
-                                             <input type="text"  class="form-control"  placeholder="Holiday Id" required data-validation-required-message="This Currency Name field is required">
-                                        </div>
-                                         </div>
-                                        </div>
-
-                                        <div class="col-12 col-sm-4 col-lg-4">
-                                            <div class="form-group">
-                                                <div class="controls">
-                                            <label>Holiday Date</label>
-                                            <input type="text" class="form-control birthdate-picker" required placeholder="Holiday Date" data-validation-required-message="This birthdate field is required">
-                                        </div>
-                                        </div>
-                                        </div>
-
-                                        <div class="col-12 col-sm-4 col-lg-4">
-                                            <div class="form-group">
-                                                <div class="controls">
-                                            <label>Holiday Name</label>
-                                            <input type="text"  class="form-control"  placeholder="Holiday Name" required data-validation-required-message="This Currency Symbol field is required">
-                                        </div>
-                                        </div>
-                                        </div>
-
-                                       
-                                   </div>
                                   
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-6">
+                                         <div class="form-group">
+                                           <div class="controls">
+                                            <label>Department</label>
+                                            <fieldset class="form-group">
+                                                <select class="form-control" id="users-list-status">
+                                                    
+                                                    <option value="Active">IT</option>
+                                                    <option value="Blocked">HR</option>
+                                                    <option value="deactivated">Accounts</option>
+                                                    <option value="Active">Sales</option>
+                                                   
+                                                </select>
+                                            </fieldset>         
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label>Employee Name</label>
+                                                <select class="select2 form-control" id="default-select" multiple="multiple">
+                                                 
+                                                     <option value="Active">Abhay</option>
+                                                     <option value="Blocked">Bhumi</option>
+                                                     <option value="deactivated">rahul</option>
+                                                     <option value="Active">Diksha</option>
+                                                     <option value="Blocked">yash</option>
+                                                     <option value="deactivated">pooja</option>
+                                                     <option value="deactivated">somya</option>
+                                                     <option value="Blocked">yash</option>
+                                                     <option value="deactivated">pooja</option>
+                                                     <option value="deactivated">somya</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                     </div>    
+
+                                   <div class="row justify-content-between">
+                                        <div class="col-12 col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                            <label>Week Days</label>
+                                            <fieldset class="form-group">
+                                                <select class="select2 form-control"  id="my-select" multiple="multiple">
+                                                    <option value="">Select Week Days</option>
+                                                    <option value="All"> All </option>
+                                                    <option value="Active">Monday</option>
+                                                    <option value="Blocked">Tuesday</option>
+                                                    <option value="deactivated">Wednesday</option>
+                                                    <option value="Active">Thusday</option>
+                                                    <option value="Blocked">Friday</option>
+                                                    <option value="deactivated">Saturday</option>
+                                                    <option value="deactivated">Sunday</option>
+                                                </select>
+                                            </fieldset>         
+                                        </div>
+                                        </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Date</label>
+                                                    <input type="text" id="test" class="form-control birthdate-picker">
+                                                </div>
+                                            </div>
+                                         </div>
+
+                                        </div>
                                     
+                                        <div class="row">
+                                             <div class="col-12 col-sm-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Remark</label>
+                                                        <input type="text"  class="form-control"  placeholder="Remark" required data-validation-required-message="This Currency Name field is required">
+                                                    </div>
+                                                </div>
+                                             </div>
+                                         </div>    
+
+                                     
+
                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
                                         <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Submit</button>
                                         <button type="reset" class="btn btn-outline-dark mb-1 mt-0.5">Reset</button>
@@ -362,149 +416,125 @@
                         <div class="card-content">
                               <div class="card-body card-dashboard">
 
-                                  <div class="table-responsive">
-                                     <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
-                                          <thead>
-                                              <tr>
-                                               
-                                                    <th>Holiday Id</th>
-                                                    <th>Holiday Date</th>
-                                                    <th>Holiday Name</th>
-                                                    <th>IsActive</th>
-                                                    <th>Action</th>
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                            <tr>
-                                                <td>01</td>
-                                                <td>01/01/22</td>
-                                                <td>Holi</td>
-                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                                    
-                                                    <label class="custom-control-label" for="customSwitch1">
-                                                    
-                                                    <span class="switch-text-left">Active</span>
-                                                    
-                                                    <span class="switch-text-right">InActive</span>
-                                                    
-                                                    </label>
-                                                    
-                                                    </div></td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>02</td>
-                                               
-                                                <td>01/01/22</td>
-                                                <td>Holi</td>
-                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                                    
-                                                    <label class="custom-control-label" for="customSwitch2">
-                                                    
-                                                    <span class="switch-text-left">Active</span>
-                                                    
-                                                    <span class="switch-text-right">InActive</span>
-                                                    
-                                                    </label>
-                                                    
-                                                    </div></td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>03</td>
-                                                <td>01/01/22</td>
-                                                <td>Holi</td>
-                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                                                    
-                                                    <label class="custom-control-label" for="customSwitch3">
-                                                    
-                                                    <span class="switch-text-left">Active</span>
-                                                    
-                                                    <span class="switch-text-right">InActive</span>
-                                                    
-                                                    </label>
-                                                    
-                                                    </div></td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>04</td>
-                                               
-                                                <td>01/01/22</td>
-                                                <td>Holi</td>
-                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                                    
-                                                    <label class="custom-control-label" for="customSwitch4">
-                                                    
-                                                    <span class="switch-text-left">Active</span>
-                                                    
-                                                    <span class="switch-text-right">InActive</span>
-                                                    
-                                                    </label>
-                                                    
-                                                    </div></td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-\                                                <td>05</td>
-                                               
-                                                <td>01/01/22</td>
-                                                <td>Holi</td>
-                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch5">
-                                                    
-                                                    <label class="custom-control-label" for="customSwitch5">
-                                                    
-                                                    <span class="switch-text-left">Active</span>
-                                                    
-                                                    <span class="switch-text-right">InActive</span>
-                                                    
-                                                    </label>
-                                                    
-                                                    </div></td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                         
-                                        </tbody>
-                                      </table>
-                                  </div>
+                                <div class="table-responsive">
+                                    <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                         <thead>
+                                           <tr>
+                                                   <th>SrNo.</th>
+                                                   <th>Department</th>
+                                                   <th>Employee Name</th>
+                                                   <th>Week Days</th>
+                                                   <th>Date</th>
+                                                   <th>IsActive</th>
+                                                   <th>Action</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                               <td>1</td>
+                                               <td>IT</td>
+                                               <td>Pooja</td>
+                                               <td>Monday</td>
+                                               <td>01/01/22</td>
+                                                   <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                               
+                                                       <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                       
+                                                       <label class="custom-control-label" for="customSwitch3">
+                                                       
+                                                       <span class="switch-text-left">Active</span>
+                                                       
+                                                       <span class="switch-text-right">InActive</span>
+                                                       
+                                                       </label>
+                                                       
+                                                       </div></td>
+                                                      
+                                               <td >
+                                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                               </td>
+                                           </tr>
+
+                                           <tr>
+                                               <td>2</td>
+                                               <td>IT</td>
+                                               <td>Somya</td>
+                                               <td>Tuesday</td>
+                                               <td>01/01/22</td>
+                                               <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                       <input type="checkbox" class="custom-control-input" id="customSwitch6">
+                                                       <label class="custom-control-label" for="customSwitch6">
+                                                       <span class="switch-text-left">Active</span>
+                                                       <span class="switch-text-right">InActive</span>
+                                                       </label>
+                                                       </div></td>
+                                               <td>
+                                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                               </td>
+                                           </tr>
+
+                                           <tr>
+                                               <td>3</td>
+                                               <td>IT</td>
+                                               <td>Yash</td>
+                                               <td>Wednesday</td>
+                                               <td>01/01/22</td>
+                                                   <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                               
+                                                       <input type="checkbox" class="custom-control-input" id="customSwitch9">
+                                                       
+                                                       <label class="custom-control-label" for="customSwitch9">
+                                                       
+                                                       <span class="switch-text-left">Active</span>
+                                                       
+                                                       <span class="switch-text-right">InActive</span>
+                                                       
+                                                       </label>
+                                                       
+                                                       </div></td>
+                                                       
+                                               <td >
+                                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                               </td>
+                                           </tr>
+
+                                           <tr>
+                                               <td>4</td>
+                                               <td>IT</td>
+                                               <td>Nvya</td>
+                                               <td>Friday</td>
+                                               <td>01/01/22</td>
+                                                   <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                               
+                                                       <input type="checkbox" class="custom-control-input" id="customSwitch12">
+                                                       
+                                                       <label class="custom-control-label" for="customSwitch12">
+                                                       
+                                                       <span class="switch-text-left">Active</span>
+                                                       
+                                                       <span class="switch-text-right">InActive</span>
+                                                       
+                                                       </label>
+                                                       
+                                                       </div></td>
+                                                       
+                                               <td >
+                                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                               </td>
+                                           </tr>
+
+                                        
+                                       </tbody>
+                                     </table>
+                                 </div>
                               </div>
                           </div>
                     </div>
-                   
-              
-
-           
                 
-                   
-                           
-                 
-
-
             </div>
            
         </div>
@@ -561,6 +591,24 @@
 <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
 <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
+<script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+<script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+
+
+<script>
+    $("#my-select").select2();
+
+$("#my-select").on('change', function(){
+    var selected = $(this).val();
+
+    if(selected != null)
+    {
+      if(selected.indexOf('All')>=0){
+          $(this).val('All').select2();
+      }
+    }
+})
+</script>
 <script>
     $(function () {
     $("#example1").DataTable({
@@ -571,15 +619,22 @@
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     
     });
+    
     </script>
 
 <script>
+    $('#test').pickadate({
+  weekdaysShort: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+  showMonthsShort: true,
+  showWeekendsHeighlighted:true
+});
+</script>
+<script>
     window.onload = function () {
         document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-        document.getElementById("holiday_list").className = 'active';
+        document.getElementById("wfh").className = 'active';
     }
 </script>
-
 </body>
 <!-- END: Body-->
 
