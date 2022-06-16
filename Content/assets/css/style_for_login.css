@@ -1,0 +1,102 @@
+a:hover {
+	text-decoration: none;
+  color: #ffffff;
+}
+
+.focus-input100 {
+    
+    color: #7367f0;
+  }
+
+  .input100:focus + .focus-input100 + .symbol-input100 {
+    color: #7367f0;
+    
+  }
+
+  .login100-form-btn {
+    
+    background: #7367f0;
+    
+  }
+
+body{
+    background-image: url('../../app-assets/images/pages/hrms-portal_new.jpg');
+    background-size:cover;
+    
+}
+
+.wrap-login100{
+
+
+
+  background: #c8c8c8;
+  
+  background: -webkit-linear-gradient(326deg, #3f494d, #c8c8c8);
+  
+  background: -o-linear-gradient(326deg, #3f494d, #c8c8c8);
+  
+  background: -moz-linear-gradient(326deg, #3f494d, #c8c8c8);
+  
+  background: linear-gradient(326deg, #3f494d, #c8c8c8);
+  
+  }
+
+.txt2{
+    color:white;
+}
+
+.txt1
+{
+    color: white;
+}
+
+h3{
+  color: black;
+  margin-top:-50px;
+}
+
+img.js-tilt {
+  margin-top: 50px;
+}
+
+.input100
+{
+  border-radius: 5px;
+}
+button.login100-form-btn {
+  border-radius: 5px;
+}
+
+
+
+a.txt2:hover {
+  color: black;
+}
+.login10-form-btn {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+
+  
+  height: 50px;
+  border-radius: 25px;
+  background: #7367f0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+div#OTPInput {
+  justify-content: space-around;
+}
