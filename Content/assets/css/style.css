@@ -331,6 +331,12 @@ i.fa.fa-users.mr-25 {
   }
   /* end  */
 
+  /* Pooja 16/06/22 create employee */
+  .my_class1 {
+    padding-left: 2rem !important;
+}
+ /* end */ 
+
 
   /* .card-body .detail {
   height: 40vh;
