@@ -69,7 +69,7 @@
 
                         <ul class="nav">
                             <li>
-                                <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
+                                <select class="form-control d-sm-none" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
                                     <option value="">Select Location</option>
                                     <option value="Active">Gurgaon</option>
                                     <option value="Blocked">Mumbai</option>
@@ -234,6 +234,10 @@
                             <a href="../Attendance/Report.html"><i class="fa fa-bar-chart"></i><span class="menu-item" data-i18n="View">Reports </span></a>
                         </li>
                     </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="../Leave/LeaveManagement_Dashboard.html"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                    
                 </li>
                 <li class=" nav-item">
                     <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
@@ -466,11 +470,14 @@
 
                                         <div class="row mb-2">
 
-                                            <!-- <div class="col-lg-2 mt-50">
-                                                <a class=" my-25" href="#" for="UserImage">
-                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="150" width="160">
-                                                </a>
-                                                <input type="file" id="UserImage" hidden>
+                                            <div class="col-lg-2 mt-50">
+                                                <label for="UserImage">
+                                                    <div class=" my-25">
+                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="150" width="160">
+                                                    </div>
+                                                    <input type="file" id="UserImage" hidden>
+                                                </label>
+
                                             </div>
 
                                             
@@ -478,25 +485,25 @@
                                                 <a class="mr-2 my-25" href="#">
                                                     <img src="../../Content/app-assets/images/portrait/small/avatar-s-19.jpg" class="users-avatar-shadow rounded" height="80" width="180">
                                                 </a>
-                                            </div> -->
+                                            </div>
 
-                                            <div class="avatar-wrapper">
+                                             <!-- <div class="avatar-wrapper">
                                                 <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="profile-pic" height="150" width="160">
                                                 <div class="upload-button">
-                                                 <!-- <i class="fa-arrow-up" aria-hidden="true"></i>  -->
+                                                 <i class="fa-arrow-up" aria-hidden="true"></i> 
                                                 </div>
                                                 <input class="file-upload" type="file" accept="image/*"/>
                                             </div>
 
                                             <div class="avatar-wrapper1">
-                                                <!-- <a class="mr-2 my-25" href="#"> -->
+                                                <a class="mr-2 my-25" href="#">
                                                     <img src="../../Content/app-assets/images/portrait/small/avatar-s-19.jpg" class="profile-pic1" height="80" width="180">
-                                                <!-- </a>                                               -->
+                                                </a>                                              
                                                   <div class="upload-button1">
-                                                 <!-- <i class="fa-arrow-up" aria-hidden="true"></i>  -->
+                                                 <i class="fa-arrow-up" aria-hidden="true"></i> 
                                                 </div>
                                                 <input class="file-upload1" type="file" accept="image/*"/>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <form novalidate>
                                             <div class="row">
@@ -1795,6 +1802,10 @@
     <script src="../../Content/app-assets/js/scripts/navs/navs.js"></script>
     <!-- END: Page JS-->
 
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
+    
+
     <script>
         $(function () {
             $("#example1").DataTable({
@@ -1813,6 +1824,10 @@
             document.getElementById("createemp").className = 'active';
         }
     </script>
+    <script>
+        
+         $('#datepick').multiDatesPicker();
+        </script>
 
     
         <script type="text/javascript">
@@ -1868,6 +1883,6 @@
 
 
 </body>
-<!-- END: Body-->
+
 
 </html>
