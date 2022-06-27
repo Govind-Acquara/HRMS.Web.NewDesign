@@ -16,31 +16,32 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
      <!-- BEGIN: Vendor CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/fullcalendar.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/daygrid.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/timegrid.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-     <!-- END: Vendor CSS-->
- 
-     <!-- BEGIN: Theme CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
- 
-     <!-- BEGIN: Page CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/calendars/fullcalendar.css">
+       <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/fullcalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/daygrid.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/timegrid.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/calendars/fullcalendar.css">
+    <!-- END: Page CSS-->
+
      <!-- END: Page CSS-->
  
-      <!-- END: Page CSS-->
-  
-      <!-- BEGIN: Custom CSS-->
-      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+     <!-- BEGIN: Custom CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
      <!-- END: Custom CSS-->
 
 </head>
@@ -177,9 +178,6 @@
                     <li>
                         <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
                     </li>
-                    <li>
-                        <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
-                    </li>
                 </ul>
             </li>
             <li class=" nav-item">
@@ -202,7 +200,7 @@
                 </ul>
             </li>
             <li class=" nav-item" id="attendance">
-                <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+                <a href="../Attendance/AttendanceDashboard.html"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
                     <li>
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
@@ -210,7 +208,7 @@
                     <li>
                         <a href="../Attendance/LeaveTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type Master </span></a>
                     </li>
-                    <li id="weekly_off">
+                    <li>
                         <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
                     </li>
                     <li>
@@ -246,7 +244,6 @@
                     <li>
                         <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission </span></a>
                     </li>
-                    
                 </ul>
             </li>
             <li class=" nav-item">
@@ -289,99 +286,209 @@
     </div>
 </div>
 <!-- END: Main Menu-->
-<!-- BEGIN: Content-->
-    <section class="app-content content" id="column-selectors">
+
+         <!-- BEGIN: Content-->
+    <div class="app-content content">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-1">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Weekly Off Master</h2>
-                            <div class="breadcrumb-wrapper col-12">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="../Dashboard/Index.html">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Master
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
             <div class="content-body">
-                
-                
-                    <div class="card">
-                        
-                        <div class="card-content collapse show">
-                            <div class="card-body pt-0 pb-0">
-                                <div class="row">
-
-                                
-                                <div class="col-8">
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="cal-category-bullets d-none">
-                                                    <div class="bullets-group-1 mt-2">
-                                                        <div class="category-business mr-1">
-                                                            <span class="bullet bullet-success bullet-sm mr-25"></span>
-                                                            Business
-                                                        </div>
-                                                        <div class="category-work mr-1">
-                                                            <span class="bullet bullet-warning bullet-sm mr-25"></span>
-                                                            Work
-                                                        </div>
-                                                        <div class="category-personal mr-1">
-                                                            <span class="bullet bullet-danger bullet-sm mr-25"></span>
-                                                            Personal
-                                                        </div>
-                                                        <div class="category-others">
-                                                            <span class="bullet bullet-primary bullet-sm mr-25"></span>
-                                                            Others
-                                                        </div>
-                                                    </div>
+                <!-- Full calendar start -->
+                <section id="basic-examples">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex flex-column align-items-start pb-0">
+                                    <div class="avatar bg-rgba-primary p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-users text-primary font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-bold-700 mt-1">92.6k</h2>
+                                    <p class="mb-0">Subscribers Gained</p>
+                                </div>
+                                <div class="card-content">
+                                    <div id="line-area-chart-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex flex-column align-items-start pb-0">
+                                    <div class="avatar bg-rgba-success p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-credit-card text-success font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-bold-700 mt-1">97.5k</h2>
+                                    <p class="mb-0">Revenue Generated</p>
+                                </div>
+                                <div class="card-content">
+                                    <div id="line-area-chart-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex flex-column align-items-start pb-0">
+                                    <div class="avatar bg-rgba-danger p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-shopping-cart text-danger font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-bold-700 mt-1">36%</h2>
+                                    <p class="mb-0">Quarterly Sales</p>
+                                </div>
+                                <div class="card-content">
+                                    <div id="line-area-chart-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex flex-column align-items-start pb-0">
+                                    <div class="avatar bg-rgba-warning p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-package text-warning font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-bold-700 mt-1">97.5K</h2>
+                                    <p class="mb-0">Orders Received</p>
+                                </div>
+                                <div class="card-content">
+                                    <div id="line-area-chart-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="cal-category-bullets d-none">
+                                            <div class="bullets-group-1 mt-2">
+                                                <div class="category-business mr-1">
+                                                    <span class="bullet bullet-success bullet-sm mr-25"></span>
+                                                    Business
                                                 </div>
-                                                <div id='fc-default'></div>
+                                                <div class="category-work mr-1">
+                                                    <span class="bullet bullet-warning bullet-sm mr-25"></span>
+                                                    Work
+                                                </div>
+                                                <div class="category-personal mr-1">
+                                                    <span class="bullet bullet-danger bullet-sm mr-25"></span>
+                                                    Personal
+                                                </div>
+                                                <div class="category-others">
+                                                    <span class="bullet bullet-primary bullet-sm mr-25"></span>
+                                                    Others
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id='fc-default' class="my_calendar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                          
+                        </div>
+                        <div class="col-4">
+                            <div class="card" style="height:568px ;">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h4 class="mb-0">Goal Overview</h4>
+                                    <p class="font-medium-5 mb-0"><i class="feather icon-help-circle text-muted cursor-pointer"></i></p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body px-0 pb-0">
+                                        <div id="goal-overview-chart" class="mt-75"></div>
+                                        <div class="row text-center mx-0">
+                                            <div class="col-6 border-top border-right d-flex align-items-between flex-column py-1">
+                                                <p class="mb-50">Completed</p>
+                                                <p class="font-large-1 text-bold-700">786,617</p>
+                                            </div>
+                                            <div class="col-6 border-top d-flex align-items-between flex-column py-1">
+                                                <p class="mb-50">In Progress</p>
+                                                <p class="font-large-1 text-bold-700">13,561</p>
                                             </div>
                                         </div>
                                     </div>
-                                
-                                  
-                                </div>
-
-                                <div class="col-4 mt-2">
-                                    <h3 class="text-center">Weekly Off</h3>
-                                    <div class="row">
-                                        <div class="col-12" id="holiday" >
-                                            <label class="mt-2" style="font-size: 20px;" ></label>
-                                            
-
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 mt-2">
-                                          <label style="font-size: 20px;" id="holiday2"></label>
-                                          
-                                        </div>
-                                    </div>
-
-                                </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- calendar Modal starts-->
+                    <div class="modal fade text-left modal-calendar" tabindex="-1" role="dialog" aria-labelledby="cal-modal" aria-modal="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-text-bold-600" id="cal-modal">Add Event</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <form action="#">
+                                    <div class="modal-body">
+                                        <div class="d-flex justify-content-between align-items-center add-category">
+                                            <div class="chip-wrapper"></div>
+                                            <div class="label-icon pt-1 pb-2 dropdown calendar-dropdown">
+                                                <i class="feather icon-tag dropdown-toggle" id="cal-event-category" data-toggle="dropdown"></i>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cal-event-category">
+                                                    <span class="dropdown-item business" data-color="success">
+                                                        <span class="bullet bullet-success bullet-sm mr-25"></span>
+                                                        Business
+                                                    </span>
+                                                    <span class="dropdown-item work" data-color="warning">
+                                                        <span class="bullet bullet-warning bullet-sm mr-25"></span>
+                                                        Work
+                                                    </span>
+                                                    <span class="dropdown-item personal" data-color="danger">
+                                                        <span class="bullet bullet-danger bullet-sm mr-25"></span>
+                                                        Personal
+                                                    </span>
+                                                    <span class="dropdown-item others" data-color="primary">
+                                                        <span class="bullet bullet-primary bullet-sm mr-25"></span>
+                                                        Others
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <fieldset class="form-label-group">
+                                            <input type="text" class="form-control" id="cal-event-title" placeholder="Employee Name">
+                                            <label for="cal-event-title">Employee Name</label>
+                                        </fieldset>
+                                        <fieldset class="form-label-group">
+                                            <input type="text" class="form-control pickadate" id="cal-start-date" placeholder="Start Date">
+                                            <label for="cal-start-date">Start Date</label>
+                                        </fieldset>
+                                        <fieldset class="form-label-group">
+                                            <input type="text" class="form-control pickadate" id="cal-end-date" placeholder="End Date">
+                                            <label for="cal-end-date">End Date</label>
+                                        </fieldset>
+                                        <fieldset class="form-label-group">
+                                            <textarea class="form-control" id="cal-description" rows="5" placeholder="Description"></textarea>
+                                            <label for="cal-description">Description</label>
+                                        </fieldset>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary cal-add-event waves-effect waves-light" disabled>
+                                            Add Event</button>
+                                        <button type="button" class="btn btn-primary d-none cal-submit-event waves-effect waves-light" disabled>submit</button>
+                                        <button type="button" class="btn btn-flat-danger cancel-event waves-effect waves-light" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-flat-danger remove-event d-none waves-effect waves-light" data-dismiss="modal">Remove</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    
-                
+                    <!-- calendar Modal ends-->
+                </section>
+                <!-- // Full calendar end -->
+
             </div>
-           
         </div>
-    </section>
+    </div>
+    <!-- END: Content-->
     
     <!-- END: Content-->
 
@@ -419,25 +526,38 @@
 
 <!-- END: Page JS-->
 
+<!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+<script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+<script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
+<script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+<script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+<script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+<script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+<script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+<script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+<script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+<script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+<script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
 <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
 <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
 
 
  <!-- BEGIN: Page Vendor JS-->
-<!-- calendar JS  -->
+ <script src="../../Content/app-assets/vendors/js/extensions/moment.min.js"></script>
  <script src="../../Content/app-assets/vendors/js/calendar/fullcalendar.min.js"></script>
  <script src="../../Content/app-assets/vendors/js/calendar/extensions/daygrid.min.js"></script>
  <script src="../../Content/app-assets/vendors/js/calendar/extensions/timegrid.min.js"></script>
  <script src="../../Content/app-assets/vendors/js/calendar/extensions/interactions.min.js"></script>
- <script src="../../Content/app-assets/js/scripts/extensions/fullcalendar.js"></script>
- 
+ <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+ <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
  <!-- END: Page Vendor JS-->
 
+<script src="../../Content/app-assets/js/scripts/extensions/fullcalendar.js"></script>
 
 
-
-<!-- END: Page Vendor JS-->
+<script src="../../Content/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+<script src="../../Content/app-assets/vendors/js/charts/apexcharts.min.js"></script>
 
 
 
@@ -464,50 +584,12 @@
 <script>
     window.onload = function () {
         document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-        document.getElementById("weekly_off").className = 'active';
+        
     }
 
-   
-
-</script>
-<script>
-   $(document).ready(function() {
-    $('.fc-day').click(
-    function(){
-        var data=$(this).attr('data-date');
-        var dt = data.split('-');
-       
-        var element1  = document.querySelector("[data-date=" + CSS.escape(data) + "]");
-        element1.style.backgroundColor="#ffaabb";
-    var
-    year = parseInt(dt[0], 10),
-    month = parseInt(dt[1], 10) , 
-    day = parseInt(dt[2], 10),
-    date = new Date(year, month -1 , day);
-    var day =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    //var list = document.getElementById("holiday");
-
-    document.getElementById("holiday").innerHTML=day[date.getDay()];
-
-    // const element =document.querySelector("[data-date=" + CSS.escape(data) + "]");
-    // element.addEventListener("click",addHoliday);
-
-    // function addHoliday(){
-    //     var newLi = document.createElement("li");
-    //     var el = document.getElementById("holiday");
-    //     el.appendChild(newLi);
-    //     newLi.innerHTML = day[date.getDay()];
-    // }
     
-
-});
-   });
-
-
-
-
-
 </script>
+
 </body>
 <!-- END: Body-->
 

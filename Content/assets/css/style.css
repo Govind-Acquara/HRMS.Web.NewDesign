@@ -171,7 +171,9 @@ a.fa.fa-eye.pl-2 {
   cursor: default;
   user-select: none;
 }
-
+.users-avatar-shadow{
+  cursor: pointer;
+}
 .tag-danger {
   background: #4c494a;
 }
@@ -340,15 +342,149 @@ i.fa.fa-users.mr-25 {
 }
  /* end */ 
 
+ /* css for calendar on attendance dashboard */
+ .fc-scroller.fc-day-grid-container {
+  height: 400px !important;
+}
 
-  /* .card-body .detail {
-  height: 40vh;
-} */
+/* attendence page css 17/06/2022(pooja) */
 
-/* div.dataTables_wrapper div.dataTables_filter input {
+.my_Class {
+  padding: 2px 2px !important;
+  border-radius: 4px;
+  min-width: 27px;
+  text-align: center;
+  margin-bottom: 2px;
+
+}
+.mytop_Class {
+  padding: 5px 5px !important;
+  border-radius: 5px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.tblClass{
+padding: 2px 2px !important;
+min-width: 27px;
+text-align: center;
+margin-bottom: 2px;
+}
+
+.popup {
+position: relative;
+display: inline-block;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+visibility: hidden;
+width: 160px;
+background-color: #555;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 8px 0;
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+visibility: visible;
+-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s;
+}
+
+
+
+@media print{@page {size: landscape}
+
+}
+
+
+/* end 17 june 2022 */
+
+
+/* for Leave dashboard Yash 27-06-22 */
+
+/* Start */
+  .info-box {
+    display: block;
+    min-height: 90px;
+    background: #fff;
     width: 100%;
-} */
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    border-radius: 1rem;
+    margin-bottom: 15px;
+}
 
-/* div.dataTables_wrapper div.dataTables_filter label {
-    float: left;
-} */
+
+.info-box-content {
+    padding: 5px 10px;
+   
+}
+
+
+
+ .progress {
+    background: rgba(0,0,0,0.2);
+    margin: 5px -10px 5px -10px;
+    height: 2px;
+}
+.info-box-text {
+    font-weight: 700;
+}
+.small-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color:#3b3d55;
+    display: block;
+    z-index: 10;
+   
+    text-decoration: none;
+}
+
+.leave-page
+{
+    position: relative;
+    width: 100%;
+    
+    padding-left: 14px;
+    padding-right: 0px;
+}
+.my-progress-bar{
+    background-color: #808080;
+}
+
+/* end  */
+ /* leave dashboard Yash 27-06 */ 
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+
+}

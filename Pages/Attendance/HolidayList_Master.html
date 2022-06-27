@@ -43,6 +43,8 @@
  
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+     <!--css for color picker -->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.2.0/css/bootstrap-colorpicker.min.css"/>
      <!-- END: Custom CSS-->
 
 </head>
@@ -236,6 +238,10 @@
                 </ul>
             </li>
             <li class=" nav-item">
+                <a href="../Leave/LeaveManagement_Dashboard.html"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                
+            </li>
+            <li class=" nav-item">
                 <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
                 <ul class="menu-content">
                     <li>
@@ -329,7 +335,7 @@
                             <div class="card-body pt-0 pb-0">
                                 <form class="form-horizontal" novalidate>
                                     <div class="row">
-                                        <div class="col-12 col-sm-4 col-lg-4">
+                                        <div hidden class="col-12 col-sm-4 col-lg-4">
                                             <div class="form-group">
                                              <div class="controls">
                                              <label>Holiday Id</label>
@@ -338,7 +344,7 @@
                                          </div>
                                         </div>
 
-                                        <div class="col-12 col-sm-4 col-lg-4">
+                                        <div class="col-12 col-sm-4 col-lg-6">
                                             <div class="form-group">
                                                 <div class="controls">
                                             <label>Holiday Date</label>
@@ -347,20 +353,76 @@
                                         </div>
                                         </div>
 
-                                        <div class="col-12 col-sm-4 col-lg-4">
+                                        <div class="col-12 col-sm-4 col-lg-6">
                                             <div class="form-group">
                                                 <div class="controls">
                                             <label>Holiday Name</label>
-                                            <input type="text"  class="form-control"  placeholder="Holiday Name" required data-validation-required-message="This Currency Symbol field is required">
+                                            <input type="text"  class="form-control"  placeholder="Holiday Name" required>
                                         </div>
                                         </div>
                                         </div>
 
                                        
                                    </div>
+                                   <div class="row">
+                                    <div class="col-12 col-sm-4 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                        <label>ShortName</label>
+                                        <input type="text" class="form-control" required">
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-4 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                        <label>Remark</label>
+                                        <input type="text"  class="form-control"  placeholder="Remark" required>
+                                    </div>
+                                    </div>
+                                    </div>
+
+
+                                   </div>
+
+                                   <div class="row">
+                                    <div class="col-12 col-sm-4 col-lg-2">
+                                        <div class="form-group">
+                                        <div class="controls">
+                                        <label>Background Color</label>
+                                                                             
+                                        <input type="text" class="form-control background-change" id="background" required disabled>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-4 col-lg-2">
+                                        <div class="form-group">
+                                        <div class="controls">
+                                        <label>Font Color</label>
+                                                                             
+                                        <input type="text" class="form-control background-change" id="font" required disabled>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-sm-4 col-12 mt-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck2" onclick="change_status(this)">
+                                            <label class="custom-control-label" for="customCheck2"></label>
+                                        </div>
+                                        
+                                    </div>
+
+
+                                   </div>
+
+
                                   
                                     
                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                        
                                         <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Submit</button>
                                         <button type="reset" class="btn btn-outline-dark mb-1 mt-0.5">Reset</button>
                                     </div>
@@ -372,8 +434,7 @@
                     <div class="card">
                         <div class="card-content">
                               <div class="card-body card-dashboard">
-
-                                  <div class="table-responsive">
+                                 <div class="table-responsive">
                                      <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
                                           <thead>
                                               <tr>
@@ -477,7 +538,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-\                                                <td>05</td>
+                                                <td>05</td>
                                                
                                                 <td>01/01/22</td>
                                                 <td>Holi</td>
@@ -572,6 +633,9 @@
 <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
 <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
+<!-- for color picker by Yash  -->
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.2.0/js/bootstrap-colorpicker.min.js" > </script>
+
 <script>
     $(function () {
     $("#example1").DataTable({
@@ -591,7 +655,29 @@
     }
 </script>
 
+
+<script>
+    $(function () {
+    $('.background-change').colorpicker({
+    
+    });
+    $('.background-change').on('colorpickerChange');
+    });
+    </script>
+    <script>
+        function change_status(status)
+        {
+           
+            var txt = document.getElementById("background");
+            var txt2 = document.getElementById("font");
+            txt.disabled=status.checked?false:true;
+            txt2.disabled=status.checked?false:true;
+
+
+        }
+    </script>
 </body>
+
 <!-- END: Body-->
 
 </html>
