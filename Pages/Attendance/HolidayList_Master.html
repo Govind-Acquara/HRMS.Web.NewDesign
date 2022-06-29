@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Holiday List Master</title>
+    <title>Leave Apply</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -32,8 +32,6 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
-     <!-- for right side penal (pooja) -->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/data-list-view.css">
  
      <!-- BEGIN: Page CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
@@ -45,9 +43,7 @@
  
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
-     <!--css for color picker -->
-    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.2.0/css/bootstrap-colorpicker.min.css"/>
-     <!-- END: Custom CSS-->
+    <!-- END: Custom CSS-->
 
 </head>
 <!-- END: Head-->
@@ -56,20 +52,25 @@
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
 
-<!-- BEGIN: Header-->
-<nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+    <div class="overlay-bg"></div>
+
+   <!-- BEGIN: Header-->
+ <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
     <div class="navbar-wrapper">
         <div class="navbar-container content">
             <div class="navbar-collapse" id="navbar-mobile">
                 <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item mobile-menu  mr-auto">
-                            <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
-                                <i class="ficon feather icon-menu"></i>
-                            </a>
+                        <li class="nav-item mobile-menu  mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item nav-toggle">
+                            <!-- <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
+                                <i class=" d-block d-xl-none font-medium-4 primary "></i>
+                                <i class="  font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i>
+                            </a> -->
                         </li>
                     </ul>
-                    
                     <ul class="nav">
                         <li>
                             <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
@@ -124,8 +125,91 @@
             <h6 class="text-primary mb-0">Files</h6>
         </a>
     </li>
-    
-    
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/xls.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;17kb</small>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/jpg.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;11kb</small>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/pdf.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;150kb</small>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/doc.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;256kb</small>
+        </a>
+    </li>
+    <li class="d-flex align-items-center">
+        <a class="pb-25" href="#">
+            <h6 class="text-primary mb-0">Members</h6>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
+                </div>
+            </div>
+        </a>
+    </li>
 </ul>
 <ul class="main-search-list-defaultlist-other-list d-none">
     <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
@@ -169,7 +253,7 @@
                         <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
                     </li>
                     <li>
-                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
+                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Deparment Master</span></a>
                     </li>
                     <li>
                         <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
@@ -186,7 +270,6 @@
                     <li>
                         <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
                     </li>
-                   
                 </ul>
             </li>
             <li class=" nav-item">
@@ -214,7 +297,7 @@
                     <li>
                         <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
                     </li>
-                    <li id="holiday_list">
+                    <li id="holiday_master">
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
                     <li>
@@ -238,30 +321,30 @@
                     <li>
                         <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports </span></a>
                     </li>
-                    
-
+                   
                 </ul>
             </li>
             <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                 <ul class="menu-content">
-                    <li>
-                        <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                    
+                        <li>
+                            <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
                             
-                    </li>
+                         </li>
                    
                     <li>
                         <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Master </span></a>
                         
-                    </li>
-                    <li>
+                     </li>
+                     <li>
                         <a href="../Leave/LeaveApply.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Apply </span></a>
                         
-                    </li>
-                    <li>
-                        <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
+                     </li>
+                     <li>
+                         <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
                          
-                    </li>
+                      </li>
                 </ul>
                 
             </li>
@@ -288,12 +371,6 @@
                     <li>
                         <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
                     </li>
-                    <li>
-                        <a href="../Company/HRMS_BranchDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Branch</span></a>
-                    </li>
-                    <li>
-                        <a href="../Company/HRMS_BranchDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Branch List</span></a>
-                    </li>
                 </ul>
             </li>
            <li class=" nav-item">
@@ -317,287 +394,248 @@
             </li>
         </ul>
     </div>
-</div>
-<!-- END: Main Menu-->
-<div class="app-content content">
-    <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
-    <div class="content-wrapper">
-        <div class="content-header row">
-            <div class="content-header-left col-md-9 col-12 mb-2">
-                <div class="row breadcrumbs-top">
-                    <div class="col-12">
-                        <h2 class="content-header-title float-left mb-0">Holiday Master</h2>
-                        <div class="breadcrumb-wrapper col-12">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
-                                </li>
-                                <li class="breadcrumb-item active">Master
-                                </li>
-                            </ol>
+</div> 
+    <!-- END: Main Menu-->
+<!-- BEGIN: Content-->
+    <section class="app-content content" id="column-selectors">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-1">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Holiday Master</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Attendance
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="content-body">
+                
+
+                <div class="my-2 dt-buttons btn-group">
+                    <button id="sidebar-toggle" class="btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Holiday</button>
+                </div>
+                <div id="sidebar-content">
+
+                    <div class="CloseBTN">&times;</div>
+                    
+                    <div>
+                        <form id="sideform" class="sidebar-form">
+                            <h4 class="font-weight-bold mb-2">Add Holiday</h4>
+                            <div class="form-group">
+                                <label>Holiday Date</label>
+                                <input type="date" name="text" class="form-control">
+                            </div>
+    
+                            <div class="form-group">
+                                <label>Holiday Name</label>
+                                 <input type="text"  class="form-control"  placeholder="Holiday Name" required >
+                              </div>
+                              <div class="form-group">
+                                <label>Short Name</label>
+                                 <input type="text"  class="form-control"  placeholder="Short Name" required >
+                              </div>
+                              <div class="form-group">
+                                <label>Remark</label>
+                                 <input type="text"  class="form-control"  placeholder="Remark" required >
+                              </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                    <div class="controls">
+                                    <label>Background Color</label>
+                                    <input type="color" class="form-control" id="background" required disabled>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group">
+                                    <div class="controls">
+                                    <label>Font Color</label>
+                                                                         
+                                    <input type="color" class="form-control" id="font" required disabled>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-1 col-12 mt-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck2" onclick="change_status(this)">
+                                        <label class="custom-control-label" for="customCheck2"></label>
+                                    </div>
+                                 </div>
+                            </div>
+    
+                              <div class="d-flex my-2  justify-content-center ">
+                                <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
+                                <button type="reset" class="btn w-50 btn-outline-dark mb-1 mt-0.5">Reset</button>
+                            </div>
+    
+    
+                          </form> 
                     </div>
                 </div>
             </div>
+
+                    <div class="card">
+                        <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
+                        <div class="card-content">
+                              <div class="card-body card-dashboard">
+                                <div class="table-responsive">
+                                    <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                        <thead>
+                                            <tr>
+                                             
+                                                  <th>Sr. No.</th>
+                                                  <th>Holiday Date</th>
+                                                  <th>Holiday Name</th>
+                                                  <th>IsActive</th>
+                                                  <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                              <td>01</td>
+                                              <td>01/01/22</td>
+                                              <td>Holi</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch1">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>02</td>
+                                             
+                                              <td>01/01/22</td>
+                                              <td>Holi</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch2">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>03</td>
+                                              <td>01/01/22</td>
+                                              <td>Holi</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch3">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>04</td>
+                                             
+                                              <td>01/01/22</td>
+                                              <td>Holi</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch4">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>05</td>
+                                             
+                                              <td>01/01/22</td>
+                                              <td>Holi</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch5">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                       
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+
+                    
+                   
+              
+
+            </div>
            
         </div>
-        <div class="content-body">
-            <!-- Data list view starts -->
-            <section id="data-list-view" class="data-list-view-header">
-               
-             
-                <!-- DataTable starts -->
-            <div class="card">
-                <Span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></Span>
-                <div class="table-responsive">
-                    <table class="table border-secondary data-list-view">
-                         <thead>
-                             <tr>
-                              
-                                   <th>Holiday Id</th>
-                                   <th>Holiday Date</th>
-                                   <th>Holiday Name</th>
-                                   <th>IsActive</th>
-                                   <th>Action</th>
-                             </tr>
-                         </thead>
-                         <tbody>
-                           <tr>
-                               <td>01</td>
-                               <td>01/01/22</td>
-                               <td>Holi</td>
-                               <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-               
-                                   <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                   
-                                   <label class="custom-control-label" for="customSwitch1">
-                                   
-                                   <span class="switch-text-left">Active</span>
-                                   
-                                   <span class="switch-text-right">InActive</span>
-                                   
-                                   </label>
-                                   
-                                   </div></td>
-                               <td >
-                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                   
-                               </td>
-                           </tr>
-                           <tr>
-                               <td>02</td>
-                              
-                               <td>01/01/22</td>
-                               <td>Holi</td>
-                               <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-               
-                                   <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                   
-                                   <label class="custom-control-label" for="customSwitch2">
-                                   
-                                   <span class="switch-text-left">Active</span>
-                                   
-                                   <span class="switch-text-right">InActive</span>
-                                   
-                                   </label>
-                                   
-                                   </div></td>
-                               <td >
-                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                 
-                               </td>
-                           </tr>
-                           <tr>
-                               <td>03</td>
-                               <td>01/01/22</td>
-                               <td>Holi</td>
-                               <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-               
-                                   <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                                   
-                                   <label class="custom-control-label" for="customSwitch3">
-                                   
-                                   <span class="switch-text-left">Active</span>
-                                   
-                                   <span class="switch-text-right">InActive</span>
-                                   
-                                   </label>
-                                   
-                                   </div></td>
-                               <td >
-                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                  
-                               </td>
-                           </tr>
-                           <tr>
-                               <td>04</td>
-                              
-                               <td>01/01/22</td>
-                               <td>Holi</td>
-                               <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-               
-                                   <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                   
-                                   <label class="custom-control-label" for="customSwitch4">
-                                   
-                                   <span class="switch-text-left">Active</span>
-                                   
-                                   <span class="switch-text-right">InActive</span>
-                                   
-                                   </label>
-                                   
-                                   </div></td>
-                               <td >
-                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                           
-                               </td>
-                           </tr>
-                           <tr>
-                               <td>05</td>
-                              
-                               <td>01/01/22</td>
-                               <td>Holi</td>
-                               <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-               
-                                   <input type="checkbox" class="custom-control-input" id="customSwitch5">
-                                   
-                                   <label class="custom-control-label" for="customSwitch5">
-                                   
-                                   <span class="switch-text-left">Active</span>
-                                   
-                                   <span class="switch-text-right">InActive</span>
-                                   
-                                   </label>
-                                   
-                                   </div></td>
-                               <td >
-                                   <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                   
-                               </td>
-                           </tr>
-                        
-                       </tbody>
-                     </table>
-                 </div>
-            </div>   
-                <!-- DataTable ends -->
-
-                <!-- add new sidebar starts -->
-                <div class="add-new-data-sidebar">
-                    <div class="overlay-bg"></div>
-                    <div class="add-new-data">
-                        <div class="div mt-2 px-2 d-flex new-data-title justify-content-between">
-                            <div>
-                                <h4 class="">Holiday List</h4>
-                            </div>
-                            <div class="hide-data-sidebar">
-                                <i class="feather icon-x"></i>
-                            </div>
-                        </div>
-                        <div class="data-items pb-3">
-                            <div class="data-fields px-2 mt-3">
-                                <form class="form-horizontal" novalidate>
-                                  
-                                    <div class="row">
-                                      <div hidden class="col-sm-12 data-field-col">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                            <label>Holiday Id</label>
-                                            <input type="text"  class="form-control"  placeholder="Holiday Id" required data-validation-required-message="This Currency Name field is required">
-                                        </div>
-                                         </div>
-                                        </div>
-                                     <div class="col-sm-12 data-field-col">
-                                      <div class="form-group">
-                                       <div class="controls">
-                                        <label>Holiday Date</label>
-                                        <input type="text" class="form-control birthdate-picker" required placeholder="Holiday Date" data-validation-required-message="This birthdate field is required">
-                                     </div>
-                                 </div>
-                                     </div>
- 
-                                     <div class="col-sm-12 data-field-col">
-                                         <div class="form-group">
-                                          <div class="controls">
-                                            <label>Holiday Name</label>
-                                            <input type="text"  class="form-control"  placeholder="Holiday Name" required>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        
-                                        <div class="col-sm-12 data-field-col">
-                                         <div class="form-group">
-                                          <div class="controls">
-                                            <label>ShortName</label>
-                                            <input type="text" class="form-control" required">
-                                        </div>
-                                        </div>
-                                        </div>
-                                    
-                                
- 
-                                        <div class="col-sm-12 data-field-col">
-                                         <div class="form-group">
-                                            <div class="controls">
-                                                <label>Remark</label>
-                                                <input type="text"  class="form-control"  placeholder="Remark" required>
-                                           </div>
-                                         </div>
-                                       </div>
+    </section>
     
-                                     </div>
-                                     
-                                     <div class="row">
-                                        <div class="col-12 col-sm-6">
-                                            <div class="form-group">
-                                            <div class="controls">
-                                            <label>Background Color</label>
-                                            <input type="color" class="form-control" id="background" required disabled>
-                                        </div>
-                                        </div>
-                                        </div>
-    
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group">
-                                            <div class="controls">
-                                            <label>Font Color</label>
-                                                                                 
-                                            <input type="color" class="form-control" id="font" required disabled>
-                                        </div>
-                                        </div>
-                                        </div>
-    
-                                        <div class="col-sm-1 col-12 mt-2">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck2" onclick="change_status(this)">
-                                                <label class="custom-control-label" for="customCheck2"></label>
-                                            </div>
-                                            
-                                        </div>
-    
-                                       </div>
-                                     
-                                    
-                                 </form>
-                            </div>
-                        </div>
-                        <div class="add-data-footer d-flex justify-content-around px-3 mt-2">
-                            <div class="add-data-btn">
-                                <button class="btn btn-primary">Submit</button>
-                            </div>
-                            <div class="cancel-data-btn">
-                                <button class="btn btn-outline-primary">Reset</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- add new sidebar ends -->
-            </section>
-            <!-- Data list view end -->
-
-        </div>
-    </div>
-</div>
+    <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
@@ -610,60 +648,69 @@
 </footer>
 <!-- END: Footer-->
 
-<!-- BEGIN: Vendor JS-->
-<script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
-<script src="../../Content/app-assets/js/custom-js.js"></script>
-<!-- BEGIN Vendor JS-->
 
-
-<script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
-<script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-<!-- END: Page Vendor JS-->
-
-<!-- BEGIN: Theme JS-->
-<script src="../../Content/app-assets/js/core/app-menu.js"></script>
-<script src="../../Content/app-assets/js/core/app.js"></script>
-<script src="../../Content/app-assets/js/scripts/components.js"></script>
-<!-- END: Theme JS-->
-
-<!-- BEGIN: Page JS-->
-
-<script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
-<script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-
-<!-- END: Page JS-->
-
-<!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
-<script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
-<script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
-<script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
-<script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-<script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
-
-<!-- for right side penal (pooja) -->
-<script src="../../Content/app-assets/js/scripts/ui/data-list-view.js"></script>
-
-<!-- for color picker by Yash  -->
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.2.0/js/bootstrap-colorpicker.min.js" > </script>
-
-
-<script>
-    $(function () {
-    $('.background-change').colorpicker({
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../Content/app-assets/js/custom-js.js"></script>
+    <!-- BEGIN Vendor JS-->
     
-    });
-    $('.background-change').on('colorpickerChange');
-    });
-    </script>
+    
+    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <!-- END: Page Vendor JS-->
+    
+    <!-- BEGIN: Theme JS-->
+    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
+    <script src="../../Content/app-assets/js/core/app.js"></script>
+    <script src="../../Content/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+    
+    <!-- BEGIN: Page JS-->
+    
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
+    
+    <!-- END: Page JS-->
+    
+    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+    <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
+    <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+
+
+    <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
+    
+
+    
     <script>
+        $(function () {
+        $("#example1").DataTable({
+          "responsive": true, "lengthChange": false, "autoWidth": true,
+          
+          
+          "buttons": ["excel","print", "copy","pdf","colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        
+        });
+        </script>
+    
+    <script>
+        window.onload = function () {
+            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("holiday_master").className = 'active';
+        }
+
         function change_status(status)
         {
            
@@ -674,14 +721,18 @@
 
 
         }
-
-        window.onload = function () {
-        document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-        document.getElementById("holiday_list").className = 'active';
-    }
     </script>
-</body>
+    <!-- END: Page JS-->
+<script>
+    $('#test').pickadate({
+    min: true
+});
 
+$('#test2').pickadate({
+    min: true
+});
+</script>
+</body>
 <!-- END: Body-->
 
 </html>
