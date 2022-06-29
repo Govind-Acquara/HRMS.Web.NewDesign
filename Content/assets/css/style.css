@@ -488,3 +488,15 @@ hr {
   border-top: 2px solid rgba(0, 0, 0, 0.1);
 
 }
+
+/* 29-06-2022 Yash  for attendance dashboard to change link text on hover */
+p.mb-0.line-ellipsis:hover{
+  color:#7367f0;
+}
+
+i.fa.fa-times.close-icon {
+  float: right;
+  padding-right: 10px;
+  padding-top: 10px;
+  cursor: pointer;
+}
