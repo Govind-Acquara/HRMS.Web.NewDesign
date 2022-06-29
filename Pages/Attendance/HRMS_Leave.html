@@ -52,6 +52,8 @@
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
 
+    <div class="overlay-bg"></div>
+
    <!-- BEGIN: Header-->
  <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
     <div class="navbar-wrapper">
@@ -419,103 +421,67 @@
             </div>
             <div class="content-body">
                 
-                
-                    <div class="card">
-                        <div class="card-header pb-1">
-                            <h5 class="card-basic">Leave</h5>
-                            <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
-                            <div class="heading-elements">
-                                <ul class="list-inline mb-0">
-                                    <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                                    <li><a data-action="collapse"><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
-                                </ul>
+
+                <div class="my-2 dt-buttons btn-group">
+                    <button id="sidebar-toggle" class="btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add New Leave</button>
+                </div>
+                <div id="sidebar-content">
+
+                    <div class="CloseBTN">&times;</div>
+                    
+                    <div>
+                        <form id="sideform" class="sidebar-form">
+                            <h4 class="font-weight-bold">Add New Leave</h4>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" name="text" class="form-control" placeholder="Name">
                             </div>
-                        </div>
-                        <div class="card-content collapse show">
-                            <div class="card-body pt-0 pb-0">
-                                <form class="form-horizontal" novalidate>
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                        <div class="controls">
-                                            <label>Name</label>
-                                            <input type="text" name="text" class="form-control" placeholder="Name">
-                                        </div>
-                                       </div>
-                                     </div>
-                                     <div class="col-12 col-sm-6 col-lg-4">
-                                      <div class="form-group">
-                                      <div class="controls">
-                                        <label>Emp. Code</label>
-                                         <input type="text"  class="form-control"  placeholder="Emp. Code" required data-validation-required-message="This Currency Name field is required">
-                                      </div>
-                                     </div>
-                                     </div>
-
-                                        <div class="col-12 col-sm-6 col-lg-4">
-                                            <div class="form-group">
-                                             <div class="controls">
-                                               <label>Leave Type</label>
-                                               <fieldset class="form-group">
-                                                 <select class="form-control" id="users-list-status">
-                                                   <option value="">Select Leave Type</option>
-                                                   <option value="Active">CL</option>
-                                                   <option value="Blocked">SL</option>
-                                                   <option value="deactivated">FL</option>
-                                                   <option value="deactivated">HD</option>
-                                                 </select>
-                                               </fieldset>
-                                             </div>
-                                            </div>
-                                          </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>From Date</label>
-                                                <input type="text" id="test" class="form-control birthdate-picker">
-                                            </div>
-                                        </div>
-                                     </div>
-                                     <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>To Date</label>
-                                                <input type="text" id="test2" class="form-control birthdate-picker">
-                                            </div>
-                                        </div>
-                                  </div>
-                                  <div class="col-12 col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                    <div class="controls">
-                                      <label>Reason</label>
-                                       <input type="text"  class="form-control"  placeholder="Reason" required data-validation-required-message="This Currency Name field is required">
-                                    </div>
-                                   </div>
-                                   </div>
-                                 
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                              <label>Attachment</label>
-                                               <input type="file"  class="form-control"  required data-validation-required-message="This Currency Name field is required">
-                                            </div>
-                                           </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                    <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Submit</button>
-                                    <button type="reset" class="btn btn-outline-dark mb-1 mt-0.5">Reset</button>
-                                </div>
-
-                                </form>
+    
+                            <div class="form-group">
+                                <label>Emp. Code</label>
+                                 <input type="text"  class="form-control"  placeholder="Emp. Code" required data-validation-required-message="This Currency Name field is required">
+                              </div>
+    
+                              <div class="form-group">
+                                <label>Leave Type</label>
+                                  <select class="form-control" id="users-list-status">
+                                    <option value="">Select Leave Type</option>
+                                    <option value="Active">CL</option>
+                                    <option value="Blocked">SL</option>
+                                    <option value="deactivated">FL</option>
+                                    <option value="deactivated">HD</option>
+                                  </select>
+                              </div>
+    
+                              <div class="form-group">
+                                <label>From Date</label>
+                                <input type="date"  class="form-control">
                             </div>
-                        </div>
+    
+                            <div class="form-group">
+                                <label>To Date</label>
+                                <input type="date" class="form-control ">
+                            </div>
+    
+                            <div class="form-group">
+                                <label>Reason</label>
+                                 <input type="text"  class="form-control"  placeholder="Reason" required data-validation-required-message="This Currency Name field is required">
+                              </div>
+    
+                              <div class="form-group">
+                                <label>Attachment</label>
+                                 <input type="file"  class="form-control"  required data-validation-required-message="This Currency Name field is required">
+                              </div>
+    
+                              
+                              <div class="d-flex my-2  justify-content-center ">
+                                <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
+                                <button type="reset" class="btn w-50 btn-outline-dark mb-1 mt-0.5">Reset</button>
+                            </div>
+    
+    
+                          </form> 
+                    </div>
                     </div>
                     </div>
 
@@ -677,6 +643,12 @@
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+
+
+    <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
+    
+
     
     <script>
         $(function () {
