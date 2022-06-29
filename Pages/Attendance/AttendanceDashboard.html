@@ -43,7 +43,6 @@
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
      <!-- END: Custom CSS-->
-
 </head>
 <!-- END: Head-->
 
@@ -199,12 +198,15 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item" id="attendance">
+            <li class=" nav-item att-menu" id="attendance">
                 <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
-                <ul class="menu-content">
-                    <li id="dashboard">
-                        <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                <ul class="menu-content att-submenu">
+                    <li>
+                        <li id="dashboard">
+                            <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                        </li>  
                     </li>
+                    
                     <li>
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
@@ -218,7 +220,7 @@
                         <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                     </li>
                     <li>
-                        <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Leave </span></a>
+                        <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Leave Apply </span></a>
                     </li>
                     <li>
                         <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
@@ -232,7 +234,28 @@
                 </ul>
             </li>
             <li class=" nav-item">
-                <a href="../Leave/LeaveManagement_Dashboard.html"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                <ul class="menu-content">
+                    
+                        <li>
+                            <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                            
+                         </li>
+                   
+                    <li>
+                        <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Master </span></a>
+                        
+                     </li>
+                     <li>
+                        <a href="../Leave/LeaveApply.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Apply </span></a>
+                        
+                     </li>
+
+                     <li>
+                         <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
+                         
+                      </li>
+                </ul>
                 
             </li>
             <li class=" nav-item">
@@ -326,7 +349,7 @@
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">200</h2>
-                                        <a href="#" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Present</p></a>
+                                        <a href="../Attendance/HRMS_Attendance.html" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Present</p></a>
                                     </div>
                                 </div>
                             </div>
@@ -341,7 +364,7 @@
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">50</h2>
-                                        <a href="#" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Absent</p></a>
+                                        <a href="../Attendance/HRMS_Attendance.html" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Absent</p></a>
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +379,7 @@
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">30</h2>
-                                        <a href="#" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Late</p></a>
+                                        <a href="../Attendance/HRMS_Attendance.html" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Late</p></a>
                                     </div>
                                 </div>
                             </div>
@@ -386,13 +409,77 @@
                                             </div>
                                         </div>
                                         <h2 class="text-bold-700">5</h2>
-                                        <a href="#" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Holiday</p></a>
+                                        <a href="../Attendance/HolidayList_Master.html" style="color:#858585 ;"><p class="mb-0 line-ellipsis">Holiday</p></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <div class="row">
+
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-start pb-0">
+                                    <div>
+                                        <h2 class="text-bold-700 mb-0">100</h2>
+                                        <p>Present</p>
+                                    </div>
+                                    <div class="avatar bg-rgba-primary p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-cpu text-primary font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-start pb-0">
+                                    <div>
+                                        <h2 class="text-bold-700 mb-0">100</h2>
+                                        <p>Present</p>
+                                    </div>
+                                    <div class="avatar bg-rgba-success p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-server text-success font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-start pb-0">
+                                    <div>
+                                        <h2 class="text-bold-700 mb-0">100</h2>
+                                        <p>Present</p>
+                                    </div>
+                                    <div class="avatar bg-rgba-danger p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-activity text-danger font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-start pb-0">
+                                    <div>
+                                        <h2 class="text-bold-700 mb-0">100</h2>
+                                        <p>Present</p>
+                                    </div>
+                                    <div class="avatar bg-rgba-warning p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-alert-octagon text-warning font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <div class="col-8">
                             <div class="card">
                                 <div class="card-content">
@@ -628,6 +715,11 @@
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     
     });
+
+    window.onload = function () {
+        document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+        document.getElementById("dashboard").className = 'active';
+    }
     
     </script>
 
@@ -638,15 +730,7 @@
   showWeekendsHeighlighted:true
 });
 </script>
-<script>
-    window.onload = function () {
-        document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-        document.getElementById("dashboard").className = 'active';
-        
-    }
 
-    
-</script>
 
 </body>
 <!-- END: Body-->

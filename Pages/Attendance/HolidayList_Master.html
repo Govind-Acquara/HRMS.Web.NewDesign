@@ -227,7 +227,7 @@
                         <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                     </li>
                     <li>
-                        <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Leave </span></a>
+                        <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Leave Apply </span></a>
                     </li>
                     <li>
                         <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
@@ -241,6 +241,29 @@
                     
 
                 </ul>
+            </li>
+            <li class=" nav-item">
+                <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                <ul class="menu-content">
+                    <li>
+                        <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                            
+                    </li>
+                   
+                    <li>
+                        <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Master </span></a>
+                        
+                    </li>
+                    <li>
+                        <a href="../Leave/LeaveApply.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Apply </span></a>
+                        
+                    </li>
+                    <li>
+                        <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
+                         
+                    </li>
+                </ul>
+                
             </li>
             <li class=" nav-item">
                 <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
@@ -322,9 +345,10 @@
             <!-- Data list view starts -->
             <section id="data-list-view" class="data-list-view-header">
                
-
+             
                 <!-- DataTable starts -->
             <div class="card">
+                <Span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></Span>
                 <div class="table-responsive">
                     <table class="table border-secondary data-list-view">
                          <thead>
@@ -357,7 +381,7 @@
                                    </div></td>
                                <td >
                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                   
                                </td>
                            </tr>
                            <tr>
@@ -380,7 +404,7 @@
                                    </div></td>
                                <td >
                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                 
                                </td>
                            </tr>
                            <tr>
@@ -402,7 +426,7 @@
                                    </div></td>
                                <td >
                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                  
                                </td>
                            </tr>
                            <tr>
@@ -425,7 +449,7 @@
                                    </div></td>
                                <td >
                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                           
                                </td>
                            </tr>
                            <tr>
@@ -448,7 +472,7 @@
                                    </div></td>
                                <td >
                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                   <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                   
                                </td>
                            </tr>
                         
@@ -650,6 +674,11 @@
 
 
         }
+
+        window.onload = function () {
+        document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+        document.getElementById("holiday_list").className = 'active';
+    }
     </script>
 </body>
 
