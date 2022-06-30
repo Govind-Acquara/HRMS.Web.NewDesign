@@ -10,20 +10,18 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Leave View</title>
+    <title>Leave Apply</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
      <!-- BEGIN: Vendor CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/fullcalendar.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/daygrid.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/timegrid.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
      <!-- END: Vendor CSS-->
- 
-     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
-     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
-     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
  
      <!-- BEGIN: Theme CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
@@ -36,13 +34,15 @@
      <!-- BEGIN: Page CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
- 
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+    
      <!-- END: Page CSS-->
  
-     <!-- BEGIN: Custom CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+      <!-- END: Page CSS-->
+  
+      <!-- BEGIN: Custom CSS-->
+      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+
+     
     <!-- END: Custom CSS-->
 
 </head>
@@ -333,12 +333,15 @@
                             
                          </li>
                    
-                    <li>
+                    <li id="leave_master">
                         <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Master </span></a>
                         
                      </li>
-                     
-                     <li id="=leave_view">
+                     <li>
+                        <a href="../Leave/LeaveApply.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Apply </span></a>
+                        
+                     </li>
+                     <li>
                          <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
                          
                       </li>
@@ -402,12 +405,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Leave View</h2>
+                            <h2 class="content-header-title float-left mb-0">Leave Master</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Attendance
+                                    <li class="breadcrumb-item active">Master
                                     </li>
                                 </ol>
                             </div>
@@ -420,7 +423,7 @@
                 
 
                 <div class="my-2 dt-buttons btn-group">
-                    <button id="sidebar-toggle" class="btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Apply Leave</button>
+                    <button id="sidebar-toggle" class="btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Leave Apply</button>
                 </div>
                 <div id="sidebar-content">
 
@@ -428,7 +431,7 @@
                     
                     <div>
                         <form id="sideform" class="sidebar-form">
-                            <h4 class="font-weight-bold mb-2">Add Apply Leave</h4>
+                            <h4 class="font-weight-bold mb-2">Add Leave Apply</h4>
                             <div class="form-group">
                                 <label>Employee Name</label>
                                   <select class="form-control" id="users-list-status">
@@ -460,17 +463,15 @@
                                 <label>From  Date</label>
                                 <input type="date" class="form-control " id="fromdate">
                             </div>
-                            <div class="row" style="margin-left:25% ;">
-                                <div class="col-12 col-lg-6 col-sm-6" >
-                            <div class="form-group" style="text-align:center ;"> 
+                            
+                            <div class="form-group"> 
                                 <label>Days</label>  
-                                <input type="text" class="form-control text-center shadow rounded-circle border-secandory" placeholder="0" id="result" disabled /> 
+                                <input type="text" class="form-control" placeholder="0" id="result" disabled /> 
                             </div>
-                            </div></div>
     
                             <div class="form-group">
                                 <label>To Date</label>
-                                <input type="date" class="form-control  " id="todate">
+                                <input type="date" class="form-control " id="todate">
                             </div>
      
                            <div class="d-flex my-2  justify-content-center ">
@@ -479,177 +480,166 @@
                             </div>
     
     
-                          </form>
+                          </form> 
                     </div>
-                </div>
-            </div>
+                    </div>
+                    </div>
 
                     <div class="card">
-                        <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
+                        
                         <div class="card-content">
                               <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                    <table id="example1" class="table border-secondary data-list-view">
                                         <thead>
-                                            <tr>
-                                                <th>SrNo.</th>
-                                                <th>Employee Name</th>
-                                                <th>Code</th>
-                                                <th>Department</th>
-                                                <th>Designation</th>
-                                                <th>Reporting Person</th>
-                                                <th>Status</th>
-                                                <th class="">Action</th>
+                                          <tr>
+                                              <th>Leave Type Id</th>
+                                                  <th>Type</th>
+                                                  <th>Background Color</th>
+                                                  <th>Font Color</th>
+                                                  <th>IsActive</th>
+                                                  <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center mb-1">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-5.jpg" alt="avtar img holder" height="35" width="35">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Carissa Dolle</h6>
-                                                        <span class="font-small-2">12-02-2022 To 15-02-2022</span>
-                                                    </div>
-                                                </div></td>
-                                                <td>Emp-101</td>
-                                                <td>IT</td>
-                                                <td>Software Developer</td>
-                                                <td>Geeta</td>
-                                                <td><div class="chip chip-warning">
-                                                    <div class="chip-body">
-                                                        <div class="chip-text">Pending</div>
-                                                    </div>
-                                                </div></td>
-    
-                                                <td class="">
-                                                    <div class="chip chip-success">
-                                                        <div class="chip-body ">
-                                                            <div class="chip-text"><i class="fa fa-check rounded-circle bg-white text-success "></i>&nbsp;Approved</div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <div class="chip chip-danger ">
-                                                        <div class="chip-body">
-                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center mb-1">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-6.jpg" alt="avtar img holder" height="35" width="35">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Liliana Pecor</h6>
-                                                        <span class="font-small-2">1-02-2022 To 4-01-2022</span>
-                                                    </div>
-                                                </div></td>
-                                                <td>Emp-102</td>
-                                                <td>Accounts</td>
-                                                <td>Manager</td>
-                                                <td>ABCD</td>
-                                                <td><div class="chip chip-danger">
-                                                    <div class="chip-body">
-                                                        <div class="chip-text">Reject</div>
-                                                    </div>
-                                                </div></td>
-    
-                                                <td>
-                                                
-                                                    <div class="chip chip-success">
-                                                        <div class="chip-body">
-                                                            <div class="chip-text"><i class="fa fa-check rounded-circle bg-white text-success "></i>&nbsp;Approved</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="chip chip-danger">
-                                                        <div class="chip-body">
-                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
-                                                        </div>
-                                                    </div>
-    
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>3</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center mb-1">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-7.jpg" alt="avtar img holder" height="35" width="35">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Isidra Strunk</h6>
-                                                        <span class="font-small-2">2-02-2022 To 5-02-2022</span>
-                                                    </div>
-                                                </div></td>
-                                                <td>Emp-103</td>
-                                                <td>Sales</td>
-                                                <td>Executive</td>
-                                                <td>ABCD</td>
-                                                <td><div class="chip chip-success">
-                                                    <div class="chip-body">
-                                                        <div class="chip-text">Approved</div>
-                                                    </div>
-                                                </div></td>
-    
-                                                <td>
-                                                   
-                                                    <div class="chip chip-success">
-                                                        <div class="chip-body">
-                                                            <div class="chip-text"><i class="fa fa-check rounded-circle bg-white text-success "></i>&nbsp;Approved</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="chip chip-danger">
-                                                        <div class="chip-body">
-                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
-                                                        </div>
-                                                    </div>
-    
-                                                </td>
-                                            </tr>
-    
-                                            <tr>
-                                                <td>4</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center mb-1">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-8.jpg" alt="avtar img holder" height="35" width="35">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Gerald Licea</h6>
-                                                        <span class="font-small-2">12-06-2022 To 15-06-2022</span>
-                                                    </div>
-                                                </div></td>
-                                                <td>Emp-104</td>
-                                                <td>IT</td>
-                                                <td> Developer</td>
-                                                <td>Geeta</td>
-                                                <td><div class="chip chip-warning">
-                                                    <div class="chip-body">
-                                                        <div class="chip-text">Pending</div>
-                                                    </div>
-                                                </div></td>
-    
-                                                <td>
-    
-                                                    <div class="chip chip-success">
-                                                        <div class="chip-body">
-                                                            <div class="chip-text"><i class="fa fa-check rounded-circle bg-white text-success"></i>&nbsp;Approved</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="chip chip-danger">
-                                                        <div class="chip-body">
-                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger"></i>&nbsp;Reject</div>
-                                                        </div>
-                                                    </div>
-    
-                                                </td>
-                                            </tr>
-    
-                                        </tbody>
+                                          <tr>
+                                              <td>1</td>
+                                              <td>ABC</td>
+                                              <td><div class="chip chip-warning">
+                                                  <div class="chip-body">
+                                                      <div class="chip-text">Red</div>
+                                                  </div>
+                                              </div></td>
+                                              <td>black</td>
+                                              <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch1">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>2</td>
+                                              <td>ABC</td>
+                                              <td><div class="chip chip-danger">
+                                                  <div class="chip-body">
+                                                      <div class="chip-text">Red</div>
+                                                  </div>
+                                              </div></td>
+                                              <td>black</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch2">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+               
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>3</td>
+                                              <td>ABC</td>
+                                              <td><div class="chip chip-primary">
+                                                  <div class="chip-body">
+                                                      <div class="chip-text">Red</div>
+                                                  </div>
+                                              </div></td>
+                                              <td>black</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch3">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+               
+                                          <tr>
+                                              <td>4</td>
+                                              <td>ABC</td>
+                                              <td><div class="chip chip-danger">
+                                                  <div class="chip-body">
+                                                      <div class="chip-text">Red</div>
+                                                  </div>
+                                              </div></td>
+                                              <td>black</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch4">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>5</td>
+                                              <td>ABC</td>
+                                              <td><div class="chip chip-warning">
+                                                  <div class="chip-body">
+                                                      <div class="chip-text">Red</div>
+                                                  </div>
+                                              </div></td>
+                                              <td>black</td>
+                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                  <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                                  
+                                                  <label class="custom-control-label" for="customSwitch5">
+                                                  
+                                                  <span class="switch-text-left">Active</span>
+                                                  
+                                                  <span class="switch-text-right">InActive</span>
+                                                  
+                                                  </label>
+                                                  
+                                                  </div></td>
+                                              <td >
+                                                  <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                  <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                              </td>
+                                          </tr>
+                                      </tbody>
                                     </table>
                                 </div>
                               </div>
@@ -716,13 +706,24 @@
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    
+    
+    
+     <!-- BEGIN: Page Vendor JS-->
+     <script src="../../Content/app-assets/vendors/js/extensions/moment.min.js"></script>
+     <script src="../../Content/app-assets/vendors/js/calendar/fullcalendar.min.js"></script>
+     <script src="../../Content/app-assets/vendors/js/calendar/extensions/daygrid.min.js"></script>
+     <script src="../../Content/app-assets/vendors/js/calendar/extensions/timegrid.min.js"></script>
+     <script src="../../Content/app-assets/vendors/js/calendar/extensions/interactions.min.js"></script>
+     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+     <!-- END: Page Vendor JS-->
+    
 
-
-    <!-- Importing Custom Script.js  -->
-    <script src="../../Content/assets/js/scripts.js"></script>
-     <!-- js link for find diferrence between date-->
+   <!-- js link for find diferrence between date-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
+  <!-- Importing Custom Script.js  -->
+  <script src="../../Content/assets/js/scripts.js"></script>
     
     <script>
         $(function () {
@@ -734,94 +735,82 @@
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         
         });
-        </script>
+    </script>
     
     <script>
         window.onload = function () {
             document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_view").className = 'active';
+            document.getElementById("leave_master").className = 'active';
         }
-
-      
-    </script>
-
-<script>
-    $('.datepicker').datepicker({
-      dateFormat: 'yy-mm-dd',
-      changeMonth: true,
-      changeYear: true,
-    });
- 
-    $(document).on('change', '#todate', function () {
-      var fromdate = $("#fromdate").val();
-      var todate = $("#todate").val();
- 
-      if ((fromdate == "") || (todate == "")) {
-        $("#result").html("Please enter Both dates");
-        return false
-      }
- 
-      var dt1 = new Date(fromdate);
-      var dt2 = new Date(todate);
- 
-      var time_difference = dt2.getTime() - dt1.getTime();
-      var result = time_difference / (1000 * 60 * 60 * 24)+1;
- 
-      var output =  result +" Day";
-      $("#result").val(output);
-    });
-  </script>
-<!-- for date disable(pooja) -->
-  <script language="javascript">
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-
-    today = yyyy + '-' + mm + '-' + dd;
-    $('#fromdate').attr('min',today);
-  </script>
-
- <script language="javascript">
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-
-    today = yyyy + '-' + mm + '-' + dd;
-    $('#todate').attr('min',today);
-</script>
- 
-<!-- end date disable js(pooja) -->
-    <script>
-     function selectDate(date) {
-    $('#calendar-wrapper').updateCalendarOptions({
-        date: date
-    });
-    console.log(calendar.getSelectedDate());
-    }
-
-    var defaultConfig = {
-    weekDayLength: 1,
-    
-    onClickDate: selectDate,
-    showYearDropdown: true,
-    startOnMonday: false,
-    };
-
-    var calendar = $('#calendar-wrapper').calendar(defaultConfig);
-    console.log(calendar.getSelectedDate());
     </script>
     <!-- END: Page JS-->
-
     <script>
-        window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_view").className = 'active';
+        $('.datepicker').datepicker({
+          dateFormat: 'yy-mm-dd',
+          changeMonth: true,
+          changeYear: true,
+        });
+     
+        $(document).on('change', '#todate', function () {
+          var fromdate = $("#fromdate").val();
+          var todate = $("#todate").val();
+     
+          if ((fromdate == "") || (todate == "")) {
+            $("#result").html("Please enter Both dates");
+            return false
+          }
+     
+          var dt1 = new Date(fromdate);
+          var dt2 = new Date(todate);
+     
+          var time_difference = dt2.getTime() - dt1.getTime();
+          var result = time_difference / (1000 * 60 * 60 * 24)+1;
+     
+          var output =  result +" Day";
+          $("#result").val(output);
+        });
+      </script>
+<!-- for date disable(pooja) -->
+      <script language="javascript">
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+    
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#fromdate').attr('min',today);
+      </script>
+
+     <script language="javascript">
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#todate').attr('min',today);
+    </script>
+     
+    <!-- end date disable js(pooja) -->
+        <script>
+         function selectDate(date) {
+        $('#calendar-wrapper').updateCalendarOptions({
+            date: date
+        });
+        console.log(calendar.getSelectedDate());
         }
 
-      
-    </script>
+        var defaultConfig = {
+        weekDayLength: 1,
+        
+        onClickDate: selectDate,
+        showYearDropdown: true,
+        startOnMonday: false,
+        };
+
+        var calendar = $('#calendar-wrapper').calendar(defaultConfig);
+        console.log(calendar.getSelectedDate());
+        </script>
 
 </body>
 <!-- END: Body-->

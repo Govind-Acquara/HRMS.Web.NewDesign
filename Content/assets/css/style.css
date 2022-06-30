@@ -564,6 +564,20 @@ i.fa.fa-times.close-icon {
   .CloseBTN:hover{
       color: #7E3AF3;
   }
-  
-  
-   /* Sidebar CSS End */
+    /* Sidebar CSS End */
+  /* for attendance dashboard Yash*/
+  span.tag.tag-info {
+    background: #3e6c99;
+    font-size: large;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+a.my_link{
+    color:white;
+}
+a.my_link:hover{
+    color:white;
+}
+
+/* end  */
+ 
