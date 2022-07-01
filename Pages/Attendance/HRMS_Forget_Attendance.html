@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Forget Attendance</title>
+    <title>Leave Apply</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -19,8 +19,6 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-     <!-- for right side penal (pooja) -->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/data-list-view.css">
      <!-- END: Vendor CSS-->
  
      <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
@@ -53,7 +51,10 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
- <!-- BEGIN: Header-->
+
+    <div class="overlay-bg"></div>
+
+   <!-- BEGIN: Header-->
  <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
     <div class="navbar-wrapper">
         <div class="navbar-container content">
@@ -320,7 +321,7 @@
                     <li>
                         <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports </span></a>
                     </li>
-                    
+                   
                 </ul>
             </li>
             <li class=" nav-item">
@@ -393,17 +394,15 @@
             </li>
         </ul>
     </div>
-</div>
-   
+</div> 
     <!-- END: Main Menu-->
-
-    <!-- BEGIN: Content-->
-    <div class="app-content content">
+<!-- BEGIN: Content-->
+    <section class="app-content content" id="column-selectors">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
+                <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
                             <h2 class="content-header-title float-left mb-0">Forget Attendance</h2>
@@ -411,182 +410,181 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Master
+                                    <li class="breadcrumb-item active">Attendance
                                     </li>
                                 </ol>
                             </div>
                         </div>
                     </div>
                 </div>
-               
+                
             </div>
             <div class="content-body">
-                <!-- Data list view starts -->
-                <section id="data-list-view" class="data-list-view-header">
+                
+
+                <div class="my-2 dt-buttons btn-group">
+                    <button id="sidebar-toggle" class="btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Forget Attendance</button>
+                </div>
+                <div id="sidebar-content">
+
+                    <div class="CloseBTN">&times;</div>
+                    
+                    <div>
+                        <form id="sideform" class="sidebar-form">
+                            <h4 class="font-weight-bold mb-2"> Add Forget Attendance</h4>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" name="text" class="form-control" placeholder="Name">
+                            </div>
+    
+                            <div class="form-group">
+                                <label>Employee Code</label>
+                                 <input type="text"  class="form-control"  placeholder="Employee Code" required>
+                              </div>
+    
+                              <div class="form-group">
+                                <label for="data-status">Date</label>
+                                <select class="form-control" id="data-status">
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                              </div>
+    
+                              
+    
+                            <div class="form-group">
+                                <label>Reason</label>
+                                 <input type="text"  class="form-control"  placeholder="Reason" required>
+                              </div>
+    
+                              
+                              <div class="d-flex my-2  justify-content-center ">
+                                <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
+                                <button type="reset" class="btn w-50 btn-outline-dark mb-1 mt-0.5">Reset</button>
+                            </div>
+    
+    
+                          </form> 
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                        <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
+                        <div class="card-content">
+                              <div class="card-body card-dashboard">
+                                <div class="table-responsive">
+                                    <table id="example1" class="table border-secondary data-list-view">
+                                        <thead>
+                                            <tr>
+                                              <th>Sr. No.</th>
+                                              <th>Name</th>
+                                              <th>Employee Code</th>
+                                              <th>Date</th>
+                                              <th>Reason</th>
+                                              <th>Status</th>
+                                              <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                              <td>1</td>
+                                              <td>Jhon</td>
+                                              <td>Emp101</td>
+                                              <td class="date">21-01-22</td>
+                                              <td>ABC</td>
+                                              <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Pending</div>
+                                                </div>
+                                            </div></td>
+                                            <td class="product-action">
+                                                <span class="action-edit"><i class="feather icon-edit"></i></span>
+                                                <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Jhon</td>
+                                            <td>Emp101</td>
+                                            <td>21-01-22</td>
+                                            <td>ABC</td>
+                                            <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Pending</div>
+                                                </div>
+                                            </div></td>
+                                            <td class="product-action">
+                                                <span class="action-edit"><i class="feather icon-edit"></i></span>
+                                                <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Jhon</td>
+                                            <td>Emp101</td>
+                                            <td>21-01-22</td>
+                                            <td>ABC</td>
+                                            <td><div class="chip chip-success">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Approved</div>
+                                                </div>
+                                            </div></td>
+                                            <td class="product-action">
+                                                <span class="action-edit"><i class="feather icon-edit"></i></span>
+                                                <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr> 
+                                            <td>4</td>
+                                            <td>Jhon</td>
+                                            <td>Emp101</td>
+                                            <td>21-01-22</td>
+                                            <td>ABC</td>
+                                            <td><div class="chip chip-danger">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Regect</div>
+                                                </div>
+                                            </div></td>
+                                            <td class="product-action">
+                                                <span class="action-edit"><i class="feather icon-edit"></i></span>
+                                                <span class="action-delete"><i class="feather icon-trash" style="color: red;"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Jhon</td>
+                                            <td>Emp101</td>
+                                            <td>21-01-22</td>
+                                            <td>ABC</td>
+                                            <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Pending</div>
+                                                </div>
+                                            </div></td>
+                                            <td class="product-action">
+                                                <span class="action-edit"><i class="feather icon-edit"></i></span>
+                                                <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
+                                            </td>
+                                        </tr>
+                                        
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+
+                    
                    
-
-                    <!-- DataTable starts -->
-                <div class="card">
-                    <Span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></Span>
-                    <div class="table-responsive">
-                        <table class="table border-secondary data-list-view">
-                            <thead>
-                                <tr>
-                                  <th>Sr. No.</th>
-                                  <th>Name</th>
-                                  <th>Employee Code</th>
-                                  <th>Date</th>
-                                  <th>Reason</th>
-                                  <th>Status</th>
-                                  <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                  <td>1</td>
-                                  <td>Jhon</td>
-                                  <td>Emp101</td>
-                                  <td class="date">21-01-22</td>
-                                  <td>ABC</td>
-                                  <td><div class="chip chip-warning">
-                                    <div class="chip-body">
-                                        <div class="chip-text">Pending</div>
-                                    </div>
-                                </div></td>
-                                <td class="product-action">
-                                    <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                    <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>2</td>
-                                <td>Jhon</td>
-                                <td>Emp101</td>
-                                <td>21-01-22</td>
-                                <td>ABC</td>
-                                <td><div class="chip chip-warning">
-                                    <div class="chip-body">
-                                        <div class="chip-text">Pending</div>
-                                    </div>
-                                </div></td>
-                                <td class="product-action">
-                                    <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                    <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Jhon</td>
-                                <td>Emp101</td>
-                                <td>21-01-22</td>
-                                <td>ABC</td>
-                                <td><div class="chip chip-success">
-                                    <div class="chip-body">
-                                        <div class="chip-text">Approved</div>
-                                    </div>
-                                </div></td>
-                                <td class="product-action">
-                                    <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                    <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
-                                </td>
-                            </tr>
-                            <tr> 
-                                <td>4</td>
-                                <td>Jhon</td>
-                                <td>Emp101</td>
-                                <td>21-01-22</td>
-                                <td>ABC</td>
-                                <td><div class="chip chip-danger">
-                                    <div class="chip-body">
-                                        <div class="chip-text">Regect</div>
-                                    </div>
-                                </div></td>
-                                <td class="product-action">
-                                    <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                    <span class="action-delete"><i class="feather icon-trash" style="color: red;"></i></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Jhon</td>
-                                <td>Emp101</td>
-                                <td>21-01-22</td>
-                                <td>ABC</td>
-                                <td><div class="chip chip-warning">
-                                    <div class="chip-body">
-                                        <div class="chip-text">Pending</div>
-                                    </div>
-                                </div></td>
-                                <td class="product-action">
-                                    <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                    <span class="action-delete"><i class="feather icon-trash"  style="color: red;"></i></span>
-                                </td>
-                            </tr>
-                            
-                          </tbody>
-                        </table>
-                    </div>
-                </div>   
-                    <!-- DataTable ends -->
-
-                    <!-- add new sidebar starts -->
-                    <div class="add-new-data-sidebar">
-                        <div class="overlay-bg"></div>
-                        <div class="add-new-data">
-                            <div class="div mt-2 px-2 d-flex new-data-title justify-content-between">
-                                <div>
-                                    <h4>Forgot Attendance</h4>
-                                </div>
-                                <div class="hide-data-sidebar">
-                                    <i class="feather icon-x"></i>
-                                </div>
-                            </div>
-                            <div class="data-items pb-3">
-                                <div class="data-fields px-2 mt-3">
-                                    <div class="row">
-                                        <div class="col-sm-12 data-field-col">
-                                            <label for="data-name">Name</label>
-                                            <input type="text" class="form-control" id="data-name" placeholder="Name">
-                                        </div>
-                                        <div class="col-sm-12 data-field-col">
-                                            <label for="data-name">Employee Code</label>
-                                            <input type="text" class="form-control" id="data-name" placeholder="Employee Code">
-                                        </div>
-                                        <div class="col-sm-12 data-field-col">
-                                            <label for="data-status">Date</label>
-                                            <select class="form-control" id="data-status">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-12 data-field-col">
-                                            <label class="control-label">Reason</label>
-                                            <textarea required class="form-control" placeholder="Reason"></textarea>
-                                        </div>
-                                      
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="add-data-footer d-flex justify-content-around px-3 mt-2">
-                                <div class="add-data-btn">
-                                    <button class="btn btn-primary">Submit</button>
-                                </div>
-                                <div class="cancel-data-btn">
-                                    <button class="btn btn-outline-primary">Reset</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- add new sidebar ends -->
-                </section>
-                <!-- Data list view end -->
+              
 
             </div>
+           
         </div>
-    </div>
-    <!-- END: Content-->
+    </section>
     
     <!-- END: Content-->
 
@@ -640,15 +638,12 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-    <!-- for right side penal (pooja) -->
-    <script src="../../Content/app-assets/js/scripts/ui/data-list-view.js"></script>
-    <!-- END: Page JS-->
-    <script>
-        window.onload = function () {
-            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("forget_attendance").className = 'active';
-        }
-    </script>
+
+    <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
+    
+
+    
     <script>
         $(function () {
         $("#example1").DataTable({
@@ -660,6 +655,15 @@
         
         });
         </script>
+    
+    <script>
+        window.onload = function () {
+            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("forget_attendance").className = 'active';
+        }
+    </script>
+    <!-- END: Page JS-->
+
 </body>
 <!-- END: Body-->
 
