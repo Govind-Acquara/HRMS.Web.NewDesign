@@ -501,7 +501,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <div id='fc-default' class="my_calendar"></div>
+                                        <div id='fc-default1' class="my_calendar"></div>
                                     </div>
                                 </div>
                             </div>
@@ -706,6 +706,79 @@
 
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('fc-default1');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+      height: 'parent',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth',
+      },
+      defaultView: 'dayGridMonth',
+      navLinks: true,
+      editable: true,
+      eventLimit: true,
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2022-07-02',
+        },
+        {
+          title: 'All Day Event 2',
+          start: '2022-08-05',
+        },
+        {
+          title: 'All Day Event 3',
+          start: '2022-07-06',
+        }
+      ]
+    });
+
+    $('#btn-add-event').click(function(){
+        var newEvents = [
+        {
+          title: 'All Day Event 2',
+          start: '2022-07-05',
+        },
+        {
+          title: 'All Day Event 3',
+          start: '2022-07-06',
+        }
+      ];
+
+    calendar.addEventSource(newEvents);
+
+    });
+
+    calendar.render();
+  });
+
+// $(document).ready(function() {
+//     var calendar = new Calendar(calendarEl, {
+//   timeZone: 'UTC',
+//   events: [
+//     {
+//       id: 'a',
+//       title: 'my event',
+//       start: '2022-07-02'
+//     }
+//   ]
+// })
+// //     calendar.addEvent( events [    {
+// //       id: 'a',
+// //       title: 'my event',
+// //       start: '2018-09-01'
+// //     }
+// //  ] )
+//  var event = calendar.getEventById('a') // an event object!
+// var start = event.start // a property (a Date object)
+// console.log(start.toISOString()) // "2018-09-01T00:00:00.000Z"
+// })
+
     $(function () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": true,
@@ -729,7 +802,50 @@
   showMonthsShort: true,
   showWeekendsHeighlighted:true
 });
-</script>
+
+// $(document).ready(function() {
+// $('#fc-default').fullCalendar({
+
+//     // calendar.addEvent({
+//     //   id: "newEvent",
+//     //   title: eventTitle,
+//     //   start: startDate,
+//     //   end: correctEndDate,
+//     //   description: eventDescription,
+//     //   color: evtColor,
+//     //   dataEventColor: eventColor,
+//     //   allDay: true
+//     // });
+
+// // displayEventTime: true,// Display event time
+// addEvent: function( title,start, end,description,callback ) { 
+//         var events =[        
+//            {
+//                 title  : 'event1',
+//                 start  : '2022-07-18',
+//             },
+//             {
+//                 title  : 'event2',
+//                 start  : '2022-07-19',
+//                 end    : '2022-07-19',
+//             },
+//             {
+//                 title  : 'event3',
+//                 start  : '2022-07-20',
+//                 // allDay : false // will make the time show
+//             }];
+//             addEvent.push({
+//                 title: 'This is a Material Design event!',
+//                 start: '2022-07-20T08:30:00',
+//                 end: '2022-07-20T08:30:00',
+//                 color: '#C2185B'
+//             });
+//             callback(addEvent);
+//     }
+//  });
+// });
+ </script>
+
 
 
 </body>

@@ -43,6 +43,26 @@
       <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
      <!-- END: Custom CSS-->
 
+     <style>
+        .selbg{
+            background-color: #ffaabb;
+
+        }
+
+        #weekoff-calendar .fc-scroller{
+            
+            height: 24rem !important;
+        }
+
+        #weekoff-calendar .fc-addNew-button{
+            display: none;
+        }
+
+        #weekoff-calendar .fc-center{
+            display: none;
+        }
+     </style>
+
 </head>
 <!-- END: Head-->
 
@@ -345,11 +365,11 @@
                                 <div class="row">
 
                                 
-                                <div class="col-8">
+                                <div class="col-4">
                                     <div class="card">
                                         <div class="card-content">
                                             <div class="card-body">
-                                                <div class="cal-category-bullets d-none">
+                                                <!-- <div class="cal-category-bullets d-none">
                                                     <div class="bullets-group-1 mt-2">
                                                         <div class="category-business mr-1">
                                                             <span class="bullet bullet-success bullet-sm mr-25"></span>
@@ -368,8 +388,11 @@
                                                             Others
                                                         </div>
                                                     </div>
+                                                </div> -->
+                                                <div id="weekoff-calendar">
+                                                    <div id='fc-default'></div>
                                                 </div>
-                                                <div id='fc-default'></div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -380,10 +403,7 @@
                                 <div class="col-4 mt-2">
                                     <h3 class="text-center">Weekly Off</h3>
                                     <div class="row">
-                                        <div class="col-12" id="holiday" >
-                                            <label class="mt-2" style="font-size: 20px;" ></label>
-                                            
-
+                                        <div id="holiday" >
                                         </div>
                                     </div>
                                     <div class="row">
@@ -397,6 +417,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     </div>
                     
@@ -465,6 +486,8 @@
 
 
 <script>
+
+
     $(function () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": true,
@@ -494,23 +517,85 @@
 
 </script>
 <script>
-   $(document).ready(function() {
-    $('.fc-day').click(
-    function(){
-        var data=$(this).attr('data-date');
-        var dt = data.split('-');
+
+
+var selectedDates = [];
+
+$(document).ready(function(){
+$("th.fc-sat").on("click", function(){
+    $('tbody tr td:nth-child(7)').not('.fc-other-month').toggleClass("selbg").each( function(){
+var getweekdates = selectedDates.push($(this).attr("data-date"));
+console.log(getweekdates);
+var uniqueweekends = $.unique(selectedDates);
+selectedDates = $.grep(selectedDates, n => n == 0 || n);
+var app = document.getElementById("holiday");
+app.innerHTML ='<ul>' + selectedDates.map(function (weekdates) {
+return '<li class="font-weight-bold" style="font-size: 20px;">' + weekdates + '</li>';
+}).join('') + '</ul>';
+})
+})
+
+});
+
+
+$(document).ready(function() {
+$(".fc-day-top , .fc-day, th.fc-sat").on("click", function(){ 
+
+    var data=$(this).attr("data-date");
+    var arraystatus=null;
+    var getdate  = document.querySelector("[data-date=" + CSS.escape(data) + "]");
+    var index=selectedDates.indexOf(data);
+        if (index >= 0) {
+            console.log("spliced data"+" "+selectedDates.splice(index,1) + " " +"of index"+" "+index); 
+            getdate.classList.remove("selbg");
+        }
+    if (index === -1) {
+    selectedDates.push(data);
+        getdate.classList.toggle("selbg");
+        arraystatus=null;
+       }
+       selectedDates = $.grep(selectedDates, n => n == 0 || n);
+    // console.log(selectedDates);
+    var app = document.getElementById("holiday");
+app.innerHTML = '<ul>' +selectedDates.map(function (slctddate) {
+	return '<li class="font-weight-bold" style="font-size: 20px;">' + slctddate + '</li>';
+}).join('') + '</ul>';
+})
+});
+
+
+
+// var app = document.getElementById("holiday");
+// app.innerHTML = '<ul>' + seldates.map(function (slctddate) {
+// 	return '<li class="font-weight-bold" style="font-size: 20px;">' + slctddate + '</li>';
+// }).join('') + '</ul>';
+// })
+// });
+
+
+
+//   $(document).ready(function() {
+//     $('.fc-day').click(
+//     function(){
+//         var data=$(this).attr('data-date');
+//         var dt = data.split('-');
        
-        var element1  = document.querySelector("[data-date=" + CSS.escape(data) + "]");
-        element1.style.backgroundColor="#ffaabb";
-    var
-    year = parseInt(dt[0], 10),
-    month = parseInt(dt[1], 10) , 
-    day = parseInt(dt[2], 10),
-    date = new Date(year, month -1 , day);
-    var day =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+//        var element1  = document.querySelector("[data-date=" + CSS.escape(data) + "]");
+//        console.log("e data" + element1);
+//         seldates.push(element1.data);
+
+//         console.log("dates"+ seldates);
+
+//         document.getElementById("holiday").innerHTML=seldates;
+    // var
+    // year = parseInt(dt[0], 10),
+    // month = parseInt(dt[1], 10) , 
+    // day = parseInt(dt[2], 10),
+    // date = new Date(year, month -1 , day);
+    // var day =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     //var list = document.getElementById("holiday");
 
-    document.getElementById("holiday").innerHTML=day[date.getDay()];
+    // document.getElementById("holiday").innerHTML=day[date.getDay()];
 
     // const element =document.querySelector("[data-date=" + CSS.escape(data) + "]");
     // element.addEventListener("click",addHoliday);
@@ -521,10 +606,41 @@
     //     el.appendChild(newLi);
     //     newLi.innerHTML = day[date.getDay()];
     // }
-    
 
-});
-   });
+// });
+//    });
+
+
+//    $(document).ready(function() {
+//     $('.fc-day').click(
+//     function(){
+//         var data=$(this).attr('data-date');
+//         var dt = data.split('-');
+       
+//         var element1  = document.querySelector("[data-date=" + CSS.escape(data) + "]");
+//         element1.style.backgroundColor="#ffaabb";
+//     var
+//     year = parseInt(dt[0], 10),
+//     month = parseInt(dt[1], 10) , 
+//     day = parseInt(dt[2], 10),
+//     date = new Date(year, month -1 , day);
+//     var day =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+//     //var list = document.getElementById("holiday");
+
+//     document.getElementById("holiday").innerHTML=day[date.getDay()];
+
+//     // const element =document.querySelector("[data-date=" + CSS.escape(data) + "]");
+//     // element.addEventListener("click",addHoliday);
+
+//     // function addHoliday(){
+//     //     var newLi = document.createElement("li");
+//     //     var el = document.getElementById("holiday");
+//     //     el.appendChild(newLi);
+//     //     newLi.innerHTML = day[date.getDay()];
+//     // }
+
+// });
+//    });
 
 
 

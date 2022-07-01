@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('fc-default');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
+
+
     plugins: ["dayGrid", "timeGrid", "interaction"],
     customButtons: {
       addNew: {
@@ -166,6 +168,19 @@ document.addEventListener('DOMContentLoaded', function () {
       "</div>" +
       "</div>"));
   });
+
+  $(document).ready(function() {
+
+    calendar.addEvent({
+        title: 'July',
+        start: '2022-07-03'
+      })
+ var event = calendar.getEventById('newEvent') // an event object!
+var start = event.start // a property (a Date object)
+console.log(start.toISOString()) // "2018-09-01T00:00:00.000Z"
+})
+
+
 
   // calendar add event
   $(".cal-add-event").on("click", function () {
