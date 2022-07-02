@@ -814,7 +814,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Date of Birth</label>
-                                                                    <input type="text" class="form-control birthdate-picker">
+                                                                    <input type="text"  class="form-control dob-picker" placeholder="Date of Birth">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1825,7 +1825,6 @@
     <script src="../../Content/app-assets/js/scripts/navs/navs.js"></script>
     <!-- END: Page JS-->
 
-
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
     
 
@@ -1839,6 +1838,31 @@
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
         });
+
+
+
+
+        $(function()
+{ 
+    var today = new Date(); 
+    var dd = today.getDate();
+    // console.log(dd);
+    $('.dob-picker').pickadate(
+    {
+        selectYears: 150,
+        today: '',
+        selectMonths: true,
+        min: new Date(1900,1,1),
+        max: new Date(((new Date()).getFullYear()), -210,dd)
+}
+    );
+});
+
+
+var date = new Date();
+date.setDate( date.getDate() - 6 );
+date.setFullYear( date.getFullYear() - 1 );
+$("#datepicker").val((date.getMonth() ) + '/' + (date.getDate()) + '/' + (date.getFullYear()));
     </script>
 
     <script>
@@ -1847,10 +1871,6 @@
             document.getElementById("createemp").className = 'active';
         }
     </script>
-    <script>
-        
-         $('#datepick').multiDatesPicker();
-        </script>
 
     
         <script type="text/javascript">
