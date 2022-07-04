@@ -50,7 +50,8 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
-
+    
+    <div class="overlay-bg"></div>
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
         <div class="navbar-wrapper">
@@ -155,7 +156,7 @@
                 <li class=" navigation-header">
                     <span>Menu</span>
                 </li>
-                <li class=" nav-item" id="Master">
+                <li class=" nav-item">
                     <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
                     <ul class="menu-content">
                         <li>
@@ -177,7 +178,7 @@
                         <li>
                             <a href="../Master/HRMS_EmployeeTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
                         </li>
-                        <li id="codemaster">
+                        <li>
                             <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
                         </li>
                         <li>
@@ -252,7 +253,11 @@
                              <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
                              
                           </li>
+                          <li id="WFH">
+                            <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
+                         </li>
                     </ul>
+
                     
                 </li>
                 <li class=" nav-item">
@@ -328,49 +333,48 @@
                 </div>
 
             </div>
+          
+               
             <div class="content-body">
-
-                <div class="card">
-                    <div class="card-header pb-1">
-                        <h5 class="card-basic">Work From Home</h5>
-                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
-                        <div class="heading-elements">
-                            <ul class="list-inline mb-0">
-                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                            </ul>
-                        </div>
+                
+                    <div class="my-2 dt-buttons btn-group">
+                        <button class="btn btn-primary sidebar-toggle ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add WFH</button>
                     </div>
-                    <div class="card-content collapse show">
-                        <div class="card-body pt-0 pb-0">
-                            <form class="form-horizontal" novalidate>
-
-                                <div class="row">
-                                    <div class="col-12 col-sm-12 col-lg-4">
-                                        <label for="users-list-status">Department</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-status">
-                                                <option value="">--Select Department--</option>
-                                                <option value="0">IT</option>
-                                                <option value="1">Sales</option>
-                                                <option value="0">HR</option>
-                                                <option value="1">Accounts</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-lg-4">
-                                        <label for="users-list-status">Reporting Person</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-status">
-                                                <option value="">--Select Reporting Person--</option>
-                                                <option value="0"></option>
-                                                <option value="1"></option>
-                                                <option value="0"></option>
-                                                <option value="1"></option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-lg-4">
-                                        <label for="users-list-status">Employee Names</label>
+                    <div class="sidebar-content">
+    
+                        <div class="CloseBTN">&times;</div>
+                        
+                        <div>
+                            <form id="sideform" class="sidebar-form">
+                                <h4 class="font-weight-bold mb-2">Work From Home</h4>
+                                <div class="form-group">
+                                     <label for="users-list-status">Department</label>
+                                    <fieldset class="form-group">
+                                        <select class="form-control" id="users-list-status">
+                                            <option value="">--Select Department--</option>
+                                            <option value="0">IT</option>
+                                            <option value="1">Sales</option>
+                                            <option value="0">HR</option>
+                                            <option value="1">Accounts</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="users-list-status">Reporting Person</label>
+                                    <fieldset class="form-group">
+                                        <select class="form-control" id="users-list-status">
+                                            <option value="">--Select Reporting Person--</option>
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                        </select>
+                                    </fieldset>
+                                  </div>
+        
+                                  <div class="form-group">
+                                    <label for="users-list-status">Employee Names</label>
                                         <fieldset class="form-group">
                                             <select class="form-control" id="users-list-status">
                                                 <option value="">--Reporting Employee Name--</option>
@@ -380,38 +384,25 @@
                                                 <option value="1">Nikita</option>
                                             </select>
                                         </fieldset>
-                                    </div>
+                                  </div>
+        
+                                  <div class="form-group">
+                                    <label>From Date</label>
+                                    <input type="date"  class="form-control">
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>From Date</label>
-                                                <input type="text" class="form-control birthdate-picker" placeholder="From Date">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>To Date</label>
-                                                <input type="text" class="form-control birthdate-picker" placeholder="From Date">
-                                            </div>
-                                        </div>
-                                    </div>
+        
+                                <div class="form-group">
+                                    <label>To Date</label>
+                                    <input type="date" class="form-control ">
                                 </div>
-
-
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-12 form-group">
-                                        <label>Reason</label>
-                                        <input type="text" class="form-control" placeholder="Reason">
-                                    </div>
-                                </div>
-
-                             <div class="row">
-                                <div class="col-12 col-sm-12 col-lg-6">
+        
+                                <div class="form-group">
+                                    <label>Reason</label>
+                                    <textarea rows="2"  class="form-control" placeholder="Reason"></textarea>
+                                     <!-- <input type="text"  class="form-control"  placeholder="Reason" required data-validation-required-message="This Currency Name field is required"> -->
+                                  </div>
+        
+                                  <div class="form-group">
                                     <label for="users-list-status">ReviewBy</label>
                                     <fieldset class="form-group">
                                         <select class="form-control" id="users-list-status">
@@ -420,8 +411,8 @@
                                             <option value="1">Karan</option>
                                         </select>
                                     </fieldset>
-                                </div>
-                                <div class="col-12 col-sm-12 col-lg-6">
+                                  </div>
+                                  <div class="form-group">
                                     <label for="users-list-status">ApproveBy</label>
                                     <fieldset class="form-group">
                                         <select class="form-control" id="users-list-status">
@@ -430,39 +421,320 @@
                                             <option value="1">Karan</option>
                                         </select>
                                     </fieldset>
+                                  </div>
+        
+                                  
+                                  <div class="d-flex my-2  justify-content-center ">
+                                    <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
+                                    <button type="reset" class="btn w-50 btn-outline-primary mb-1 mt-0.5">Reset</button>
                                 </div>
-                            </div>
-                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                    <button type="submit" class="btn btn-primary glow  mr-1 mt-1 mb-1">Submit</button>
-                                    <button type="reset" class="btn btn-outline-dark mb-1 mt-1">Reset</button>
-                                </div>
-                            </form>
+        
+        
+                              </form> 
+                        </div>
+                        </div>
+            </div>
+ <!-- for searching  -->
+
+ <div class="card">
+    <div class="card-header pb-1">
+        <h5 class="card-basic">WFH Employees</h5>
+        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+        <div class="heading-elements">
+            <ul class="list-inline mb-0">
+                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                <li><a data-action="close"><i class="feather icon-x text-bold-800"></i></a></li>
+                <!-- <a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a> -->
+            </ul>
+        </div>
+    </div>
+    <div class="card-content collapse show">
+       
+        <div class="card-body pt-0 ">
+           
+            <form class="form-horizontal" novalidate>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-4">
+                        <div class="form-group">
+                            <label>Employee Name</label>
+                            <select class="select2 form-control">
+                             
+                                 <option value="Active">--Select Employee Name--</option>
+                                 <option value="Blocked">Bhumi</option>
+                                 <option value="deactivated">rahul</option>
+                                 <option value="Active">Diksha</option>
+                                 <option value="Blocked">yash</option>
+                                 <option value="deactivated">pooja</option>
+                                 <option value="deactivated">somya</option>
+                                 <option value="Blocked">yash</option>
+                                 <option value="deactivated">pooja</option>
+                                 <option value="deactivated">somya</option>
+                            </select>
                         </div>
                     </div>
+
+                    <div class="col-12 col-sm-4 col-lg-4">
+                        <div class="form-group">
+                            <div class="controls">
+                                <label>Employee Code</label>
+                                <input type="text" class="form-control" placeholder="Employee Code">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-12 col-sm-12 col-lg-4">
+                        <div class="form-group">
+                            <label>Reporting Person</label>
+                            <select class="select2 form-control">
+                                 <option value="Active">Select Reporting Person</option>
+                                 <option value="Blocked">Geeta Pathak</option>
+                                 <option value="deactivated"></option>
+                                 <option value="Active"></option>
+                                 <option value="Blocked"></option>
+                                 <option value="deactivated"></option>
+                                 <option value="deactivated"></option>
+                                 <option value="Blocked"></option>
+                                 
+                            </select>
+                        </div>
+                    </div>
+                
                 </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-4">
+                        <div class="form-group">
+                            <div class="controls">
+                                <label>From Date</label>
+                                <input type="text" class="form-control birthdate-picker"  placeholder="From Date">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-4">
+                        <div class="form-group">
+                            <div class="controls">
+                                <label>To Date</label>
+                                <input type="text" class="form-control birthdate-picker" placeholder="To Date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12 col-lg-4 mt-lg-2">
+                     <button type="search" class="btn btn-primary glow "><i class="feather icon-search"></i> Search</button>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            </form>
+        </div>
+    </div>
+
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body card-dashboard">
 
                             <div class="table-responsive">
-                                <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                <table id="example1" class="table table-responsive border-secondary table-striped dataex-html5-selectors">
                                     <thead>
                                         <tr>
                                             <th>Sr.No.</th>
-                                            <th>From</th>
-                                            <th>To</th>
-                                            <th>Emp.Code</th>
+                                            <th class="px-3" >Name</th>
+                                            <th>Department</th>
+                                            <th>Reporting Person</th>
+                                            <th class="px-3">From Date</th>
+                                            <th class="px-4">To Date</th>
+                                            <th>ReviewBy</th>
+                                            <th>AproveBy</th>
+                                            <th>Reason</th>
                                             <th>IsActive</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-
                                     <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span class="font-small-2">Pooja Jain</span>
+                                                    <span class="font-small-2">Emp-101</span>
+                                                </div>
+                                            </div></td>
+                                       
+                                            <td>IT</td>
+                                            <td>Geeta</td>
+                                            <td>01-07-2022</td>
+                                            <td>30-07-2022</td>
+                                            <td>Neha</td>
+                                            <td>Swati</td>
+                                            <td> 
+                                                <div class="modal-primary mr-1 mb-1 d-inline-block">
+                                                    <!-- Button trigger modal -->
+                                                    <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                        <i class="feather icon-message-square"></i>
+                                                    </span>
 
+                                                    <!-- Modal -->
+                                                    <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel160" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header bg-primary white">
+                                                                    <h5 class="modal-title" id="myModalLabel160">Reason:</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Not In office location
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               </td>
+                                           
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                            
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
+                                            <td >
+                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span class="font-small-2">Yash Sharma</span>
+                                                    <span class="font-small-2">Emp-102</span>
+                                                </div>
+                                            </div></td>
+                                       
+                                            <td>IT</td>
+                                            <td>Geeta</td>
+                                            <td>01-07-2022</td>
+                                            <td>30-07-2022</td>
+                                            <td>Neha</td>
+                                            <td>Swati</td>
+                                            <td> 
+                                                <div class="modal-primary mr-1 mb-1 d-inline-block">
+                                                    <!-- Button trigger modal -->
+                                                    <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                        <i class="feather icon-message-square"></i>
+                                                    </span>
 
+                                                    <!-- Modal -->
+                                                    <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel160" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header bg-primary white">
+                                                                    <h5 class="modal-title" id="myModalLabel160">Reason:</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Not In office location
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               </td>
+                                           
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                            
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                
+                                                <label class="custom-control-label" for="customSwitch2">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
+                                            <td >
+                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span class="font-small-2">Arpit Sharma</span>
+                                                    <span class="font-small-2">Emp-103</span>
+                                                </div>
+                                            </div></td>
+                                       
+                                            <td>IT</td>
+                                            <td>Geeta</td>
+                                            <td>01-07-2022</td>
+                                            <td>30-07-2022</td>
+                                            <td>Neha</td>
+                                            <td>Swati</td>
+                                            <td> 
+                                                <div class="modal-primary mr-1 mb-1 d-inline-block">
+                                                    <!-- Button trigger modal -->
+                                                    <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                        <i class="feather icon-message-square"></i>
+                                                    </span>
 
+                                                    <!-- Modal -->
+                                                    <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel160" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header bg-primary white">
+                                                                    <h5 class="modal-title" id="myModalLabel160">Reason:</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Not In office location
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               </td>
+                                           
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                            
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                
+                                                <label class="custom-control-label" for="customSwitch3">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
+                                            <td >
+                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
+
+
+                           
                         </div>
                     </div>
                 </div>
@@ -518,6 +790,9 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
+       <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
+
     <script>
         $(function () {
             $("#example1").DataTable({
@@ -532,8 +807,8 @@
     <!-- Code for menu active Yash 04/06/22 -->
     <script>
         window.onload = function () {
-            document.getElementById("Master").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("codemaster").className = 'active';
+            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("WFH").className = 'active';
         }
     </script>
 
