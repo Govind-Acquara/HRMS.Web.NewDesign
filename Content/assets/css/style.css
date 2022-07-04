@@ -505,7 +505,7 @@ i.fa.fa-times.close-icon {
 
   /*Arpit's Sidebar CSS Start */
 
-  #sidebar-content {
+  .sidebar-content {
     position: fixed;
     top: 0px;
     right: 0px;
@@ -525,7 +525,7 @@ i.fa.fa-times.close-icon {
    transition: all 0.2s linear;
   }
   
-  #sidebar-content.side-active{
+  .sidebar-content.side-active{
       width: 28.57rem;
   }
   

@@ -11,7 +11,7 @@
   
       const sidebar = document.querySelector(".sidebar-toggle");
       const overlay = document.querySelector(".overlay-bg");
-      const sidebarContent = document.querySelector("#sidebar-content");
+      const sidebarContent = document.querySelector(".sidebar-content");
   
       $(".sidebar-toggle").on('click', function () {
           sidebar.classList.toggle("side-active");
@@ -19,11 +19,11 @@
           overlay.classList.toggle("show");
       })
   
-      //sidebar.addEventListener("click", () => {
-      //    sidebar.classList.toggle("side-active");
-      //    sidebarContent.classList.toggle("side-active");
-      //    overlay.classList.toggle("show");
-      //})
+    //   sidebar.addEventListener("click", () => {
+    //      sidebar.classList.toggle("side-active");
+    //      sidebarContent.classList.toggle("side-active");
+    //      overlay.classList.toggle("show");
+    //   })
   
       document.querySelector(".overlay-bg").addEventListener("click", () => {
           sidebar.classList.remove("side-active");
