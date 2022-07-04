@@ -1,39 +1,44 @@
 (function(window, undefined) {
-  'use strict';
-
-  /*
-  NOTE:
-  ------
-  PLACE HERE YOUR OWN JAVASCRIPT CODE IF NEEDED
-  WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR JAVASCRIPT CODE PLEASE CONSIDER WRITING YOUR SCRIPT HERE.  */
-
-          // Sidebar Javascript start
-
-          const sidebar = document.querySelector("#sidebar-toggle");
-          const overlay = document.querySelector(".overlay-bg");
-          const sidebarContent = document.querySelector("#sidebar-content");
+    'use strict';
   
-          sidebar.addEventListener("click", () =>{
-              sidebar.classList.toggle("side-active");
-              sidebarContent.classList.toggle("side-active");
-              overlay.classList.toggle("show");
-          })
+    /*
+    NOTE:
+    ------
+    PLACE HERE YOUR OWN JAVASCRIPT CODE IF NEEDED
+    WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR JAVASCRIPT CODE PLEASE CONSIDER WRITING YOUR SCRIPT HERE.  */
   
-          document.querySelector(".overlay-bg").addEventListener("click", () => {
-              sidebar.classList.remove("side-active");
-              sidebarContent.classList.remove("side-active");
-              overlay.classList.remove("show");
-          })
+      // Sidebar Javascript start
   
-          document.querySelector(".CloseBTN").addEventListener("click", () => {
-              sidebar.classList.remove("side-active");
-              sidebarContent.classList.remove("side-active");
-              overlay.classList.remove("show");
-          })
+      const sidebar = document.querySelector(".sidebar-toggle");
+      const overlay = document.querySelector(".overlay-bg");
+      const sidebarContent = document.querySelector("#sidebar-content");
   
-          // Sidebar Javascript end
-
+      $(".sidebar-toggle").on('click', function () {
+          sidebar.classList.toggle("side-active");
+          sidebarContent.classList.toggle("side-active");
+          overlay.classList.toggle("show");
+      })
   
-
-})(window);
-
+      //sidebar.addEventListener("click", () => {
+      //    sidebar.classList.toggle("side-active");
+      //    sidebarContent.classList.toggle("side-active");
+      //    overlay.classList.toggle("show");
+      //})
+  
+      document.querySelector(".overlay-bg").addEventListener("click", () => {
+          sidebar.classList.remove("side-active");
+          sidebarContent.classList.remove("side-active");
+          overlay.classList.remove("show");
+      })
+  
+      document.querySelector(".CloseBTN").addEventListener("click", () => {
+          sidebar.classList.remove("side-active");
+          sidebarContent.classList.remove("side-active");
+          overlay.classList.remove("show");
+      })
+  
+            // Sidebar Javascript end
+  
+  
+  
+  })(window);
