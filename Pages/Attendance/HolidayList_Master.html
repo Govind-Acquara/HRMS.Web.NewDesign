@@ -429,7 +429,7 @@
                             <h4 class="font-weight-bold mb-2">Add Holiday</h4>
                             <div class="form-group">
                                 <label>Holiday Date</label>
-                                <input type="date" name="text" class="form-control">
+                                <input type="date" name="text" id="hday" value="2022-07-30" class="form-control">
                             </div>
     
                             <div class="form-group">
@@ -446,22 +446,53 @@
                               </div>
                             <div class="row">
                                 <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                    <div class="controls">
                                     <label>Background Color</label>
-                                    <input type="color" class="form-control" id="background" required disabled>
-                                    </div>
-                                    </div>
+                                    <input type="color" id="background" list="backgroundColors" value="#ea5656" required >
+                                    <datalist id="backgroundColors">
+                                      <option value="#fe9f41"/>
+                                      <option value="#9CE3AB"/>
+                                      <option value="#219EBC"/>
+                                      <option value="#FFB703"/>
+                                      <option value="#FCA311"/>
+                                      <option value="#FCA311"/>
+                                      <option value="#F95738"/>
+                                      <option value="#9e224f"/>
+                                      <option value="#0D3B66"/>
+                                      <option value="#F4D35E"/>
+                                      <option value="#023047"/>
+                                      <option value="#14213D"/>
+                                      <option value="#242F9B"/>
+                                      <option value="#8ECAE6"/>
+                                      <option value="#ea5656"/>
+                                      <option value="#9BA3EB"/>
+                                    </datalist>
+
                                 </div>
 
                                 <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                    <div class="controls">
+
                                     <label>Font Color</label>
                                                                          
-                                    <input type="color" class="form-control" id="font" required disabled>
-                                    </div>
-                                    </div>
+                                    <input type="color" id="font" list="fontColors" value="#ffffff" required>
+                                    <datalist id="fontColors">
+                                        <option value="#fe9f41"/>
+                                        <option value="#9CE3AB"/>
+                                        <option value="#219EBC"/>
+                                        <option value="#FFB703"/>
+                                        <option value="#FCA311"/>
+                                        <option value="#FCA311"/>
+                                        <option value="#F95738"/>
+                                        <option value="#9e224f"/>
+                                        <option value="#0D3B66"/>
+                                        <option value="#F4D35E"/>
+                                        <option value="#023047"/>
+                                        <option value="#14213D"/>
+                                        <option value="#242F9B"/>
+                                        <option value="#8ECAE6"/>
+                                        <option value="#ea5656"/>
+                                        <option value="#9BA3EB"/>
+                                      </datalist>
+
                                 </div>
 
                                 <div class="col-sm-1 col-12 mt-2">
@@ -491,7 +522,6 @@
                                     <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
                                         <thead>
                                             <tr>
-                                             
                                                   <th>Sr. No.</th>
                                                   <th>Holiday Date</th>
                                                   <th>Holiday Name</th>
@@ -713,6 +743,14 @@
     </script>
     <!-- END: Page JS-->
 <script>
+    
+// $(document).ready(function(){
+//     var datevalue = $("#hday").attr('value');
+//     // console.log(datevalue);
+//     document.getElementById("hday").value = datevalue;
+
+// });
+
     $('#test').pickadate({
     min: true
 });
