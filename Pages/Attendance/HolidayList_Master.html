@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Leave Apply</title>
+    <title>Holiday Master</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -37,7 +37,13 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
- 
+
+
+     <!-- Toast CSS -->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
+     <!-- Toast CSS -->
+
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
  
@@ -418,7 +424,7 @@
                 
             </div>
             <div class="content-body">
-                
+                <button type="button" class="btn btn-outline-success mr-1 mb-1" id="type-success">Success</button>
 
                 <div class="my-2 dt-buttons btn-group">
                     <button class="sidebar-toggle btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Holiday</button>
@@ -712,9 +718,13 @@
 
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
-    
 
-    
+    <!-- Toast JS -->
+
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+        <!-- Toast JS -->
+
     <script>
         $(function () {
         $("#example1").DataTable({
@@ -728,6 +738,20 @@
         </script>
     
     <script>
+
+
+
+// // Success Type
+// $('#type-success').on('click', function () {
+//     $.toast({
+//     heading: 'Information',
+//     text: 'Loaders are enabled by default. Use `loader`, `loaderBg` to change the default behavior',
+//     icon: 'info',
+//     loader: true,        // Change it to false to disable loader
+//     loaderBg: '#9EC600'  // To change the background
+// })
+// });
+
         window.onload = function () {
             document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("holiday_master").className = 'active';
@@ -745,14 +769,16 @@
         }
     </script>
     <!-- END: Page JS-->
-<script>
-    
-// $(document).ready(function(){
-//     var datevalue = $("#hday").attr('value');
-//     // console.log(datevalue);
-//     document.getElementById("hday").value = datevalue;
 
-// });
+<script>
+
+
+$(document).ready(function() {
+    $('#type-success').on('click', function () {
+    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+  });
+})
+    
 
     $('#test').pickadate({
     min: true

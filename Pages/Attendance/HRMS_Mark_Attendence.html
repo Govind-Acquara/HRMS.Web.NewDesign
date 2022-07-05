@@ -430,20 +430,65 @@
                             </div>
                         </div>
                         <div class="card-content collapse show">
-                            <div class="card-body pt-0 pb-0">
+                            <div class="card-body pt-0">
                                 <form class="form-horizontal" novalidate>
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                            <button type="button" class="btn btn-primary btn-lg">Mark Attendance</button>
+                                <div class="row ">
+                                        <div>
+                                            <button type="button" class="btn btn-primary">Mark Attendance</button>
                                        </div>
-                                     </div>
+
+                                     <div class="ml-2">
+                                        <button class="btn btn-primary" type="submit"><i class="fa fa-download"></i>&nbsp;Import</button>
+
+                                       </div>
                                 </div>
 
                                 </form>
                             </div>
                         </div>
                     </div>
+                    </div>
+
+                    <div class="card">
+                        <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
+                        <div class="card-content">
+                              <div class="card-body card-dashboard">
+                                <div class="table-responsive">
+                                    <table id="example1" class="table border-secondary data-list-view">
+                                        <thead>
+                                            <tr>
+                                              <th>Sr. No.</th>
+                                              <th>Name</th>
+                                              <th>Employee Code</th>
+                                              <th>Date</th>
+                                              <th>Reason</th>
+                                              <th>Status</th>
+                                              <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                              <td>1</td>
+                                              <td>Jhon</td>
+                                              <td>Emp101</td>
+                                              <td class="date">21-01-22</td>
+                                              <td>ABC</td>
+                                              <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Pending</div>
+                                                </div>
+                                            </div></td>
+                                            <td class="product-action">
+                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+
+                                            </td>
+                                          </tr>
+                                        
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </div>
                     </div>
 
                   
@@ -503,6 +548,18 @@
             document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("attendance_mark").className = 'active';
         }
+    </script>
+
+<script>
+    $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": true,
+      
+      
+      "buttons": ["excel","print", "copy","pdf","colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    
+    });
     </script>
 </body>
 <!-- END: Body-->
