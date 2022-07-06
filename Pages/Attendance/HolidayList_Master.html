@@ -314,9 +314,6 @@
                         <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                     </li>
                     <li>
-                        <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Leave Apply </span></a>
-                    </li>
-                    <li>
                         <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                     </li>
                     <li>
@@ -424,7 +421,7 @@
                 
             </div>
             <div class="content-body">
-                <button type="button" class="btn btn-outline-success mr-1 mb-1" id="type-success">Success</button>
+                <!-- <button type="button" class="btn btn-outline-success mr-1 mb-1" id="type-success">Success</button> -->
 
                 <div class="my-2 dt-buttons btn-group">
                     <button class="sidebar-toggle btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Holiday</button>
@@ -740,6 +737,9 @@
     <script>
 
 
+$('#type-success').on('click', function () {
+    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+  });
 
 // // Success Type
 // $('#type-success').on('click', function () {
