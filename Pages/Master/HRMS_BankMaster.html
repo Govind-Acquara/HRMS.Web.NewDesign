@@ -15,8 +15,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+     <!-- BEGIN: Vendor CSS-->
+   <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+   <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
     <!-- END: Vendor CSS-->
 
@@ -39,7 +40,8 @@
 
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
     <!-- END: Page CSS-->
-
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
+    
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -361,7 +363,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                    <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
+                                    <button type="submit" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
                                     <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
                                 </div>
                                
@@ -463,6 +465,10 @@
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
 
+      <!--Pooja BEGIN: Page Vendor JS-->
+      <script src="../../Content/app-assets/vendors/js/extensions/toastr.min.js"></script>
+      <!-- END: Page Vendor JS-->
+
     <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
     <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
     <!-- END: Page Vendor JS-->
@@ -476,9 +482,13 @@
     <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
     <!-- END: Page JS-->
+      <!--Pooja BEGIN: Page JS -->
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+    <!-- END: Page JS-->
+  
 
 
-
+   
 
     <script>
         $(function () {
@@ -500,6 +510,12 @@
             document.getElementById("Master").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("bank").className = 'active';
            }
+
+
+        $('#type-submit').on('click', function () {
+        toastr.success('Page Submitted!', 'Miracle Max Says');
+
+});
     </script>
    
 
