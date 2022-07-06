@@ -165,22 +165,51 @@
                 </li>
               </ul>
 
-              <ul class="nav">
-                <li>
-                  <select
-                    class="form-control"
-                    id="label-small"
-                    placeholder="Small Input"
-                    style="padding-right: 2rem"
-                  >
-                    <option value="">Select Office Location</option>
-                    <option value="Active">Gurgaon</option>
-                    <option value="Blocked">Mumbai</option>
-                    <option value="deactivated">Abu Dhabi</option>
-                    <option value="deactivated">Other</option>
-                  </select>
-                </li>
-              </ul>
+                        <ul class="nav">
+                            <li>
+                                <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
+                                    <option value="">Select Office Location</option>
+                                    <option value="Active">Gurgaon</option>
+                                    <option value="Blocked">Mumbai</option>
+                                    <option value="deactivated">Abu Dhabi</option>
+                                    <option value="deactivated">Other</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+                        <!-- <li class="nav-item nav-search">
+                            <a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                <input class="input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="template-list">
+                                <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                <ul class="search-list search-list-main"></ul>
+                            </div>
+                        </li> -->
+                        <li class="dropdown dropdown-notification nav-item">
+                            <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <li class="dropdown-menu-header">
+                                    <div class="dropdown-header m-0 p-2">
+                                        <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
+                                    </div>
+                                </li>
+
+                                <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avatar" height="40" width="40"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="../Users/HRMS_User_Profile.html"><i class="feather icon-user"></i> Edit Profile</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="../../Index.html"><i class="feather icon-power"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <ul class="nav navbar-nav float-right">
               <li class="nav-item nav-search">
@@ -394,43 +423,172 @@
                 >
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#"
-              ><i class="feather icon-users"></i
-              ><span class="menu-title" data-i18n="User">Employee </span></a
-            >
-            <ul class="menu-content">
-              <li>
-                <a href="../Employee/HRMS_CreateEmployee.html"
-                  ><i class="feather icon-circle"></i
-                  ><span class="menu-item" data-i18n="List"
-                    >Create Employee</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="../Employee/HRMS_ViewEmployeeList.html"
-                  ><i class="feather icon-circle"></i
-                  ><span class="menu-item" data-i18n="List"
-                    >View Employee</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="../Employee/HRMS_EditEmployeeList.html"
-                  ><i class="feather icon-circle"></i
-                  ><span class="menu-item" data-i18n="View"
-                    >Edit Employee</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="../Employee/Reports.html"
-                  ><i class="feather icon-circle"></i
-                  ><span class="menu-item" data-i18n="View">Reports</span></a
-                >
-              </li>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item">
+                    <a href="../Dashboard/Index.html">
+                        <i class=" active feather icon-home"></i>
+                        <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
+                        <!-- <span class="badge badge badge-warning badge-pill float-right mr-2">2</span> -->
+                    </a>
+                </li>
+                <li class=" navigation-header">
+                    <span>Menu</span>
+                </li>
+                <li class=" nav-item" id="Master" >
+                    <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
+                    <ul class="menu-content">
+                        <li id="bank">
+                            <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DocumentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Document Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_EmployeeTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
+                        </li>
+                        <li>
+                            <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
+                        </li>
+                        <li>
+                            <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
+                        </li>
+                        <li>
+
+                            <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
+                        </li>
+                       
+                        <li>
+                            <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/Report.html"><i class="fa fa-bar-chart"></i><span class="menu-item" data-i18n="View">Reports </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item" id="leave">
+                    <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                    <ul class="menu-content">
+                        
+                            <li>
+                                <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                                
+                             </li>
+                       
+                        <li>
+                            <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type</span></a>
+                            
+                         </li>
+                         
+                         <li>
+                             <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
+                             
+                          </li>
+                          <li>
+                            <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
+                         </li>
+                         <li>
+                            <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
+                         </li>
+                    </ul>
+                    
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Users/HRMS_User_Profile.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New User </span></a>
+                        </li>
+                        <li>
+                            <a href="../Users/HRMS_User_Profile_List.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View User </span></a>
+                        </li>
+                        <li>
+                            <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Company/HRMS_CompanyDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
+                        </li>
+                        <li>
+                            <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
+                        </li>
+                        <li>
+                            <a href="../Company/HRMS_BranchDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Branch</span></a>
+                        </li>
+                        <li>
+                            <a href="../Company/HRMS_BranchDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Branch List</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-lock"></i><span class="menu-title" data-i18n="User">Role & Permission</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Role/HRMS_Role.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Role</span></a>
+                        </li>
+                        <li>
+                            <a href="../Role/HRMS_RoleList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role List</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-codepen"></i><span class="menu-title" data-i18n="User">Subscription</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Subscription/AddSubscription.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">My Subscription</span></a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
           </li>
           <li class="nav-item">
