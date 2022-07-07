@@ -359,81 +359,9 @@
                     <div class="card-content">
                         <div class="card-body card-dashboard">
 
-                            
-                            <form>
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <label for="users-list-role">Employee Name</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-role">
-                                                <option value="">A</option>
-                                                <option value="">B</option>
-                                                <option value="">C</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <label for="users-list-verified">Employee Code</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-verified">
-                                                <option value="">GU000</option>
-                                                <option value="true">GU000</option>
-                                                <option value="false">GU000</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <label for="users-list-status">Status</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-status">
-                                                <option value="">Active</option>
-                                                <option value="Active">InActive</option>
-
-                                                
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <label>Location</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control">
-                                                
-                                                <option value="">New Delhi</option>
-                                                <option value="">Mumbai</option>
-                                                <option value="">Chennai</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>From Date</label>
-                                                <input type="text" class="form-control birthdate-picker" placeholder="From Date">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 col-sm-6 col-lg-3">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>To Date</label>
-                                                <input type="text" class="form-control birthdate-picker" placeholder="To Date">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-3 col-sm-6 flex-sm-row mt-2  justify-content-end pr-0">
-                                        <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Search</button>
-                                        
-                                    </div> 
-                                </div>
-                            </form>
 
                             <div class="table-responsive">
-                                <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                <table id="AttendanceReportTable" class="table border-secondary table-striped dataex-html5-selectors">
                                     <thead>
                                         <tr>
                                             <th>SrNo.</th>
@@ -447,6 +375,19 @@
                                             
                                         </tr>
                                     </thead>
+                                    <tfoot class="tableSearchFoot">
+                                        <tr>
+                                            <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                            <th>Image</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Code</th>
+                                            <th>Date</th>
+                                            <th>Punch in</th>
+                                            <th>Punch out</th>
+                                            <th></th>
+                                            
+                                        </tr>
+                                    </tfoot>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
@@ -551,6 +492,10 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
     <!-- END: Page JS-->
+
+
+        <!-- Importing Custom Script.js  -->
+        <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
         $(function () {

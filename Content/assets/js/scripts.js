@@ -50,7 +50,7 @@
 
             $(document).ready(function(){
 
-                $('#ViewLeaveTable tfoot th').not('th:nth-child(7)').not('th:nth-child(1)').not('th:nth-child(8)').each( function () {
+                $('#ViewLeaveTable tfoot th').not('th:nth-child(1)').not('th:nth-child(8)').each( function () {
                 var title = $('#ViewLeaveTable tfoot th').eq( $(this).index() ).text();
                 $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
                 } );
@@ -208,7 +208,7 @@
 
             $(document).ready(function(){
 
-                $('#ForgetAttendanceTable tfoot th').not('th:nth-child(1)').not('th:nth-child(10)').each( function () {
+                $('#ForgetAttendanceTable tfoot th').not('th:nth-child(1)').not('th:nth-child(7)').each( function () {
                 var title = $('#ForgetAttendanceTable tfoot th').eq( $(this).index() ).text();
                 $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
             } );
@@ -233,6 +233,110 @@
         });
     }
  
+
+              //Attendance Report Page Table Script
+
+              if ($('#AttendanceReportTable').length != 0) {
+
+
+                $(document).ready(function(){
+    
+                    $('#AttendanceReportTable tfoot th').not('th:nth-child(1)').not('th:nth-child(8)').each( function () {
+                    var title = $('#AttendanceReportTable tfoot th').eq( $(this).index() ).text();
+                    $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
+                } );
+            
+                $("#AttendanceReportTable").DataTable({
+                              "responsive": true, "autoWidth": true, "lengthChange": false,
+                              "buttons": ["excel","print", "copy","pdf","colvis"]
+                            }).buttons().container().appendTo(' .col-md-6:eq(0)');
+            
+                 var table = $('#AttendanceReportTable').DataTable();
+            
+                table.columns().every( function () {
+                    var that = this;
+             
+                    $( 'input', this.footer() ).on( 'keyup change', function () {
+                        that
+                            .search( this.value )
+                            .draw();
+                    } );
+                } );
+            
+            });
+        }
+
+
+
+                      //Daily Attendance Page Table Script
+
+                      if ($('#DailyAttendanceTable').length != 0) {
+
+
+                        $(document).ready(function(){
+            
+                            $('#DailyAttendanceTable tfoot th').not('th:nth-child(1)').not('th:nth-child(7)').each( function () {
+                            var title = $('#DailyAttendanceTable tfoot th').eq( $(this).index() ).text();
+                            $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
+                        } );
+                    
+                        $("#DailyAttendanceTable").DataTable({
+                                      "responsive": true, "autoWidth": true, "lengthChange": false,
+                                      "buttons": ["excel","print", "copy","pdf","colvis"]
+                                    }).buttons().container().appendTo(' .col-md-6:eq(0)');
+                    
+                         var table = $('#DailyAttendanceTable').DataTable();
+                    
+                        table.columns().every( function () {
+                            var that = this;
+                     
+                            $( 'input', this.footer() ).on( 'keyup change', function () {
+                                that
+                                    .search( this.value )
+                                    .draw();
+                            } );
+                        } );
+                    
+                    });
+                }
+        
+
+
+
+
+                      //Mark Attendance Page Table Script
+
+                      if ($('#MarkAttendanceTable').length != 0) {
+                        $(document).ready(function(){
+            
+                            $('#MarkAttendanceTable tfoot th').not('th:nth-child(1)').not('th:nth-child(7)').each( function () {
+                            var title = $('#MarkAttendanceTable tfoot th').eq( $(this).index() ).text();
+                            $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
+                        } );
+                    
+                        $("#MarkAttendanceTable").DataTable({
+                                      "responsive": true, "autoWidth": true, "lengthChange": false,
+                                      "buttons": ["excel","print", "copy","pdf","colvis"]
+                                    }).buttons().container().appendTo(' .col-md-6:eq(0)');
+                    
+                         var table = $('#MarkAttendanceTable').DataTable();
+                    
+                        table.columns().every( function () {
+                            var that = this;
+                     
+                            $( 'input', this.footer() ).on( 'keyup change', function () {
+                                that
+                                    .search( this.value )
+                                    .draw();
+                            } );
+                        } );
+                    
+                    });
+                }
+                              
+
+
+
 
 
   
