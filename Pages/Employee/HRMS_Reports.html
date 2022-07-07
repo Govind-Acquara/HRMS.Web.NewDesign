@@ -460,7 +460,7 @@
                             <div class="card-body card-dashboard">
         
                                 <div class="table-responsive">
-                                    <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                    <table id="EmployeeReportTable" class="table border-secondary table-striped dataex-html5-selectors">
                                         <thead>
                                             <tr>
                                                 <th>Sr. No.</th>
@@ -477,6 +477,21 @@
                                                 
                                             </tr>
                                         </thead>
+                                        <tfoot class="tableSearchFoot">
+                                            <tr>
+                                                <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                                <th>Employee Name</th>
+                                                <th>Employee Code</th>
+                                                <th>Designation</th>
+                                                <th>Department</th>
+                                                <th>EmailID</th>
+                                                <th>Mobile Number</th>
+                                                <th>Date of Joining</th>
+                                                <!-- <th>Location</th> -->
+                                                <th>Reporting Officer</th>
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
@@ -605,6 +620,12 @@
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+
+        <!-- Importing Custom Script.js  -->
+        <script src="../../Content/assets/js/scripts.js"></script>
+
+
+
     <script>
         $(function () {
             $("#example1").DataTable({

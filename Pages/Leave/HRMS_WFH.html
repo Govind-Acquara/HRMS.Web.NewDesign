@@ -436,106 +436,12 @@
             </div>
  <!-- for searching  -->
 
- <div class="card">
-    <div class="card-header pb-1">
-        <h5 class="card-basic">WFH Employees</h5>
-        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
-        <div class="heading-elements">
-            <ul class="list-inline mb-0">
-                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                <li><a data-action="close"><i class="feather icon-x text-bold-800"></i></a></li>
-                <!-- <a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a> -->
-            </ul>
-        </div>
-    </div>
-    <div class="card-content collapse show">
-       
-        <div class="card-body pt-0 ">
-           
-            <form class="form-horizontal" novalidate>
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="form-group">
-                            <label>Employee Name</label>
-                            <select class="select2 form-control">
-                             
-                                 <option value="Active">--Select Employee Name--</option>
-                                 <option value="Blocked">Bhumi</option>
-                                 <option value="deactivated">rahul</option>
-                                 <option value="Active">Diksha</option>
-                                 <option value="Blocked">yash</option>
-                                 <option value="deactivated">pooja</option>
-                                 <option value="deactivated">somya</option>
-                                 <option value="Blocked">yash</option>
-                                 <option value="deactivated">pooja</option>
-                                 <option value="deactivated">somya</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-4 col-lg-4">
-                        <div class="form-group">
-                            <div class="controls">
-                                <label>Employee Code</label>
-                                <input type="text" class="form-control" placeholder="Employee Code">
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="form-group">
-                            <label>Reporting Person</label>
-                            <select class="select2 form-control">
-                                 <option value="Active">Select Reporting Person</option>
-                                 <option value="Blocked">Geeta Pathak</option>
-                                 <option value="deactivated"></option>
-                                 <option value="Active"></option>
-                                 <option value="Blocked"></option>
-                                 <option value="deactivated"></option>
-                                 <option value="deactivated"></option>
-                                 <option value="Blocked"></option>
-                                 
-                            </select>
-                        </div>
-                    </div>
-                
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="form-group">
-                            <div class="controls">
-                                <label>From Date</label>
-                                <input type="text" class="form-control birthdate-picker"  placeholder="From Date">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-12 col-lg-4">
-                        <div class="form-group">
-                            <div class="controls">
-                                <label>To Date</label>
-                                <input type="text" class="form-control birthdate-picker" placeholder="To Date">
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-sm-12 col-lg-4 mt-lg-2">
-                     <button type="search" class="btn btn-primary glow "><i class="feather icon-search"></i> Search</button>
-                    </div>
-                </div>
-                
-            </div>
-
-
-            </form>
-        </div>
-    </div>
-
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body card-dashboard">
 
                             <div class="table-responsive">
-                                <table id="example1" class="table table-responsive border-secondary table-striped dataex-html5-selectors">
+                                <table id="WFHtable" class="table table-responsive border-secondary table-striped dataex-html5-selectors">
                                     <thead>
                                         <tr>
                                             <th>Sr.No.</th>
@@ -550,6 +456,22 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
+
+                                    <tfoot class="tableSearchFoot">
+                                        <tr>
+                                            <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                            <th>Name</th>
+                                            <th>Department</th>
+                                            <th>Reporting Person</th>
+                                            <th>From Date</th>
+                                            <th>To Date</th>
+                                            <th>ReviewBy</th>
+                                            <th>AproveBy</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
+
                                     <tbody>
                                         <tr>
                                             <td>1</td>
