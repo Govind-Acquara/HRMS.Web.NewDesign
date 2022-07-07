@@ -42,6 +42,9 @@
         }
 
 
+        if ($('#ViewLeaveTable').length != 0) {
+            
+
 
             // View Leave Page Table Script
 
@@ -50,28 +53,32 @@
                 $('#ViewLeaveTable tfoot th').not('th:nth-child(7)').not('th:nth-child(1)').not('th:nth-child(8)').each( function () {
                 var title = $('#ViewLeaveTable tfoot th').eq( $(this).index() ).text();
                 $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
-            } );
-        
-            $("#ViewLeaveTable").DataTable({
-                          "responsive": true, "autoWidth": true, "lengthChange": false,
+                } );
+                
+                var buttons= $("#ViewLeaveTable").DataTable({
+                          "responsive": true, 
+                          "autoWidth": true, 
+                          "lengthChange": false,
                           "buttons": ["excel","print", "copy","pdf","colvis"]
-                        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        
-             var table = $('#ViewLeaveTable').DataTable();
-        
-            table.columns().every( function () {
+                        }).buttons().container().appendTo('.col-md-6:eq(0)');
+                
+                var table = $('#ViewLeaveTable').DataTable();
+                
+                table.columns().every( function () {
                 var that = this;
-         
+                
                 $( 'input', this.footer() ).on( 'keyup change', function () {
                     that
                         .search( this.value )
                         .draw();
                 } );
-            } );
-        
-        });
+                } );
+                
+                });
 
+    }
 
+    if ($('#WFHtable').length != 0) {
                     // WFH Table Script
 
                     $(document).ready(function(){
@@ -84,7 +91,7 @@
                             $("#WFHtable").DataTable({
                                   "responsive": true, "autoWidth": true, "lengthChange": false,
                                   "buttons": ["excel","print", "copy","pdf","colvis"]
-                                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                                }).buttons().container().appendTo(' .col-md-6:eq(0)');
                 
                      var table = $('#WFHtable').DataTable();
                 
@@ -99,10 +106,10 @@
                     } );
                 
                 });
+            }
 
 
-
-                
+                if ($('#ViewEmployeeTable').length != 0) {
                     // View Employee Table Script
 
                     $(document).ready(function(){
@@ -115,7 +122,7 @@
                    $("#ViewEmployeeTable").DataTable({
                                   "responsive": true, "autoWidth": true, "lengthChange": false,
                                   "buttons": ["excel","print", "copy","pdf","colvis"]
-                                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                                }).buttons().container().appendTo(' .col-md-6:eq(0)');
                 
                      var table = $('#ViewEmployeeTable').DataTable();
                 
@@ -131,8 +138,10 @@
                 
                 });
 
+            }
 
-                                    // View Employee Table Script
+                if ($('#EditEmployeeTable').length != 0) {
+                                    // Edit Employee Table Script
                                 $(document).ready(function(){
                                     $('#EditEmployeeTable tfoot th').not('th:nth-child(1)').not('th:nth-child(8)').not('th:nth-child(9)').each( function () {
                                     var title = $('#EditEmployeeTable tfoot th').eq( $(this).index() ).text();
@@ -142,7 +151,7 @@
                                $("#EditEmployeeTable").DataTable({
                                               "responsive": true, "autoWidth": true, "lengthChange": false,
                                               "buttons": ["excel","print", "copy","pdf","colvis"]
-                                            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                                            }).buttons().container().appendTo(' .col-md-6:eq(0)');
                             
                                  var table = $('#EditEmployeeTable').DataTable();
                             
@@ -159,10 +168,10 @@
                             });
 
 
+                        }
 
 
-
-
+                            if ($('#EmployeeReportTable').length != 0) {
         //Employee Report Page Table Script
 
             $(document).ready(function(){
@@ -175,7 +184,7 @@
             $("#EmployeeReportTable").DataTable({
                           "responsive": true, "autoWidth": true, "lengthChange": false,
                           "buttons": ["excel","print", "copy","pdf","colvis"]
-                        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                        }).buttons().container().appendTo(' .col-md-6:eq(0)');
         
              var table = $('#EmployeeReportTable').DataTable();
         
@@ -190,8 +199,41 @@
             } );
         
         });
-
+    }
  
-  
+          //Forget Attendance Page Table Script
+
+    if ($('#ForgetAttendanceTable').length != 0) {
+
+
+            $(document).ready(function(){
+
+                $('#ForgetAttendanceTable tfoot th').not('th:nth-child(1)').not('th:nth-child(10)').each( function () {
+                var title = $('#ForgetAttendanceTable tfoot th').eq( $(this).index() ).text();
+                $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
+            } );
+        
+            $("#ForgetAttendanceTable").DataTable({
+                          "responsive": true, "autoWidth": true, "lengthChange": false,
+                          "buttons": ["excel","print", "copy","pdf","colvis"]
+                        }).buttons().container().appendTo(' .col-md-6:eq(0)');
+        
+             var table = $('#ForgetAttendanceTable').DataTable();
+        
+            table.columns().every( function () {
+                var that = this;
+         
+                $( 'input', this.footer() ).on( 'keyup change', function () {
+                    that
+                        .search( this.value )
+                        .draw();
+                } );
+            } );
+        
+        });
+    }
+ 
+
+
   
   })(window);
