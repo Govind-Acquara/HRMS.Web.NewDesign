@@ -567,3 +567,10 @@ i.fa.fa-times.close-icon {
   
   
    /* Sidebar CSS End */
+
+
+   /* Table Search CSS */
+
+   .tableSearchFoot{
+    display: table-header-group;
+   }

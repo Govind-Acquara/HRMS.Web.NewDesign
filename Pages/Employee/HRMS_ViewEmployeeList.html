@@ -348,7 +348,7 @@
                         <div class="card-body card-dashboard">
 
                             <div class="table-responsive">
-                                <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                <table id="ViewEmployeeTable" class="table border-secondary table-striped dataex-html5-selectors">
                                     <thead>
                                         <tr>
                                             <th>SrNo.</th>
@@ -358,14 +358,23 @@
                                             <th>Date Of Join</th>
                                             <th>Email</th>
                                             <th>City</th>
-
-
-
                                             <th>Status</th>
-
                                             <th>Action</th>
                                         </tr>
                                     </thead>
+                                    <tfoot class="tableSearchFoot">
+                                        <tr>
+                                            <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                            <th>Name</th>
+                                            <th>Department</th>
+                                            <th>Designation</th>
+                                            <th>Date Of Join</th>
+                                            <th>Email</th>
+                                            <th>City</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
@@ -513,6 +522,9 @@
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
+ 
+
+
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
         <p class="clearfix blue-grey lighten-2 mb-0">
@@ -555,17 +567,9 @@
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
     <!-- END: Page JS-->
 
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true, "lengthChange": false, "autoWidth": true,
+   <!-- Importing Custom Script.js  -->
+   <script src="../../Content/assets/js/scripts.js"></script>
 
-
-                "buttons": ["excel", "print", "copy", "pdf", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
-        });
-    </script>
     <script>
         window.onload = function () {
             document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
