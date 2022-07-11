@@ -50,7 +50,7 @@
 
         }
         #fc-default1 tbody .fc-row{
-            height: 73px !important;
+            height: 80px !important;
 
         }
      </style>
@@ -477,10 +477,10 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <div id="product-order-chart" class="mb-2"></div>
+                                        <div id="chart" class="mb-2"></div>
                                         <div class="chart-info d-flex justify-content-between mb-1">
                                             <div class="series-info d-flex align-items-center">
-                                                <i class="fa fa-circle-o text-bold-700 text-primary"></i>
+                                                <i class="fa fa-circle-o text-bold-700 text-success"></i>
                                                 <span class="text-bold-600 ml-50">Present</span>
                                             </div>
                                             <div class="product-result">
@@ -489,7 +489,7 @@
                                         </div>
                                         <div class="chart-info d-flex justify-content-between mb-1">
                                             <div class="series-info d-flex align-items-center">
-                                                <i class="fa fa-circle-o text-bold-700 text-warning"></i>
+                                                <i class="fa fa-circle-o text-bold-700 text-primary"></i>
                                                 <span class="text-bold-600 ml-50">Late</span>
                                             </div>
                                             <div class="product-result">
@@ -498,8 +498,26 @@
                                         </div>
                                         <div class="chart-info d-flex justify-content-between mb-75">
                                             <div class="series-info d-flex align-items-center">
-                                                <i class="fa fa-circle-o text-bold-700 text-danger"></i>
+                                                <i class="fa fa-circle-o text-bold-700 text-info"></i>
                                                 <span class="text-bold-600 ml-50">Absent</span>
+                                            </div>
+                                            <div class="product-result">
+                                                <span>10</span>
+                                            </div>
+                                        </div>
+                                        <div class="chart-info d-flex justify-content-between mb-75">
+                                            <div class="series-info d-flex align-items-center">
+                                                <i class="fa fa-circle-o text-bold-700 text-warning"></i>
+                                                <span class="text-bold-600 ml-50">CL</span>
+                                            </div>
+                                            <div class="product-result">
+                                                <span>10</span>
+                                            </div>
+                                        </div>
+                                        <div class="chart-info d-flex justify-content-between mb-75">
+                                            <div class="series-info d-flex align-items-center">
+                                                <i class="fa fa-circle-o text-bold-700 text-danger"></i>
+                                                <span class="text-bold-600 ml-50">SL</span>
                                             </div>
                                             <div class="product-result">
                                                 <span>10</span>
@@ -649,15 +667,79 @@
 <script src="../../Content/app-assets/js/scripts/extensions/fullcalendar.js"></script>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
  
  
-<!-- pie chart Yash 28-06-2022 -->
-<script src="../../Content/app-assets/js/scripts/pages/dashboard-analytics.js"></script>
-<script src="../../Content/app-assets/vendors/js/charts/apexcharts.min.js"></script>
 
 
 <script>
+
+
+
+      
+var options ={
+    chart: {
+      height: 350,
+      type: 'radialBar',
+    },
+    colors: ["#188754","#0d6efd","#0dcaf0", "#fec107", "#dc3546"],
+    fill: {
+      type: 'gradient',
+      gradient: {
+        enabled: true,
+        shade: 'dark',
+        type: 'vertical',
+        shadeIntensity: 0.5,
+        gradientToColors: ["#28c76f","#7367f0","#00cfe8", "#ff9f43", "#ea5455"],
+        inverseColors: false,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 100]
+      },
+    },
+    stroke: {
+      lineCap: 'round'
+    },
+    plotOptions: {
+      radialBar: {
+        size: 165,
+        hollow: {
+          size: '30%'
+        },
+        track: {
+          strokeWidth: '100%',
+          margin: 5,
+        },
+        dataLabels: {
+          name: {
+            fontSize: '18px',
+          },
+          value: {
+            fontSize: '16px',
+            formatter: function (val) {
+            return val + " Emp."
+          }
+          },
+          total: {
+            show: true,
+            label: 'Total',
+
+            formatter: function (w) {
+              // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+              return 42459
+            }
+          }
+        }
+      }
+    },
+    series: [70, 52, 26, 5, 8],
+    labels: ['Present', 'Late', 'Absent','CL','SL'],
+
+  };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('fc-default1');
