@@ -416,4 +416,192 @@
   }
 
 
+
+
+
+  // Weekly Off Page Script start
+
+  //Table checkbox Script
+
+  if ($('#sundayAll , #mondayAll , #tuesdayAll , #wednesdayAll , #thursdayAll , #fridayAll , #saturdayAll').length != 0) {
+
+
+$('#sundayAll , #mondayAll , #tuesdayAll , #wednesdayAll , #thursdayAll , #fridayAll , #saturdayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+   $('td input[type=checkbox]', tr).prop('checked', this.checked);
+});
+
+  }
+
+  if ($('#sunday1 , #sunday2 , #sunday3 , #sunday4 , #sunday5').length != 0) {
+
+$('#sunday1 , #sunday2 , #sunday3 , #sunday4 , #sunday5').click(function(){
+    var isChecked = $("#sundayAll").is(":checked");
+    var isAllNotChecked=$("#sunday1 , #sunday2 , #sunday3 , #sunday4 , #sunday5").is(":not(:checked)");
+    if(isChecked)
+    { $("#sundayAll").prop("checked", false);}
+    else if(isAllNotChecked)
+        {
+            $("#sundayAll").prop("checked", false);
+        }
+        else 
+        {
+            $("#sundayAll").prop("checked", true);
+        }
+ });
+
+}
+
+
+if ($('#monday1 , #monday2 , #monday3 , #monday4 , #monday5').length != 0) {
+
+
+ $('#monday1 , #monday2 , #monday3 , #monday4 , #monday5').click(function(){
+    var isChecked = $("#mondayAll").is(":checked");
+    var isAllNotChecked=$("#monday1 , #monday2 , #monday3 , #monday4 , #monday5").is(":not(:checked)");
+    if(isChecked)
+    { $("#mondayAll").prop("checked", false);}
+    else if(isAllNotChecked)
+        {
+            $("#mondayAll").prop("checked", false);
+        }
+        else 
+        {
+            $("#mondayAll").prop("checked", true);
+        }
+
+ });
+
+}
+
+
+if ($('#tuesday1 , #tuesday2 , #tuesday3 , #tuesday4 , #tuesday5').length != 0) {
+
+ $('#tuesday1 , #tuesday2 , #tuesday3 , #tuesday4 , #tuesday5').click(function(){
+    var isChecked = $("#tuesdayAll").is(":checked");
+    var isAllNotChecked=$("#tuesday1 , #tuesday2 , #tuesday3 , #tuesday4 , #tuesday5").is(":not(:checked)");
+    if(isChecked)
+    { $("#tuesdayAll").prop("checked", false);}
+    else if(isAllNotChecked)
+        {
+            $("#tuesdayAll").prop("checked", false);
+        }
+        else 
+        {
+            $("#tuesdayAll").prop("checked", true);
+        }
+
+ });
+
+}
+
+
+if ($('#wednesday1 , #wednesday2 , #wednesday3 , #wednesday4 , #wednesday5').length != 0) {
+
+
+ $('#wednesday1 , #wednesday2 , #wednesday3 , #wednesday4 , #wednesday5').click(function(){
+    var isChecked = $("#wednesdayAll").is(":checked");
+    var isAllNotChecked=$("#wednesday1 , #wednesday2 , #wednesday3 , #wednesday4 , #wednesday5").is(":not(:checked)");
+    if(isChecked)
+    { $("#wednesdayAll").prop("checked", false);}
+    else if(isAllNotChecked)
+        {
+            $("#wednesdayAll").prop("checked", false);
+        }
+        else 
+        {
+            $("#wednesdayAll").prop("checked", true);
+        }
+});
+
+}
+
+
+if ($('#thursday1 , #thursday2 , #thursday3 , #thursday4 , #thursday5').length != 0) {
+
+ $('#thursday1 , #thursday2 , #thursday3 , #thursday4 , #thursday5').click(function(){
+    var isChecked = $("#thursdayAll").is(":checked");
+    var isAllNotChecked=$("#thursday1 , #thursday2 , #thursday3 , #thursday4 , #thursday5").is(":not(:checked)");
+    if(isChecked)
+    { $("#thursdayAll").prop("checked", false);}
+    else if(isAllNotChecked)
+        {
+            $("#thursdayAll").prop("checked", false);
+        }
+        else 
+        {
+            $("#thursdayAll").prop("checked", true);
+        }
+ });
+
+}
+
+if ($('#friday1 , #friday2 , #friday3 , #friday4 , #friday5').length != 0) {
+
+ $('#friday1 , #friday2 , #friday3 , #friday4 , #friday5').click(function(){
+    var isChecked = $("#fridayAll").is(":checked");
+    var isAllNotChecked=$("#friday1 , #friday2 , #friday3 , #friday4 , #friday5").is(":not(:checked)");
+    if(isChecked)
+    { $("#fridayAll").prop("checked", false);}
+    else if(isAllNotChecked)
+        {
+            $("#fridayAll").prop("checked", false);
+        }
+        else 
+        {
+            $("#fridayAll").prop("checked", true);
+        }
+ });
+
+}
+
+if ($('#saturday1 , #saturday2 , #saturday3 , #saturday4 , #saturday5').length != 0) {
+
+
+ $('#saturday1 , #saturday2 , #saturday3 , #saturday4 , #saturday5').click(function(){
+    var isChecked = $("#saturdayAll").is(":checked");
+    var isAllNotChecked=$("#saturday1 , #saturday2 , #saturday3 , #saturday4 , #saturday5").is(":not(:checked)");
+    if(isChecked)
+    { $("#saturdayAll").prop("checked", false);}
+    else if(isAllNotChecked)
+        {
+            $("#saturdayAll").prop("checked", false);
+        }
+        else 
+        {
+            $("#saturdayAll").prop("checked", true);
+        }
+ });
+
+}
+
+if ($('#currentYear').length != 0) {
+
+
+$('#currentYear').click(function(){
+  if ($(this).is(':checked')) {
+        // $('#currentYear').prop("checked", false);
+        $('#yearStartMonth , #yearEndMonth').prop("disabled", true);
+  } else {
+        $('#yearStartMonth , #yearEndMonth').prop("disabled", false);
+  }
+});
+
+}
+
+if ($('#customYear').length != 0) {
+
+$('#customYear').click(function(){
+  if ($(this).is(':checked')) {
+        $('#currentYear').prop("checked", false);
+        $('#yearStartMonth , #yearEndMonth').prop("disabled", false);
+  } else {
+        $('#yearStartMonth , #yearEndMonth').prop("disabled", true);
+  }
+});
+
+}
+  // Weekly Off Page Script End
+
+
 })(window);
