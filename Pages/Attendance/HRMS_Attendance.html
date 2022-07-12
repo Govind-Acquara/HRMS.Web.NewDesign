@@ -442,7 +442,7 @@
 
                                                      
                                                         <div class="table-responsive shadow p-2 mb-2 bg-white rounded">
-                                                            <table id="example1" class="table  border-secondary table-striped dataex-html5-selectors">
+                                                            <table id="DailyAttendanceTable" class="table  border-secondary table-striped ">
                                                                 <thead>
                                                                     <tr>
                                                                         <th>Sr. No.</th>
@@ -455,6 +455,19 @@
                                                                         <th>Current Status</th>
                                                                     </tr>
                                                                 </thead>
+
+                                                                <tfoot class="tableSearchFoot">
+                                                                    <tr>
+                                                                        <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                                                        <th>Name</th>
+                                                                        <th>Emp. Code</th>
+                                                                        <th>City</th>
+                                                                        <th>Log-In</th>
+                                                                        <th>Log-Out</th>
+                                                                        <!-- <th>Working Hour</th> -->
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </tfoot>
                                                                 <tbody>
                                                                    
                                                                     <tr>
@@ -593,6 +606,9 @@
      <!-- END: Page Vendor JS-->
 
      <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+
+         <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
     <script>
         $(function () {
             $("#example1").DataTable({

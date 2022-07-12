@@ -353,9 +353,404 @@
                 
             </div>
             <div class="content-body">
+
+
+                <div class="card">
+                    <div class="card-header pb-1">
+                        <h4 class="card-basic">Week Definition</h4>
+                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                                <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body">
+                            <form class="form-horizontal" novalidate>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                                <label>Week Starts On</label>
+                                                <select class="form-control" id="users-list-status">
+                                                    <option value="">Sunday</option>
+                                                    <option value="">Monday</option>
+                                                    <option value="">Tuesday</option>
+                                                    <option value="">Wednesday</option>
+                                                    <option value="">Thursday</option>
+                                                    <option value="">Friday</option>
+                                                    <option value="">Saturday</option>
+                                                </select>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Work Week Starts On</label>
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">Monday</option>
+                                                <option value="">Tuesday</option>
+                                                <option value="">Wednesday</option>
+                                                <option value="">Thursday</option>
+                                                <option value="">Friday</option>
+                                                <option value="">Saturday</option>
+                                                <option value="">Sunday</option>
+
+                                            </select>
+                                        
+                                    </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Work Week Ends On</label>
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">Friday</option>
+                                                <option value="">Saturday</option>
+                                                <option value="">Sunday</option>
+                                                <option value="">Monday</option>
+                                                <option value="">Tuesday</option>
+                                                <option value="">Wednesday</option>
+                                                <option value="">Thursday</option>
+
+                                            </select>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <h4>Weekend Definition</h4>
+                                    <hr>
+                                </div>
+
+
+
+                                <div class="table-responsive rounded-lg">
+                                    <table class="table border-light rounded-lg table-striped ">
+                                        <thead class="table-light">
+                                            <tr>
+                                              <th>Days</th>
+                                              <th>All</th>
+                                              <th>1st</th>
+                                              <th>2nd</th>
+                                              <th>3rd</th>
+                                              <th>4th</th>
+                                              <th>5th</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="font-weight-bold">Sunday</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input checkAll" name="customCheck" id="sundayAll">
+                                                    <label class="custom-control-label" for="sundayAll"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="sunday1">
+                                                    <label class="custom-control-label" for="sunday1"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="sunday2">
+                                                    <label class="custom-control-label" for="sunday2"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="sunday3">
+                                                    <label class="custom-control-label" for="sunday3"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="sunday4">
+                                                    <label class="custom-control-label" for="sunday4"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="sunday5">
+                                                    <label class="custom-control-label" for="sunday5"></label>
+                                                </div>
+                                            </td>
+    
+                                          </tr>
+    
+                                          <tr>
+                                            <td class="font-weight-bold">Monday</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="mondayAll">
+                                                    <label class="custom-control-label" for="mondayAll"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="monday1">
+                                                    <label class="custom-control-label" for="monday1"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="monday2">
+                                                    <label class="custom-control-label" for="monday2"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="monday3">
+                                                    <label class="custom-control-label" for="monday3"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="monday4">
+                                                    <label class="custom-control-label" for="monday4"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="monday5">
+                                                    <label class="custom-control-label" for="monday5"></label>
+                                                </div>
+                                            </td>
+    
+                                          </tr>
+    
+                                          <tr>
+                                            <td class="font-weight-bold">Tuesday</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="tuesdayAll">
+                                                    <label class="custom-control-label" for="tuesdayAll"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="tuesday1">
+                                                    <label class="custom-control-label" for="tuesday1"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="tuesday2">
+                                                    <label class="custom-control-label" for="tuesday2"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="tuesday3">
+                                                    <label class="custom-control-label" for="tuesday3"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="tuesday4">
+                                                    <label class="custom-control-label" for="tuesday4"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="tuesday5">
+                                                    <label class="custom-control-label" for="tuesday5"></label>
+                                                </div>
+                                            </td>
+    
+                                          </tr>
+    
+                                          <tr>
+                                            <td class="font-weight-bold">Wednesday</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="wednesdayAll">
+                                                    <label class="custom-control-label" for="wednesdayAll"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="wednesday1">
+                                                    <label class="custom-control-label" for="wednesday1"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="wednesday2">
+                                                    <label class="custom-control-label" for="wednesday2"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="wednesday3">
+                                                    <label class="custom-control-label" for="wednesday3"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="wednesday4">
+                                                    <label class="custom-control-label" for="wednesday4"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="wednesday5">
+                                                    <label class="custom-control-label" for="wednesday5"></label>
+                                                </div>
+                                            </td>
+    
+                                          </tr>
+    
+                                          <tr>
+                                            <td class="font-weight-bold">Thursday</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="thursdayAll">
+                                                    <label class="custom-control-label" for="thursdayAll"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="thursday1">
+                                                    <label class="custom-control-label" for="thursday1"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="thursday2">
+                                                    <label class="custom-control-label" for="thursday2"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="thursday3">
+                                                    <label class="custom-control-label" for="thursday3"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="thursday4">
+                                                    <label class="custom-control-label" for="thursday4"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="thursday5">
+                                                    <label class="custom-control-label" for="thursday5"></label>
+                                                </div>
+                                            </td>
+    
+                                          </tr>
+    
+                                          <tr>
+                                            <td class="font-weight-bold">Friday</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="fridayAll">
+                                                    <label class="custom-control-label" for="fridayAll"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="friday1">
+                                                    <label class="custom-control-label" for="friday1"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="friday2">
+                                                    <label class="custom-control-label" for="friday2"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="friday3">
+                                                    <label class="custom-control-label" for="friday3"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="friday4">
+                                                    <label class="custom-control-label" for="friday4"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="friday5">
+                                                    <label class="custom-control-label" for="friday5"></label>
+                                                </div>
+                                            </td>
+    
+                                          </tr>
+    
+                                          <tr>
+                                            <td class="font-weight-bold">Saturday</td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="saturdayAll">
+                                                    <label class="custom-control-label" for="saturdayAll"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="saturday1">
+                                                    <label class="custom-control-label" for="saturday1"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="saturday2">
+                                                    <label class="custom-control-label" for="saturday2"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="saturday3">
+                                                    <label class="custom-control-label" for="saturday3"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="saturday4">
+                                                    <label class="custom-control-label" for="saturday4"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="saturday5">
+                                                    <label class="custom-control-label" for="saturday5"></label>
+                                                </div>
+                                            </td>
+    
+                                          </tr>
+    
+                                       
+                                      </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-between pr-0 mt-2">
+                                    <div class="custom-control custom-checkbox my-auto">
+                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="allMonths">
+                                        <label class="custom-control-label" for="allMonths">Apply to all Months</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
+                                        <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 
                 
-                    <div class="card">
+                    <!-- <div class="card">
                         <Span><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></Span>
                         
                         <div class="card-content collapse show">
@@ -367,26 +762,6 @@
                                     <div class="card">
                                         <div class="card-content">
                                             <div class="card-body">
-                                                <!-- <div class="cal-category-bullets d-none">
-                                                    <div class="bullets-group-1 mt-2">
-                                                        <div class="category-business mr-1">
-                                                            <span class="bullet bullet-success bullet-sm mr-25"></span>
-                                                            Business
-                                                        </div>
-                                                        <div class="category-work mr-1">
-                                                            <span class="bullet bullet-warning bullet-sm mr-25"></span>
-                                                            Work
-                                                        </div>
-                                                        <div class="category-personal mr-1">
-                                                            <span class="bullet bullet-danger bullet-sm mr-25"></span>
-                                                            Personal
-                                                        </div>
-                                                        <div class="category-others">
-                                                            <span class="bullet bullet-primary bullet-sm mr-25"></span>
-                                                            Others
-                                                        </div>
-                                                    </div>
-                                                </div> -->
                                                 <div id="weekoff-calendar">
                                                     <div id='fc-default'></div>
                                                 </div>
@@ -416,7 +791,9 @@
                             </div>
                         </div>
                         
-                    </div>
+                    </div> -->
+
+
                     </div>
                     
                 
@@ -443,6 +820,8 @@
 <script src="../../Content/app-assets/js/custom-js.js"></script>
 <!-- BEGIN Vendor JS-->
 
+<!-- checkAll JS -->
+<script src="js/checkAll.min.js"></script>
 
 <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
 <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
@@ -484,6 +863,61 @@
 
 
 <script>
+
+
+// Sunday Check All
+
+$('#sundayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+
+//   if ($('td input[type=checkbox]', tr).prop("checked", false)) {
+//     $("#sundayAll").prop("checked", false);
+//   }
+
+});
+
+// Monday Check All
+
+$('#mondayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+});
+
+// Tuesday Check All
+
+$('#tuesdayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+});
+
+// Wednesday Check All
+
+$('#wednesdayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+});
+
+// Thursday Check All
+
+$('#thursdayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+});
+
+// Friday Check All
+
+$('#fridayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+});
+
+// Saturday Check All
+
+$('#saturdayAll').click(function(e) {
+  var tr = $(e.target).closest('tr');
+  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+});
 
 
     $(function () {

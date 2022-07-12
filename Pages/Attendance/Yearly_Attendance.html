@@ -387,7 +387,29 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-12 col-sm-4 col-lg-9 pb-1 ">
+                                                            <div class="col-12 col-sm-4 d-flex col-lg-12 pb-1 " style="gap: 1rem;">
+                                                                <!-- <div >
+                                                                    <span style="padding-left: 2px;"><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary text-white">P</label> - Present</span>
+                                                                </div>
+                                                                <div class="border-3 border-left-info">
+                                                                    <span style="padding-left: 2px;">H - Holiday</span>
+                                                                </div>
+                                                                <div class="border-3 border-left-warning">
+                                                                    <span style="padding-left: 2px;">W - Weekend</span>
+                                                                </div>
+                                                                <div class="border-3 border-left-danger">
+                                                                    <span style="padding-left: 2px;">A - Absent, DT - Deviation Time</span>
+                                                                </div>
+                                                                <div class="border-3 border-left-warning">
+                                                                    <span style="padding-left: 2px;">Paid Leave</span>
+                                                                </div>
+                                                                <div class="border-3 border-left-info">
+                                                                    <span style="padding-left: 2px;">On Duty</span>
+                                                                </div>
+                                                                <div class="border-3 border-left-danger">
+                                                                    <span style="padding-left: 2px;">Unpaid Leave</span>
+                                                                </div> -->
+
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label data-toggle="tooltip" data-placement="top" title="Sick Leave" class="mytop_Class  bg-gradient-dark text-white">SL</label>
@@ -406,17 +428,15 @@
                                                         <div class="col-12 col-sm-12 col-lg-4">
                                                             <div class="form-group">
                                                                 <label>Employee Name</label>
-                                                                <select class="select2 form-control" id="my-select1">
+                                                                <select class="select2 form-control" id="Employees">
                                                                      <option value="Active">Select Employee Name</option>
-                                                                     <option value="Blocked">Bhumi</option>
-                                                                     <option value="deactivated">rahul</option>
-                                                                     <option value="Active">Diksha</option>
-                                                                     <option value="Blocked">yash</option>
-                                                                     <option value="deactivated">pooja</option>
-                                                                     <option value="deactivated">somya</option>
-                                                                     <option value="Blocked">yash</option>
-                                                                     <option value="deactivated">pooja</option>
-                                                                     <option value="deactivated">somya</option>
+                                                                     <option value="bhumi">Bhumi</option>
+                                                                     <option value="rahul">rahul</option>
+                                                                     <option value="diksha">Diksha</option>
+                                                                     <option value="yash">yash</option>
+                                                                     <option value="pooja">pooja</option>
+                                                                     <option value="somya">somya</option>
+
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -442,14 +462,10 @@
 
                                           
                                             <div class="shadow-sm bg-white rounded  mb-2 ml-0">
-                                                <div class="row">
-                                                 <!-- <div class="col-12 col-md-6 pb-2">
-                                                   <canvas id="YearPiChart"  style="height: 300px; width: 100%;"></canvas>
-                                                 </div> -->
-                                                 <div class="col-12 col-md-6 col-lg-12">
-                                                     <canvas id="barChart" style="height: 300px; width: 100%;"></canvas>
+
+                                                 <div class="col-12">
+                                                     <canvas id="barChart" style="height: 400px; width: 100%;"></canvas>
                                                  </div>
-                                               </div>
 
                                             </div>
                                           
@@ -713,6 +729,7 @@
     </script>
 
 <script>
+    
 $(document).ready(function(){
 
     var currYear = new Date();
@@ -727,142 +744,99 @@ $("#currentYear").datepicker( {
     autoclose:true //to close picker once year is selected
 }); 
 </script>
-
-<!-- <script>
-
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-
-    var ctx = document.getElementById('myChart');
-    const config = {
-  type: 'bar',
-  data: data,
-  options: {
-    plugins: {
-      title: {
-        display: true,
-        text: 'Chart.js Bar Chart - Stacked'
-      },
-    },
-    responsive: true,
-    interaction: {
-      intersect: false,
-    },
-    scales: {
-      x: {
-        stacked: true,
-      },
-      y: {
-        stacked: true
-      }
-    }
-  }
-};
-</script> -->
     
 
    
 <script>
-var ctxB = document.getElementById("barChart").getContext('2d');
-var myBarChart = new Chart(ctxB, {
+
+var EmployeeData = {
+    "bhumi": {
+        "present": [14, 11, 14, 15, 13, 12,15, 31, 13, 14, 11, 8],
+        "absent": [-4, -5, -6, -7, -3, -4,-6, -5, -5, -6, -3, -4],
+        "leave": [-2, -5, -4, -6, -3, -4,-6, -8, -5, -6, -3, -3]
+    },
+    "rahul": {
+        "present": [8, 5, 16, 13, 11, 10,13, 17, 11, 12, 9, 7],
+        "absent": [-4, -15, -8, -9, -30, -6,-9, -13, -7, -8, -5, -2],
+        "leave": [-4, -5, -6, -7, -3, -4,-6, -5, -5, -6, -3, -4]
+    },
+    "diksha": {
+        "present": [14, 11, 14, 15, 13, 12,15, 31, 13, 14, 11, 8],
+        "absent": [-5, -6, -7, -5, -3, -1,-6, -3, -5, -4, -3, -1],
+        "leave": [-4, -5, -6, -7, -3, -4,-6, -5, -5, -6, -3, -4]
+    }
+}
+
+console.log(EmployeeData);
+
+const ctxB = document.getElementById("barChart").getContext('2d');
+const myBarChart = new Chart(ctxB, {
   type: 'bar',
   data: {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sept","Oct","Nov","Dec"],
-    datasets: [{
-      label: 'Attendance Progress',
+    datasets: [
+    {
+      label: 'Present',
     
-      data: [12, 19, 3, 5, 2, 3,12, 19, 3, 5, 2, 3],
+      data: [4, 15, 8, 9, 30, 6,9, 13, 7, 8, 5, 2],
       backgroundColor: [
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef'
-      ],
-     
-    },
-        {
-      label: 'Sick Leave',
-    
-      data: [8, 17, 5, 7, 4, 5,10, 16, 5, 7, 4, 6],
-      backgroundColor: [
-
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336',
-        '#f44336'
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0'
       ],
      
     },
     {
-      label: 'Casual Leave',
+      label: 'Leave',
     
-      data: [4, 15, 8, 9, 7, 6,9, 13, 7, 8, 5, 2],
+      data: [-12, -19, -3, -5, -2,- 3,-12, -19, -3, -5, -2, -3],
       backgroundColor: [
-
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236',
-        '#f4a236'
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb'
       ],
      
-    }
+    },
+        {
+      label: 'Absent',
+    
+      data: [-8, -17, -5, -7, -4, -5,-10, -16, -5, -7, -4, -6],
+      backgroundColor: [
+
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383',
+        '#fe6383'
+      ],
+     
+    },
+
     ]
   },
   options: {
@@ -892,11 +866,23 @@ var myBarChart = new Chart(ctxB, {
        }
   }
 });
+
+
+const EmpAtt = document.getElementById('Employees');
+EmpAtt.addEventListener('change',EmployeeTracker)
+function EmployeeTracker(){
+    // const label = coffeesales.options[coffeesales.selectedIndex].text;
+    myBarChart.data.datasets[0].data = EmployeeData.bhumi.present;
+    myBarChart.data.datasets[1].data = EmployeeData.bhumi.leave;
+    myBarChart.data.datasets[2].data = EmployeeData.bhumi.absent;
+
+    myBarChart.update();
+}
 </script> 
 
     
 <!-- year page -->
-    <script>
+    <!-- <script>
         var xValues = ["Total Apsent", "Total Working Days","Total Present"];
         var yValues = [20,80,60];
         var barColors = [
@@ -928,7 +914,7 @@ var myBarChart = new Chart(ctxB, {
             }
         }
         });
-        </script> 
+        </script>  -->
       
 
     </body>

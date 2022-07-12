@@ -417,7 +417,6 @@
                 
                 
                     <div class="card">
-                        <Span></Span>
                         <div class="card-header pb-1">
                             <h5 class="card-basic">Attendance</h5>
                             <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
@@ -446,99 +445,94 @@
                             </div>
                         </div>
                     </div>
-                    </div>
+                    
 
                     <div class="card">
                         <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
                         <div class="card-content">
                               <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table id="example1" class="table border-secondary data-list-view">
+                                    <table id="MarkAttendanceTable" class="table border-secondary table-striped ">
                                         <thead>
                                             <tr>
-                                              <th>Sr. No.</th>
-                                              <th>Name</th>
-                                              <th>Employee Code</th>
-                                              <th>Date</th>
-                                              <th>Reason</th>
-                                              <th>Status</th>
-                                              <th>Action</th>
+                                                <th>Sr. No.</th>
+                                                <th>Name</th>
+                                                <th>Emp. Code</th>
+                                                <th>City</th>
+                                                <th>Log-In</th>
+                                                <th>Log-Out</th>
+                                                <!-- <th>Working Hour</th> -->
+                                                <th>Current Status</th>
                                             </tr>
                                         </thead>
+
+                                        <tfoot class="tableSearchFoot">
+                                            <tr>
+                                                <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                                <th>Name</th>
+                                                <th>Emp. Code</th>
+                                                <th>City</th>
+                                                <th>Log-In</th>
+                                                <th>Log-Out</th>
+                                                <!-- <th>Working Hour</th> -->
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
                                         <tbody>
-                                          <tr>
-                                             <td>1</td>
-                                              <td>Pooja</td>
-                                              <td>Emp101</td>
-                                              <td class="date">21-01-22</td>
-                                              <td>Network issue</td>
-                                              <td><div class="chip chip-warning">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Pending</div>
-                                                </div>
-                                            </div></td>
-                                            <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                                   
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="headcol">Pooja</td>
+                                                <td>Emp101</td>
+                                                <td>Gurgaon</td>
+                                                <td>10:00am</td>
+                                                <td>7:30am</td>
+                                                <!-- <td>9.30</td> -->
+                                                <td><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary text-white"  title="I am Present">P</label></td>
+                                              
+                                            </tr>
 
-                                            </td>
-                                          </tr>
-                                         
-                                          <tr>
-                                            <td>2</td>
-                                            <td>Yash</td>
-                                            <td>Emp102</td>
-                                            <td>21-01-22</td>
-                                            <td>Getting exception</td>
-                                            <td><div class="chip chip-warning">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Pending</div>
-                                                </div>
-                                            </div></td>
-                                            <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                            <tr>
+                                                <td>2</td>
+                                                <td class="headcol">Yash</td>
+                                                <td>Emp102</td>
+                                                <td>Gurgaon</td>
+                                                <td>10:10am</td>
+                                                <td>7:35am</td>
+                                                <!-- <td>9.15</td> -->
+                                                <td><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class bg-gradient-primary  text-white"  title="I am Present">P</label></td>
+                                              
+                                            </tr>
 
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Somya</td>
-                                            <td>Emp103</td>
-                                            <td>21-03-22</td>
-                                            <td>Geeting Exception</td>
-                                            <td><div class="chip chip-success">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Approved</div>
-                                                </div>
-                                            </div></td>
-                                            <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="headcol">Somya</td>
+                                                <td>Emp103</td>
+                                                <td>Gurgaon</td>
+                                                <td>00:00</td>
+                                                <td>00:00</td>
+                                                <!-- <td>00</td> -->
+                                                <td><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger  text-white"  title="I am Present">A</label></td>
+                                              
+                                            </tr>
 
-                                            </td>
-                                        </tr>
-                                        <tr> 
-                                            <td>4</td>
-                                            <td>Arpit</td>
-                                            <td>Emp104</td>
-                                            <td>11-02-22</td>
-                                            <td>Forgot to mark</td>
-                                            <td><div class="chip chip-danger">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Regect</div>
-                                                </div>
-                                            </div></td>
-                                            <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                            </td>
-                                        </tr>
-                                        
-                                      </tbody>
-                                    </table>
+                                            <tr>
+                                                <td>4</td>
+                                                <td class="headcol">Albina Simonis</td>
+                                                <td>Emp104</td>
+                                                <td>Gurgaon</td>
+                                                <td>00:00</td>
+                                                <td>00:00</td>
+                                                <!-- <td>00</td> -->
+                                                <td><label data-toggle="tooltip" data-placement="top" title="Sick Leave" class="mytop_Class  bg-gradient-info  text-white"  title="I am Present">SL</label></td>
+                                               
+                                            </tr>
+                                        </tbody>
+            </table>
                                 </div>
                               </div>
                           </div>
                     </div>
-
-                  
             </div>
            
         </div>
@@ -562,34 +556,44 @@
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
     <script src="../../Content/app-assets/js/custom-js.js"></script>
     <!-- BEGIN Vendor JS-->
-
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
+    
+    
     <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
     <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
     <!-- END: Page Vendor JS-->
-
+    
     <!-- BEGIN: Theme JS-->
     <script src="../../Content/app-assets/js/core/app-menu.js"></script>
     <script src="../../Content/app-assets/js/core/app.js"></script>
     <script src="../../Content/app-assets/js/scripts/components.js"></script>
     <!-- END: Theme JS-->
-
+    
     <!-- BEGIN: Page JS-->
-    <script src="../../Content/app-assets/js/scripts/datatables/datatable.js"></script>
+    
     <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-
+    
     <!-- END: Page JS-->
+    
+    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+    <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
+    <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+
+
+    <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
+    
     <script>
         window.onload = function () {
             document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
@@ -597,17 +601,7 @@
         }
     </script>
 
-<script>
-    $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": true,
-      
-      
-      "buttons": ["excel","print", "copy","pdf","colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    
-    });
-    </script>
+
 </body>
 <!-- END: Body-->
 
