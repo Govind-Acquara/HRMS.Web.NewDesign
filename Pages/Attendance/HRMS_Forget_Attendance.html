@@ -428,9 +428,13 @@
             </div>
             <div class="content-body">
                 
+                <div class="pb-3">
+                    <a  class="btn btn-secandory ml-0 mb-50 mb-sm-0" href="HRMS_Forgot_AttendanceReport.html"> <i class="fa fa-calendar-check-o"></i>Forgot Attendance Report</a>
+                  </div>
 
                 <div class="my-2 dt-buttons btn-group">
-                    <button class="btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Forget Attendance</button>
+                  <a  class="btn btn-primary ml-0 mb-50 mb-sm-0" href="HRMS_Forgot_AttendanceReport.html">Process All as Pending</a>
+                   
                 </div>
                 <div class="sidebar-content">
 
@@ -464,30 +468,38 @@
                                 <label for="data-status">Attendance Type</label>
                                 <select class="form-control" id="data-status" placeholder="Select Attendance Type">
                                     <option>Select Attendance Type</option>
-                                    <option>Arpit</option>
-                                    <option>Pooja</option>
-                                    <option>Yash</option>
+                                    <option>Present</option>
+                                    <option>Absent</option>
+                                    <option></option>
                                     <option></option>
                                 </select>
                               </div>
-
+                              
+                              <div class="form-group">
+                                <input type="checkbox" id="presentCheckbox"   placeholder="Reason" required>
+                                <label for="presentCheckbox">Check if Present</label>
+                              </div>
                               <div class="form-group">
                                 <label for="data-status">Approved By</label>
                                 <select class="form-control" id="data-status" placeholder="Select Attendance Type">
                                     <option>Select Reporting Officer Name</option>
-                                    <option>Pooja</option>
-                                    <option>Yash</option>
+                                    <option></option>
+                                    <option></option>
                                     <option></option>
                                 </select>
                               </div>
     
-                              
-    
-                            <div class="form-group">
-                                <input type="checkbox" id="presentCheckbox"   placeholder="Reason" required>
-
-                                <label for="presentCheckbox">Check if Present</label>
+                              <div class="form-group">
+                                <label for="data-status">Reviewed By</label>
+                                <select class="form-control" id="data-status" placeholder="Select Attendance Type">
+                                    <option>Select Reporting Officer Name</option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
                               </div>
+                            
+                           
     
                               <div class="form-group">
                                 <label for="">Reason</label>
@@ -502,8 +514,8 @@
     
                           </form> 
                     </div>
-                    </div>
-                    </div>
+                </div>
+              </div>
 
                     <div class="card">
                         <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
@@ -515,10 +527,8 @@
                                             <tr>
                                               <th>Sr. No.</th>
                                               <th>Name</th>
-                                              <th>Employee Code</th>
                                               <th>Date</th>
-                                              <th>Reason</th>
-                                              <th>Status</th>
+                                              <th>Attendance</th>
                                               <th>Action</th>
                                             </tr>
                                         </thead>
@@ -526,75 +536,49 @@
                                             <tr>
                                               <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
                                               <th>Name</th>
-                                              <th>Employee Code</th>
                                               <th>Date</th>
-                                              <th>Reason</th>
-                                              <th>Status</th>
+                                              <th>Attendance</th>
                                               <th></th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
                                           <tr>
                                               <td>1</td>
-                                              <td>Pooja</td>
-                                              <td>Emp101</td>
-                                              <td class="date">21-01-22</td>
-                                              <td>Network issue</td>
-                                              <td><div class="chip chip-warning">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Pending</div>
-                                                </div>
-                                            </div></td>
-                                            <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                              <td>Rohit Sharma</td>
+                                              <td class="date">3-07-2022</td>
+                                              <td>P</td>
+                                              <td class="product-action">
+                                                <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class="feather icon-edit"></i></span>
 
-                                            </td>
+                                              </td>
                                           </tr>
                                           <tr>
                                             <td>2</td>
-                                            <td>Yash</td>
-                                            <td>Emp102</td>
-                                            <td>21-01-22</td>
-                                            <td>Getting exception</td>
-                                            <td><div class="chip chip-warning">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Pending</div>
-                                                </div>
-                                            </div></td>
+                                            <td>Geeta Pathak</td>
+                                            <td>21-01-2022</td>
+                                            <td>Absent</td>
                                             <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class="feather icon-edit"></i></span>
 
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td>Somya</td>
-                                            <td>Emp103</td>
-                                            <td>21-03-22</td>
-                                            <td>Geeting Exception</td>
-                                            <td><div class="chip chip-success">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Approved</div>
-                                                </div>
-                                            </div></td>
+                                            <td>Neha Shrivastav</td>
+                                            <td>12-07-2022</td>
+                                            <td>Absent</td>
                                             <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class="feather icon-edit"></i></span>
 
                                             </td>
                                         </tr>
                                         <tr> 
                                             <td>4</td>
-                                            <td>Arpit</td>
-                                            <td>Emp104</td>
-                                            <td>11-02-22</td>
-                                            <td>Forgot to mark</td>
-                                            <td><div class="chip chip-danger">
-                                                <div class="chip-body">
-                                                    <div class="chip-text">Regect</div>
-                                                </div>
-                                            </div></td>
+                                            <td>Yash Sharma</td>
+                                            <td>12-07-2022</td>
+                                            <td>P</td>
                                             <td class="product-action">
-                                                <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class="feather icon-edit"></i></span>
                                             </td>
                                         </tr>
                                        
