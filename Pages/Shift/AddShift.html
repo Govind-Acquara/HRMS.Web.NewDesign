@@ -42,7 +42,7 @@
       <!-- BEGIN: Custom CSS-->
       <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
      <!-- END: Custom CSS-->
-
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 </head>
 <!-- END: Head-->
@@ -347,7 +347,7 @@
 
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h4 class="card-basic">Add Shift</h4>
+                        <h4 class="card-basic font-weight-bold">Add Shift for Company : <span class="font-weight-normal">Acquara India</span></h4>
                         <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -360,25 +360,20 @@
                         <div class="card-body">
                             <form class="form-horizontal" novalidate>
                                 <div class="row form-group">
-                                    <div class="col-lg-4 col-md-4">
+                                    <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
                                             <label class="" for="shiftName">Shift Name</label>
                                             <input type="text" class="form-control" id="shiftName" placeholder="Enter Shift Name">
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
+                                    <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
-                                            <label class="" for="shiftFrom">From</label>
-                                            <input type="time" class="form-control" id="shiftFrom" placeholder="Enter Shift Name">
+                                            <label class="" for="shiftDate">Shift Date</label>
+                                            <input type="text" class="form-control" id="shiftDate" placeholder="Enter Shift Starting and Ending Date">
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="form-group">
-                                            <label class="" for="shiftTo">To</label>
-                                            <input type="time" class="form-control" id="shiftTo" placeholder="Enter Shift Name">
-                                        </div>
-                                    </div>
+
                                 </div>
 
                                 <div class="row form-group">
@@ -563,7 +558,9 @@
  <!-- END: Page Vendor JS-->
 
 
-
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 <!-- END: Page Vendor JS-->
 <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
@@ -577,6 +574,35 @@
 
 
 <script>
+
+$(function() {
+
+$('#shiftDate').daterangepicker({
+    autoUpdateInput: false,
+    locale: {
+        cancelLabel: 'Clear'
+    }
+});
+
+$('#shiftDate').on('apply.daterangepicker', function(ev, picker) {
+    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+});
+
+$('#shiftDate').on('cancel.daterangepicker', function(ev, picker) {
+    $(this).val('');
+});
+
+});
+
+// $(function() {
+//   $('#shiftDate').daterangepicker({
+//     opens: 'left'
+//   }, function(start, end, label) {
+//     console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+//   });
+// });
+
+
     window.onload = function () {
         document.getElementById("shift").classList.add("has-sub", "sidebar-group-active", "open")
         document.getElementById("addShiftPage").className = 'active';
