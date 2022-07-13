@@ -431,7 +431,11 @@
                                         </select>
                                     </fieldset>
                                   </div>
-        
+                                   
+                                  <div class="form-group">
+                                    <label>Attachment</label>
+                                    <input type="file" class="form-control">
+                                </div>
                                   
                                   <div class="d-flex my-2  justify-content-center ">
                                     <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
@@ -441,7 +445,7 @@
         
                               </form> 
                         </div>
-                        </div>
+                    </div>
             </div>
  <!-- for searching  -->
 
@@ -462,6 +466,8 @@
                                             <th>ReviewBy</th>
                                             <th>AproveBy</th>
                                             <th>Reason</th>
+                                            <th>IsActive</th>
+                                            <th>Attachment</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -476,6 +482,8 @@
                                             <th>To Date</th>
                                             <th>ReviewBy</th>
                                             <th>AproveBy</th>
+                                            <th></th>
+                                            <th></th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -524,13 +532,26 @@
                                                 </div>
                                                </td>
                                            
-                                            
+                                               <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
+                                                <td></td>
                                             <td >
                                                 <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-check-circle"></i></span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>1</td>
+                                            <td>2</td>
                                             <td><div class="d-flex justify-content-start align-items-center">
                                                 <div class="user-page-info">
                                                     <span class="font-small-2">Yash Sharma</span>
@@ -570,14 +591,28 @@
                                                     </div>
                                                 </div>
                                                </td>
-                                           
+                                               
+                                               <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                
+                                                <label class="custom-control-label" for="customSwitch2">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
+                                                <td></td>
                                           
                                                <td>
                                                 <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-check-circle"></i></span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>1</td>
+                                            <td>3</td>
                                             <td><div class="d-flex justify-content-start align-items-center">
                                                 <div class="user-page-info">
                                                     <span class="font-small-2">Arpit Sharma</span>
@@ -617,7 +652,20 @@
                                                     </div>
                                                 </div>
                                                </td>
-                                           
+                                               <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                
+                                                <label class="custom-control-label" for="customSwitch3">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
+                                                <td></td>
                                                <td >
                                                 <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-check-circle"></i></span>
                                             </td>
