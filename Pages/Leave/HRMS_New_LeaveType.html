@@ -1,0 +1,1184 @@
+
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>New Leave Type</title>
+    <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <!-- END: Vendor CSS-->
+
+    <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
+
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+    <!-- END: Page CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu  mr-auto">
+                                <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
+                                    <i class="ficon feather icon-menu"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav">
+                            <li>
+                                <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
+                                    <option value="">Select Office Location</option>
+                                    <option value="Active">Gurgaon</option>
+                                    <option value="Blocked">Mumbai</option>
+                                    <option value="deactivated">Abu Dhabi</option>
+                                    <option value="deactivated">Other</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+                        <!-- <li class="nav-item nav-search">
+                            <a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                <input class="input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="template-list">
+                                <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                <ul class="search-list search-list-main"></ul>
+                            </div>
+                        </li> -->
+                        <li class="dropdown dropdown-notification nav-item">
+                            <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <li class="dropdown-menu-header">
+                                    <div class="dropdown-header m-0 p-2">
+                                        <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
+                                    </div>
+                                </li>
+
+                                <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avatar" height="40" width="40"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="../Users/HRMS_User_Profile.html"><i class="feather icon-user"></i> Edit Profile</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="../../Index.html"><i class="feather icon-power"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <ul class="main-search-list-defaultlist d-none">
+        <li class="d-flex align-items-center">
+            <a class="pb-25" href="#">
+                <h6 class="text-primary mb-0">Files</h6>
+            </a>
+        </li>
+
+
+    </ul>
+    <ul class="main-search-list-defaultlist-other-list d-none">
+        <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
+            <a class="d-flex align-items-center justify-content-between w-100 py-50">
+                <div class="d-flex justify-content-start"><span class="mr-75 feather icon-alert-circle"></span><span>No results found.</span></div>
+            </a>
+        </li>
+    </ul>
+    <!-- END: Header-->
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="">
+                        <!-- <div class="brand-logo"></div> -->
+                        <h2 class="brand-text mb-0">HRMS Portal</h2>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item">
+                    <a href="../Dashboard/Index.html">
+                        <i class="feather icon-home"></i>
+                        <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
+                        <!-- <span class="badge badge badge-warning badge-pill float-right mr-2">2</span> -->
+                    </a>
+                </li>
+                <li class=" navigation-header">
+                    <span>Menu</span>
+                </li>
+                <li class=" nav-item" id="Master">
+                    <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                        </li>
+
+                        <li>
+                            <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_DocumentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Document Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_EmployeeTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
+                        </li>
+                        <li>
+                            <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
+                        </li>
+                        <li>
+                            <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
+                        </li>
+                        <li>
+                            <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
+                        </li>
+                        <li>
+
+                            <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
+                        </li>
+                       
+                        <li>
+                            <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
+                        </li>
+
+                        <li>
+                            <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/Report.html"><i class="fa fa-bar-chart"></i><span class="menu-item" data-i18n="View">Reports </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item" id="leave">
+                    <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                    <ul class="menu-content">
+                        
+                            <li id="dashboard">
+                                <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                                
+                             </li>
+                       
+                        <li>
+                            <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type</span></a>
+                            
+                         </li>
+                        
+                         <li>
+                             <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
+                             
+                          </li>
+                          <li>
+                            <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
+                         </li>
+                         <li>
+                            <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
+                         </li>
+                    </ul>
+                    
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Users/HRMS_User_Profile.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New User </span></a>
+                        </li>
+                        <li>
+                            <a href="../Users/HRMS_User_Profile_List.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View User </span></a>
+                        </li>
+                        <li>
+                            <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Company/HRMS_CompanyDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
+                        </li>
+                        <li>
+                            <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-lock"></i><span class="menu-title" data-i18n="User">Role & Permission</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Role/HRMS_Role.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Role</span></a>
+                        </li>
+                        <li>
+                            <a href="../Role/HRMS_RoleList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role List</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-codepen"></i><span class="menu-title" data-i18n="User">Subscription</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Subscription/AddSubscription.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">My Subscription</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">New Leave Type</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="../Dashboard/Index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        Leave
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content-body">
+
+                <div class="card">
+                    <div class="card-header pb-1">
+                        <h5 class="card-basic">Add Leave Type</h5>
+                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body">
+                            <form class="form-horizontal" novalidate>
+
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="users-list-status">Employee Names</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control" id="users-list-status">
+                                                        <option value="">--Reporting Employee Name--</option>
+                                                        <option value="0">Pooja</option>
+                                                        <option value="1">Yash</option>
+                                                        <option value="0">Aashish</option>
+                                                        <option value="1">Nikita</option>
+                                                    </select>
+                                                </fieldset>
+                                          </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Employee Code</label>
+                                                <input type="text" class="form-control" placeholder="Employee Code">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Type</label>
+                                                <select class="form-control" id="users-list-status">
+                                                    <option value="">Select Type</option>
+                                                    <option value="0">Paid</option>
+                                                    <option value="1"></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+
+                                <div class="row">
+                                    <label class="pl-1 pr-2">Unit:</label>
+                                    <div class="col-12 col-sm-4 col-lg-3">
+                                        <ul class="list-unstyled">
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck7">
+                                                        <label class="custom-control-label" for="customCheck7">Days</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck8">
+                                                        <label class="custom-control-label" for="customCheck8">Hours</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+
+                                    <label class="pl-5 ml-1">Balance Based on:</label>
+                                    <div class="col-12 col-sm-4 col-lg-5">
+                                        <ul class="list-unstyled">
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck9">
+                                                        <label class="custom-control-label" for="customCheck9">Fixed Entitlement</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck10">
+                                                        <label class="custom-control-label" for="customCheck10">Leave Grant</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+
+                                 
+
+                                </div>
+
+                                <div class="row">
+                                 <div class="col-12 col-sm-12 col-lg-12">
+                                     <label for="users-list-status" class="required">Discription:</label>
+                                      <fieldset class="form-label-group">
+                                        <textarea class="form-control" id="label-textarea" rows="2" placeholder="Label in Textarea"></textarea>
+                                         <label for="label-textarea">Label in Textarea</label>
+                                      </fieldset>
+                                 </div>
+                                </div>
+
+                                <h6>Validity:</h6>
+                                <div class="row">
+                                 <div class="col-12 col-sm-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label>From Date</label>
+                                        <input type="date"  class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-12 col-sm-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label>To Date</label>
+                                        <input type="date" class="form-control ">
+                                    </div>
+                                 </div>
+                                </div>
+                            <hr class="">
+                           
+                          
+                          <div class="pt-1 pb-1">
+                            <ul class="nav nav-tabs nav-justified" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" aria-controls="home" role="tab" aria-selected="true">Entitlement</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile" aria-controls="profile" role="tab" aria-selected="false">Applicable</a>
+                                </li>
+                              
+                                <li class="nav-item">
+                                    <a class="nav-link " id="about-tab" data-toggle="tab" href="#about" aria-controls="about" role="tab" aria-selected="false">Restriction</a>
+                                </li>
+                            </ul>
+                        </div>
+                     <div class="tab-content">
+                        <div class="tab-pane active" id="home" aria-labelledby="home-tab" role="tabpanel">
+                            <h6 class="pb-1 pt-1">Effective after:</h6>
+                            <div class="row">
+                              <div class="col-12 col-sm-6 col-lg-6">
+                                 <div class="controls">
+                                     <div class="form-group">
+                                      <label>Date of joing</label>
+                                        <input type="date" class="form-control ">
+                                     </div>
+                                 </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="custom-control custom-checkbox pb-1">
+                                    <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheckN">
+                                    <label class="custom-control-label" for="customCheckN">Acrrual</label>
+                                </div>
+                                <div class="row pb-1">
+                                    <div class="col-lg-2">
+
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">Year</option>
+                                                <option value="0"></option>
+                                                <option value="1"></option>
+                                            </select>
+
+                                        </div>
+
+                                     <div class="col-lg-2 pl-0">
+                                        <div class="d-flex">
+                                            <span class="mr-1 my-auto">On</span>
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">1st</option>
+                                                <option value="0"></option>
+                                                <option value="1"></option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <select class="form-control" id="users-list-status">
+                                            <option value="">Jan</option>
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 pl-0">
+                                        <div class="d-flex">
+                                            <span class="ml-1 my-auto">No. of days</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="d-flex">
+                                            <span class="mr-1 my-auto">In</span>
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">Current Accrual</option>
+                                                <option value="0"></option>
+                                                <option value="1"></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                 
+                                </div>
+                            </div>
+
+                            <div class="pb-1">
+                                <div class="custom-control custom-checkbox pb-1">
+                                    <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck11">
+                                    <label class="custom-control-label" for="customCheck11">Reset</label>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">Yearly</option>
+                                                <option value="0"></option>
+                                                <option value="1"></option>
+                                            </select>
+
+                                        </div>
+
+                                     <div class="col-lg-2 pl-0">
+                                        <div class="d-flex">
+                                            <span class="mr-1 my-auto">On</span>
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">Last Day</option>
+                                                <option value="0"></option>
+                                                <option value="1"></option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <select class="form-control" id="users-list-status">
+                                            <option value="">Dec</option>
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                        </select>
+                                    </div>
+                                    
+                                   
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="pb-1 pt-1">
+                              
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                      <select class="form-control" id="users-list-status">
+                                        <option value="">Carry Forward</option>
+                                        <option value="0"></option>
+                                        <option value="1"></option>
+                                     </select>
+                                    </div>
+
+                                    <div class="col-lg-2">
+                                        <div class="form-group pl-1">
+                                            <div class="controls">
+                                                <input type="text" class="form-control" placeholder="" value="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <select class="form-control" id="users-list-status">
+                                            <option value="">Percentage</option>
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-lg-2 pl-0">
+                                        <div class="d-flex">
+                                            <span class="ml-1 my-auto">Max Limit</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="tab-pane " id="profile" aria-labelledby="profile-tab" role="tabpanel">
+                            
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab-justified" data-toggle="pill" href="#home-justified" aria-controls="home-justified" aria-expanded="true">Applicable</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " id="profile-tab-justified" data-toggle="pill" href="#profile-justified" aria-controls="profile-justified" aria-expanded="false">Exceptions</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+
+    
+
+                            <div class="tab-pane active" role="tabpanel"  id="home-justified" aria-labelledby="home-tab-justified" aria-expanded="true">
+
+                                <div class="row pb-1">
+                                    <div class="col-12 col-sm-4 col-lg-3">
+                                        <ul class="list-unstyled">
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" checked name="customCheck" id="customCheckt">
+                                                        <label class="custom-control-label" for="customCheckt">Male</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" checked name="customCheck" id="customCheckt2">
+                                                        <label class="custom-control-label" for="customCheckt2">Female</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+
+                                    <label class="pl-5 ml-1">Marital:</label>
+                                    <div class="col-12 col-sm-4 col-lg-5">
+                                        <ul class="list-unstyled">
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" checked name="customCheck" id="customCheck9">
+                                                        <label class="custom-control-label" for="customCheck9">Single</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" checked name="customCheck" id="customCheck10">
+                                                        <label class="custom-control-label" for="customCheck10">Married</label>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+
+                                 
+
+                                </div>
+                              
+                                   
+                                
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Department</label>
+                                             <input type="text"  class="form-control"  placeholder="Department" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Designation</label>
+                                             <input type="text"  class="form-control"  placeholder="Designation" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Location</label>
+                                             <input type="text"  class="form-control"  placeholder="Location" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+                                
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Role</label>
+                                             <input type="text"  class="form-control"  placeholder="Role" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+                                </div>
+                                  
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-lg-4">
+                                        <div class="form-group">
+                                            <label>Employee Name</label>
+                                            <select class="select2 form-control" id="default-select">
+                                                 <option value="Active">Select Employee Name</option>
+                                                 <option value="Blocked">Bhumi</option>
+                                                 <option value="deactivated">rahul</option>
+                                                 <option value="Active">Diksha</option>
+                                                 <option value="Blocked">yash</option>
+                                                 <option value="deactivated">pooja</option>
+                                                 <option value="deactivated">somya</option>
+                                                 <option value="Blocked">yash</option>
+                                                 <option value="deactivated">pooja</option>
+                                                 <option value="deactivated">somya</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="tab-pane" id="profile-justified" role="tabpanel" aria-labelledby="profile-tab-justified" aria-expanded="false">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Department</label>
+                                             <input type="text"  class="form-control"  placeholder="Department" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Designation</label>
+                                             <input type="text"  class="form-control"  placeholder="Designation" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Location</label>
+                                             <input type="text"  class="form-control"  placeholder="Location" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+                                
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Role</label>
+                                             <input type="text"  class="form-control"  placeholder="Role" required data-validation-required-message="This Currency Name field is required">
+                                          </div>
+                                    </div>
+                                </div>
+                                  
+                            </div>
+
+                        </div>
+
+                        </div>
+
+                        <div class="tab-pane " id="about" aria-labelledby="about-tab" role="tabpanel">
+                          
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4>Weekend between Leave Period :</h4>
+                                    <div class="form-group">
+                                        <div class="d-flex" style="gap: 1rem;">
+                                            <fieldset>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="customRadio" id="customRadio1" >
+                                                    <label class="custom-control-label" for="customRadio1">Count as leave: Count after</label>
+                                                </div>
+                                            </fieldset>
+                                                <div>
+                                                    <input type="text" class="form-control d-inline-block col-2 ">
+                                                    <label>Days</label>
+                                                </div>
+                                        </div>
+
+
+                                        <fieldset>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" class="custom-control-input" name="customRadio" id="customRadio2">
+                                                <label class="custom-control-label" for="customRadio2">Don't count as leave</label>
+                                            </div>
+                                        </fieldset>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <h4>Holidays between Leave Period :</h4>
+                                    <div class="form-group" >
+                                        <div class="d-flex" style="gap: 1rem;">
+                                        <fieldset>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" class="custom-control-input" name="customRadio" id="customRadio3">
+                                                <label class="custom-control-label" for="customRadio3">Count as leave: Count after</label>
+                                            </div>
+                                        </fieldset>
+                                        <div>
+                                            <input type="text" class="form-control d-inline-block col-2 ">
+                                            <label>Days</label>
+                                        </div>
+                                        </div>
+                                        <fieldset>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" class="custom-control-input" name="customRadio" id="customRadio4">
+                                                <label class="custom-control-label" for="customRadio4">Don't count as leave</label>
+                                            </div>
+                                        </fieldset>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                          
+                          
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <h4>While Applying Leave, Exceed Leave Balance :</h4>
+                                    <div class="row">
+                                        <div class="col-6 mb-1">
+                                            <fieldset>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="customRadio" id="customRadio1">
+                                                    <label class="custom-control-label" for="customRadio1">Allow</label>
+                                                </div>
+                                            </fieldset>
+
+                                        </div>
+                                        <div class="col-6 mb-1">
+                                            <fieldset>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="customRadio" id="customRadio1">
+                                                    <label class="custom-control-label" for="customRadio1">Don't Allow</label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <ul class="list-unstyled mb-0 ">
+
+                                        <li class="d-inline-block mr-2">
+                                            <fieldset>
+                                                <div class="custom-control custom-radio form-group">
+                                                    <input type="radio" class="custom-control-input" name="customRadio" id="customRadio3">
+                                                    <label class="custom-control-label" for="customRadio3">Without Limit</label>
+                                                </div>
+                                            </fieldset>
+                                        </li>
+                                        <li class="d-inline-block mr-2">
+                                            <fieldset>
+                                                <div class="custom-control custom-radio form-group">
+                                                    <input type="radio" class="custom-control-input" name="customRadio" id="customRadio0">
+                                                    <label class="custom-control-label" for="customRadio0">Unit year end Limit</label>
+                                                </div>
+                                            </fieldset>
+                                        </li>
+                                        <li class="d-inline-block mr-2">
+                                            <fieldset>
+                                                <div class="custom-control custom-radio form-group">
+                                                    <input type="radio" class="custom-control-input" name="customRadio" id="customRadio0">
+                                                    <label class="custom-control-label" for="customRadio0">Without limit and mark as LOP</label>
+                                                </div>
+                                            </fieldset>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <h4>Duration(s) Allowed :</h4>
+                                    <div class="row form-group">
+                                        <div class="col-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck7">
+                                                <label class="custom-control-label" for="customCheck7">Full Day</label>
+                                            </div>
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck7">
+                                                <label class="custom-control-label" for="customCheck7">Quarter Day</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-6">
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck7">
+                                                <label class="custom-control-label" for="customCheck7">Half Day</label>
+                                            </div>
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck7">
+                                                <label class="custom-control-label" for="customCheck7">Hours</label>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>   
+
+                            <div class="form-group">
+                                <h4>Duration(s) Allowed :</h4>
+                                <div class="row">
+                                    <div class="col-lg-6 form-group">
+                                        <label>Allow User To view</label>
+                                        <select class="form-control" id="users-list-status">
+                                            <option value="">Complete Leave Summary</option>
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-6 form-group">
+                                        <label>Balance To be Displayed</label>
+                                        <select class="form-control" id="users-list-status">
+                                            <option value="">Start Date of Leave Request</option>
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <h4>Allow Request For :</h4>
+                                <div class="row">
+                                    <div class="col-lg-6 form-group">
+                                            <fieldset>
+                                                <div class="custom-control form-group custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck7">
+                                                    <label class="custom-control-label" for="customCheck7">Past Dates</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox pl-3 d-flex">
+                                                    <input type="checkbox" class="custom-control-input " name="customCheck" id="customCheck13" >
+                                                    <label class="custom-control-label" for="customCheck13">Past</label>
+                                                    <div class="pl-1">
+                                                        <input type="text" class="form-control d-inline-block col-lg-2 ">
+                                                        <label>Days</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+
+                                    </div>
+                                    <div class="col-lg-6 form-group">
+                                        <fieldset>
+                                            <div class="custom-control custom-checkbox form-group">
+                                                <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck16">
+                                                <label class="custom-control-label" for="customCheck16">Future Dates</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="custom-control custom-checkbox pl-3 d-flex form-group">
+                                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck15" >
+                                                        <label class="custom-control-label" for="customCheck15">Next</label>
+                                                        <div class="pl-1">
+                                                            <input type="text" class="form-control d-inline-block col-4 ">
+                                                            <label>Days</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-8">
+                                                    <div class="custom-control custom-checkbox pl-3 d-inline-flex form-group">
+                                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck14" >
+                                                        <label class="custom-control-label" for="customCheck14">To be Applied</label>
+                                                        <div class="pl-1">
+                                                            <input type="text" class="form-control d-inline-block col-2 ">
+                                                            <label>Days in advance</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </fieldset>
+                                        
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="custom-control custom-checkbox form-group">
+                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck17">
+                                            <label class="custom-control-label" for="customCheck17">Minimum Leave that can be availed per application</label>
+                                            <div class="p-1">
+                                                <input type="text" class="form-control col-2 d-inline-block">
+                                                <label>Days</label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox form-group">
+                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck17">
+                                            <label class="custom-control-label" for="customCheck17">Maximum number of consicutive days of leave allowed </label>
+                                            <div class="p-1">
+                                                <input type="text" class="form-control col-2 d-inline-block">
+                                                <label>Days</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox form-group">
+                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck17">
+                                            <label class="custom-control-label" for="customCheck17">Enable file upload option if the applied leave period exceeds</label>
+                                            <div class="p-1">
+                                                <input type="text" class="form-control col-2 d-inline-block">
+                                                <label>Days</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label >This leave can be applied only on</label>
+                                            <input type="text" class="form-control col-6">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="custom-control custom-checkbox form-group">
+                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck17">
+                                            <label class="custom-control-label" for="customCheck17">Maximum Leave that can be availed per application</label>
+                                            <div class="p-1">
+                                                <input type="text" class="form-control col-2 d-inline-block">
+                                                <label>Days</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox form-group">
+                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck17">
+                                            <label class="custom-control-label" for="customCheck17">Minimum Gap(in Days) between two application</label>
+                                            <div class="p-1">
+                                                <input type="text" class="form-control col-2 d-inline-block">
+                                                <label>Days</label>
+                                            </div>
+                                        </div>
+
+                                        <div class=" form-group ">
+                                            <label for=""> Maximum number of application allowed within the specified period</label>
+                                            <div class="d-flex col-lg-6 p-1 border border-2 rounded-lg">
+                                                <input type="text" class="form-control col-2 d-inline-block">
+                                                 <h3 class="my-auto mx-1">/</h3>
+                                                 <select class="form-control" id="users-list-status">
+                                                    <option value="" selected>Week</option>
+                                                    <option value="0">1</option>
+                                                    <option value="1">2</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label >This leave cannot be taken together with</label>
+                                            <input type="text" class="form-control col-6">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
+
+                                <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
+                                <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
+                        </div>
+        </div>
+                   </form>
+                  </div>
+                </div>
+
+            </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix blue-grey lighten-2 mb-0">
+            <span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2022<a class="text-bold-800 grey darken-2" href="" target="_blank">Acquara,</a>All rights Reserved</span>
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../Content/app-assets/js/custom-js.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+
+    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Theme JS-->
+    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
+    <script src="../../Content/app-assets/js/core/app.js"></script>
+    <script src="../../Content/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+    <!-- BEGIN: Page JS-->
+
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
+    <!-- END: Page JS-->
+    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+    <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": true,
+
+
+                "buttons": ["excel", "print", "copy", "pdf", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        });
+    </script>
+    <!-- Code for menu active Yash 04/06/22 -->
+    <script>
+        window.onload = function () {
+            document.getElementById("Master").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("codemaster").className = 'active';
+        }
+    </script>
+
+</body>
+<!-- END: Body-->
+
+</html>

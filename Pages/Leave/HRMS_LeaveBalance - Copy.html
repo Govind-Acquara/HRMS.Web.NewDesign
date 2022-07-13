@@ -340,72 +340,100 @@
             </div>
             <div class="content-body">
               <!-- side content -->
-              <div class="my-2 dt-buttons btn-group">
-                <button class="btn btn-primary ml-0 sidebar-toggle mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i>Leave Balance</button>
-            </div>
-            <div class="sidebar-content">
-
-                <div class="CloseBTN">&times;</div>
+              <div class="card">
+                <div class="card-header">
+                    <h5 class="card-basic">Leave Balance</h5>
+                    <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                            <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+              
                 
-                <div>
-                    <form id="sideform" class="sidebar-form">
-                        <h4 class="font-weight-bold mb-2">Leave Balance</h4>
+                <div class="card-content collapse show">
+                    <div class="card-body pt-0 pb-0">
+                        <form class="form-horizontal" novalidate>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="data-status">Employee Name</label>
+                                        <select class="form-control" id="data-status">
+                                            <option>Select Employee Name</option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                          <div class="form-group">
-                            <label for="data-status">Employee Name</label>
-                            <select class="form-control" id="data-status">
-                                <option>Select Employee Name</option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                            </select>
-                          </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class=" form-group">
+                                        <label for="data-status">Employee Code</label>
+                                        <input type="text"  class="form-control"  placeholder="Employee Code" required >
+                                    </div>
+                                </div>
 
-                          <div class=" form-group">
-                            <label for="data-status">Employee Code</label>
-                            <input type="text"  class="form-control"  placeholder="Employee Code" required >
-                          </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="data-status">Designation</label>
+                                        <input type="text"  class="form-control"  placeholder="Designation" required >
+                                    </div>
+                                </div>
 
-                          <div class="form-group">
-                            <label for="data-status">Designation</label>
-                            <input type="text"  class="form-control"  placeholder="Designation" required >
-                          </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="data-status">City</label>
+                                        <input type="text" class="form-control" placeholder="City">
+                                    </div>
+                                </div>
+                            </div>
 
-                          <div class="form-group">
-                            <label for="data-status">City</label>
-                            <input type="text" class="form-control" placeholder="City">
-                          </div>
+                            <div class="row">
+                              <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Date Of Joining</label>
+                                     <input type="date"  class="form-control" required >
+                                </div>
+                              </div>
+
+                                <!-- <h5 class="pb-1">LB Carry Forward:</h5> -->
+                               <div class="row pr-5 pl-5">
+                                <div class="col-12 pl-4">
+                                  <h5 class="pt-2">LB Carry Forward:</h5>
+                               </div>
+                              </div>
+
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                     <div class="form-group">
+                                         <label>Base Year</label>
+                                          <input type="date"  class="form-control" required >
+                                     </div>
+                                 </div>
+                                 <div class="col-12 col-sm-6 col-lg-3">
+                                     <div class="form-group">
+                                         <label>Current Year</label>
+                                          <input type="date"  class="form-control" required >
+                                     </div>
+                                 </div>
+                               
+                             </div>
+                            
+
                         
-                          <div class="form-group">
-                            <label>Date Of Joining</label>
-                             <input type="date"  class="form-control" required >
-                          </div>
 
-                           <h5 class="pb-1">LB Carry Forward:</h5>
-                           <div class="row">
-                            <div class="col-12 col-sm-4 col-md-6">
-                                <div class="form-group">
-                                    <label>Base Year</label>
-                                     <input type="date"  class="form-control" required >
-                                </div>
+                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Submit</button>
+                                <button type="reset" class="btn btn-outline-primary mb-1 mt-0.5">Reset</button>
                             </div>
-                            <div class="col-12 col-sm-4 col-md-6">
-                                <div class="form-group">
-                                    <label>Current Year</label>
-                                     <input type="date"  class="form-control" required >
-                                </div>
-                            </div>
-                           </div>
-                          <div class="d-flex my-2  justify-content-center ">
-                            <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
-                            <button type="reset" class="btn w-50 btn-outline-primary mb-1 mt-0.5">Reset</button>
-                        </div>
-
-
-                      </form> 
+                        </form>
+                    </div>
                 </div>
             </div>
-
+          
+        
 
                 <div class="card">
                     <div class="card-header">
