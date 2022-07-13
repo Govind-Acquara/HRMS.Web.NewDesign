@@ -38,7 +38,9 @@
      <!-- END: Page CSS-->
  
       <!-- END: Page CSS-->
-  
+      <!-- link for month date picker -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
       <!-- BEGIN: Custom CSS-->
       <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
      <!-- END: Custom CSS-->
@@ -274,7 +276,16 @@
                 </ul>
                 
             </li>
-            <li class=" nav-item">
+            <li class=" nav-item" id="shift">
+                <a href="#"><i class="feather icon-clock"></i><span class="menu-title" data-i18n="User">Shift</span></a>
+                <ul class="menu-content">
+                    <li id="addShiftPage">
+                        <a href="../Shift/AddShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Add Shift</span></a>
+                    </li>
+
+                </ul>
+            </li>          
+              <li class=" nav-item">
                 <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
                 <ul class="menu-content">
                     <li>
@@ -370,7 +381,7 @@
                         <div class="card-body">
                             <form class="form-horizontal" novalidate>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
                                                 <label>Week Starts On</label>
                                                 <select class="form-control" id="users-list-status">
@@ -385,7 +396,7 @@
                                             
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Work Week Starts On</label>
                                             <select class="form-control" id="users-list-status">
@@ -401,7 +412,7 @@
                                         
                                     </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Work Week Ends On</label>
                                             <select class="form-control" id="users-list-status">
@@ -419,16 +430,25 @@
                                     </div>
                                 </div>
 
-                                <div class="mt-2">
-                                    <h4>Weekend Definition</h4>
-                                    <hr>
+                                <div class="d-flex justify-content-between border-bottom my-1">
+                                    <div >
+                                        <h4>Weekend Definition</h4>
+
+                                    </div>
+                                    <div class=" my-auto">
+                                        <!-- <input type="checkbox" class="custom-control-input" name="customCheck" id="allMonths"> -->
+                                        <span class=" font-weight-bold" >* This will be Apply to all Months</span>
+                                    </div>
+
                                 </div>
 
 
 
+
+
                                 <div class="table-responsive rounded-lg">
-                                    <table class="table border-light rounded-lg table-striped ">
-                                        <thead class="table-light">
+                                    <table class="table border rounded-lg table-striped ">
+                                        <thead class="table-d text-white" style="background-color: #747474; ">
                                             <tr>
                                               <th>Days</th>
                                               <th>All</th>
@@ -731,16 +751,65 @@
                                       </tbody>
                                     </table>
                                 </div>
-
-                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-between pr-0 mt-2">
-                                    <div class="custom-control custom-checkbox my-auto">
-                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="allMonths">
-                                        <label class="custom-control-label" for="allMonths">Apply to all Months</label>
+                                <div>
+                                    <div class="mt-2">
+                                        <h4>Calendar Year</h4>
+                                        <hr>
                                     </div>
                                     <div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" checked=checked name="customRadio" id="currentYear">
+                                            <label class="custom-control-label font-weight-bold" for="currentYear">Calendar Year (January to December)</label>
+                                        </div>
+                                        
+                                    </div>
+
+
+                                    <div class="custom-control custom-radio pt-2">
+                                        <input type="radio" class="custom-control-input" name="customRadio" id="customYear">
+                                        <label class="custom-control-label font-weight-bold "  for="customYear">Custom Year</label>
+                                    </div>
+                                    <div class="row pt-2">
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="font-weight-bold" for="first-name-vertical">The year starts from</label>
+                                                 <input type="text"  name="datepicker" id="yearStartMonth" disabled = disabled class="form-control " required placeholder="Select Starting Month" >
+                                               </div> 
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="font-weight-bold" for="first-name-vertical">and year ends on</label>
+                                                 <input type="text"  name="datepicker" id="yearEndMonth" disabled = disabled class="form-control " required placeholder="Select Ending Month" >
+                                               </div> 
+                                        </div>
+                                        
+                                    </div>
+
+
+    
+
+                                </div>
+
+                                <!-- <div>
+                                    <div >
+                                        <h4>Statutory Weekend</h4>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="customCheck" id="statutoryWeekend">
+                                            <label class="custom-control-label" for="statutoryWeekend">Define statutory weekends and track statutory weekend hours separately.</label>
+                                        </div>
+                                    </div>
+
+                                </div> -->
+
+                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
+
                                         <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
                                         <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
-                                    </div>
                                 </div>
 
                             </form>
@@ -861,63 +930,48 @@
 <!-- END: Page Vendor JS-->
 
 
+    <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
+
+
+<!-- js link for month date picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
 
 <script>
 
-
-// Sunday Check All
-
-$('#sundayAll').click(function(e) {
-  var tr = $(e.target).closest('tr');
-  $('td input[type=checkbox]', tr).prop('checked', this.checked);
-
-//   if ($('td input[type=checkbox]', tr).prop("checked", false)) {
-//     $("#sundayAll").prop("checked", false);
-//   }
-
+$('#currentYear').click(function(){
+      if ($(this).is(':checked')) {
+            // $('#currentYear').prop("checked", false);
+            $('#yearStartMonth , #yearEndMonth').prop("disabled", true);
+      } else {
+            $('#yearStartMonth , #yearEndMonth').prop("disabled", false);
+      }
 });
 
-// Monday Check All
-
-$('#mondayAll').click(function(e) {
-  var tr = $(e.target).closest('tr');
-  $('td input[type=checkbox]', tr).prop('checked', this.checked);
+$('#customYear').click(function(){
+      if ($(this).is(':checked')) {
+            $('#currentYear').prop("checked", false);
+            $('#yearStartMonth , #yearEndMonth').prop("disabled", false);
+      } else {
+            $('#yearStartMonth , #yearEndMonth').prop("disabled", true);
+      }
 });
 
-// Tuesday Check All
+$("#yearStartMonth").datepicker( {
+    format: "mm-yyyy",
+    startView: "months", 
+    minViewMode: "months"
+}); 
 
-$('#tuesdayAll').click(function(e) {
-  var tr = $(e.target).closest('tr');
-  $('td input[type=checkbox]', tr).prop('checked', this.checked);
-});
 
-// Wednesday Check All
 
-$('#wednesdayAll').click(function(e) {
-  var tr = $(e.target).closest('tr');
-  $('td input[type=checkbox]', tr).prop('checked', this.checked);
-});
 
-// Thursday Check All
-
-$('#thursdayAll').click(function(e) {
-  var tr = $(e.target).closest('tr');
-  $('td input[type=checkbox]', tr).prop('checked', this.checked);
-});
-
-// Friday Check All
-
-$('#fridayAll').click(function(e) {
-  var tr = $(e.target).closest('tr');
-  $('td input[type=checkbox]', tr).prop('checked', this.checked);
-});
-
-// Saturday Check All
-
-$('#saturdayAll').click(function(e) {
-  var tr = $(e.target).closest('tr');
-  $('td input[type=checkbox]', tr).prop('checked', this.checked);
-});
+$("#yearEndMonth").datepicker( {
+    format: "mm-yyyy",
+    startView: "months", 
+    minViewMode: "months"
+}); 
 
 
     $(function () {
