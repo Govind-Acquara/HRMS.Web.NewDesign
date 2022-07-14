@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Forgot Attendance Report</title>
+    <title>Branch Master</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -37,7 +37,13 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
- 
+
+
+     <!-- Toast CSS -->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
+     <!-- Toast CSS -->
+
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
  
@@ -319,7 +325,7 @@
                    
                 </ul>
             </li>
-            <li class=" nav-item" id="leave">
+            <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                 <ul class="menu-content">
                     
@@ -329,11 +335,11 @@
                          </li>
                    
                     <li>
-                        <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type  </span></a>
+                        <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type</span></a>
                         
                      </li>
-                     
-                     <li id="leave_view">
+                    
+                     <li>
                          <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
                          
                       </li>
@@ -369,7 +375,7 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item">
+            <li class=" nav-item" id="Company">
                 <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
                 <ul class="menu-content">
                     <li>
@@ -378,7 +384,7 @@
                     <li>
                         <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
                     </li>
-                    <li>
+                    <li id="BranchMaster">
                         <a href="../Company/HRMS_Branch_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Branch Master</span></a>
                     </li>
                 </ul>
@@ -415,12 +421,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Forgot Attendance Report</h2>
+                            <h2 class="content-header-title float-left mb-0">Branch Master</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Attendance
+                                    <li class="breadcrumb-item active">Company
                                     </li>
                                 </ol>
                             </div>
@@ -429,214 +435,284 @@
                 </div>
                 
             </div>
-                    <div >
-                      <a  class="btn btn-primary m-1 " href="HRMS_Forget_Attendance.html"> <i class="fa fa-calendar-check-o"></i>&nbsp;&nbsp;Forgot Attendance List</a>
-                    </div>
-                      
-                    <div class="sidebar-content">
+            <div class="content-body">
+                <!-- <button type="button" class="btn btn-outline-success mr-1 mb-1" id="type-success">Success</button> -->
 
-                        <div class="CloseBTN">&times;</div>
-                        
-                        <div>
-                            <form id="sideform" class="sidebar-form">
-                                <h4 class="font-weight-bold mb-2"> Add Forget Attendance</h4>
-    
-                                <div class="form-group">
-                                    <label for="data-status">Please Select A Employee Name</label>
-                                    <select class="form-control" id="data-status">
-                                        <option>Select Employee Name</option>
-                                        <option>Arpit</option>
-                                        <option>Pooja</option>
-                                        <option>Yash</option>
-                                        <option></option>
-                                    </select>
-                                  </div>
-    
-                                <div class="form-group">
-                                    <label>Emp. Code</label>
-                                    <input type="text" name="text" class="form-control" placeholder="Emp. Code">
-                                </div>
-                                <div class="form-group">
-                                    <label>Date</label>
-                                     <input type="date"  class="form-control"  placeholder="Employee Code" required>
-                                  </div>
-    
-                                  <div class="form-group">
-                                    <label for="data-status">Attendance Type</label>
-                                    <select class="form-control" id="data-status" placeholder="Select Attendance Type">
-                                        <option>Select Attendance Type</option>
-                                        <option>Present</option>
-                                        <option>Absent</option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                  </div>
-                                  
-                                  <div class="form-group">
-                                    <input type="checkbox" id="presentCheckbox"   placeholder="Reason" required>
-                                    <label for="presentCheckbox">Check if Present</label>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="data-status">Approved By</label>
-                                    <select class="form-control" id="data-status" placeholder="Select Attendance Type">
-                                        <option>Select Reporting Officer Name</option>
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                  </div>
-        
-                                  <div class="form-group">
-                                    <label for="data-status">Reviewed By</label>
-                                    <select class="form-control" id="data-status" placeholder="Select Attendance Type">
-                                        <option>Select Reporting Officer Name</option>
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                  </div>
-                                
-                               
-        
-                                  <div class="form-group">
-                                    <label for="">Reason</label>
-                                    <textarea class="form-control" rows="2"></textarea>
-                                  </div>
-                                  
-                                  <div class="d-flex my-2  justify-content-center ">
-                                    <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
-                                    <button type="reset" class="btn w-50 btn-outline-primary mb-1 mt-0.5">Reset</button>
-                                </div>
-        
-        
-                              </form> 
+                <div class="card">
+                    <div class="card-header pb-1">
+                        <h5 class="card-basic">Add Branch</h5>
+                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body pt-0 pb-0">
+                            <form class="form-horizontal" novalidate>
+        
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Branch Name</label>
+                                                <input type="text" class="form-control" placeholder="Branch Name" required data-validation-required-message="This username field is required">
+                                            </div>
+                                        </div>
+                                    </div> 
+        
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Branch Code</label>
+                                                <input type="text" class="form-control" placeholder="Branch Code" required data-validation-required-message="This username field is required">
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+        
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Country Name</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control" id="users-list-status">
+                                                        <option value="">--Please Select Country--</option>
+                                                        <option value="0">India</option>
+                                                        <option value="1">Dubai</option>
+                                                        <option value="0">USA</option>
+                                                        <option value="1"></option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>State Name</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control" id="users-list-status">
+                                                        <option value="">--Please Select State--</option>
+                                                        <option value="0"></option>
+                                                        <option value="1"></option>
+                                                        <option value="0"></option>
+                                                        <option value="1"></option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Address1</label>
+                                                <textarea class="form-control" id="label-textarea" rows="2" placeholder="Label in Textarea"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Address2</label>
+                                                <textarea class="form-control" id="label-textarea" rows="2" placeholder="Label in Textarea"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>PinCode</label>
+                                                <input type="text" class="form-control" placeholder="Pincode" value="0" required data-validation-required-message="This username field is required">
+                                            </div>
+                                        </div>
+                                    </div> 
+        
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Currency Name</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control" id="users-list-status">
+                                                        <option value="">--Please Select State--</option>
+                                                        <option value="0"></option>
+                                                        <option value="1"></option>
+                                                        <option value="0"></option>
+                                                        <option value="1"></option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>TimeZone</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control" id="users-list-status">
+                                                        <option value="">--Please Select TimeZone--</option>
+                                                        <option value="0"></option>
+                                                        <option value="1"></option>
+                                                        <option value="0"></option>
+                                                        <option value="1"></option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Company Name</label>
+                                                <input type="text" class="form-control" placeholder="Company Name" disabled>
+                                            </div>
+                                        </div>
+                                    </div> 
+        
+                                </div>
+        
+                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                    <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
+                                    <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
                     <div class="card">
                         <div class="card-content">
                               <div class="card-body card-dashboard">
                                 <div class="table-responsive">
-                                    <table id="ForgotAttendanceReport" class="table border-secondary table-striped dataex-html5-selectors">
+                                    <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                       
                                         <thead>
                                             <tr>
                                                 <th>SrNo.</th>
-                                                <th>Employee Name</th>
-                                                <th>Date</th>
-                                                <th>Approve By</th>
-                                                <th>Review By</th>
-                                                <th>Attendance</th>
-                                                <th>Status</th>
-                                                <th class="">Action</th>
+                                                <th>Company Name</th>
+                                                <th>Branch Name</th>
+                                                <th>Branch Code</th>
+                                                <th>country Name</th>
+                                                <th>State Name</th>
+                                                <th>Address</th>
+                                                <th>Pincode</th>
+                                                <th>TimeZone</th>
+                                                <th>Currency</th>
+                                                <th>IsActive</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
-                                         <tfoot class="tableSearchFoot">
-                                            <tr>
-                                                <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
-                                                <th>Employee Name</th>
-                                                <th>Days</th>
-                                                <th>Leave Type</th>
-                                                <th>Department</th>
-                                                <th>Reporting Person</th>
-                                                <th>Status</th>
-                                                <th></th>
-                                            </tr>
-                                        </tfoot> 
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-5.jpg" alt="avtar img holder" height="40" width="40">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Rohit Sharma</h6>
-                                                        <h6 class="mb-0">Emp-101</h6>
-                                                        
-                                                    </div>
-                                                </div></td>
-                                                <td>3-07-2022</td>
-                                                <td>Swati Sharma</td>
-                                                <td>Neha Shrivastav</td>
-                                                <td>P</td>
-                                                <td>Pending</td>
-                                                <td class="product-action">
-                                                    <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class="feather icon-edit"></i></span>
-    
+                                                <td>Acquara India</td>
+                                                <td>Gurgaon</td>
+                                                <td>Gur001</td>
+                                                <td>India</td>
+                                                <td>Hariyana</td>
+                                                <td>123,Gurgaon Hariyana</td>
+                                                <td>122001</td>
+                                                <td>(GMT+5:30)</td>
+                                                <td>Rs.</td>
+                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                          
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                    
+                                                    <label class="custom-control-label" for="customSwitch1">
+                                                    
+                                                    <span class="switch-text-left">Active</span>
+                                                    
+                                                    <span class="switch-text-right">InActive</span>
+                                                    
+                                                    </label>
+                                                    
+                                                    </div></td>
+                                                <td>
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+            
                                                 </td>
                                             </tr>
+                                          
                                             <tr>
                                                 <td>2</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-6.jpg" alt="avtar img holder" height="40" width="40">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Geeta Pathak</h6>
-                                                        <h6 class="mb-0">Emp-102</h6>
-                                                       
-                                                    </div>
-                                                </div></td>
-                                                <td>12-07-2022</td>
-                                                <td>Swati Sharma</td>
-                                                <td>Neha Shrivastav</td>
-                                                <td>Absent</td>
-                                                <td>Absent</td>
-    
-                                                <td class="product-action">
-                                                    <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light"><i class="feather icon-edit"></i></span>
+                                                <td>Acquara India</td>
+                                                <td>Gurgaon</td>
+                                                <td>Gur002</td>
+                                                <td>India</td>
+                                                <td>Hariyana</td>
+                                                <td>123,Gurgaon Hariyana</td>
+                                                <td>122001</td>
+                                                <td>(GMT+5:30)</td>
+                                                <td>Rs.</td>
+                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                          
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                    
+                                                    <label class="custom-control-label" for="customSwitch2">
+                                                    
+                                                    <span class="switch-text-left">Active</span>
+                                                    
+                                                    <span class="switch-text-right">InActive</span>
+                                                    
+                                                    </label>
+                                                    
+                                                    </div></td>
+                                                <td>
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+            
                                                 </td>
                                             </tr>
-    
+            
                                             <tr>
                                                 <td>3</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-7.jpg" alt="avtar img holder" height="35" width="35">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Yash Sharma</h6>
-                                                        <h6 class="mb-0">Emp-103</h6>
-                                                       
-                                                    </div>
-                                                </div></td>
-                                                <td>12-07-2022</td>
-                                                <td>Yash Sharma</td>
-                                                <td>Neha Shrivastav</td>
-                                                <td>P</td>
-                                                <td>Pending</td>
-                                                <td class="product-action">
-                                                    <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class="feather icon-edit"></i></span>
-    
+                                                <td>Acquara India</td>
+                                                <td>Gurgaon</td>
+                                                <td>Gur003</td>
+                                                <td>India</td>
+                                                <td>Hariyana</td>
+                                                <td>123,Gurgaon Hariyana</td>
+                                                <td>122001</td>
+                                                <td>(GMT+5:30)</td>
+                                                <td>Rs.</td>
+                                                <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                          
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                    
+                                                    <label class="custom-control-label" for="customSwitch3">
+                                                    
+                                                    <span class="switch-text-left">Active</span>
+                                                    
+                                                    <span class="switch-text-right">InActive</span>
+                                                    
+                                                    </label>
+                                                    
+                                                    </div></td>
+                                                <td>
+                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+            
                                                 </td>
                                             </tr>
-    
-                                            <tr>
-                                                <td>4</td>
-                                                <td> <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="avatar mr-50">
-                                                        <img src="../../Content/app-assets/images/portrait/small/avatar-s-8.jpg" alt="avtar img holder" height="35" width="35">
-                                                    </div>
-                                                    <div class="user-page-info">
-                                                        <h6 class="mb-0">Pooja Jain</h6>
-                                                        <h6 class="mb-0">Emp-104</h6>
-                                                      
-                                                    </div>
-                                                </div></td>
-                                                <td>1-07-2022</td>
-                                                <td>Swati Sharma</td>
-                                                <td>Neha Shrivastav</td>
-                                                <td>Absent</td>
-                                                <td>Absent</td>
-                                            
-    
-                                                <td class="product-action">
-                                                    <span class="action-edit cursor-pointer sidebar-toggle waves-effect sidebar waves-light "><i class="feather icon-edit"></i></span>
-    
-                                                </td>
-                                            </tr>
-    
+            
+            
                                         </tbody>
+
                                     </table>
                                 </div>
                               </div>
@@ -707,10 +783,13 @@
 
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
-     <!-- js link for find diferrence between date-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-    
+    <!-- Toast JS -->
+
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+        <!-- Toast JS -->
+
     <script>
         $(function () {
         $("#example1").DataTable({
@@ -724,92 +803,60 @@
         </script>
     
     <script>
-        window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_view").className = 'active';
-        }
 
-      
+
+$('#type-success').on('click', function () {
+    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+  });
+
+// // Success Type
+// $('#type-success').on('click', function () {
+//     $.toast({
+//     heading: 'Information',
+//     text: 'Loaders are enabled by default. Use `loader`, `loaderBg` to change the default behavior',
+//     icon: 'info',
+//     loader: true,        // Change it to false to disable loader
+//     loaderBg: '#9EC600'  // To change the background
+// })
+// });
+
+        window.onload = function () {
+            document.getElementById("Company").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("BranchMaster").className = 'active';
+        }
     </script>
 
-<script>
-    $('.datepicker').datepicker({
-      dateFormat: 'yy-mm-dd',
-      changeMonth: true,
-      changeYear: true,
-    });
- 
-    $(document).on('change', '#todate', function () {
-      var fromdate = $("#fromdate").val();
-      var todate = $("#todate").val();
- 
-      if ((fromdate == "") || (todate == "")) {
-        $("#result").html("Please enter Both dates");
-        return false
-      }
- 
-      var dt1 = new Date(fromdate);
-      var dt2 = new Date(todate);
- 
-      var time_difference = dt2.getTime() - dt1.getTime();
-      var result = time_difference / (1000 * 60 * 60 * 24)+1;
- 
-      var output =  result +" Day";
-      $("#result").val(output);
-    });
-  </script>
-<!-- for date disable(pooja) -->
-  <script language="javascript">
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
+        function change_status(status)
+        {
+           
+            var txt = document.getElementById("background");
+            var txt2 = document.getElementById("font");
+            txt.disabled=status.checked?false:true;
+            txt2.disabled=status.checked?false:true;
 
-    today = yyyy + '-' + mm + '-' + dd;
-    $('#fromdate').attr('min',today);
-  </script>
 
- <script language="javascript">
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-
-    today = yyyy + '-' + mm + '-' + dd;
-    $('#todate').attr('min',today);
-</script>
- 
-<!-- end date disable js(pooja) -->
-    <script>
-     function selectDate(date) {
-    $('#calendar-wrapper').updateCalendarOptions({
-        date: date
-    });
-    console.log(calendar.getSelectedDate());
-    }
-
-    var defaultConfig = {
-    weekDayLength: 1,
-    
-    onClickDate: selectDate,
-    showYearDropdown: true,
-    startOnMonday: false,
-    };
-
-    var calendar = $('#calendar-wrapper').calendar(defaultConfig);
-    console.log(calendar.getSelectedDate());
+        }
     </script>
     <!-- END: Page JS-->
 
-    <script>
-        window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_view").className = 'active';
-        }
+<script>
 
-      
-    </script>
 
+$(document).ready(function() {
+    $('#type-success').on('click', function () {
+    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+  });
+})
+    
+
+    $('#test').pickadate({
+    min: true
+});
+
+$('#test2').pickadate({
+    min: true
+});
+</script>
 </body>
 <!-- END: Body-->
 
