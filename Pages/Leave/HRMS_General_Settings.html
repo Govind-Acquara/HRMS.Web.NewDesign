@@ -232,7 +232,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="leave">
                     <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                     <ul class="menu-content">
                         
@@ -256,8 +256,23 @@
                          <li>
                             <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
                          </li>
+                         <li>
+                            <a href="../Leave/HRMS_New_LeaveType.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
+                         </li>
+                         <li id="GeneralSettings">
+                            <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
+                         </li>
                     </ul>
                     
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-clock"></i><span class="menu-title" data-i18n="User">Shift</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Shift/AddShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Add Shift</span></a>
+                        </li>
+    
+                    </ul>
                 </li>
                 <li class=" nav-item">
                     <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
@@ -812,8 +827,8 @@
     <!-- Code for menu active Yash 04/06/22 -->
     <script>
         window.onload = function () {
-            document.getElementById("Master").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("codemaster").className = 'active';
+            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("GeneralSettings").className = 'active';
         }
     </script>
 
