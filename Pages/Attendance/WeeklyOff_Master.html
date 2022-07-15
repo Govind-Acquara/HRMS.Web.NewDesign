@@ -288,7 +288,12 @@
                     <li id="addShiftPage">
                         <a href="../Shift/AddShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Add Shift</span></a>
                     </li>
-
+                    <li>
+                        <a href="../Shift/AssignShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Assign Shift</span></a>
+                    </li>
+                    <li>
+                        <a href="../Shift/ViewShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Shift</span></a>
+                    </li>
                 </ul>
             </li>          
               <li class=" nav-item">
@@ -783,14 +788,14 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="font-weight-bold" for="first-name-vertical">The year starts from</label>
-                                                 <input type="text"  name="datepicker" id="yearStartMonth" disabled = disabled class="form-control " required placeholder="Select Starting Month" >
+                                                 <input type="text"  name="datepicker" id="yearStartMonth" disabled = disabled class="form-control Monthdatepicker" required placeholder="Select Starting Month" >
                                                </div> 
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="font-weight-bold" for="first-name-vertical">and year ends on</label>
-                                                 <input type="text"  name="datepicker" id="yearEndMonth" disabled = disabled class="form-control " required placeholder="Select Ending Month" >
+                                                 <input type="text"  name="datepicker" id="yearEndMonth" disabled = disabled class="form-control Monthdatepicker" required placeholder="Select Ending Month" >
                                                </div> 
                                         </div>
                                         
@@ -967,21 +972,11 @@ $('#customYear').click(function(){
       }
 });
 
-$("#yearStartMonth").datepicker( {
-    format: "mm-yyyy",
-    startView: "months", 
-    minViewMode: "months"
-}); 
-
-
-
-
-$("#yearEndMonth").datepicker( {
-    format: "mm-yyyy",
-    startView: "months", 
-    minViewMode: "months"
-}); 
-
+$(".Monthdatepicker").datepicker( {
+        format: "mm-yyyy",
+        startView: "months", 
+        minViewMode: "months"
+    }); 
 
     $(function () {
     $("#example1").DataTable({
