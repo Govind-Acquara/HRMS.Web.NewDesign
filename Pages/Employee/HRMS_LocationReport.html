@@ -337,7 +337,7 @@
                                         <a href="../Dashboard/Index.html">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item active">
-                                        Employee Details
+                                        Employee 
                                     </li>
                                 </ol>
                             </div>
@@ -370,86 +370,7 @@
 
                     </div>
                 </div>
-                    <div class="card-content collapse show">
-                        <div class="card-body pt-1 pb-0">
-                            <form class="form-horizontal" novalidate>
-                                <div class="row">
-                                    <!-- <input type="text" hidden name="text" class="form-control" placeholder="Currency Id"> -->
-                                    <div class="col-12 col-sm-4 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>Employee Name</label>
-                                                <fieldset class="form-group">
-                                                    <select class="form-control" id="users-list-status">
-                                                        <option value="">Select Employee Name</option>
-                                                        <option value="Active">Somya</option>
-                                                        <option value="Blocked">Yash</option>
-                                                        <option value="deactivated">Pooja</option>
-                                                    </select>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class="col-12 col-sm-4 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>Employee Code</label>
-                                                <input class="form-control" type="text" placeholder="Employee Code">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-4 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>Location</label>
-                                                <fieldset class="form-group">
-                                                    <select class="form-control" id="users-list-status">
-                                                        <option value="">Select Location</option>
-                                                        <option value="Active">Delhi</option>
-                                                        <option value="Blocked">Dubai</option>
-                                                        <option value="deactivated">Abu Dhabi</option>
-                                                    </select>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                
-                                    <div class="row">
-                                        <input type="text" hidden name="text" class="form-control" placeholder="Currency Id">
-                                        
-                                        <div class="col-12 col-sm-4 col-lg-4">
-                                            <div class="form-group">
-                                                <div class="controls">
-                                                    <label>Status</label>
-                                                    <fieldset class="form-group">
-                                                        <select class="form-control" id="users-list-status">
-                                                            <option value="">Select Status</option>
-                                                            <option value="Active">Active</option>
-                                                            <option value="Blocked">InActive</option>
-                                                        </select>
-                                                    </fieldset>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    <div class="col-12 col-lg-4 flex-sm-row justify-content-end pr-0">
-                                        <button type="search" class="btn btn-primary glow  mr-1 mt-2 mb-1">Search</button>
-                                        <!-- <button type="reset" class="btn btn-outline-dark mb-1 mt-0.5">Reset</button> -->
-                                    </div>
-                                        
-                                        
-                                        </div>    
-
-
-
-
-
-                            </form>
-                        </div>
-                    </div>
+                   
                     <!-- <div class="card-header pb-1"> -->
                         <!-- <h5 class="card-basic">Add Currency Name</h5> -->
                         <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
@@ -467,7 +388,7 @@
                             <div class="card-body card-dashboard">
         
                                 <div class="table-responsive">
-                                    <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                    <table id="LocationReport" class="table border-secondary table-striped dataex-html5-selectors">
                                         <thead>
                                             <tr>
                                                 <th>Sr. No.</th>
@@ -484,6 +405,19 @@
                                                 
                                             </tr>
                                         </thead>
+                                        <tfoot class="tableSearchFoot">
+                                            <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Code</th>
+                                            <th>Designation</th>
+                                            <th>Department</th>
+                                            <th>EmailID</th>
+                                            <!-- <th>Mobile Number</th> -->
+                                            <th>Date of Joining</th>
+                                            <th>Location</th>
+                                            <th>Reporting Officer</th>
+                                            <th>Status</th>
+                                        </tfoot>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
@@ -587,6 +521,10 @@
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+
+     <!-- Importing Custom Script.js  -->
+   <script src="../../Content/assets/js/scripts.js"></script>
+
     <script>
         $(function () {
             $("#example1").DataTable({
