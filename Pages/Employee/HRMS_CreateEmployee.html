@@ -342,130 +342,32 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Create Employee</h2>
-                            <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a>Employee </a>
-                                    </li>
-                            </ol>
+                            <h2 class="content-header-title float-left mb-0">Employee Details</h2>
                             <div class="breadcrumb-wrapper col-12">
-                                
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="@Url.Content("~/Home/Index")">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        Create Employee
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="content-body">
-                <!-- users edit start -->
-
-                <div class="card">
-                    <div class="card-header pb-1">
-                        <h5 class="card-basic">Employee Details</h5>
-                        <div class="heading-elements">
-                            <ul class="list-inline mb-0">
-                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card-content collapse show">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-1 pl-1 pr-1 pb-1 pt-0">
-                                    <div class=" text-left">
-                                        <label class="cursor-pointer" for="UserImage">
-                                            <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="60" width="60">
-                                        </label>
-                                        <input type="file" id="UserImage" hidden>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Employee Code :</div>
-                                        <div class="col-6">EMP-101</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">HR</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">City :</div>
-                                        <div class="col-6">Delhi</div>
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">Admin</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Company :</div>
-                                        <div class="col-6">Acquara</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                                
-                            </div>
-    
-    
-                            </form>
-                        </div>
-                 </div>
-
-
                 <section class="users-edit">
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <ul class="nav nav-pills mb-3" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center active" href="../Employee/HRMS_CreateEmployee.html">
-                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Official</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center " href="../Employee/CreateEmployee_Personal.html">
-                                            <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">Personal</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Passport_CreateEmployee.html">
-                                            <i class="feather icon-book mr-25"></i><span class="d-none d-sm-block">Passport/Visa </span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Qualification_CreateEmployee.html">
-                                            <i class="feather icon-award mr-25"></i><span class="d-none d-sm-block">Qualification</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/PreviousJob_CreateEmployee.html">
-                                            <i class="feather icon-rotate-ccw mr-25"></i><span class="d-none d-sm-block">Previous Job</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Documents_CreateEmployee.html">
-                                            <i class="feather icon-sidebar mr-25"></i><span class="d-none d-sm-block">Documents</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
                                 <div class="tab-content">
-                                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
-                                        <!-- users edit account form start -->
 
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <!-- General Info Tab start -->
+                                    <div class="tab-pane active" id="general" aria-labelledby="general-tab" role="tabpanel">
+                                        <!-- General Info form start -->
                                         <div class="row mb-2">
 
                                             <div class="col-lg-2 mt-50">
@@ -478,56 +380,20 @@
 
                                             </div>
 
-                                            
                                             <div class="col-lg-4"  style="margin-top: 50px;">
                                                 <label class="mr-2 my-25 border" for="signature">
                                                     <img src="../../Content/app-assets/images/portrait/small/avatar-s-19.jpg" class="users-avatar-shadow rounded" height="80" width="180">
                                                 </label>
                                                 <input type="file" id="signature" hidden>
                                             </div>
-
-                                             <!-- <div class="avatar-wrapper">
-                                                <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="profile-pic" height="150" width="160">
-                                                <div class="upload-button">
-                                                 <i class="fa-arrow-up" aria-hidden="true"></i> 
-                                                </div>
-                                                <input class="file-upload" type="file" accept="image/*"/>
-                                            </div>
-
-                                            <div class="avatar-wrapper1">
-                                                <a class="mr-2 my-25" href="#">
-                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-19.jpg" class="profile-pic1" height="80" width="180">
-                                                </a>                                              
-                                                  <div class="upload-button1">
-                                                 <i class="fa-arrow-up" aria-hidden="true"></i> 
-                                                </div>
-                                                <input class="file-upload1" type="file" accept="image/*"/>
-                                            </div> -->
                                         </div>
+
                                         <form novalidate>
                                             <div class="row">
                                                 <div class="col-12 mt-1">
                                                     <div class=" border rounded px-1 ">
                                                         <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-user mr-50 "></i>Official Details</h6>
-                                                        <div class="row">
-                                                            <div class="col-12 col-sm-12 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Emp. Id</label>
-                                                                        <input type="text" class="form-control" placeholder="Emp. Id" value="0" required data-validation-required-message="This username field is required">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 col-sm-12 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Ref. Id</label>
-                                                                        <input type="text" class="form-control" placeholder="Ref. Id" value="0" required data-validation-required-message="This username field is required">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
+                                                       
                                                         <div class="row">
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
@@ -546,26 +412,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-12 col-sm-12 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label class="required">Emp. Code</label>
-                                                                        <input type="text" class="form-control" placeholder="Emp. Code" required data-validation-required-message="This username field is required">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 col-sm-12 col-lg-6">
-                                                                <label for="users-list-status" class="required">Status</label>
-                                                                <fieldset class="form-group">
-                                                                    <select class="form-control" id="users-list-status">
-                                                                        <option value="">Select Status</option>
-                                                                        <option value="Active">Active</option>
-                                                                        <option value="Blocked">Not-Active</option>
-                                                                    </select>
-                                                                </fieldset>
-                                                            </div>
-                                                        </div>
+                                                       
                                                         <div class="row">
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
@@ -735,6 +582,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>User Name</label>
+                                                                        <input type="text" class="form-control" placeholder="User Name" required data-validation-required-message="This username field is required" disabled>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <div class="controls">
+                                                                        <label>Password</label>
+                                                                        <input type="text" class="form-control" placeholder="Password " required data-validation-required-message="This username field is required">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
                                                     </div>
                                                 </div>
@@ -745,23 +610,20 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <!-- users edit account form ends -->
+                                        <!-- General Info Info form ends -->
                                     </div>
-
+                                    <!-- General Info Tab End -->
+            
                                 </div>
-
-
-
-
                             </div>
                         </div>
                     </div>
-                    </section>
+                </section>
+                <!-- users edit ends -->
             </div>
+           
         </div>
-
         <!-- users edit ends -->
-
     </div>
     
     <!-- END: Content-->
@@ -822,43 +684,66 @@
     
 
     <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true, "lengthChange": false, "autoWidth": true,
-
-
-                "buttons": ["excel", "print", "copy", "pdf", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
+        $('#OfficeEmail').change(function () {
+            var username = $('#OfficeEmail').val();
+            $('#UserName').val(username);
         });
-
-
-
-
-        $(function()
-{ 
-    var today = new Date(); 
-    var dd = today.getDate();
-    // console.log(dd);
-    $('.dob-picker').pickadate(
-    {
-        selectYears: 150,
-        today: '',
-        selectMonths: true,
-        min: new Date(1900,1,1),
-        max: new Date(((new Date()).getFullYear()), -210,dd)
-}
-    );
-});
-
-
-var date = new Date();
-date.setDate( date.getDate() - 6 );
-date.setFullYear( date.getFullYear() - 1 );
-$("#datepicker").val((date.getMonth() ) + '/' + (date.getDate()) + '/' + (date.getFullYear()));
     </script>
-
-    <script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+    
+                    reader.onload = function (e) {
+                        $('.profile-pic').attr('src', e.target.result);
+                    }
+    
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+    
+            $(".file-upload").on('change', function () {
+                readURL(this);
+            });
+    
+            $(".upload-button").on('click', function () {
+                $(".file-upload").click();
+            });
+        });
+    
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+    
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+    
+                    reader.onload = function (e) {
+                        $('.profile-pic1').attr('src', e.target.result);
+                    }
+    
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $(".file-upload1").on('change', function () {
+                readURL(this);
+            });
+    
+            $(".upload-button1").on('click', function () {
+                $(".file-upload1").click();
+            });
+        });
+    
+        /* To highlight sidemenu Yash 04-07-22 */
+        // window.onload = function () {
+        //     document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
+        //     document.getElementById("EmployeeIndex").className = 'active';
+        // }
+    </script>
+     <script>
         window.onload = function () {
             document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("createemp").className = 'active';
@@ -866,56 +751,51 @@ $("#datepicker").val((date.getMonth() ) + '/' + (date.getDate()) + '/' + (date.g
     </script>
 
     
-        <script type="text/javascript">
- $(document).ready(function() {
-	
-    var readURL = function(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('.profile-pic').attr('src', e.target.result);
+    <script type="text/javascript">
+        $(document).ready(function () {
+    
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('.profile-img').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
             }
     
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-   
-    $(".file-upload").on('change', function(){
-        readURL(this);
-    });
+            $("#ProfilePic").on('change', function () {
+                readURL(this);
+            });
     
-    $(".upload-button").on('click', function() {
-       $(".file-upload").click();
-    });
-});
-
-</script>
- <script type="text/javascript">
-    $(document).ready(function() {
-       
-       var readURL = function(input) {
-           if (input.files && input.files[0]) {
-               var reader = new FileReader();
-   
-               reader.onload = function (e) {
-                   $('.profile-pic1').attr('src', e.target.result);
-               }
-       
-               reader.readAsDataURL(input.files[0]);
-           }
-       }
-      
-       $(".file-upload1").on('change', function(){
-           readURL(this);
-       });
-       
-       $(".upload-button1").on('click', function() {
-          $(".file-upload1").click();
-       });
-   });
-   </script> 
+            $("#ProfilePic").on('click', function () {
+                $("#ProfilePic").click();
+            });
+        });
     
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+    
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('.signature-img').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+    
+            $("#Signature").on('change', function () {
+                readURL(this);
+            });
+    
+            $("#Signature").on('click', function () {
+                $("#Signature").click();
+            });
+        });
+    </script> 
 
 
 </body>
