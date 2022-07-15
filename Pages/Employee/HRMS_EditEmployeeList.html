@@ -348,14 +348,14 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Edit Employee</h2>
+                            <h2 class="content-header-title float-left mb-0">Edit Employee List</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item active">
-                                        Employee Details
+                                        Employee 
                                     </li>
                                 </ol>
                             </div>
@@ -371,18 +371,27 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body card-dashboard">
-
+                            <div class="card-header pb-1">
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        
+                                        <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
+                                        <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+                                        <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="table-responsive">
                                 <table id="EditEmployeeTable" class="table border-secondary table-striped dataex-html5-selectors">
                                     <thead>
                                         <tr>
                                             <th>SrNo.</th>
+                                            <th>Photo</th>
                                             <th>Name</th>
                                             <th>Department</th>
                                             <th>Designation</th>
                                             <th>Date Of Join</th>
                                             <th>Email</th>
-                                            <th>City</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -391,12 +400,12 @@
                                     <tfoot class="tableSearchFoot">
                                         <tr>
                                             <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                            <th>Photo</th>
                                             <th>Name</th>
                                             <th>Department</th>
                                             <th>Designation</th>
                                             <th>Date Of Join</th>
                                             <th>Email</th>
-                                            <th>City</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -405,12 +414,17 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
+                                            <td> <div class="d-flex justify-content-start align-items-center">
+                                                <div class="avatar mr-50">
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
+                                                </div>
+                                            </div></td>
                                             <td>Pooja</td>
                                             <td>IT</td>
                                             <td>Software Developer</td>
                                             <td>17/05/21</td>
                                             <td>Pooja.jain@acquara.com</td>
-                                            <td>Gurgaon</td>
+                                            
 
                                             <td>
 
@@ -434,12 +448,17 @@
                                         </tr>
                                         <tr>
                                             <td>2</td>
+                                            <td> <div class="d-flex justify-content-start align-items-center">
+                                                <div class="avatar mr-50">
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
+                                                </div>
+                                            </div></td>
                                             <td>Yash</td>
                                             <td>IT</td>
                                             <td>Software Developer</td>
                                             <td>1/05/21</td>
                                             <td>Yash.Sharma@acquara.com</td>
-                                            <td>Gurgaon</td>
+                                           
 
                                             <td>
 
@@ -463,12 +482,17 @@
                                         </tr>
                                         <tr>
                                             <td>3</td>
+                                            <td> <div class="d-flex justify-content-start align-items-center">
+                                                <div class="avatar mr-50">
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
+                                                </div>
+                                            </div></td>
                                             <td>Arpit</td>
                                             <td>IT</td>
                                             <td>Devloper</td>
                                             <td>1/07/22</td>
                                             <td>Arpit.sharma@acquara.com</td>
-                                            <td>Gurgaon</td>
+                                           
 
                                             <td>
 
@@ -492,12 +516,17 @@
                                         </tr>
                                         <tr>
                                             <td>4</td>
+                                            <td> <div class="d-flex justify-content-start align-items-center">
+                                                <div class="avatar mr-50">
+                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
+                                                </div>
+                                            </div></td>
                                             <td>Neha</td>
                                             <td>HR</td>
                                             <td>Manager</td>
                                             <td>1/05/21</td>
                                             <td>Neha@Acquara.com</td>
-                                            <td>Gurgaon</td>
+                                           
                                             <td>
 
                                                 <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">

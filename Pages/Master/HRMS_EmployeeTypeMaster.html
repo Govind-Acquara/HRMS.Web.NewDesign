@@ -346,7 +346,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Employee Category</h2>
+                            <h2 class="content-header-title float-left mb-0">Employee Category Master</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
@@ -367,7 +367,7 @@
 
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h5 class="card-basic">Add Category Name</h5>
+                        <h5 class="card-basic">Add Employee Category Name</h5>
                         <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -380,7 +380,7 @@
                             <form class="form-horizontal" novalidate>
                                 <div class="row">
                                     <input type="text" hidden name="text" class="form-control" placeholder="Probation ID">
-                                    <div class="col-12 col-sm-12 col-lg-12">
+                                    <div class="col-12 col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Category Name</label>
@@ -388,6 +388,20 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <div class="form-group">
+                                            <div class="controls pt-2">
+                                                <fieldset>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">Probation Apply</label>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
                                     <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
@@ -406,7 +420,7 @@
                                     <thead>
                                         <tr>
                                             <th>Sr. No.</th>
-                                            <th>Category Name</th>
+                                            <th>Categories Name</th>
                                             <th>IsActive</th>
                                             <th>Action</th>
                                         </tr>
@@ -415,7 +429,19 @@
                                         <tr>
                                             <td>1</td>
                                             <td>Probation Demo</td>
-                                            <td>Yes</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
 
@@ -424,7 +450,19 @@
                                         <tr>
                                             <td>2</td>
                                             <td>Full Time</td>
-                                            <td>Yes</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                
+                                                <label class="custom-control-label" for="customSwitch2">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
 
@@ -433,7 +471,19 @@
                                         <tr>
                                             <td>3</td>
                                             <td>Part Time</td>
-                                            <td>Yes</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                
+                                                <label class="custom-control-label" for="customSwitch3">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
 
@@ -442,7 +492,19 @@
                                         <tr>
                                             <td>4</td>
                                             <td>Regular</td>
-                                            <td>Yes</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                
+                                                <label class="custom-control-label" for="customSwitch4">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
 

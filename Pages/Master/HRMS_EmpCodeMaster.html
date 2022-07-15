@@ -359,7 +359,7 @@
 
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h5 class="card-basic">Add Code Details</h5>
+                        <h5 class="card-basic">Add Employee Code Details</h5>
                         <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -372,6 +372,17 @@
                             <form class="form-horizontal" novalidate>
 
                                 <div class="row">
+                                    <div class="col-12 col-sm-12 col-lg-6">
+                                        <label for="users-list-status">Mapping With</label>
+                                        <fieldset class="form-group">
+                                            <select class="form-control" id="users-list-status">
+                                                <option value="">Select Employee Name</option>
+                                                <option value="0">Rajender</option>
+                                                <option value="1">Karan</option>
+                                            </select>
+                                        </fieldset>
+                                    </div>
+
                                     <div class="col-12 col-sm-6 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
@@ -380,6 +391,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                   
+                                </div>
+                                <div class="row">
                                     <div class="col-12 col-sm-6 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
@@ -388,8 +402,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
+
                                     <div class="col-12 col-sm-6 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
@@ -398,6 +411,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                   
+                                </div>
+
+
+                                <div class="row">
                                     <div class="col-12 col-sm-6 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
@@ -408,27 +426,6 @@
                                     </div>
                                 </div>
 
-
-
-
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-6 form-group">
-                                        <label>Refrence No.</label>
-                                        <input type="text" class="form-control" placeholder="Refrence No">
-                                    </div>
-
-                                    <div class="col-12 col-sm-12 col-lg-6">
-                                        <label for="users-list-status" class="required">Mapping With</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-status">
-                                                <option value="">Select Employee Name</option>
-                                                <option value="0">Rajender</option>
-                                                <option value="1">Karan</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-
-                                </div>
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
                                     <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
                                     <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
@@ -446,47 +443,95 @@
                                     <thead>
                                         <tr>
                                             <th>Mapping With</th>
-                                            <th>Code Type</th>
-                                            <th>Employee Code Prefix</th>
-                                            <th>Employee Code Date</th>
+                                            <th>Emp. code Prefix</th>
+                                            <th>Emp. code Date</th>
                                             <th>Starting Number</th>
                                             <th>Generated Code</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>Rajender</td>
                                             <td>Emp</td>
-                                            <td>GUR</td>
-                                            <td>1-01-22</td>
-                                            <td>1</td>
-                                            <td>Gur0101</td>
+                                            <td>22-07-07</td>
+                                            <td>3</td>
+                                            <td>EMP2022-07-073</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                         </tr>
                                         <tr>
                                             <td>Karan</td>
                                             <td>Emp</td>
-                                            <td>GUR</td>
-                                            <td>3-01-22</td>
-                                            <td>2</td>
-                                            <td>Gur0202</td>
+                                            <td>22-07-07</td>
+                                            <td>3</td>
+                                            <td>EMP2022-07-073</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                         </tr>
                                         <tr>
                                             <td>Rahul</td>
                                             <td>Emp</td>
-                                            <td>GUR</td>
-                                            <td>1-03-22</td>
+                                            <td>22-07-07</td>
                                             <td>3</td>
-                                            <td>Gur003</td>
+                                            <td>EMP2022-07-073</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                         </tr>
                                         <tr>
                                             <td>kajal</td>
                                             <td>Emp</td>
-                                            <td>GUR</td>
-                                            <td>1-02-22</td>
-                                            <td>4</td>
-                                            <td>Gur004</td>
+                                            <td>22-07-07</td>
+                                            <td>3</td>
+                                            <td>EMP2022-07-073</td>
+                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                
+                                                <span class="switch-text-left">Active</span>
+                                                
+                                                <span class="switch-text-right">InActive</span>
+                                                
+                                                </label>
+                                                
+                                                </div></td>
                                         </tr>
-                                </tbody>
+                                  </tbody>
                                 </table>
                             </div>
                         </div>
