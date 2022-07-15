@@ -53,7 +53,6 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
-
 <!-- BEGIN: Header-->
 <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
     <div class="navbar-wrapper">
@@ -356,11 +355,90 @@
             </div>
             <div class="content-body">
 
+                
+                <!-- <div class="my-2 dt-buttons btn-group">
+                    <button class="btn btn-primary ml-0 sidebar-toggle mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Shift</button>
+                </div>
+                <div class="sidebar-content">
+
+                    <div class="CloseBTN">&times;</div>
+                    
+                    <div>
+                        <form id="sideform" class="sidebar-form">
+                            <h4 class="font-weight-bold mb-2">Add Shift</h4>
+
+                            <div class="form-group">
+                                <label class="" for="companyName">Company/Client Name</label>
+                                <input type="text" class="form-control" id="companyName" placeholder="Enter Company/Client Name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="" for="shiftName">Shift Name</label>
+                                <input type="text" class="form-control" id="shiftName" placeholder="Enter Shift Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="" for="shiftDate">Shift Date</label>
+                                <input type="text" class="form-control" id="shiftDate" placeholder="Enter Shift Starting and Ending Date">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="shiftName">Shift Timing</label>
+                                <input type="text" class="form-control" id="duration">
+                            </div>
+
+                            <div>
+                                <label>Weekend Based On</label>
+                                <fieldset id="WBRadio">
+                                <div class="row pt-1 form-group">
+                                        <div class="col-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="WBL" checked>
+                                                    <label class="custom-control-label" for="WBL">Location</label>
+                                                </div>
+                                        </div>
+                                        <div class="col-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="WBS">
+                                                    <label class="custom-control-label" for="WBS">Shift</label>
+                                                </div>
+                                        </div>
+                                </div>
+                            </fieldset>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="SAFD">Aplicable For Department</label>
+                                <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFD">
+                                        <option value="it">IT</option>
+                                        <option value="accounts">Accounts</option>
+                                        <option value="sales">Sales</option>
+                                        <option value="hr">HR</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="SAFL">Aplicable For Location</label>
+                                <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFL">
+                                        <option value="delhi">Delhi</option>
+                                        <option value="mumbai">Mumbai</option>
+                                        <option value="dubai">Dubai</option>
+                                </select>
+                            </div>
+
+                              <div class="d-flex my-2  justify-content-center ">
+                                <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
+                                <button type="reset" class="btn w-50 btn-primary-dark mb-1 mt-0.5">Reset</button>
+                            </div>
+    
+    
+                          </form> 
+                    </div>
+                </div> -->
 
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h4 class="card-basic font-weight-bold">Add Shift for Company : <span class="font-weight-normal">Acquara India</span></h4>
-                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                        <h4 class="card-basic font-weight-bold">Add Shift</h4>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
                                 <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
@@ -391,6 +469,7 @@
                                             <input type="text" class="form-control" id="shiftDate" placeholder="Enter Shift Starting and Ending Date">
                                         </div>
                                     </div>
+ 
 
                                 </div>
 
@@ -417,21 +496,67 @@
                                     </fieldset>
 
                                     </div> -->
-                                    <div class="col-lg-4 col-md-4">
+                                    <!-- <div class="col-lg-4 col-md-4">
                                         <div class="form-group">
                                             <label for="shiftName">Hours before the shift starts</label>
                                             <input type="time" class="form-control">
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-lg-4 col-md-4">
                                         <div class="form-group">
-                                            <label for="shiftName">Hours after the shift ends</label>
-                                            <input type="time" class="form-control">
+                                            <label for="shiftName">Shift Timing</label>
+                                            <input type="text" class="form-control" id="duration" placeholder="Enter Shift Timing">
                                         </div>
                                     </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <label>Weekend Based On</label>
+                                        <fieldset id="WBRadio">
+                                        <div class="row pt-1 form-group">
+                                                <div class="col-6">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBL" checked>
+                                                            <label class="custom-control-label" for="WBL">Location</label>
+                                                        </div>
+                                                </div>
+                                                <div class="col-6">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBS">
+                                                            <label class="custom-control-label" for="WBS">Shift</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </fieldset>
+                                    </div>
+
+
+
                                 </div>
 
-                                
+                                <div class="row">
+
+                                    <div class="form-group col-lg-6 col-md-6">
+                                        <label for="SAFD">Aplicable For Department</label>
+                                        <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFD">
+                                                <option value="it">IT</option>
+                                                <option value="accounts">Accounts</option>
+                                                <option value="sales">Sales</option>
+                                                <option value="hr">HR</option>
+                                        </select>
+                                    </div>
+
+                                                                    
+                                <div class="form-group col-lg-6 col-md-6">
+                                    <label for="SAFL">Aplicable For Location</label>
+                                    <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFL">
+                                            <option value="delhi">Delhi</option>
+                                            <option value="mumbai">Mumbai</option>
+                                            <option value="dubai">Dubai</option>
+                                    </select>
+                                </div>
+                                </div>
+
+
+<!--                                 
                                 <div class="row form-group">
                                     <div class="col-lg-4 col-md-4">
                                         <label>Shift Margin</label>
@@ -449,26 +574,6 @@
                                                     <label class="custom-control-label" for="ShiftMarginDisable">Disable</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </fieldset>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4">
-                                        <label>Weekend Based On</label>
-                                        <fieldset id="WBRadio">
-                                        <div class="row pt-1 form-group">
-                                                <div class="col-6">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBL" checked>
-                                                            <label class="custom-control-label" for="WBL">Location</label>
-                                                        </div>
-                                                </div>
-                                                <div class="col-6">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBS">
-                                                            <label class="custom-control-label" for="WBS">Shift</label>
-                                                        </div>
-                                                </div>
                                         </div>
                                     </fieldset>
                                     </div>
@@ -491,14 +596,14 @@
                                         </div>
                                     </fieldset>
                                     </div>
-                                    <!-- <div class="col-lg-4 col-md-4">
+                                     <div class="col-lg-4 col-md-4">
                                         <div>
                                             <label for="RPD">Rate per day</label>
                                             <input type="text" class="form-control" id="RPD" placeholder="Rate Per Day">
                                         </div>
-                                    </div> -->
-                                </div>
-                                <div class="row">
+                                    </div>
+                                </div> -->
+                                <!-- <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label for="SAFD">Aplicable For Department</label>
                                         <select class="select2 form-control" multiple="multiple" id="SAFD">
@@ -517,7 +622,7 @@
                                                 <option value="dubai">Dubai</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
                                     <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
@@ -730,6 +835,18 @@
 
 <script>
 
+$('#duration').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 1,
+            locale: {
+                format: 'HH:mm'
+            }
+        }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });
+
+
+
 $(function() {
 
 $('#shiftDate').daterangepicker({
@@ -749,11 +866,10 @@ $('#shiftDate').on('cancel.daterangepicker', function(ev, picker) {
 
 });
 
-$(function () {
+$(function (){
         $("#shiftTable").DataTable({
           "responsive": true, "lengthChange": false, "autoWidth": true,
-          
-          
+
           "buttons": ["excel","print", "copy","pdf","colvis"]
         }).buttons().container().appendTo('#shiftTable_wrapper .col-md-6:eq(0)');
         
@@ -771,5 +887,4 @@ $(function () {
 
 </body>
 <!-- END: Body-->
-
 </html>

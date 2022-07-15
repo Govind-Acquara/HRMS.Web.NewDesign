@@ -621,7 +621,6 @@ if ($('#saturday1 , #saturday2 , #saturday3 , #saturday4 , #saturday5').length !
 
 if ($('#currentYear').length != 0) {
 
-
 $('#currentYear').click(function(){
   if ($(this).is(':checked')) {
         // $('#currentYear').prop("checked", false);
@@ -647,5 +646,31 @@ $('#customYear').click(function(){
 }
   // Weekly Off Page Script End
 
+
+  if ($('#WBL').length != 0) {
+
+
+    $('#WBL').click(function(){
+      if ($(this).is(':checked')) {
+            $('#SAFD , #SAFL').prop("disabled", true);
+      } else {
+            $('#SAFD , #SAFL').prop("disabled", false);
+      }
+    });
+    
+    }
+    
+    if ($('#WBS').length != 0) {
+    
+    $('#WBS').click(function(){
+      if ($(this).is(':checked')) {
+            $('#WBL').prop("checked", false);
+            $('#SAFD , #SAFL').prop("disabled", false);
+      } else {
+            $('#SAFD , #SAFL').prop("disabled", true);
+      }
+    });
+    
+    }
 
 })(window);
