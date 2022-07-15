@@ -569,6 +569,11 @@ i.fa.fa-times.close-icon {
    /* Sidebar CSS End */
 
 
+   .gap-1rem{
+    gap: 1rem;
+   }
+
+
    /* Table Search CSS */
 
    .tableSearchFoot{
