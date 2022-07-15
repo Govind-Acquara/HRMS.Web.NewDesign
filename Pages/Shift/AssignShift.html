@@ -10,22 +10,22 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Leave Apply</title>
+    <title>Assign Shift</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
      <!-- BEGIN: Vendor CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/fullcalendar.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/daygrid.min.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/timegrid.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
      <!-- END: Vendor CSS-->
  
-     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
-     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
-     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
- 
      <!-- BEGIN: Theme CSS-->
+     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
@@ -36,14 +36,16 @@
      <!-- BEGIN: Page CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
- 
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/calendars/fullcalendar.css">
      <!-- END: Page CSS-->
  
-     <!-- BEGIN: Custom CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
-    <!-- END: Custom CSS-->
+      <!-- END: Page CSS-->
+      <!-- BEGIN: Custom CSS-->
+      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+     <!-- END: Custom CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 </head>
 <!-- END: Head-->
@@ -51,26 +53,20 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
-
-    <div class="overlay-bg"></div>
-
-   <!-- BEGIN: Header-->
- <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+<!-- BEGIN: Header-->
+<nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
     <div class="navbar-wrapper">
         <div class="navbar-container content">
             <div class="navbar-collapse" id="navbar-mobile">
                 <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item mobile-menu  mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item nav-toggle">
-                            <!-- <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
-                                <i class=" d-block d-xl-none font-medium-4 primary "></i>
-                                <i class="  font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i>
-                            </a> -->
+                        <li class="nav-item mobile-menu  mr-auto">
+                            <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
+                                <i class="ficon feather icon-menu"></i>
+                            </a>
                         </li>
                     </ul>
+                    
                     <ul class="nav">
                         <li>
                             <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
@@ -125,91 +121,8 @@
             <h6 class="text-primary mb-0">Files</h6>
         </a>
     </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between w-100" href="#">
-            <div class="d-flex">
-                <div class="mr-50"><img src="../../Content/app-assets/images/icons/xls.png" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
-                </div>
-            </div><small class="search-data-size mr-50 text-muted">&apos;17kb</small>
-        </a>
-    </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between w-100" href="#">
-            <div class="d-flex">
-                <div class="mr-50"><img src="../../Content/app-assets/images/icons/jpg.png" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
-                </div>
-            </div><small class="search-data-size mr-50 text-muted">&apos;11kb</small>
-        </a>
-    </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between w-100" href="#">
-            <div class="d-flex">
-                <div class="mr-50"><img src="../../Content/app-assets/images/icons/pdf.png" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
-                </div>
-            </div><small class="search-data-size mr-50 text-muted">&apos;150kb</small>
-        </a>
-    </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between w-100" href="#">
-            <div class="d-flex">
-                <div class="mr-50"><img src="../../Content/app-assets/images/icons/doc.png" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
-                </div>
-            </div><small class="search-data-size mr-50 text-muted">&apos;256kb</small>
-        </a>
-    </li>
-    <li class="d-flex align-items-center">
-        <a class="pb-25" href="#">
-            <h6 class="text-primary mb-0">Members</h6>
-        </a>
-    </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-            <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-            <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-            <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
-        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-            <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
-                </div>
-            </div>
-        </a>
-    </li>
+    
+    
 </ul>
 <ul class="main-search-list-defaultlist-other-list d-none">
     <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
@@ -253,7 +166,7 @@
                         <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
                     </li>
                     <li>
-                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Deparment Master</span></a>
+                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
                     </li>
                     <li>
                         <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
@@ -291,7 +204,7 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item" id="attendance">
+            <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
                     <li>
@@ -300,9 +213,7 @@
                     <li>
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
-                    <li id="leave_type">
-                        <a href="../Attendance/LeaveTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type Master </span></a>
-                    </li>
+                    
                     <li>
                         <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
                     </li>
@@ -316,20 +227,18 @@
                         <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
                     </li>
                     <li>
-                        <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports </span></a>
+                        <a href="../Attendance/Report.html"><i class="fa fa-bar-chart"></i><span class="menu-item" data-i18n="View">Reports </span></a>
                     </li>
-                   
                 </ul>
             </li>
             <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                 <ul class="menu-content">
-                    
-                        <li>
+                    <li>
                             <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
                             
-                         </li>
-                   
+                     </li>
+
                     <li>
                         <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type</span></a>
                         
@@ -351,17 +260,16 @@
                      <li>
                         <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
                      </li>
-                   
                 </ul>
                 
             </li>
             <li class=" nav-item" id="shift">
                 <a href="#"><i class="feather icon-clock"></i><span class="menu-title" data-i18n="User">Shift</span></a>
                 <ul class="menu-content">
-                    <li id="addShiftPage">
+                    <li>
                         <a href="../Shift/AddShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Add Shift</span></a>
                     </li>
-                    <li>
+                    <li id="assignShiftPage">
                         <a href="../Shift/AssignShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Assign Shift</span></a>
                     </li>
                     <li>
@@ -369,7 +277,7 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item">
+        <li class=" nav-item">
                 <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
                 <ul class="menu-content">
                     <li>
@@ -381,6 +289,7 @@
                     <li>
                         <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission </span></a>
                     </li>
+                    
                 </ul>
             </li>
             <li class=" nav-item">
@@ -394,6 +303,12 @@
                     </li>
                     <li>
                         <a href="../Company/HRMS_Branch_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Branch Master</span></a>
+                    </li>
+                    <li>
+                        <a href="../Company/HRMS_BranchDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">New Branch</span></a>
+                    </li>
+                    <li>
+                        <a href="../Company/HRMS_BranchDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View Branch List</span></a>
                     </li>
                 </ul>
             </li>
@@ -418,8 +333,8 @@
             </li>
         </ul>
     </div>
-</div> 
-    <!-- END: Main Menu-->
+</div>
+<!-- END: Main Menu-->
 <!-- BEGIN: Content-->
     <section class="app-content content" id="column-selectors">
         <div class="content-overlay"></div>
@@ -429,12 +344,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">LeaveType Master</h2>
+                            <h2 class="content-header-title float-left mb-0">Assign Shift</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="../Dashboard/Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Attendance
+                                    <li class="breadcrumb-item active">Shift
                                     </li>
                                 </ol>
                             </div>
@@ -444,188 +359,223 @@
                 
             </div>
             <div class="content-body">
+
+
+                <div class="card">
+                    <div class="card-header pb-1">
+                        <h4 class="card-basic font-weight-bold">Assign Shift</h4>
+                        <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                                <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body">
+                            <form class="form-horizontal" novalidate>
+
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <label>Assign Shift Based On</label>
+                                        <fieldset id="WBRadio">
+                                        <div class="row pt-1 form-group">
+                                                <div class="col-6">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBL" checked>
+                                                            <label class="custom-control-label" for="WBL">Branch</label>
+                                                        </div>
+                                                </div>
+                                                <div class="col-6">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBS">
+                                                            <label class="custom-control-label" for="WBS">Individual</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </fieldset>
+                                    </div>
+
+                                    <div class="form-group col-lg-6 col-md-6">
+                                        <label >Shift Name</label>
+                                        <select class=" form-control">
+                                            <option value="it">Shift 1</option>
+                                            <option value="accounts">Shift 2</option>
+                                            <option value="sales">Shift 3</option>
+                                            <option value="hr">General Shift</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="form-group col-lg-6 col-md-6">
+                                        <label for="SAFD">Assign for Department</label>
+                                        <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFD">
+                                            <option value="it">IT</option>
+                                            <option value="accounts">Accounts</option>
+                                            <option value="sales">Sales</option>
+                                            <option value="hr">HR</option>
+                                        </select>
+                                    </div>
+
+                                                                    
+                                <div class="form-group col-lg-6 col-md-6">
+                                    <label for="SAFL">Assign For Employee</label>
+                                    <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFL">
+                                            <option value="delhi">Arpit</option>
+                                            <option value="mumbai">Yash</option>
+                                            <option value="dubai">Pooja</option>
+                                    </select>
+                                </div>
+
+                                </div>
+
+                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
+                                    <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
+                                    <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
+                            </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 
 
-                <div class="my-2 dt-buttons btn-group">
-                    <button class="btn btn-primary ml-0 sidebar-toggle mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Leave Type</button>
-                </div>
-                <div class="sidebar-content">
-
-                    <div class="CloseBTN">&times;</div>
-                    
-                    <div>
-                        <form id="sideform" class="sidebar-form">
-                            <h4 class="font-weight-bold mb-2">Add Leave Type</h4>
-                            
-    
-                            <div class="form-group">
-                                <label>Leave Type Name</label>
-                                 <input type="text"  class="form-control"  placeholder="Leave Type Name" required >
-                              </div>
-                              <div class="form-group">
-                                <label>Short Name</label>
-                                 <input type="text"  class="form-control"  placeholder="Short Name" required >
-                              </div>
-                              <div class="form-group">
-                                <label>Remark</label>
-                                 <input type="text"  class="form-control"  placeholder="Remark" required >
-                              </div>
-                            <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                    <div class="controls">
-                                    <label>Background Color</label>
-                                    <input type="color" class="form-control" id="background" required disabled>
-                                    </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                    <div class="controls">
-                                    <label>Font Color</label>
-                                                                         
-                                    <input type="color" class="form-control" id="font" required disabled>
-                                    </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-1 col-12 mt-2">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck2" onclick="change_status(this)">
-                                        <label class="custom-control-label" for="customCheck2"></label>
-                                    </div>
-                                 </div>
-                            </div>
-    
-                              <div class="d-flex my-2  justify-content-center ">
-                                <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
-                                <button type="reset" class="btn w-50 btn-outline-dark mb-1 mt-0.5">Reset</button>
-                            </div>
-    
-    
-                          </form> 
-                    </div>
-                </div>
-            </div>
-
-                    <div class="card">
-                        <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
-                        <div class="card-content">
-                              <div class="card-body card-dashboard">
-                                <div class="table-responsive">
-                                    <table id="example1" class="table border-secondary data-list-view">
-                                        <thead>
-                                          <tr>
-                                              <th>Sr. No.</th>
-                                                  <th>LeaveTypeName</th>
-                                                  <th>ShortName</th>
-                                                  <th>IsActive</th>
-                                                  <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                              <td>1</td>
-                                              <td>Sick Leave</td>
-                                              <td>SL</td>
-                                              <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                                  
+                
+                <div class="card">
+                    <div class="card-content">
+                          <div class="card-body card-dashboard">
+                            <div class="table-responsive">
+                                <table id="shiftTable" class="table border-secondary table-striped">
+                                   
+                                    <thead>
+                                        <tr>
+                                            <th>SrNo.</th>
+                                            <th>Emp. Name</th>
+                                            <th>Department</th>
+                                            <th>Branch</th>
+                                            <th>Shift Name</th>
+                                            <th>Company Name</th>
+                                            <th>Shift Timing</th>
+                                            <th>Shift Date</th>
+                                            <th>IsActive</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Arpit Sharma</td>
+                                            <td>IT</td>
+                                            <td>Gurgaon</td>
+                                            <td>Shift 1</td>
+                                            <td>Acquara India</td>
+                                            <td>6:00 AM to 2:00 PM</td>
+                                            <td>01/07/22 to 31/07/22</td>
+                                            <td>  
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
                                                   <label class="custom-control-label" for="customSwitch1">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
+                                                     <span class="switch-text-left">Active</span>
+                                                     <span class="switch-text-right">InActive</span>
                                                   </label>
-                                                  
-                                                  </div></td>
-                                              <td >
-                                                  <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td>2</td>
-                                              <td>Casual Leave</td>
-                                           
-                                              <td>CL</td>
-                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                                  
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                      
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Yash Sharma</td>
+                                            <td>IT</td>
+                                            <td>Gurgaon</td>
+                                            <td>Shift 2</td>
+                                            <td>Acquara India</td>
+                                            <td>2:00 PM to 10:00 PM</td>
+                                            <td>01/07/22 to 31/07/22</td>
+                                            <td>  
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                 <input type="checkbox" class="custom-control-input" id="customSwitch2">
                                                   <label class="custom-control-label" for="customSwitch2">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
+                                                     <span class="switch-text-left">Active</span>
+                                                     <span class="switch-text-right">InActive</span>
                                                   </label>
-                                                  
-                                                  </div></td>
-               
-                                              <td >
-                                                  <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td>3</td>
-                                              <td>Maternity Leave</td>
-                                             
-                                              <td>ML</td>
-                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                                                  
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Pooja Jain</td>
+                                            <td>IT</td>
+                                            <td>Gurgaon</td>
+                                            <td>Shift 3</td>
+                                            <td>Acquara India</td>
+                                            <td>10:00 PM to 6:00 AM</td>
+                                            <td>01/07/22 to 31/07/22</td>
+                                            <td>  
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                 <input type="checkbox" class="custom-control-input" id="customSwitch3">
                                                   <label class="custom-control-label" for="customSwitch3">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
+                                                     <span class="switch-text-left">Active</span>
+                                                     <span class="switch-text-right">InActive</span>
                                                   </label>
-                                                  
-                                                  </div></td>
-                                              <td >
-                                                  <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-               
-                                          <tr>
-                                              <td>4</td>
-                                              <td>Parental Leave</td>
-                                             
-                                              <td>PL</td>
-                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                                  
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+        
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Govind Sharma</td>
+                                            <td>IT</td>
+                                            <td>Gurgaon</td>
+                                            <td>General Shift</td>
+                                            <td>Acquara India</td>
+                                            <td>10:00 AM to 7:00 PM</td>
+                                            <td>01/07/22 to 31/07/22</td>
+                                            <td>  
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                                 <input type="checkbox" class="custom-control-input" id="customSwitch4">
                                                   <label class="custom-control-label" for="customSwitch4">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
+                                                     <span class="switch-text-left">Active</span>
+                                                     <span class="switch-text-right">InActive</span>
                                                   </label>
-                                                  
-                                                  </div></td>
-                                              <td >
-                                                  <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-                                          
-                                      </tbody>
-                                    </table>
-                                </div>
-                              </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+        
+        
+                                    </tbody>
+
+                                </table>
+                            </div>
                           </div>
+                      </div>
+                </div>
+
+                
+
+
                     </div>
-
                     
-                   
-              
-
+                
             </div>
            
         </div>
@@ -644,82 +594,87 @@
 </footer>
 <!-- END: Footer-->
 
+<!-- BEGIN: Vendor JS-->
+<script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
+<script src="../../Content/app-assets/js/custom-js.js"></script>
+<!-- BEGIN Vendor JS-->
 
-    <!-- BEGIN: Vendor JS-->
-    <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
-    <script src="../../Content/app-assets/js/custom-js.js"></script>
-    <!-- BEGIN Vendor JS-->
-    
-    
-    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
-    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-    <!-- END: Page Vendor JS-->
-    
-    <!-- BEGIN: Theme JS-->
-    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
-    <script src="../../Content/app-assets/js/core/app.js"></script>
-    <script src="../../Content/app-assets/js/scripts/components.js"></script>
-    <!-- END: Theme JS-->
-    
-    <!-- BEGIN: Page JS-->
-    
-    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
-    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-    
-    <!-- END: Page JS-->
-    
-    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
-    <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
-    <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
-    <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
-    <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
+<script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+<script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+<!-- END: Page Vendor JS-->
+
+<!-- BEGIN: Theme JS-->
+<script src="../../Content/app-assets/js/core/app-menu.js"></script>
+<script src="../../Content/app-assets/js/core/app.js"></script>
+<script src="../../Content/app-assets/js/scripts/components.js"></script>
+<!-- END: Theme JS-->
+
+<!-- BEGIN: Page JS-->
+
+<script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+<script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
+
+<!-- END: Page JS-->
+
+
+
+
+ <!-- BEGIN: Page Vendor JS-->
+<!-- calendar JS  -->
+ <script src="../../Content/app-assets/vendors/js/calendar/fullcalendar.min.js"></script>
+ <script src="../../Content/app-assets/vendors/js/calendar/extensions/daygrid.min.js"></script>
+ <script src="../../Content/app-assets/vendors/js/calendar/extensions/timegrid.min.js"></script>
+ <script src="../../Content/app-assets/vendors/js/calendar/extensions/interactions.min.js"></script>
+ <script src="../../Content/app-assets/js/scripts/extensions/fullcalendar.js"></script>
+ 
+ <!-- END: Page Vendor JS-->
+
+     <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+     <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+     <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
+     <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+     <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+     <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+     <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+     <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+     <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<!-- END: Page Vendor JS-->
+
+
+
+<script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+
+<script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
 
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
-    
 
-    
-    <script>
-        $(function () {
-        $("#example1").DataTable({
+<script>
+
+$(function (){
+        $("#shiftTable").DataTable({
           "responsive": true, "lengthChange": false, "autoWidth": true,
-          
-          
+
           "buttons": ["excel","print", "copy","pdf","colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        }).buttons().container().appendTo('#shiftTable_wrapper .col-md-6:eq(0)');
         
         });
-        </script>
-    
-    <script>
-        window.onload = function () {
-            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_type").className = 'active';
-        }
 
-      
-    </script>
-    <!-- END: Page JS-->
-<script>
-    $('#test').pickadate({
-    min: true
-});
+    window.onload = function () {
+        document.getElementById("shift").classList.add("has-sub", "sidebar-group-active", "open")
+        document.getElementById("assignShiftPage").className = 'active';
+    }
 
-$('#test2').pickadate({
-    min: true
-});
 </script>
+
 </body>
 <!-- END: Body-->
-
 </html>
