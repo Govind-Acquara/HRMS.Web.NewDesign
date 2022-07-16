@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Create Employee</title>
+    <title>Edit Employee</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -195,7 +195,7 @@
                         <li>
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
-                        <li>
+                        <li id="Editemp">
                             <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
                         </li>
 
@@ -346,7 +346,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Create Employee</h2>
+                            <h2 class="content-header-title float-left mb-0">Edit Employee</h2>
                             <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
@@ -429,7 +429,7 @@
                                 <ul class="nav nav-pills mb-3" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link d-flex align-items-center" href="../Employee/HRMS_EditEmployees.html">
-                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Official</span>
+                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">General</span>
                                         </a>
                                     </li>
 
@@ -656,7 +656,7 @@ $("#datepicker").val((date.getMonth() ) + '/' + (date.getDate()) + '/' + (date.g
     <script>
         window.onload = function () {
             document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("createemp").className = 'active';
+            document.getElementById("Editemp").className = 'active';
         }
     </script>
 
