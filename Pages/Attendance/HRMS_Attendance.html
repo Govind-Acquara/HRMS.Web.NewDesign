@@ -425,33 +425,53 @@
                                                         </div>
                                                        
                                                             <div class="row">
-                                                                <div class="col-12 col-sm-12 col-lg-4">
+                                                                <div class="col-12 col-sm-12 col-lg-3">
                                                                     <div class="form-group">
-                                                                        <label>Employee Name</label>
+                                                                        <label>Location</label>
                                                                         <select class="select2 form-control">
-                                                                         
-                                                                             <option value="Active">Select Employee Name</option>
-                                                                             <option value="Blocked">Bhumi</option>
-                                                                             <option value="deactivated">rahul</option>
-                                                                             <option value="Active">Diksha</option>
-                                                                             <option value="Blocked">yash</option>
-                                                                             <option value="deactivated">pooja</option>
-                                                                             <option value="deactivated">somya</option>
-                                                                             <option value="Blocked">yash</option>
-                                                                             <option value="deactivated">pooja</option>
-                                                                             <option value="deactivated">somya</option>
+                                                                             <option value="Active">Select Location</option>
+                                                                             <option value="Blocked">Gurgaon</option>
+                                                                             <option value="deactivated">Mumbai</option>
+                                                                             <option value="Active">Abu Dabi</option>
+                                                                             <option value="Blocked">Dubai</option>
                                                                         </select>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-12 col-sm-12 col-lg-4">
-                                                                    <div class="form-group">
-                                                                        <div class="controls">
-                                                                            <label>Employee Code</label>
-                                                                            <input type="text" class="form-control" placeholder="Employee Code" value="0">
+                                                                    <div class="col-12 col-sm-12 col-lg-3">
+                                                                        <div class="form-group">
+                                                                            <label>Employee Name</label>
+                                                                            <select class="select2 form-control" id="default-select">
+                                                                                 <option value="Active">Select Employee Name</option>
+                                                                                 <option value="Blocked">Bhumi</option>
+                                                                                 <option value="deactivated">rahul</option>
+                                                                                 <option value="Active">Diksha</option>
+                                                                                 <option value="Blocked">yash</option>
+                                                                                 <option value="deactivated">pooja</option>
+                                                                                 <option value="deactivated">somya</option>
+                                                                                 <option value="Blocked">yash</option>
+                                                                                 <option value="deactivated">pooja</option>
+                                                                                 <option value="deactivated">somya</option>
+                                                                            </select>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-12 col-sm-12 col-lg-4">
+                                                                    <div class="col-12 col-sm-12 col-lg-3">
+                                                                        <div class="form-group">
+                                                                            <label>Employee Code</label>
+                                                                            <select class="select2 form-control">
+                                                                                 <option value="Active">Select Employee Code</option>
+                                                                                 <option value="Blocked">EMP 001</option>
+                                                                                 <option value="deactivated">EMP 002</option>
+                                                                                 <option value="Active">EMP 003</option>
+                                                                                 <option value="Blocked">EMP 004</option>
+                                                                                 <option value="deactivated">EMP 005</option>
+                                                                                 <option value="deactivated">EMP 006</option>
+                                                                                 <option value="Blocked">EMP 007</option>
+                                                                                 <option value="deactivated">EMP 008</option>
+                                                                                 <option value="deactivated">EMP 009</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                <div class="col-12 col-sm-12 col-lg-3">
                                                                     <div class="form-group">
                                                                         <div class="controls">
                                                                             <label>Date</label>
@@ -476,6 +496,7 @@
                                                                         <th>Log-Out</th>
                                                                         <!-- <th>Working Hour</th> -->
                                                                         <th>Current Status</th>
+                                                                        <th>Action</th>
                                                                     </tr>
                                                                 </thead>
 
@@ -489,6 +510,7 @@
                                                                         <th>Log-Out</th>
                                                                         <!-- <th>Working Hour</th> -->
                                                                         <th></th>
+                                                                        <th></th>
                                                                     </tr>
                                                                 </tfoot>
                                                                 <tbody>
@@ -501,8 +523,10 @@
                                                                         <td>10:00 AM</td>
                                                                         <td>7:30 PM</td>
                                                                         <!-- <td>9.30</td> -->
-                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary text-white"  title="I am Present">P</label></td>
-                                                                      
+                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary text-white" >P</label></td>
+                                                                        <td >
+                                                                            <span class="action-edit cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                                        </td>
                                                                     </tr>
                 
                                                                     <tr>
@@ -513,8 +537,10 @@
                                                                         <td>10:10 AM</td>
                                                                         <td>7:35 PM</td>
                                                                         <!-- <td>9.15</td> -->
-                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class bg-gradient-primary  text-white"  title="I am Present">P</label></td>
-                                                                      
+                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class bg-gradient-primary  text-white">P</label></td>
+                                                                        <td >
+                                                                            <span class="action-edit cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                                        </td>
                                                                     </tr>
                 
                                                                     <tr>
@@ -525,8 +551,10 @@
                                                                         <td>00:00</td>
                                                                         <td>00:00</td>
                                                                         <!-- <td>00</td> -->
-                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger  text-white"  title="I am Present">A</label></td>
-                                                                      
+                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger  text-white">A</label></td>
+                                                                        <td >
+                                                                            <span class="action-edit cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                                        </td>
                                                                     </tr>
                 
                                                                     <tr>
@@ -537,8 +565,10 @@
                                                                         <td>00:00</td>
                                                                         <td>00:00</td>
                                                                         <!-- <td>00</td> -->
-                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Sick Leave" class="mytop_Class  bg-gradient-info  text-white"  title="I am Present">SL</label></td>
-                                                                       
+                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary text-white" >P</label></td>
+                                                                        <td >
+                                                                            <span class="action-edit cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                                        </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -578,8 +608,7 @@
     <!-- END: Footer-->
     <!-- BEGIN: Vendor JS-->
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/charts/apexcharts.min.js"></script>
-    <script src="../../Content/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+
     <script src="../../Content/app-assets/js/custom-js.js"></script>
     <!-- BEGIN Vendor JS-->
     <!-- BEGIN: Page Vendor JS-->

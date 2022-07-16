@@ -40,6 +40,8 @@
 
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
     <!-- END: Page CSS-->
+    <!-- Dropdown Search CSS -->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -360,9 +362,9 @@
                
             <div class="content-body">
                 
-                    <div class="my-2 dt-buttons btn-group">
+                    <!-- <div class="my-2 dt-buttons btn-group">
                         <button class="btn btn-primary sidebar-toggle ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add WFH</button>
-                    </div>
+                    </div> -->
                     <div class="sidebar-content">
     
                         <div class="CloseBTN">&times;</div>
@@ -372,42 +374,8 @@
                                 <h4 class="font-weight-bold mb-2">Work From Home</h4>
                                 <div class="form-group">
                                      <label for="users-list-status">Department</label>
-                                    <fieldset class="form-group">
-                                        <select class="form-control" id="users-list-status">
-                                            <option value="">--Select Department--</option>
-                                            <option value="0">IT</option>
-                                            <option value="1">Sales</option>
-                                            <option value="0">HR</option>
-                                            <option value="1">Accounts</option>
-                                        </select>
-                                    </fieldset>
+                                     <input type="text" class="form-control" disabled>
                                 </div>
-        
-                                <div class="form-group">
-                                    <label for="users-list-status">Reporting Person</label>
-                                    <fieldset class="form-group">
-                                        <select class="form-control" id="users-list-status">
-                                            <option value="">--Select Reporting Person--</option>
-                                            <option value="0"></option>
-                                            <option value="1"></option>
-                                            <option value="0"></option>
-                                            <option value="1"></option>
-                                        </select>
-                                    </fieldset>
-                                  </div>
-        
-                                  <div class="form-group">
-                                    <label for="users-list-status">Employee Names</label>
-                                        <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-status">
-                                                <option value="">--Reporting Employee Name--</option>
-                                                <option value="0">Pooja</option>
-                                                <option value="1">Yash</option>
-                                                <option value="0">Aashish</option>
-                                                <option value="1">Nikita</option>
-                                            </select>
-                                        </fieldset>
-                                  </div>
         
                                   <div class="form-group">
                                     <label>From Date</label>
@@ -422,7 +390,6 @@
                                 <div class="form-group">
                                     <label>Reason</label>
                                     <textarea rows="2"  class="form-control" placeholder="Reason"></textarea>
-                                     <!-- <input type="text"  class="form-control"  placeholder="Reason" required data-validation-required-message="This Currency Name field is required"> -->
                                   </div>
         
                                   <div class="form-group">
@@ -462,6 +429,92 @@
                     </div>
             </div>
  <!-- for searching  -->
+
+
+ 
+ <div class="card">
+    <div class="card-header pb-1">
+        <h4 class="card-basic">Add WFH for Employee</h4>
+        <div class="heading-elements">
+            <ul class="list-inline mb-0">
+                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-content collapse show">
+        <div class="card-body">
+            <form class="form-horizontal" novalidate>
+
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-3">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <select class="select2 form-control">
+                                 <option value="Active">Select Location</option>
+                                 <option value="Blocked">Gurgaon</option>
+                                 <option value="deactivated">Mumbai</option>
+                                 <option value="Active">Abu Dabi</option>
+                                 <option value="Blocked">Dubai</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-3">
+                        <div class="form-group">
+                            <label>Reporting Person</label>
+                            <select class="select2 form-control">
+                                 <option value="Active">Select Reporting Person</option>
+                                 <option value="Blocked">Geeta Pathak</option>
+                                 <option value="deactivated">Govind Sharma</option>
+                                 <option value="Active">Nidhi Aggarwal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-3">
+                        <div class="form-group">
+                            <label>Employee Name</label>
+                            <select class="select2 form-control" id="default-select">
+                                 <option value="Active">Select Employee Name</option>
+                                 <option value="Blocked">Bhumi</option>
+                                 <option value="deactivated">rahul</option>
+                                 <option value="Active">Diksha</option>
+                                 <option value="Blocked">yash</option>
+                                 <option value="deactivated">pooja</option>
+                                 <option value="deactivated">somya</option>
+                                 <option value="Blocked">yash</option>
+                                 <option value="deactivated">pooja</option>
+                                 <option value="deactivated">somya</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-3">
+                        <div class="form-group">
+                            <label>Employee Code</label>
+                            <select class="select2 form-control">
+                                 <option value="Active">Select Employee Code</option>
+                                 <option value="Blocked">EMP 001</option>
+                                 <option value="deactivated">EMP 002</option>
+                                 <option value="Active">EMP 003</option>
+                                 <option value="Blocked">EMP 004</option>
+                                 <option value="deactivated">EMP 005</option>
+                                 <option value="deactivated">EMP 006</option>
+                                 <option value="Blocked">EMP 007</option>
+                                 <option value="deactivated">EMP 008</option>
+                                 <option value="deactivated">EMP 009</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
+                    <button type="button" class="btn btn-primary sidebar-toggle" id="type-submit"><i class=" feather icon-plus"></i> Add WFH</button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+</div>
 
                 <div class="card">
                     <div class="card-content">
@@ -508,7 +561,8 @@
                                             <td>1</td>
                                             <td><div class="d-flex justify-content-start align-items-center">
                                                 <div class="user-page-info">
-                                                    <span class="font-small-2">Pooja Jain</span>
+                                                    <span>Pooja Jain</span>
+                                                    <br>
                                                     <span class="font-small-2">Emp-101</span>
                                                 </div>
                                             </div></td>
@@ -559,7 +613,9 @@
                                                 </label>
                                                 
                                                 </div></td>
-                                                <td></td>
+                                                <td>
+                                                    <span class="cursor-pointer"><i class="feather icon-paperclip"></i></span>
+                                                </td>
                                             <td >
                                                 <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-check-circle"></i></span>
                                             </td>
@@ -568,7 +624,8 @@
                                             <td>2</td>
                                             <td><div class="d-flex justify-content-start align-items-center">
                                                 <div class="user-page-info">
-                                                    <span class="font-small-2">Yash Sharma</span>
+                                                    <span>Yash Sharma</span>
+                                                    <br>
                                                     <span class="font-small-2">Emp-102</span>
                                                 </div>
                                             </div></td>
@@ -619,7 +676,9 @@
                                                 </label>
                                                 
                                                 </div></td>
-                                                <td></td>
+                                                <td>
+                                                    <span class="cursor-pointer"><i class="feather icon-paperclip"></i></span>
+                                                </td>
                                           
                                                <td>
                                                 <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-check-circle"></i></span>
@@ -629,7 +688,8 @@
                                             <td>3</td>
                                             <td><div class="d-flex justify-content-start align-items-center">
                                                 <div class="user-page-info">
-                                                    <span class="font-small-2">Arpit Sharma</span>
+                                                    <span>Arpit Sharma</span>
+                                                    <br>
                                                     <span class="font-small-2">Emp-103</span>
                                                 </div>
                                             </div></td>
@@ -679,7 +739,9 @@
                                                 </label>
                                                 
                                                 </div></td>
-                                                <td></td>
+                                                <td>
+                                                    <span class="cursor-pointer"><i class="feather icon-paperclip"></i></span>
+                                                </td>
                                                <td >
                                                 <span class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-check-circle"></i></span>
                                             </td>
@@ -743,6 +805,10 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
+
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
        <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
 

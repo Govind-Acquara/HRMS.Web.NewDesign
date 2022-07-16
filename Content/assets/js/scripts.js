@@ -371,6 +371,7 @@
       $("#DailyAttendanceTable tfoot th")
         .not("th:nth-child(1)")
         .not("th:nth-child(7)")
+        .not("th:nth-child(8)")
         .each(function () {
           var title = $("#DailyAttendanceTable tfoot th")
             .eq($(this).index())

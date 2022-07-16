@@ -40,7 +40,8 @@
  
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
- 
+     <!-- Dropdown Search CSS -->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -443,9 +444,9 @@
             <div class="content-body">
                 
 
-                <div class="my-2 dt-buttons btn-group">
+                <!-- <div class="my-2 dt-buttons btn-group">
                     <button class="btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light sidebar-toggle "><i class=" feather icon-plus"></i> Add Apply Leave</button>
-                </div>
+                </div> -->
                 <div class="sidebar-content">
 
                     <div class="CloseBTN">&times;</div>
@@ -457,17 +458,15 @@
                             <div class="row mb-2">
                                 <div class=" col-sm-6 col-lg-6">
                                     <label>CL : 0</label>
-                                 <!-- <input type="text" disabled  class="form-control"  placeholder="0" required> -->
 
                                 </div>
                                 <div class=" col-sm-6 col-lg-6">
                                     <label>SL : 0</label>
-                                 <!-- <input type="text" disabled  class="form-control"  placeholder="0" required> -->
 
                                 </div>
 
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>Employee Name</label>
                                   <select class="form-control" id="users-list-status">
                                     <option value="" >Select Employee Name</option>
@@ -476,7 +475,7 @@
                                     <option value="deactivated">RST</option>
                                     <option value="deactivated">TUV</option>
                                   </select>
-                            </div>
+                            </div> -->
     
                             <div class="form-group">
                                 <label>Employee Code</label>
@@ -518,6 +517,92 @@
     
     
                           </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header pb-1">
+                    <h4 class="card-basic">Apply Leave for Employee</h4>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                            <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <form class="form-horizontal" novalidate>
+            
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <select class="select2 form-control">
+                                             <option value="Active">Select Location</option>
+                                             <option value="Blocked">Gurgaon</option>
+                                             <option value="deactivated">Mumbai</option>
+                                             <option value="Active">Abu Dabi</option>
+                                             <option value="Blocked">Dubai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Reporting Person</label>
+                                        <select class="select2 form-control">
+                                             <option value="Active">Select Reporting Person</option>
+                                             <option value="Blocked">Geeta Pathak</option>
+                                             <option value="deactivated">Govind Sharma</option>
+                                             <option value="Active">Nidhi Aggarwal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Employee Name</label>
+                                        <select class="select2 form-control" id="default-select">
+                                             <option value="Active">Select Employee Name</option>
+                                             <option value="Blocked">Bhumi</option>
+                                             <option value="deactivated">rahul</option>
+                                             <option value="Active">Arunima</option>
+                                             <option value="Blocked">yash</option>
+                                             <option value="deactivated">pooja</option>
+                                             <option value="deactivated">somya</option>
+                                             <option value="Blocked">yash</option>
+                                             <option value="deactivated">pooja</option>
+                                             <option value="deactivated">somya</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Employee Code</label>
+                                        <select class="select2 form-control">
+                                             <option value="Active">Select Employee Code</option>
+                                             <option value="Blocked">EMP 001</option>
+                                             <option value="deactivated">EMP 002</option>
+                                             <option value="Active">EMP 003</option>
+                                             <option value="Blocked">EMP 004</option>
+                                             <option value="deactivated">EMP 005</option>
+                                             <option value="deactivated">EMP 006</option>
+                                             <option value="Blocked">EMP 007</option>
+                                             <option value="deactivated">EMP 008</option>
+                                             <option value="deactivated">EMP 009</option>
+                                        </select>
+                                    </div>
+                                </div>
+            
+                            </div>
+            
+                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
+                                <button type="button" class="btn btn-primary sidebar-toggle" id="type-submit"><i class=" feather icon-plus"></i> Apply Leave</button>
+                                <!-- <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>     -->
+                        </div>
+            
+                        </form>
                     </div>
                 </div>
             </div>
@@ -686,7 +771,6 @@
                                                         <div class="chip-text">Pending</div>
                                                     </div>
                                                 </div></td>
-    
                                                 <td>
     
                                                     <div class="chip chip-success cursor-pointer">
@@ -771,7 +855,9 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
      <!-- js link for find diferrence between date-->
