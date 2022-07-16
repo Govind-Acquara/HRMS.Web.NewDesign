@@ -406,14 +406,14 @@
                                                             <div>
                                                                 <ul class="nav nav-pills" role="tablist">
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link d-flex align-items-center   active"  href="../Attendance/Monthly_Attendance.html" >
+                                                                        <a class="nav-link d-flex align-items-center "  href="../Attendance/Monthly_Attendance.html" >
                                                                             <i class="feather icon-users"></i><span class="d-none d-sm-block">&nbsp;&nbsp;All Employee</span>
                                                                         </a>
                                                                     </li>
                                 
                                 
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link d-flex align-items-center"  href="../Attendance/IndividualMonthlyAttendance.html" >
+                                                                        <a class="nav-link d-flex align-items-center  active"  href="../Attendance/Monthly_Attendance.html" >
                                                                             <i class="feather icon-user"></i><span class="d-none d-sm-block">&nbsp;&nbsp;Individual</span>
                                                                         </a>
                                                                     </li>                                
@@ -589,7 +589,7 @@
                                                                 <td><p class="my_Class text-white bg-gradient-secondary " title="Sunday">wo</p></td>
                                                                 <td>1</td>
                                                                 <td>2</td>
-                                                                <td>23/31</td>
+                                                                <td>23</td>
                                                                 <td>3</td>
                                                             </tr>
         
@@ -634,7 +634,7 @@
                                                                 <td><p class="my_Class text-white bg-gradient-secondary " title="Sunday">wo</p></td>
                                                                 <td>1</td>
                                                                 <td>2</td>
-                                                                <td>23/31</td>
+                                                                <td>23</td>
                                                                 <td>3</td>
                                                             </tr>
 
@@ -679,7 +679,7 @@
                                                                 <td><p class="my_Class text-white bg-gradient-secondary " title="Sunday">wo</p></td>
                                                                 <td>2</td>
                                                                 <td>2</td>
-                                                                <td>22/31</td>
+                                                                <td>22</td>
                                                                 <td>4</td>
                                                             </tr>
         
@@ -725,7 +725,7 @@
                                                                 <td><p class="my_Class text-white bg-gradient-secondary " title="Sunday">wo</p></td>
                                                                 <td>1</td>
                                                                 <td>2</td>
-                                                                <td>23/31</td>
+                                                                <td>23</td>
                                                                 <td>3</td>
                                                             </tr>
                                                         </tbody>
@@ -875,115 +875,7 @@
         }
     </script>
 
-<script>
 
-$(document).ready(function(){
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
-    var currMonYear = new Date();
-     var currentMonth = monthNames[currMonYear.getMonth()] + "-" + currMonYear.getFullYear();
-    // console.log(currentDateValue);
-    document.getElementById("datepicker").value = currentMonth;
-
-});
-
-    $("#datepicker").datepicker( {
-    format: "mm-yyyy",
-    startView: "months", 
-    minViewMode: "months"
-}); 
-</script>
-    
-
-    
-<script>
-var ctxB = document.getElementById("barChart").getContext('2d');
-var myBarChart = new Chart(ctxB, {
-  type: 'bar',
-  data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun","jul","Aug","Sept","Oct","Nov","Dec"],
-    datasets: [{
-      label: '# Attendance Progress',
-    
-      data: [12, 19, 3, 5, 2, 3,12, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef',
-        '#7367ef'
-      ],
-     
-    }]
-  },
-  options: {
-    scales: {
-            xAxes: [{
-               gridLines: {
-                  display: false
-               },
-               grid: {
-          borderColor: 'red'
-               }
-            }],
-    
-            yAxes: [{
-               ticks: {
-                  beginAtZero: true, 
-               },
-               gridLines: {
-                  display: false
-               }
-            }]
-       }
-  }
-});
-</script>   
-
-    
-<!-- year page -->
-    <script>
-        var xValues = ["Total Apsent", "Total Working Days","Total Present"];
-        var yValues = [20,80,60];
-        var barColors = [
-        "#ea5656",
-        '#ffa044',
-        '#7367ef',
-        ];
-        
-        new Chart("YearPiChart", {
-          type: "doughnut",
-          data: {
-            labels: xValues,
-            datasets: [{
-              backgroundColor: barColors,
-              data: yValues
-            }]
-          },
-       
-        options: {
-            plugins: {
-                legend: {
-                    labels: {
-                        // This more specific font property overrides the global property
-                        font: {
-                            size: 30
-                        }
-                    }
-                }
-            }
-        }
-        });
-        </script> 
       
 
     </body>
