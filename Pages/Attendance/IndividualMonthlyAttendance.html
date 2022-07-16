@@ -439,6 +439,7 @@
                                                                         <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Holiday" class="mytop_Class bg-gradient-warning text-white">H</label> - Holiday</h6>
                                                                         <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger text-white">A</label> - Absent</h6>
                                                                         <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Weekly Off" class="mytop_Class bg-gradient-secondary text-white">WO</label> - Weekly Off</h6>
+                                                                        <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary border-danger border-2 text-white">P</label> -WFH Present</h6>
 
                                                                     </div>
                                                                 </div>
@@ -505,9 +506,18 @@
                                                    
                                                   </div> 
                                               
-                                               
-                                                <div class="table-responsive shadow  mb-3  bg-white rounded p-1">
-                                                    <table id="example2" class="table  border-secondary table-striped dataex-html5-selectors">
+                                                  <div class="card">
+                                                    <div class="card-body">
+                                                    <h5>Showing Details for Month : JULY</h5>
+                                                    <div class="d-flex gap-1rem">
+                                                        <p class="border-2 border-right-primary pr-1">Total Month Days : 31</p>
+                                                        <p class="border-2 border-right-primary pr-1">Total Working Days : 24</p>
+                                                        <p class="border-2 border-right-primary pr-1">Weekly Off : 7</p>
+                                                        <p class="border-2  pr-1">Holidays : 1</p>
+                    
+                                                    </div>
+                                                <div class="table-responsive">
+                                                    <table id="example1" class="table  border-secondary table-striped dataex-html5-selectors">
                                                         <thead>
                                                             <tr>
                                                                 <th >Sr. No.</th>
@@ -534,7 +544,7 @@
                                                             <tr>
                                                                 <td>2</td>
                                                                 <td>02-07-22</td>
-                                                                <th>Saturday</th>
+                                                                <td>Saturday</td>
                                                                 <td>10:10AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr20min</td>
@@ -554,7 +564,7 @@
                                                             <tr>
                                                                 <td>4</td>
                                                                 <td>04-07-22</td>
-                                                                <th>Monday</th>
+                                                                <td>Monday</td>
                                                                 <td>10:10AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr20min</td>
@@ -564,7 +574,7 @@
                                                             <tr>
                                                                 <td>5</td>
                                                                 <td>05-07-22</td>
-                                                                <th>Tuesday</th>
+                                                                <td>Tuesday</td>
                                                                 <td>10:15AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr15min</td>
@@ -573,7 +583,7 @@
                                                             <tr>
                                                                 <td>6</td>
                                                                 <td>06-07-22</td>
-                                                                <th>Wednesday</th>
+                                                                <td>Wednesday</td>
                                                                 <td>10:15AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr15min</td>
@@ -582,7 +592,7 @@
                                                             <tr>
                                                                 <td>7</td>
                                                                 <td>07-07-22</td>
-                                                                <th>Thuesday</th>
+                                                                <td>Thuesday</td>
                                                                 <td>10:5AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr25min</td>
@@ -591,9 +601,9 @@
                                                             <tr>
                                                                 <td>8</td>
                                                                 <td>08-07-22</td>
-                                                                <th>Friday</th>
+                                                                <td>Friday</td>
                                                                 <td>00:00</td>
-                                                                <td>00:00PM</td>
+                                                                <td>00:00</td>
                                                                 <td>0</td>
                                                                 <td><p class="my_Class text-white bg-gradient-warning " title="Eid">H</p></td>
                                                             </tr>
@@ -627,7 +637,7 @@
                                                             <tr>
                                                                 <td>12</td>
                                                                 <td>12-07-22</td>
-                                                                <th>Tuesday</th>
+                                                                <td>Tuesday</td>
                                                                 <td>10:15AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr15min</td>
@@ -636,7 +646,7 @@
                                                             <tr>
                                                                 <td>13</td>
                                                                 <td>13-07-22</td>
-                                                                <th>Wednesday</th>
+                                                                <td>Wednesday</td>
                                                                 <td>10:15AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr15min</td>
@@ -645,7 +655,7 @@
                                                             <tr>
                                                                 <td>14</td>
                                                                 <td>14-07-22</td>
-                                                                <th>Thuesday</th>
+                                                                <td>Thuesday</td>
                                                                 <td>10:5AM</td>
                                                                 <td>7:30PM</td>
                                                                 <td>9hr25min</td>
@@ -653,6 +663,7 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
+                                                </div>
                                                 </div>
                                               </div>
                                               </div>
@@ -742,6 +753,17 @@
 
 
     <script>
+                $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": true,
+                "buttons": [   {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: 'tabloid'
+            },"excel","print", "copy","colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+        
         window.onload = function () {
             document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("view").className = 'active';
