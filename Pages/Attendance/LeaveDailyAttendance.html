@@ -519,10 +519,8 @@
                                                                         <th>Name</th>
                                                                         <th>Emp. Code</th>
                                                                         <th>City</th>
-                                                                        <th>Log-In</th>
-                                                                        <th>Log-Out</th>
-                                                                        <!-- <th>Working Hour</th> -->
                                                                         <th>Current Status</th>
+                                                                        <th>Reason</th>
                                                                         <th>Action</th>
                                                                     </tr>
                                                                 </thead>
@@ -533,8 +531,7 @@
                                                                         <th>Name</th>
                                                                         <th>Emp. Code</th>
                                                                         <th>City</th>
-                                                                        <th>Log-In</th>
-                                                                        <th>Log-Out</th>
+                                                                       <th>Reason</th>
                                                                         <!-- <th>Working Hour</th> -->
                                                                         <th></th>
                                                                         <th></th>
@@ -547,10 +544,12 @@
                                                                         <td class="headcol">Pooja</td>
                                                                         <td>Emp101</td>
                                                                         <td>Gurgaon</td>
-                                                                        <td>00:00</td>
-                                                                        <td>00:00</td>
-                                                                        <!-- <td>9.30</td> -->
                                                                         <td><label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="mytop_Class  bg-gradient-dark text-white">SL</label></td>
+                                                                        <td> 
+                                                                            <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                <i class="feather icon-message-square"></i>
+                                                                            </span>
+                                                                        </td>
                                                                         <td >
                                                                             <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
                                                                                 <i class="feather icon-edit"></i>
@@ -563,12 +562,14 @@
                                                                         <td class="headcol">Yash</td>
                                                                         <td>Emp102</td>
                                                                         <td>Gurgaon</td>
-                                                                        <td>00:00</td>
-                                                                        <td>0:00</td>
-                                                                        <!-- <td>9.15</td> -->
+                                                                        
                                                                         <td>
-                                                                            <label data-toggle="tooltip" data-placement="top" title="Casual Leave" class="mytop_Class  bg-gradient-info text-white">CL</label>
-                                                                                                                                                </td>
+                                                                            <label data-toggle="tooltip" data-placement="top" title="Casual Leave" class="mytop_Class  bg-gradient-info text-white">CL</label></td>
+                                                                            <td> 
+                                                                                <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                    <i class="feather icon-message-square"></i>
+                                                                                </span>
+                                                                            </td>
                                                                         <td >
                                                                             <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
                                                                                 <i class="feather icon-edit"></i>
@@ -581,10 +582,12 @@
                                                                         <td class="headcol">Somya</td>
                                                                         <td>Emp103</td>
                                                                         <td>Gurgaon</td>
-                                                                        <td>00:00</td>
-                                                                        <td>00:00</td>
-                                                                        <!-- <td>00</td> -->
                                                                         <td><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger  text-white">A</label></td>
+                                                                        <td> 
+                                                                            <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                <i class="feather icon-message-square"></i>
+                                                                            </span>
+                                                                        </td>
                                                                         <td >
                                                                             <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
                                                                                 <i class="feather icon-edit"></i>
@@ -597,16 +600,18 @@
                                                                         <td class="headcol">Albina Simonis</td>
                                                                         <td>Emp104</td>
                                                                         <td>Gurgaon</td>
-                                                                        <td>00:00</td>
-                                                                        <td>00:00</td>
-                                                                        <!-- <td>00</td> -->
                                                                         <td>
-                                                                            <label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="mytop_Class  bg-gradient-dark text-white">SL</label>                                                                        </td>
-                                                                        <td >
-                                                                            <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
-                                                                                <i class="feather icon-edit"></i>
-                                                                            </span>
-                                                                        </td>
+                                                                            <label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="mytop_Class  bg-gradient-dark text-white">SL</label></td>
+                                                                            <td> 
+                                                                                <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                    <i class="feather icon-message-square"></i>
+                                                                                </span>
+                                                                            </td>
+                                                                            <td >
+                                                                                <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                    <i class="feather icon-edit"></i>
+                                                                                </span>
+                                                                            </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -615,70 +620,13 @@
                                                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header bg-primary white">
-                                                                            <h4 class="modal-title" id="myModalLabel17">Edit Attendance</h4>
+                                                                            <h4 class="modal-title" id="myModalLabel17">Reason</h4>
                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                 <span aria-hidden="true">&times;</span>
                                                                             </button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            
-                                                                                <div class="row form-group">
-                                                                                    <div class="col-lg-6">
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                <h6>Employee Name</h6>
-                                                                                            </div>
-                                                                                            <div class="col-6">
-                                                                                                <label>Pooja</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                <h6>Location</h6>
-                                                                                            </div>
-                                                                                            <div class="col-6">
-                                                                                                <label>Gurgaon</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="col-lg-6">
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                <h6>Employee Code</h6>
-                                                                                            </div>
-                                                                                            <div class="col-6">
-                                                                                                <label>Emp101</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                <h6>Current Status</h6>
-                                                                                            </div>
-                                                                                            <div class="col-6">
-                                                                                                <label>Present</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                      
-                                                                            <div class="row">
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="form-group">
-                                                                                        <label for="">Log-In</label>
-                                                                                        <input type="text" class="form-control timePicker" value="10:00 AM">
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="form-group">
-                                                                                        <label for="">Log-Out</label>
-                                                                                        <input type="text" class="form-control timePicker" value="7:30 PM">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                                                            Not Well
                                                                         </div>
                                                                     </div>
                                                                 </div>
