@@ -43,6 +43,7 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 </head>
 <!-- END: Head-->
@@ -246,6 +247,7 @@
                          </li>
                          <li>
                              <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
+                             
                           </li>
                           <li>
                             <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
@@ -347,9 +349,7 @@
                                     <li class="breadcrumb-item">
                                         <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="#">Attendance</a>
-                                    </li>
+                                    <li class="breadcrumb-item active">Attendance</li>
                             </ol>
                             <div class="breadcrumb-wrapper col-12">
                                 
@@ -370,20 +370,20 @@
                               
                                 <ul class="nav nav-pills mb-3" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Attendance/HRMS_Attendance.html" >
+                                        <a class="nav-link d-flex align-items-center active" id="account-tab" data-toggle="tab" href="../Attendance/Monthly_Attendance.html" aria-controls="account" role="tab" aria-selected="true">
                                             <i class="fa fa-calendar-check-o mr-25"></i><span class="d-none d-sm-block">Daily Attendance</span>
                                         </a>
                                     </li>
 
 
                                     <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center  active"  href="../Attendance/Monthly_Attendance.html" id="information-tab" data-toggle="tab" aria-controls="information" role="tab" aria-selected="false">
+                                        <a class="nav-link d-flex align-items-center "  href="../Attendance/Monthly_Attendance.html" >
                                             <i class="feather icon-calendar mr-25"></i><span class="d-none d-sm-block">Monthly Attendance</span>
                                         </a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Attendance/Yearly_Attendance.html" >
+                                        <a class="nav-link d-flex align-items-center" href="../Attendance/Yearly_Attendance.html">
                                             <i class="fa fa-calendar-plus-o mr-25"></i><span class="d-none d-sm-block">Yearly Attendance</span>
                                         </a>
                                     </li>
@@ -393,38 +393,41 @@
                                
                           
                                 <div class="tab-content">
-                                  
-
-                                    <div class="tab-pane active" id="information" aria-labelledby="information-tab" role="tabpanel">
-                                        <!-- users edit Info form start -->
-                                      
+                                    <!-- daily -->
+                                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
+                                        <!-- users edit account form start -->
                                         <form novalidate>
                                             <div class="row">
-                                                <div class="col-12 mt-0">
+                                                <div class="col-12 mt-0 ">
                                                     <div class="shadow p-1 mb-2 bg-white rounded">
                                                         <div class="card-header pb-1 pl-0 pt-0">
                                                             <div>
                                                                 <ul class="nav nav-pills" role="tablist">
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link d-flex align-items-center "  href="../Attendance/Monthly_Attendance.html" >
-                                                                            <i class="feather icon-users"></i><span class="d-none d-sm-block">&nbsp;&nbsp;All Employee</span>
+                                                                        <a class="nav-link d-flex align-items-center "  href="../Attendance/HRMS_Attendance.html" >
+                                                                            <i class="feather icon-users"></i><span class="d-none d-sm-block">&nbsp;&nbsp;All Present</span>
                                                                         </a>
                                                                     </li>
                                 
                                 
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link d-flex align-items-center  active"  href="../Attendance/Monthly_Attendance.html" >
-                                                                            <i class="feather icon-user"></i><span class="d-none d-sm-block">&nbsp;&nbsp;Individual</span>
+                                                                        <a class="nav-link d-flex align-items-center   active"  href="../Attendance/IndividualMonthlyAttendance.html" >
+                                                                            <i class="feather icon-users"></i><span class="d-none d-sm-block">&nbsp;&nbsp;All Leaves</span>
                                                                         </a>
-                                                                    </li>                                
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link d-flex align-items-center"  href="../Attendance/HRMS_Forget_Attendance.html" >
+                                                                            <i class="feather icon-users"></i><span class="d-none d-sm-block">&nbsp;&nbsp;Forgot Attendance</span>
+                                                                        </a>
+                                                                    </li>                 
                                                                 </ul>
                                                             </div>
                                                             <div class="heading-elements">
                                                                 <ul class="list-inline mb-0">
+                                                                    
                                                                     <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
                                                                     <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
                                                                     <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -444,233 +447,250 @@
                                                                     </div>
                                                                 </div>
                                                                </div>
-
+    
+                                                              
                                                         </div>
-                                                    <!-- Search form -->
-                                                    
-                                                    <div class="row">
-                                                        <div class="col-12 col-sm-12 col-lg-3">
-                                                            <div class="form-group">
-                                                                <label>Location</label>
-                                                                <select class="select2 form-control">
-                                                                     <option value="Active">Select Location</option>
-                                                                     <option value="Blocked">Gurgaon</option>
-                                                                     <option value="deactivated">Mumbai</option>
-                                                                     <option value="Active">Abu Dabi</option>
-                                                                     <option value="Blocked">Dubai</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                            <div class="col-12 col-sm-12 col-lg-3">
-                                                                <div class="form-group">
-                                                                    <label>Employee Name</label>
-                                                                    <select class="select2 form-control" id="default-select">
-                                                                         <option value="Active">Select Employee Name</option>
-                                                                         <option value="Blocked">Bhumi</option>
-                                                                         <option value="deactivated">rahul</option>
-                                                                         <option value="Active">Diksha</option>
-                                                                         <option value="Blocked">yash</option>
-                                                                         <option value="deactivated">pooja</option>
-                                                                         <option value="deactivated">somya</option>
-                                                                         <option value="Blocked">yash</option>
-                                                                         <option value="deactivated">pooja</option>
-                                                                         <option value="deactivated">somya</option>
-                                                                    </select>
+                                                       
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-12 col-lg-3">
+                                                                    <div class="form-group">
+                                                                        <label>Location</label>
+                                                                        <select class="select2 form-control">
+                                                                             <option value="Active">Select Location</option>
+                                                                             <option value="Blocked">Gurgaon</option>
+                                                                             <option value="deactivated">Mumbai</option>
+                                                                             <option value="Active">Abu Dabi</option>
+                                                                             <option value="Blocked">Dubai</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                    <div class="col-12 col-sm-12 col-lg-3">
+                                                                        <div class="form-group">
+                                                                            <label>Employee Name</label>
+                                                                            <select class="select2 form-control" id="default-select">
+                                                                                 <option value="Active">Select Employee Name</option>
+                                                                                 <option value="Blocked">Bhumi</option>
+                                                                                 <option value="deactivated">rahul</option>
+                                                                                 <option value="Active">Diksha</option>
+                                                                                 <option value="Blocked">yash</option>
+                                                                                 <option value="deactivated">pooja</option>
+                                                                                 <option value="deactivated">somya</option>
+                                                                                 <option value="Blocked">yash</option>
+                                                                                 <option value="deactivated">pooja</option>
+                                                                                 <option value="deactivated">somya</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-12 col-lg-3">
+                                                                        <div class="form-group">
+                                                                            <label>Employee Code</label>
+                                                                            <select class="select2 form-control">
+                                                                                 <option value="Active">Select Employee Code</option>
+                                                                                 <option value="Blocked">EMP 001</option>
+                                                                                 <option value="deactivated">EMP 002</option>
+                                                                                 <option value="Active">EMP 003</option>
+                                                                                 <option value="Blocked">EMP 004</option>
+                                                                                 <option value="deactivated">EMP 005</option>
+                                                                                 <option value="deactivated">EMP 006</option>
+                                                                                 <option value="Blocked">EMP 007</option>
+                                                                                 <option value="deactivated">EMP 008</option>
+                                                                                 <option value="deactivated">EMP 009</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                <div class="col-12 col-sm-12 col-lg-3">
+                                                                    <div class="form-group">
+                                                                        <div class="controls">
+                                                                            <label>Date</label>
+                                                                            <input type="text" id="currentDate" class="form-control birthdate-picker" required placeholder="Date" data-validation-required-message="This birthdate field is required">
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-12 col-lg-3">
-                                                                <div class="form-group">
-                                                                    <label>Employee Code</label>
-                                                                    <select class="select2 form-control">
-                                                                         <option value="Active">Select Employee Code</option>
-                                                                         <option value="Blocked">EMP 001</option>
-                                                                         <option value="deactivated">EMP 002</option>
-                                                                         <option value="Active">EMP 003</option>
-                                                                         <option value="Blocked">EMP 004</option>
-                                                                         <option value="deactivated">EMP 005</option>
-                                                                         <option value="deactivated">EMP 006</option>
-                                                                         <option value="Blocked">EMP 007</option>
-                                                                         <option value="deactivated">EMP 008</option>
-                                                                         <option value="deactivated">EMP 009</option>
-                                                                    </select>
+                                                    </div>
+                                                 
+
+                                                     
+                                                        <div class="table-responsive shadow p-2 mb-2 bg-white rounded">
+                                                            <table id="DailyAttendanceTable" class="table  border-secondary table-striped ">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Sr. No.</th>
+                                                                        <th>Name</th>
+                                                                        <th>Emp. Code</th>
+                                                                        <th>City</th>
+                                                                        <th>Log-In</th>
+                                                                        <th>Log-Out</th>
+                                                                        <!-- <th>Working Hour</th> -->
+                                                                        <th>Current Status</th>
+                                                                        <th>Action</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tfoot class="tableSearchFoot">
+                                                                    <tr>
+                                                                        <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                                                        <th>Name</th>
+                                                                        <th>Emp. Code</th>
+                                                                        <th>City</th>
+                                                                        <th>Log-In</th>
+                                                                        <th>Log-Out</th>
+                                                                        <!-- <th>Working Hour</th> -->
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                                <tbody>
+                                                                   
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td class="headcol">Pooja</td>
+                                                                        <td>Emp101</td>
+                                                                        <td>Gurgaon</td>
+                                                                        <td>00:00</td>
+                                                                        <td>00:00</td>
+                                                                        <!-- <td>9.30</td> -->
+                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="mytop_Class  bg-gradient-dark text-white">SL</label></td>
+                                                                        <td >
+                                                                            <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                <i class="feather icon-edit"></i>
+                                                                            </span>
+                                                                           </td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td class="headcol">Yash</td>
+                                                                        <td>Emp102</td>
+                                                                        <td>Gurgaon</td>
+                                                                        <td>00:00</td>
+                                                                        <td>0:00</td>
+                                                                        <!-- <td>9.15</td> -->
+                                                                        <td>
+                                                                            <label data-toggle="tooltip" data-placement="top" title="Casual Leave" class="mytop_Class  bg-gradient-info text-white">CL</label>
+                                                                                                                                                </td>
+                                                                        <td >
+                                                                            <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                <i class="feather icon-edit"></i>
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td class="headcol">Somya</td>
+                                                                        <td>Emp103</td>
+                                                                        <td>Gurgaon</td>
+                                                                        <td>00:00</td>
+                                                                        <td>00:00</td>
+                                                                        <!-- <td>00</td> -->
+                                                                        <td><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger  text-white">A</label></td>
+                                                                        <td >
+                                                                            <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                <i class="feather icon-edit"></i>
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <td>4</td>
+                                                                        <td class="headcol">Albina Simonis</td>
+                                                                        <td>Emp104</td>
+                                                                        <td>Gurgaon</td>
+                                                                        <td>00:00</td>
+                                                                        <td>00:00</td>
+                                                                        <!-- <td>00</td> -->
+                                                                        <td>
+                                                                            <label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="mytop_Class  bg-gradient-dark text-white">SL</label>                                                                        </td>
+                                                                        <td >
+                                                                            <span class="cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                                                <i class="feather icon-edit"></i>
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                            <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header bg-primary white">
+                                                                            <h4 class="modal-title" id="myModalLabel17">Edit Attendance</h4>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            
+                                                                                <div class="row form-group">
+                                                                                    <div class="col-lg-6">
+                                                                                        <div class="row">
+                                                                                            <div class="col-6">
+                                                                                                <h6>Employee Name</h6>
+                                                                                            </div>
+                                                                                            <div class="col-6">
+                                                                                                <label>Pooja</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-6">
+                                                                                                <h6>Location</h6>
+                                                                                            </div>
+                                                                                            <div class="col-6">
+                                                                                                <label>Gurgaon</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6">
+                                                                                        <div class="row">
+                                                                                            <div class="col-6">
+                                                                                                <h6>Employee Code</h6>
+                                                                                            </div>
+                                                                                            <div class="col-6">
+                                                                                                <label>Emp101</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-6">
+                                                                                                <h6>Current Status</h6>
+                                                                                            </div>
+                                                                                            <div class="col-6">
+                                                                                                <label>Present</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                      
+                                                                            <div class="row">
+                                                                                <div class="col-lg-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Log-In</label>
+                                                                                        <input type="text" class="form-control timePicker" value="10:00 AM">
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="col-lg-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Log-Out</label>
+                                                                                        <input type="text" class="form-control timePicker" value="7:30 PM">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-12 col-lg-3">
-                                                                <div class="form-group">
-                                                                 <label for="first-name-vertical">Month</label>
-                                                                  <input type="text"  name="datepicker" id="datepicker" class="form-control " required placeholder="Monthly-Date" data-validation-required-message="This birthdate field is required" >
-                                                                </div> 
-                                                               </div>
-                                                             
-                                                    </div>
-                                                   
-                                                  </div> 
-                                              
-                                                  <div class="card">
-                                                    <div class="card-body">
-                                                    <h5>Showing Details for Month : JULY</h5>
-                                                    <div class="d-flex gap-1rem">
-                                                        <p class="border-2 border-right-primary pr-1">Total Month Days : 31</p>
-                                                        <p class="border-2 border-right-primary pr-1">Total Working Days : 24</p>
-                                                        <p class="border-2 border-right-primary pr-1">Weekly Off : 7</p>
-                                                        <p class="border-2  pr-1">Holidays : 1</p>
-                    
-                                                    </div>
-                                                <div class="table-responsive">
-                                                    <table id="example1" class="table  border-secondary table-striped dataex-html5-selectors">
-                                                        <thead>
-                                                            <tr>
-                                                                <th >Sr. No.</th>
-                                                                <th>Date</th>
-                                                                <th>Day</th>
-                                                                <th>Login</th>
-                                                                <th>Logout</th>
-                                                                <th>Working Hours</th>
-                                                                <th>Day Status</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                           
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>01-07-22</td>
-                                                                <td>Friday</td>
-                                                                <td>10:00AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr30min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-        
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>02-07-22</td>
-                                                                <td>Saturday</td>
-                                                                <td>10:10AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr20min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>03-07-22</td>
-                                                                <td>Sunday</td>
-                                                                <td>00:00</td>
-                                                                <td>00:00</td>
-                                                                <td>0</td>
-                                                                <td><p class="my_Class text-white bg-gradient-secondary " title="Sunday">wo</p></td>
-                                                            </tr>
-        
-                                                            <tr>
-                                                                <td>4</td>
-                                                                <td>04-07-22</td>
-                                                                <td>Monday</td>
-                                                                <td>10:10AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr20min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>5</td>
-                                                                <td>05-07-22</td>
-                                                                <td>Tuesday</td>
-                                                                <td>10:15AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr15min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>6</td>
-                                                                <td>06-07-22</td>
-                                                                <td>Wednesday</td>
-                                                                <td>10:15AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr15min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>7</td>
-                                                                <td>07-07-22</td>
-                                                                <td>Thuesday</td>
-                                                                <td>10:5AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr25min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>8</td>
-                                                                <td>08-07-22</td>
-                                                                <td>Friday</td>
-                                                                <td>00:00</td>
-                                                                <td>00:00</td>
-                                                                <td>0</td>
-                                                                <td><p class="my_Class text-white bg-gradient-warning " title="Eid">H</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>9</td>
-                                                                <td>05-07-22</td>
-                                                                <td>Saturday</td>
-                                                                <td>00:00</td>
-                                                                <td>00:00</td>
-                                                                <td>0</td>
-                                                                <td><p class="my_Class text-white bg-gradient-secondary " title="Saturday">wo</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>10</td>
-                                                                <td>10-07-22</td>
-                                                                <td>Sunday</td>
-                                                                <td>00:00</td>
-                                                                <td>00:00</td>
-                                                                <td>0</td>
-                                                                <td><p class="my_Class text-white bg-gradient-secondary " title="Sunday">wo</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>11</td>
-                                                                <td>11-07-22</td>
-                                                                <td>Monday</td>
-                                                                <td>00:00</td>
-                                                                <td>00:00</td>
-                                                                <td>0</td>
-                                                                <td><p class="my_Class bg-gradient-info  text-white" title="Family Function">CL</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>12</td>
-                                                                <td>12-07-22</td>
-                                                                <td>Tuesday</td>
-                                                                <td>10:15AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr15min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>13</td>
-                                                                <td>13-07-22</td>
-                                                                <td>Wednesday</td>
-                                                                <td>10:15AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr15min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>14</td>
-                                                                <td>14-07-22</td>
-                                                                <td>Thuesday</td>
-                                                                <td>10:5AM</td>
-                                                                <td>7:30PM</td>
-                                                                <td>9hr25min</td>
-                                                                <td><p class="my_Class text-white bg-gradient-primary " title="I am Present">P</p></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                        </div>
                                                 </div>
-                                                </div>
-                                              </div>
-                                              </div>
+                                            </div>
                                         </form>
-                                        <!-- users edit Info form ends -->
+                                        <!-- users edit account form ends -->
                                     </div>
-
+                             
+                                  
                                 </div>
 
                             </div>
@@ -699,8 +719,7 @@
     <!-- END: Footer-->
     <!-- BEGIN: Vendor JS-->
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
-    <script src="../../Content/app-assets/vendors/js/charts/apexcharts.min.js"></script>
-    <script src="../../Content/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+
     <script src="../../Content/app-assets/js/custom-js.js"></script>
     <!-- BEGIN Vendor JS-->
     <!-- BEGIN: Page Vendor JS-->
@@ -748,12 +767,27 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
      <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
      <!-- END: Page Vendor JS-->
-
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
      <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
 
-
+         <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
     <script>
-                $(function () {
+
+$('.timePicker').daterangepicker({
+            timePicker: true,
+            // timePicker24Hour : true,
+            singleDatePicker:true,
+            locale: {
+                format: 'HH:mm'
+            }
+        }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });
+
+
+        $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
                 "buttons": [   {
@@ -763,32 +797,73 @@
             },"excel","print", "copy","colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         });
-        
+    </script>
+     <script>
+        $(function () {
+            $("#example2").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": true,
+                "buttons": [   {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: 'tabloid'
+            },"excel","print", "copy","colvis"]
+    }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+
+<script>
+    $(function () {
+        $("#example3").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": true,
+            "buttons": [   {
+            extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'tabloid'
+        },"excel","print", "copy","colvis"]
+}).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#example4").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": true,
+            "buttons": [   {
+            extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'tabloid'
+        },"excel","print", "copy","colvis"]
+}).buttons().container().appendTo('#example4_wrapper .col-md-6:eq(0)');
+    });
+</script>
+
+
+    <script>
         window.onload = function () {
             document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("view").className = 'active';
         }
     </script>
 
-<script>
 
-    $(document).ready(function(){
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
-        var currMonYear = new Date();
-         var currentMonth = monthNames[currMonYear.getMonth()] + "-" + currMonYear.getFullYear();
-        // console.log(currentDateValue);
-        document.getElementById("datepicker").value = currentMonth;
-    
-    });
-    
-        $("#datepicker").datepicker( {
-        format: "mm-yyyy",
-        startView: "months", 
-        minViewMode: "months"
-    }); 
+<script>
+$(document).ready(function(){
+    var currentDateValue = new Date();
+     var currentTodayDate =  currentDateValue.getDate() + "-" + (currentDateValue.getMonth()+1) + "-" + currentDateValue.getFullYear();
+    // console.log(currentDateValue);
+    document.getElementById("currentDate").value = currentTodayDate;
+
+});
     </script>
+
+<script>
+    $("#datepicker").datepicker( {
+    format: "mm-yyyy",
+    startView: "months", 
+    minViewMode: "months"
+}); 
+</script>
+
       
 
     </body>
