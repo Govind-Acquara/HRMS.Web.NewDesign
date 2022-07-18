@@ -767,4 +767,29 @@ $('#customYear').click(function(){
     
     }
 
+
+    if ($('#GPWFO').length != 0) {
+    
+      $('#GPWFO').click(function(){
+        if ($(this).is(':checked')) {
+              $('#WFOmins').prop("disabled", false);
+        } else {
+              $('#WFOmins').prop("disabled", true);
+        }
+      });
+      
+      }
+
+      if ($('#GPWFH').length != 0) {
+    
+        $('#GPWFH').click(function(){
+          if ($(this).is(':checked')) {
+                $('#WFHmins').prop("disabled", false);
+          } else {
+                $('#WFHmins').prop("disabled", true);
+          }
+        });
+        
+        }
+
 })(window);
