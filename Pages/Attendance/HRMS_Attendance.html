@@ -442,7 +442,7 @@
                                                                         <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Holiday" class="mytop_Class bg-gradient-warning text-white">H</label> - Holiday</h6>
                                                                         <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger text-white">A</label> - Absent</h6>
                                                                         <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Weekly Off" class="mytop_Class bg-gradient-secondary text-white">WO</label> - Weekly Off</h6>
-                                                                        <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary  text-white">P<span style="font-size: 0.5rem;">WFH</span></label> -WFH Present</h6>
+                                                                        <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present for WFH" class="mytop_Class  bg-gradient-primary  text-white">P<span style="font-size: 0.5rem;">WFH</span></label> -WFH Present</h6>
 
                                                                     </div>
                                                                 </div>
@@ -511,6 +511,26 @@
                                                  
 
                                                      
+                                                        <!-- <div class="table-responsive shadow p-2 mb-2 bg-white rounded">
+
+                                                            <table id="AjaxTable" class="display" style="width:100%">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>ID</th>
+                                                                        <th>First Name</th>
+                                                                        <th>Last Name</th>
+                                                                        <th>Email</th>
+                                                                        <th>Gender</th>
+                                                                
+                                                                    </tr>
+                                                                </thead>
+
+                                                            </table>
+
+                                                          
+                                                        </div> -->
+
+
                                                         <div class="table-responsive shadow p-2 mb-2 bg-white rounded">
                                                             <table id="DailyAttendanceTable" class="table  border-secondary table-striped ">
                                                                 <thead>
@@ -682,6 +702,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                 </div>
                                             </div>
                                         </form>
@@ -772,6 +793,96 @@
          <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
     <script>
+
+$(document).ready(function () {
+    $('#AjaxTable').DataTable({
+        "sAjaxSource": '/Pages/Attendance/text.json',
+        "columns": [
+    { "data": "id" },
+    { "data": "first_name" },
+    { "data": "last_name" },
+    { "data": "email" },
+    { "data": "gender" }
+  ]
+    });
+});
+
+function bindReservationsDatatable() {
+
+    //var url = "/Reservations/GetReservationsResult?sd=" + surfCodeUtils.getParameterByName(surfCodeUtils.showDeleted);
+    var url = "/Reservations/GetReservationsResult?sd=";
+
+    datatable = $('#DynamicAttendanceTable')
+        .DataTable({
+            "sAjaxSource":url,
+            "bServerSide": true,
+            "bProcessing": true,
+            "bSearchable": true,
+            "lengthMenu": [[100, 1000, 5000, 10000], [100, 1000, 5000, 10000]],
+            "bSort": true,
+            "lengthChange": false,
+            "aaSorting": [],
+            "columnDefs": [{
+                "targets": [0, 8],
+                "orderable": false,
+            }],
+            "language": {
+                "emptyTable": "No record found.",
+                "processing":
+                    '<i class="fa fa-spinner fa-spin fa-3x fa-fw" style="color:#2a2b2b;"></i><span class="sr-only">Loading...</span> '
+            },
+            "columns": [
+                {
+                    "data": null,
+                    "autoWidth": true,
+                    "searchable": false,
+                },
+                {
+                    "data": "Name",
+                    "autoWidth": true,
+                    "searchable": true
+                },
+
+                {
+                    "data": "EmpCode",
+                    "autoWidth": true,
+                    "searchable": true
+                },
+                {
+                    "data": "City",
+                    "autoWidth": true,
+                    "searchable": true
+
+                },
+                {
+                    "data": "LogIn",
+                    "autoWidth": true,
+                    "searchable": true,
+
+                },
+                {
+                    "data": "LogOut",
+                    "autoWidth": true,
+                    "searchable": true
+
+                },
+                {
+                    "data": "CurrentStatus",
+                    "autoWidth": true,
+                    "searchable": true
+                },
+                {
+                    "data": null,
+                    "autoWidth": true,
+                    // render: renderActions
+                },
+
+            ]
+        });
+
+}
+
+
 
 $('.timePicker').daterangepicker({
             timePicker: true,
