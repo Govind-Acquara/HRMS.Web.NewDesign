@@ -505,7 +505,25 @@
                                                     </div>
                                                    
                                                   </div> 
-                                              
+                                                  <div class="card">
+                                                    <div class="card-body">
+                                                  <!-- <div class="shadow-sm bg-white rounded  mb-2 ml-0"> -->
+                                                    <div class="row">
+                                                     <div class="col-12 col-md-6">
+                                                         <canvas id="myChartWeekDays" style="height: 300px; width: 100%;"></canvas>
+                                                     </div>
+                                                     <div class="col-12 col-md-6">
+                                                        <h3 class="pb-1">Showing Attendance Of Emp. : Pooja</h3>
+                                                     <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Weekly Off"  class="bullet rounded-circle pr-1  text-white" style="background-color:rgba(255, 159, 64, 0.6)"></label><span class="pl-1">Weekly Off  : 5</span></h6>
+                                                     <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="bullet  text-white" style="background-color:rgba(153, 102, 255, 0.6)"></label><span class="pl-1"> Sick Leave  : 5</span></h6>
+                                                     <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Casual Leave" class="bullet text-white" style="background-color:rgba(75, 192, 192, 0.6)"></label><span class="pl-1">Casual Leave : 15</span></h6>
+                                                     <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Half Day" class="bullet text-white" style="background-color:rgba(255, 206, 86, 0.6)"></label><span class="pl-1"> Half Day   : 5</span></h6>
+                                                     <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present" class="bullet text-white" style="background-color:rgba(54, 162, 235, 0.6)"></label><span class="pl-1"> Present   : 70</span></h6>
+                                                    </div>
+                                                  </div>
+                                                 </div>
+                                                </div>
+
                                                   <div class="card">
                                                     <div class="card-body">
                                                     <h5>Showing Details for Month : JULY</h5>
@@ -790,7 +808,41 @@
     }); 
     </script>
       
-
+      <script>
+        var xValues = ["WO", "CL", "SL", "HD", "Present"];
+        var yValues = [5, 15, 5, 5, 70];
+        var barColors = [
+          'rgba(255, 159, 64, 0.6)',
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(153, 102, 255, 0.6)',
+          'rgba(255, 206, 86, 0.6)',
+          'rgba(54, 162, 235, 0.6)',
+        ];
+        
+        new Chart("myChartWeekDays", {
+          type: "doughnut",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+       
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        // This more specific font property overrides the global property
+                        font: {
+                            size: 30
+                        }
+                    }
+                }
+            }
+        }
+        });
+        </script> 
     </body>
     </html>
     
