@@ -624,7 +624,7 @@
                                                 <th>Department</th>
                                                 <th>Reporting Person</th>
                                                 <th>Status</th>
-                                                <th class="">Action</th>
+                                                <th class="pl-5 w-25">Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot class="tableSearchFoot">
@@ -674,6 +674,13 @@
                                                             <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
                                                         </div>
                                                     </div>
+                                                     
+                                                   
+                                                    <div class="chip chip-info cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-info "></i>&nbsp;Modify</div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -700,17 +707,21 @@
     
                                                 <td>
                                                 
-                                                    <div class="chip chip-success cursor-pointer">
+                                                    <!-- <div class="chip chip-success cursor-pointer">
                                                         <div class="chip-body">
                                                             <div class="chip-text"><i class="fa fa-check rounded-circle bg-white text-success "></i>&nbsp;Approved</div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="chip chip-danger cursor-pointer">
                                                         <div class="chip-body">
                                                             <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
                                                         </div>
                                                     </div>
-    
+                                                    <!-- <div class="chip chip-info cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-info "></i>&nbsp;Modify</div>
+                                                        </div>
+                                                    </div> -->
                                                 </td>
                                             </tr>
     
@@ -738,7 +749,7 @@
     
                                                 <td>
                                                    
-                                                    <div class="chip chip-success cursor-pointer">
+                                                    <!-- <div class="chip chip-success cursor-pointer">
                                                         <div class="chip-body">
                                                             <div class="chip-text"><i class="fa fa-check rounded-circle bg-white text-success "></i>&nbsp;Approved</div>
                                                         </div>
@@ -747,9 +758,18 @@
                                                         <div class="chip-body">
                                                             <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
                                                         </div>
+                                                    </div> -->
+                                                    <div class="chip chip-info cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-info "></i>&nbsp;Modify</div>
+                                                        </div>
                                                     </div>
-    
-                                                </td>
+                                                    <div class="chip chip-primary cursor-pointer">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-primary "></i>&nbsp;Cancel</div>
+                                                        </div>
+                                                    </div>
+                                                   
                                             </tr>
     
                                             <tr>
@@ -785,12 +805,89 @@
                                                             <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger"></i>&nbsp;Reject</div>
                                                         </div>
                                                     </div>
-    
+                                                    <div class="chip chip-info cursor-pointer" data-toggle="modal" data-target="#primary">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-info "></i>&nbsp;Modify</div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
     
                                         </tbody>
                                     </table>
+                                    <!-- Modal Call on modify -->
+                                    <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary white">
+                                                    <h4 class="modal-title" id="myModalLabel17">Edit Attendance</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    
+                                                        <div class="row form-group">
+                                                            <div class="col-lg-6">
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <h6>Employee Name</h6>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <label>Pooja</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <h6>Location</h6>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <label>Gurgaon</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <h6>Employee Code</h6>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <label>Emp101</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <h6>Current Status</h6>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <label>Pending</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>From Date</label>
+                                                                 <input type="date"  class="form-control" required >
+                                                              </div>
+                                                        </div>
+
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>To Date</label>
+                                                                 <input type="date"  class="form-control" required >
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                               </div>
                           </div>
