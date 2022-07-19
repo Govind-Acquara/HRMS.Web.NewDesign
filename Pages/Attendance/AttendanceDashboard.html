@@ -785,40 +785,14 @@ document.addEventListener('DOMContentLoaded', function() {
       navLinks: true,
       editable: true,
       eventLimit: true,
-      eventColor: '#FFC191',
       eventSources: [
-
-// your event source
-{
-  url: '/Pages/Attendance/event.json', // use the `url` property
-  color: '#FFC191',    // an option!
-  textColor: 'black'  // an option!
-}
-
-// any other sources...
-
+      {
+        url: '/Pages/Attendance/event.json',
+        color: 'coral',    
+        textColor: 'black'
+      }
 ]
-    });
-
-    $('#btn-add-event').click(function(){
-        var newEvents = [
-        {
-          title: 'All Day Event 2',
-          start: '2022-07-05',
-        },
-        {
-          title: 'All Day Event 3',
-          start: '2022-07-06',
-        }
-      ];
-
-    calendar.addEventSource(newEvents);
-
-    
-
-    });
-
-    
+    });    
 
     calendar.render();
   });
@@ -848,47 +822,6 @@ document.addEventListener('DOMContentLoaded', function() {
   showWeekendsHeighlighted:true
 });
 
-// $(document).ready(function() {
-// $('#fc-default').fullCalendar({
-
-//     // calendar.addEvent({
-//     //   id: "newEvent",
-//     //   title: eventTitle,
-//     //   start: startDate,
-//     //   end: correctEndDate,
-//     //   description: eventDescription,
-//     //   color: evtColor,
-//     //   dataEventColor: eventColor,
-//     //   allDay: true
-//     // });
-
-// // displayEventTime: true,// Display event time
-// addEvent: function( title,start, end,description,callback ) { 
-//         var events =[        
-//            {
-//                 title  : 'event1',
-//                 start  : '2022-07-18',
-//             },
-//             {
-//                 title  : 'event2',
-//                 start  : '2022-07-19',
-//                 end    : '2022-07-19',
-//             },
-//             {
-//                 title  : 'event3',
-//                 start  : '2022-07-20',
-//                 // allDay : false // will make the time show
-//             }];
-//             addEvent.push({
-//                 title: 'This is a Material Design event!',
-//                 start: '2022-07-20T08:30:00',
-//                 end: '2022-07-20T08:30:00',
-//                 color: '#C2185B'
-//             });
-//             callback(addEvent);
-//     }
-//  });
-// });
  </script>
 
 
