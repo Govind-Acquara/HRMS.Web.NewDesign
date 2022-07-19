@@ -509,6 +509,57 @@
 
 
 
+    //Leave Balance Page Table Script
+
+    if ($("#LeaveBalanceTable").length != 0) {
+      $(document).ready(function () {
+        $("#LeaveBalanceTable tfoot th")
+          .not("th:nth-child(1)")
+          .not("th:nth-child(6)")
+          .not("th:nth-child(7)")
+          .each(function () {
+            var title = $("#LeaveBalanceTable tfoot th")
+              .eq($(this).index())
+              .text();
+            $(this).html(
+              '<input type="text" class="form-control" placeholder="Search ' +
+                title +
+                '" />'
+            );
+          });
+  
+        $("#LeaveBalanceTable")
+          .DataTable({
+            responsive: true,
+            autoWidth: true,
+            lengthChange: false,
+            buttons: [
+              { extend: 'excel', className: 'p-1 ' },
+              { extend: 'print', className: 'p-1 ' },
+              { extend: 'copy', className: 'p-1 ' },
+              { extend: 'pdf', className: 'p-1 ' },
+              { extend: 'colvis', className: 'p-1' }
+          ],      
+          })
+          .buttons()
+          .container()
+          .appendTo(".col-md-6:eq(0)");
+  
+        var table = $("#LeaveBalanceTable").DataTable();
+  
+        table.columns().every(function () {
+          var that = this;
+  
+          $("input", this.footer()).on("keyup change", function () {
+            that.search(this.value).draw();
+          });
+        });
+      });
+    }
+
+
+
+
   //Location Report Page Table Script
 
   if ($("#LocationReport").length != 0) {
