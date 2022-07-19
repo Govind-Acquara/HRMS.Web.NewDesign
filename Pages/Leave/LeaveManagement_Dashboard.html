@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
     <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/charts/apexcharts.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/dashboard-ecommerce.css">
@@ -374,69 +375,6 @@
             <div class="content-body">
                 <!-- Dashboard Ecommerce Starts -->
                 <section>
-                    
-                  <div class="row">
-                    <div class="col-xl-12 col-md-4 col-sm-6">
-                        <div class="card mb-1">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-sm-3 col-6">
-                                             <label style="font-weight: bold;"> From Date</label>
-                                             <input type="text" class="form-control birthdate-picker">
-                                        </div>
-                                        <div class="col-lg-3 col-sm-3 col-6">
-                                            <label style="font-weight: bold;"> To Date</label>
-                                            <input type="text" class="form-control birthdate-picker">
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-lg-4">
-                                            <button type="search" class="btn btn-primary glow mt-2"><i class="feather icon-search"></i> Search</button>
-                                           </div>
-                                        <!-- <div class="col-lg-6 col-sm-6 col-sm-6">
-                                            <ul class="list-unstyled mb-0 mt-2">
-                                                <li class="d-inline-block pr-2">
-                                                    <fieldset>
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="customRadio" id="customRadio1" checked="">
-                                                            <label class="custom-control-label" for="customRadio1">Today</label>
-                                                        </div>
-                                                    </fieldset>
-                                                </li>
-                                                <li class="d-inline-block pr-2">
-                                                    <fieldset>
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="customRadio" id="customRadio3">
-                                                            <label class="custom-control-label" for="customRadio3">Weekly</label>
-                                                        </div>
-                                                    </fieldset>
-                                                </li>
-                                                <li class="d-inline-block pr-2">
-                                                    <fieldset>
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="customRadio" id="customRadio2" >
-                                                            <label class="custom-control-label" for="customRadio2">Monthly</label>
-                                                        </div>
-                                                    </fieldset>
-                                                </li>
-                                                <li class="d-inline-block">
-                                                    <fieldset>
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="customRadio" id="customRadio4">
-                                                            <label class="custom-control-label" for="customRadio4">Yearly</label>
-                                                        </div>
-                                                    </fieldset>
-                                                </li>
-                                            </ul>
-                                        </div> -->
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                
-                     <hr class="mt-0">
-                   
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="card">
@@ -507,6 +445,261 @@
                         </div>
                       
                     </div> 
+  
+                    <hr class="mt-0">
+
+                  <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-6">
+                        <div class="card mb-1">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-3 col-6">
+                                             <label style="font-weight: bold;"> From Date</label>
+                                             <input type="text" class="form-control birthdate-picker">
+                                        </div>
+                                        <div class="col-lg-3 col-sm-3 col-6">
+                                            <label style="font-weight: bold;"> To Date</label>
+                                            <input type="text" class="form-control birthdate-picker">
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-lg-4">
+                                            <button type="search" class="btn btn-primary glow mt-2"><i class="feather icon-search"></i> Search</button>
+                                           </div>
+                                       
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                
+                 
+                 <div class="row">
+                   
+                    <div class="col-xl-8 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Yearly Leave :</h4>
+                           
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <span class="badge badge-pill  bg-gradient-info float-right">15</span>
+                                   Casual Leave
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge badge-pill bg-gradient-dark float-right">15</span>
+                                    Sick Leave
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge badge-pill bg-gradient-success float-right">0</span>
+                                   Half Day
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge badge-pill bg-success float-right">60</span>
+                                    Maternity Leave
+                                </li>
+                            </ul>
+                        
+
+
+                            <div class="card-header d-flex justify-content-between pb-0">
+                                <h4 class="card-title">Leave Status</h4>
+                                <div class="dropdown chart-dropdown">
+                                    <button class="btn btn-sm border-0 dropdown-toggle px-0" type="button" id="dropdownItem3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Today Leaves
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownItem3">
+                                        <a class="dropdown-item" href="#">Last 28 Days</a>
+                                        <a class="dropdown-item" href="#">Last Month</a>
+                                        <a class="dropdown-item" href="#">Last Year</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                </div>
+                                <div class="col-12 col-md-6 mt-5">
+                                <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Weekly Off"  class="bullet rounded-circle pr-1  text-white" style="background-color:#1c92d2"></label><span class="pl-1">Total Leaves  : 13</span></h6>
+                                <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="bullet  text-white" style="background-color:#f05053"></label><span class="pl-1"> Sick Leave  : 5</span></h6>
+                                <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Casual Leave" class="bullet text-white" style="background-color:#e5008d"></label><span class="pl-1">Casual Leave : 8</span></h6>
+                               </div>                                        
+                              
+                             </div>
+
+                        </div>
+                    </div>
+                </div>
+                   
+
+                   <div class="col-xl-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <h4 class="card-title bg-gradient-info p-1 text-white rounded-lg">Upcoming Leaves :</h4>
+                                    <div class="row d-flex justify-content-around">
+                                     <h5>Employee List</h5>
+                                     <h5>Date</h5>
+                                   </div>
+                                    <div class="card-body suggested-block overflow-auto" style="height: 405px;">
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Pooja Jain</h6>
+                                                <h6 class="mb-0">Emp-101</h6>
+                                            </div>
+                                            <span class="font-small-5">20-07-2022 To 25-07-2022</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Yash Sharma</h6>
+                                                <h6 class="mb-0">Emp-102</h6>
+                                            </div>
+                                            <span class="font-small-5">21-07-2022 To 26-07-2022</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Arpit Sharma</h6>
+                                                <h6 class="mb-0">Emp-103</h6>
+                                            </div>
+                                            <span class="font-small-5">23-07-2022 To 25-07-2022</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Govind Sharma</h6>
+                                                <h6 class="mb-0">Emp-104</h6>
+                                            </div>
+                                            <span class="font-small-5">22-07-2022 To 25-07-2022</span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Geeta Pathak</h6>
+                                                <h6 class="mb-0">Emp-104</h6>
+                                            </div>
+                                            <span class="font-small-5">20-07-2022  To  25-07-2022</span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Rohit Sharma</h6>
+                                                <h6 class="mb-0">Emp-105</h6>
+                                            </div>
+                                            <span class="font-small-5">27-07-2022  To  1-08-2022</span>
+                                        </div>
+
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Pooja Jain</h6>
+                                                <h6 class="mb-0">Emp-101</h6>
+                                            </div>
+                                            <span class="font-small-5">20-07-2022 To 25-07-2022</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Yash Sharma</h6>
+                                                <h6 class="mb-0">Emp-102</h6>
+                                            </div>
+                                            <span class="font-small-5">21-07-2022 To 26-07-2022</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Arpit Sharma</h6>
+                                                <h6 class="mb-0">Emp-103</h6>
+                                            </div>
+                                            <span class="font-small-5">23-07-2022 To 25-07-2022</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Govind Sharma</h6>
+                                                <h6 class="mb-0">Emp-104</h6>
+                                            </div>
+                                            <span class="font-small-5">22-07-2022 To 25-07-2022</span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Geeta Pathak</h6>
+                                                <h6 class="mb-0">Emp-104</h6>
+                                            </div>
+                                            <span class="font-small-5">20-07-2022  To  25-07-2022</span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center  mb-1">
+                                            <div class="user-page-info">
+                                                <h6 class="mb-0">Rohit Sharma</h6>
+                                                <h6 class="mb-0">Emp-105</h6>
+                                            </div>
+                                            <span class="font-small-5">27-07-2022  To  1-08-2022</span>
+                                        </div>
+                                        
+
+                                    </div>
+                              </div>
+                            </div>
+                        </div>
+                  </div>
+                </div>
+                
+                  <!-- montly graph -->
+                  <!-- <div class="row">
+                    <div class="col-lg-8 col-md-6 col-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-end">
+                                <h4 class="card-title">Revenue</h4>
+                                <p class="font-medium-5 mb-0"><i class="feather icon-settings text-muted cursor-pointer"></i></p>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body pb-0">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="mr-2">
+                                            <p class="mb-50 text-bold-600">This Month</p>
+                                            <h2 class="text-bold-400">
+                                                <sup class="font-medium-1">$</sup>
+                                                <span class="text-success">86,589</span>
+                                            </h2>
+                                        </div>
+                                        <div>
+                                            <p class="mb-50 text-bold-600">Last Month</p>
+                                            <h2 class="text-bold-400">
+                                                <sup class="font-medium-1">$</sup>
+                                                <span>73,683</span>
+                                            </h2>
+                                        </div>
+
+                                    </div>
+                                    <div id="revenue-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-end">
+                                <h4 class="mb-0">Goal Overview</h4>
+                                <p class="font-medium-5 mb-0"><i class="feather icon-help-circle text-muted cursor-pointer"></i></p>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body px-0 pb-0">
+                                    <div id="goal-overview-chart" class="mt-75"></div>
+                                    <div class="row text-center mx-0">
+                                        <div class="col-6 border-top border-right d-flex align-items-between flex-column py-1">
+                                            <p class="mb-50">Completed</p>
+                                            <p class="font-large-1 text-bold-700">786,617</p>
+                                        </div>
+                                        <div class="col-6 border-top d-flex align-items-between flex-column py-1">
+                                            <p class="mb-50">In Progress</p>
+                                            <p class="font-large-1 text-bold-700">13,561</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
                    
                 </section>
                 <!-- Dashboard Ecommerce ends -->
@@ -559,9 +752,16 @@
     <script src="../../Content/app-assets/js/scripts/components.js"></script>
     <!-- END: Theme JS-->
     <!-- BEGIN: Page JS-->
-    <!-- <script src="../../Content/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
-    <script src="../../Content/app-assets/js/scripts/datatables/datatable.js"></script> -->
- <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+     <script src="../../Content/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+       <!-- BEGIN: Page Vendor JS-->
+    <script src="../../../app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <!-- END: Page Vendor JS-->
+    <!-- <script src="../../Content/app-assets/js/scripts/datatables/datatable.js"></script> -->
+
+<!-- chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
+   <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
     
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
@@ -572,6 +772,34 @@ window.onload = function () {
             document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("dashboard").className = 'active';
         }
+    </script>
+
+<script>
+    var xValues = ["Sick Leave", "Casual Leave", "Total Leave"];
+    var yValues = [5, 8, 13];
+    var barColors = [
+      "#f05053",
+      "#e5008d",
+      "#1c92d2",
+     
+    ];
+    
+    new Chart("myChart", {
+      type: "doughnut",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Today Leave Status"
+        }
+      }
+    });
     </script>
 </body>
 <!-- END: Body-->
