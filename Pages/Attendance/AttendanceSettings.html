@@ -365,86 +365,6 @@
             </div>
             <div class="content-body">
 
-                
-                <!-- <div class="my-2 dt-buttons btn-group">
-                    <button class="btn btn-primary ml-0 sidebar-toggle mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Shift</button>
-                </div>
-                <div class="sidebar-content">
-
-                    <div class="CloseBTN">&times;</div>
-                    
-                    <div>
-                        <form id="sideform" class="sidebar-form">
-                            <h4 class="font-weight-bold mb-2">Add Shift</h4>
-
-                            <div class="form-group">
-                                <label class="" for="companyName">Company/Client Name</label>
-                                <input type="text" class="form-control" id="companyName" placeholder="Enter Company/Client Name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="" for="shiftName">Shift Name</label>
-                                <input type="text" class="form-control" id="shiftName" placeholder="Enter Shift Name">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="" for="shiftDate">Shift Date</label>
-                                <input type="text" class="form-control" id="shiftDate" placeholder="Enter Shift Starting and Ending Date">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="shiftName">Shift Timing</label>
-                                <input type="text" class="form-control" id="duration">
-                            </div>
-
-                            <div>
-                                <label>Weekend Based On</label>
-                                <fieldset id="WBRadio">
-                                <div class="row pt-1 form-group">
-                                        <div class="col-6">
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="WBL" checked>
-                                                    <label class="custom-control-label" for="WBL">Location</label>
-                                                </div>
-                                        </div>
-                                        <div class="col-6">
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="WBS">
-                                                    <label class="custom-control-label" for="WBS">Shift</label>
-                                                </div>
-                                        </div>
-                                </div>
-                            </fieldset>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="SAFD">Aplicable For Department</label>
-                                <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFD">
-                                        <option value="it">IT</option>
-                                        <option value="accounts">Accounts</option>
-                                        <option value="sales">Sales</option>
-                                        <option value="hr">HR</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="SAFL">Aplicable For Location</label>
-                                <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFL">
-                                        <option value="delhi">Delhi</option>
-                                        <option value="mumbai">Mumbai</option>
-                                        <option value="dubai">Dubai</option>
-                                </select>
-                            </div>
-
-                              <div class="d-flex my-2  justify-content-center ">
-                                <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
-                                <button type="reset" class="btn w-50 btn-primary-dark mb-1 mt-0.5">Reset</button>
-                            </div>
-    
-    
-                          </form> 
-                    </div>
-                </div> -->
 
                 <div class="card">
                     <div class="card-header pb-1">
@@ -457,150 +377,108 @@
                         </div>
                     </div>
                     <div class="card-content collapse show">
+                        <div class="controls px-2 d-flex flex-wrap" style="gap: 1rem;">
+                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Half Day" class="mytop_Class bg-gradient-success text-white">HD</label> - Half Day</h6>
+                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary text-white">P</label> - Present</h6>
+                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Holiday" class="mytop_Class bg-gradient-warning text-white">H</label> - Holiday</h6>
+                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger text-white">A</label> - Absent</h6>
+                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Weekly Off" class="mytop_Class bg-gradient-secondary text-white">WO</label> - Weekly Off</h6>
+                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present for WFH" class="mytop_Class  bg-gradient-primary  text-white">P<span style="font-size: 0.5rem;">WFH</span></label> -WFH Present</h6>
+
+                        </div>
                         <div class="card-body">
+
                             <form class="form-horizontal" novalidate>
 
+                                <div class="row form-group">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div>
+                                            <label>Office Timing</label>
+                                            <div class="d-flex gap-1rem form-group">
+                                                <div class="d-flex gap-1rem">
+                                                    <label for="" class="d-inline-block my-auto">In:</label>
+                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
+                                                </div>
+                                                <div class="d-flex gap-1rem">
+                                                    <label for="" class="d-inline-block my-auto">Out:</label>
+                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="form-group">
+                                            <label>Present Hours</label>
+                                            <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="form-group">
+                                            <label>Half Day Hours</label>
+                                            <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours"> 
+                                        </div>
+                                    </div>
+                                </div>
                                 
-
-                                <div class="row form-group">
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="form-group">
-                                            <label class="" for="companyName">Company/Client Name</label>
-                                            <input type="text" class="form-control" id="companyName" placeholder="Enter Company/Client Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="form-group">
-                                            <label class="" for="shiftName">Shift Name</label>
-                                            <input type="text" class="form-control" id="shiftName" placeholder="Enter Shift Name">
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="form-group">
-                                            <label class="" for="shiftDate">Shift Date</label>
-                                            <input type="text" class="form-control" id="shiftDate" placeholder="Enter Shift Starting and Ending Date">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="form-group">
-                                            <label for="shiftName">Shift Timing</label>
-                                            <input type="text" class="form-control timePicker" id="duration" placeholder="Enter Shift Timing">
-                                        </div>
-                                    </div>
-
- 
-
-                                </div>
-
-                                <div class="row form-group">
-
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="form-group">
-                                            <label for="shiftName">Half Day</label>
-                                            <input type="text" class="form-control timePicker"  placeholder="Enter Half Day Mins">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4">
-                                        <label>Grace Period Based On</label>
-                                        <fieldset id="WBRadio">
-                                        <div class="row pt-1 form-group">
-                                                <div class="col-lg-6">
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input"  name="customCheck" id="GPWFO">
-                                                                <label class="custom-control-label" for="GPWFO">WFO</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <input type="text" id="WFOmins" class="form-control timePicker" disabled="disabled" placeholder="Enter Mins">
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input"  name="customCheck" id="GPWFH">
-                                                                <label class="custom-control-label" for="GPWFH">WFH</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <input type="text" id="WFHmins" class="form-control timePicker" disabled="disabled" placeholder="Enter Mins">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                    </fieldset>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <label>Shift Hours</label>
-                                                    <h4 class="pt-1">8 hours</h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <label>Half Day Hours</label>
-                                                    <h4 class="pt-1">4 hours</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4">
-                                        <label>Weekend Based On</label>
-                                        <fieldset id="WBRadio">
-                                        <div class="row pt-1 form-group">
-                                                <div class="col-6">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBL" checked>
-                                                            <label class="custom-control-label" for="WBL">Location</label>
-                                                        </div>
+
+
+
+                                    <div class="col-lg-6 border-right-secondary">
+                                        <div class="row form-group">
+                                            <div class="col-6">
+                                                <div>
+                                                    <label>Grace Timing</label>
+                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
                                                 </div>
-                                                <div class="col-6">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="WBS">
-                                                            <label class="custom-control-label" for="WBS">Shift</label>
-                                                        </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>Grace Timing Applicable for :</label>
+
+                                                <h6 class="font-weight-bold"></h6>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheckM">
+                                                    <label class="custom-control-label" for="customCheckM">WFH</label>
                                                 </div>
+                                            </div>
                                         </div>
-                                    </fieldset>
+
                                     </div>
 
-                                    <div class="form-group col-lg-4 col-md-4">
-                                        <label for="SAFD">Aplicable For Department</label>
-                                        <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFD">
-                                                <option value="it">IT</option>
-                                                <option value="accounts">Accounts</option>
-                                                <option value="sales">Sales</option>
-                                                <option value="hr">HR</option>
-                                        </select>
+                                    <div class="col-lg-6 ">
+                                        <div class="row form-group">
+                                            <div class="col-6">
+                                                <div>
+                                                    <label>Over Time Hours</label>
+                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>Over Time Applicable for :</label>
+                                                <fieldset id="WBRadio">
+                                                <div class="row pt-1 form-group">
+                                                        <div class="col-6">
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMAX" checked>
+                                                                    <label class="custom-control-label" for="OTMAX">Max</label>
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMIN">
+                                                                    <label class="custom-control-label" for="OTMIN">Min</label>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                            </fieldset>
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                                                    
-                                <div class="form-group col-lg-4 col-md-4">
-                                    <label for="SAFL">Aplicable For Location</label>
-                                    <select class="select2 form-control" multiple="multiple" disabled="disabled" id="SAFL">
-                                            <option value="delhi">Delhi</option>
-                                            <option value="mumbai">Mumbai</option>
-                                            <option value="dubai">Dubai</option>
-                                    </select>
                                 </div>
-                                </div>
-
-
 
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
                                     <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
@@ -611,132 +489,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                <div class="card">
-                    <div class="card-content">
-                          <div class="card-body card-dashboard">
-                            <div class="table-responsive">
-                                <table id="shiftTable" class="table border-secondary table-striped">
-                                   
-                                    <thead>
-                                        <tr>
-                                            <th>SrNo.</th>
-                                            <th>Shift Name</th>
-                                            <th>Company Name</th>
-                                            <th>Department</th>
-                                            <th>Location</th>
-                                            <th>Shift Timing</th>
-                                            <th>Shift Date</th>
-                                            <th>Shift Hours</th>
-                                            <th>IsActive</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shift 1</td>
-                                            <td>Acquara India</td>
-                                            <td>IT</td>
-                                            <td>Gurgaon</td>
-                                            <td>6:00 AM to 2:00 PM</td>
-                                            <td>01/07/22 to 31/07/22</td>
-                                            <td>8 hours</td>
-                                            <td>  
-                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                                  <label class="custom-control-label" for="customSwitch1">
-                                                     <span class="switch-text-left">Active</span>
-                                                     <span class="switch-text-right">InActive</span>
-                                                  </label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                            </td>
-                                        </tr>
-                                      
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Shift 2</td>
-                                            <td>Acquara India</td>
-                                            <td>Sales</td>
-                                            <td>Mumbai</td>
-                                            <td>2:00 PM to 10:00 PM</td>
-                                            <td>01/07/22 to 31/07/22</td>
-                                            <td>8 hours</td>
-                                            <td>  
-                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                                 <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                                  <label class="custom-control-label" for="customSwitch2">
-                                                     <span class="switch-text-left">Active</span>
-                                                     <span class="switch-text-right">InActive</span>
-                                                  </label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Shift 3</td>
-                                            <td>Acquara India</td>
-                                            <td>Accounts</td>
-                                            <td>Gurgaon</td>
-                                            <td>10:00 PM to 6:00 AM</td>
-                                            <td>01/07/22 to 31/07/22</td>
-                                            <td>8 hours</td>
-                                            <td>  
-                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                                 <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                                                  <label class="custom-control-label" for="customSwitch3">
-                                                     <span class="switch-text-left">Active</span>
-                                                     <span class="switch-text-right">InActive</span>
-                                                  </label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-        
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>4</td>
-                                            <td>General Shift</td>
-                                            <td>Acquara India</td>
-                                            <td>HR</td>
-                                            <td>Gurgaon</td>
-                                            <td>10:00 AM to 7:00 PM</td>
-                                            <td>01/07/22 to 31/07/22</td>
-                                            <td>8 hours</td>
-                                            <td>  
-                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                                                 <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                                  <label class="custom-control-label" for="customSwitch4">
-                                                     <span class="switch-text-left">Active</span>
-                                                     <span class="switch-text-right">InActive</span>
-                                                  </label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                            </td>
-                                        </tr>
-        
-        
-                                    </tbody>
-
-                                </table>
-                            </div>
-                          </div>
-                      </div>
-                </div>
-
-                
 
 
                     </div>
@@ -828,13 +580,15 @@
 
 <script>
 
-$('.timePicker').daterangepicker({
+$('.singleTimePicker').daterangepicker({
             timePicker: true,
-            // timePicker24Hour : true,
+            singleDatePicker: true,
+            timePicker24Hour : true,
 
             locale: {
                 format: 'HH:mm'
             }
+            
         }).on('show.daterangepicker', function (ev, picker) {
             picker.container.find(".calendar-table").hide();
         });
