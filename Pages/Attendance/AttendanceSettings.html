@@ -483,6 +483,30 @@
 
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div>
+                                            <label>Lunch Break</label>
+                                            <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select hours">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div>
+                                            <label>Break 1</label>
+                                            <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select hours">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div>
+                                            <label>Break 2</label>
+                                            <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select hours">
+                                        </div>
+                                    </div>
+
+                                </div>
+
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
                                     <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
                                     <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
@@ -582,6 +606,22 @@
 
 
 <script>
+
+
+
+$('.timeRangePicker').daterangepicker({
+            timePicker: true,
+            timePicker24Hour : true,
+
+            locale: {
+                format: 'HH:mm'
+            }
+            
+        }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });
+
+
 
 $('.singleTimePicker').daterangepicker({
             timePicker: true,
