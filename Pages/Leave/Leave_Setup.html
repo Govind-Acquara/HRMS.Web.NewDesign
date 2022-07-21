@@ -466,7 +466,12 @@
                 </div>
                 <div class="sidebar-content">
 
-                    <div class="CloseBTN">&times;</div>
+
+                    <div class="d-flex">
+                        <div class="CloseBTN">&times;</div>
+                    </div>
+
+
                     
                     <div>
                         <form id="sideform" class="sidebar-form">
@@ -515,6 +520,74 @@
                                  <input type="text"  class="form-control"  placeholder="Leave Per Month" required disabled>
                               </div>
 
+
+                              <div class="form-group">
+                                <label for="">Leaves Should be credited on</label>
+                                <div class="custom-control custom-checkbox pt-1">
+                                    <input type="checkbox" class="custom-control-input" name="customCheck1" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Pro Rata Basis</label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="">Applicable in Notice/Probation Period</label>
+                                <div class="custom-control custom-checkbox pt-1">
+                                    <input type="checkbox" class="custom-control-input" name="customCheck2" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2">NO</label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="">Leave Cancellable by Employee</label>
+                                <div class="custom-control custom-checkbox pt-1">
+                                    <input type="checkbox" class="custom-control-input" name="customCheck4" id="customCheck4">
+                                    <label class="custom-control-label" for="customCheck4">YES</label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="">Can Take in Starting of the year (Balance to be shown as Negative)</label>
+                                <div class="custom-control custom-checkbox pt-1">
+                                    <input type="checkbox" class="custom-control-input" name="customCheck5" id="customCheck5">
+                                    <label class="custom-control-label" for="customCheck5">NO</label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="" class=" my-auto">To Be applied Before</label>
+                                <div class="d-flex gap-1rem pt-1">
+                                    <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter Days">
+                                    <label for="" class=" my-auto">Days</label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="" class=" my-auto">Medical Certificate Required After</label>
+                                <div class="d-flex gap-1rem pt-1">
+                                    <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter No. of Leaves">
+                                    <label for="" class=" my-auto">Days</label>
+                                </div>
+                              </div>
+
+                              <!-- <div class="form-group">
+                                <div class="d-flex gap-1rem ">
+                                    <label for="" class=" my-auto">CL to be applied Before: </label>
+                                    <input type="text" class="form-control d-inline-block w-25" name="" id="" placeholder="Enter Days">
+                                    <label for="" class=" my-auto">Days</label>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <div class="d-flex gap-1rem ">
+                                    <label for="" class=" my-auto">SL Without Medical Certificate</label>
+                                    <input type="text" class="form-control d-inline-block w-25" name="" id="" placeholder="Enter Days">
+                                    <label for="" class=" my-auto">Days</label>
+                                </div>
+                              </div> -->
+
+
+
+
                               <div class="form-group">
                                 <label>From Date</label>
                                  <input type="date"  class="form-control" required >
@@ -548,7 +621,7 @@
                                             <th>Policy Name</th>
                                             <th>Employee Type</th>
                                             <th>Leave Type</th>
-                                            <th>Per Month Leaves</th>
+                                            <th>Per Year Leaves</th>
                                             <th>Per Month Leaves</th>
                                             <th>From Date</th>
                                             <th>To Date</th>

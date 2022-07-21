@@ -500,13 +500,7 @@
                                             </div>
 
                                           
-                                            <div class="shadow-sm bg-white rounded  mb-2 ml-0">
 
-                                                 <div class="col-12">
-                                                     <canvas id="barChart" style="height: 400px; width: 100%;"></canvas>
-                                                 </div>
-
-                                            </div>
                                                  
                                             <div class="card">
                                                 <div class="card-body">
@@ -667,9 +661,22 @@
 
                                         </form>
                                         <!-- users edit socail form ends -->
+
+                                        <div class="shadow-sm bg-white rounded  col-12 mb-2 ml-0">
+
+                                            <!-- <div class="col-12">
+                                                <canvas id="barChart" style="height: 400px; width: 100%;"></canvas>
+                                            </div> -->
+    
+    
+                                            <div >
+                                               <canvas id="my_Chart" style="height: 400px !important;" ></canvas>
+                                           </div>
+    
+                                       </div>
                                     </div>
 
-                             
+
                                   
                                 </div>
 
@@ -750,6 +757,118 @@
      <!-- END: Page Vendor JS-->
 
      <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    
+
+     <script>
+        // data define for bar chart
+        var myData = {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sept","Oct","Nov","Dec"],
+            datasets: [
+    {
+      label: 'Total Present',
+    
+      data: [265, 15, 8, 9, 30, 6,9, 13, 7, 8, 5, 2],
+      backgroundColor: [
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0',
+        '#4ac0c0'
+      ],
+     
+    },
+    {
+      label: 'Total Leave',
+    
+      data: [-12, -19, -3, -5, -2,- 3,-12, -19, -3, -5, -2, -3],
+      backgroundColor: [
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb',
+        '#36a2eb'
+      ],
+     
+    },
+       
+
+    ]
+        };
+        // Options define for display value on top of bars
+        var myoption = {
+            scales: {
+            xAxes: [{
+                
+               gridLines: {
+                  display: false
+               },
+               grid: {
+          borderColor: 'red',
+          offset: 'true'
+               },
+            //    barPercentage: 2,
+            //    categorySpacing: 2
+            },
+    ],
+    
+            yAxes: [{
+               ticks: {
+                  beginAtZero: true, 
+               },
+               gridLines: {
+                  display: false
+               }
+            }]
+       },
+            tooltips: {
+                enabled: true
+            },
+            hover: {
+                animationDuration: 1
+            },
+            animation: {
+            duration: 1,
+            onComplete: function (){
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            }
+        };
+        // Code to draw Chart
+        var ctx = document.getElementById('my_Chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',        // Define chart type
+            data: myData,    	// Chart data
+            options: myoption 	// Chart Options [This is optional paramenter use to add some extra things in the chart].
+        });
+    </script>
+    
+    
     <script>
         $(function () {
             $("#example1").DataTable({
@@ -850,6 +969,7 @@ var EmployeeData = {
 
 console.log(EmployeeData);
 
+
 const ctxB = document.getElementById("barChart").getContext('2d');
 const myBarChart = new Chart(ctxB, {
   type: 'bar',
@@ -857,7 +977,7 @@ const myBarChart = new Chart(ctxB, {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sept","Oct","Nov","Dec"],
     datasets: [
     {
-      label: 'Present',
+      label: 'Total Present',
     
       data: [4, 15, 8, 9, 30, 6,9, 13, 7, 8, 5, 2],
       backgroundColor: [
@@ -877,7 +997,7 @@ const myBarChart = new Chart(ctxB, {
      
     },
     {
-      label: 'Leave',
+      label: 'Total Leave',
     
       data: [-12, -19, -3, -5, -2,- 3,-12, -19, -3, -5, -2, -3],
       backgroundColor: [
@@ -896,27 +1016,7 @@ const myBarChart = new Chart(ctxB, {
       ],
      
     },
-        {
-      label: 'Absent',
-    
-      data: [-8, -17, -5, -7, -4, -5,-10, -16, -5, -7, -4, -6],
-      backgroundColor: [
 
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383',
-        '#fe6383'
-      ],
-     
-    },
 
     ]
   },
@@ -944,7 +1044,17 @@ const myBarChart = new Chart(ctxB, {
                   display: false
                }
             }]
-       }
+       },
+       plugins: {
+        datalabels: {
+            anchor: 'end',
+            align: 'top',
+            formatter: Math.round,
+            font: {
+                weight: 'bold'
+            }
+        }
+    }
   }
 });
 
