@@ -482,15 +482,10 @@
                                 </select>
                               </div>
 
-                              <div class=" form-group custom-control custom-checkbox">
-                                <input class="custom-control-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="custom-control-label" for="flexCheckDefault">
-                                  Monthly
-                                </label>
-                              </div>
+                              
 
                               <div class="form-group">
-                                <label for="data-status">Types of Leave</label>
+                                <label for="data-status">Leave Type</label>
                                 <select class="form-control" id="data-status">
                                     <option>Select Leave Type</option>
                                     <option>CL</option>
@@ -510,10 +505,14 @@
                                 </select>
                               </div>
                             
-    
-                            <div class="form-group">
+                              <div class="form-group">
+                                <label>Per Year Leaves</label>
+                                 <input type="text"  class="form-control"  placeholder="Leave Per Year" required >
+                              </div>
+
+                              <div class="form-group">
                                 <label>Per Month Leaves</label>
-                                 <input type="text"  class="form-control"  placeholder="Leave Per Month" required >
+                                 <input type="text"  class="form-control"  placeholder="Leave Per Month" required disabled>
                               </div>
 
                               <div class="form-group">
@@ -545,15 +544,16 @@
                                     <table id="example1" cellspacing="0" width="100%" class=" display table border-secondary data-list-view">
                                         <thead>
                                           <tr>
-                                              <th>Sr. No.</th>
-                                                  <th>Policy Name</th>
-                                                  <th>Employee Type</th>
-                                                  <th>Leave Type</th>
-                                                  <th>Per Month Leaves</th>
-                                                  <th>From Date</th>
-                                                  <th>To Date</th>
-                                                  <th>IsActive</th>
-                                                  <th>Action</th>
+                                            <th>Sr. No.</th>
+                                            <th>Policy Name</th>
+                                            <th>Employee Type</th>
+                                            <th>Leave Type</th>
+                                            <th>Per Month Leaves</th>
+                                            <th>Per Month Leaves</th>
+                                            <th>From Date</th>
+                                            <th>To Date</th>
+                                            <th>IsActive</th>
+                                            <th>Action</th>
                                             </tr>
                                         </thead>
                                         <!-- <tfoot>
@@ -572,6 +572,7 @@
                                               <td>Company Policy</td>
                                               <td>Regular</td>
                                               <td>Sick Leave</td>
+                                              <td>15</td>
                                               <td>0.83</td>
                                               <td>01/01/2022</td>
                                               <td>31/12/2022</td>
@@ -598,6 +599,7 @@
                                             <td>Leave Policy</td>
                                             <td>Regular</td>
                                             <td>Casual Leave</td>
+                                            <td>15</td>
                                             <td>1.25</td>
                                             <td>01/01/2022</td>
                                             <td>31/12/2022</td>
@@ -624,6 +626,7 @@
                                             <td>Asset Policy</td>
                                             <td>wfh</td>
                                             <td>Casual Leave</td>
+                                            <td>15</td>
                                             <td>1.25</td>
                                             <td>01/01/2022</td>
                                             <td>31/12/2022</td>
@@ -650,6 +653,7 @@
                                             <td>Company Policy</td>
                                             <td>Regular</td>
                                             <td>Sick Leave</td>
+                                            <td>15</td>
                                             <td>.83</td>
                                             <td>01/01/2022</td>
                                             <td>31/12/2022</td>
