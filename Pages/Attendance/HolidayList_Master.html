@@ -19,6 +19,8 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+      <!-- link for year date picker -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
      <!-- END: Vendor CSS-->
  
      <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
@@ -356,12 +358,12 @@
                      <li>
                         <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
                      </li>
-                     <li>
+                     <!-- <li>
                         <a href="../Leave/HRMS_New_LeaveType.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
                      </li>
                      <li>
                         <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
-                     </li>
+                     </li> -->
                 </ul>
                 
             </li>
@@ -552,7 +554,36 @@
                           </form> 
                     </div>
                 </div>
+
             </div>
+
+            <div class="card">
+                <div class="card-header">
+                 <h5 class="card-basic">Yearly Holidays:</h5>
+                 <div class="heading-elements">
+                   <ul class="list-inline mb-0">
+                     <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                   </ul>
+                 </div>
+                </div>  
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <form class="form-horizontal" novalidate>
+                          <div class="row">
+                             <div class="col-12 col-sm-4 col-lg-4">
+                                <div class="form-group">
+                                    <label>Select Year</label>
+                                    <input type="text"  name="datepicker" class="form-control currentYear" required placeholder="Year" data-validation-required-message="This birthdate field is required" >
+                                </div>
+                              </div>
+                            <div class="col-12 col-sm-4 col-lg-4">
+                             <button type="submit" class="btn btn-primary glow  mr-1 mt-2">View</button>
+                            </div>
+                           </div>
+                           </form>
+                    </div>
+                </div>
+           </div>
 
                     <div class="card">
                         <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
@@ -726,7 +757,8 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-
+     <!-- js link for month date picker -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
 
@@ -802,6 +834,24 @@ $('#test2').pickadate({
     min: true
 });
 </script>
+
+<script>
+    
+    $(document).ready(function(){
+    
+        var currYear = new Date();
+         var thisYear =currYear.getFullYear();
+        document.getElementById(".currentYear").value = thisYear;
+    
+    });
+    $(".currentYear").datepicker( {
+        format: "yyyy",
+        viewMode: "years", 
+        minViewMode: "years",
+        autoclose:true //to close picker once year is selected
+    }); 
+    </script>
+
 </body>
 <!-- END: Body-->
 
