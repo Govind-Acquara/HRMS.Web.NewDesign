@@ -182,6 +182,9 @@
                             <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
                         </li>
                         <li>
+                            <a href="../Master/TimezoneMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Timezone Master</span></a>
+                        </li>
+                        <li>
                             <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
                         </li>
                     </ul>
@@ -415,7 +418,7 @@
                                         <tr>
                                             <th>Sr. No.</th>
                                             <th>Bank Name</th>
-                                            <th>IsActive</th>
+                                            <th class="notexport">IsActive</th>
                                             <th>Created By </th>
                                             <th>Action</th>
                                         </tr>
@@ -424,29 +427,31 @@
                                         <tr>
                                             <td>1</td>
                                             <td>ICICI Bank</td>
-                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                            <td>
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
                                                 
                                                 <label class="custom-control-label" for="customSwitch1">
                                                 
                                                 <span class="switch-text-left">Active</span>
-                                                
+
                                                 <span class="switch-text-right">InActive</span>
                                                 
                                                 </label>
                                                 
-                                                </div></td>
+                                                </div>
+                                            </td>
                                                 <td>Yash</td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>Unioun Bank</td>
-                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                            <td>
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" class="custom-control-input" id="customSwitch2">
                                                 
@@ -458,7 +463,9 @@
                                                 
                                                 </label>
                                                 
-                                                </div></td>
+                                                </div>
+                                                
+                                            </td>
                                                 <td>Pooja</td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
@@ -468,29 +475,31 @@
                                         <tr>
                                             <td>3</td>
                                             <td>RBL Bank</td>
-                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                            <td>
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" class="custom-control-input" id="customSwitch3">
                                                 
                                                 <label class="custom-control-label" for="customSwitch3">
                                                 
-                                                <span class="switch-text-left">Active</span>
+                                                <span class="switch-text-left notexport">Active</span>
                                                 
                                                 <span class="switch-text-right">InActive</span>
                                                 
                                                 </label>
                                                 
-                                                </div></td>
+                                                </div>
+                                            </td>
                                                 <td>Arpit</td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
                                             <td>ICICI Bank</td>
-                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                            <td>
+                                                <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" class="custom-control-input" id="customSwitch4">
                                                 
@@ -502,7 +511,8 @@
                                                 
                                                 </label>
                                                 
-                                                </div></td>
+                                                </div>
+                                            </td>
                                                 <td>Somya</td>
                                             <td>
                                                 <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
@@ -605,10 +615,16 @@ $(document).ready(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
 
-
-                "buttons": ["excel", "print", "copy", "pdf", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
+                "buttons": [      
+                {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: 'tabloid',
+                exportOptions: {
+                    columns: ':not(.notexport)'
+                }
+            },"excel","print", "copy","colvis"]
+    }).buttons().container().appendTo(' .col-md-6:eq(0)');
 
         });
 
