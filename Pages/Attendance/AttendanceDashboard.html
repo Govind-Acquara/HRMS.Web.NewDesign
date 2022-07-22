@@ -53,6 +53,9 @@
             height: 80px !important;
 
         }
+        .chart-dropdown{
+            display: none;
+        }
      </style>
 </head>
 <!-- END: Head-->
@@ -187,6 +190,9 @@
                     </li>
                     <li>
                         <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
+                    </li>
+                    <li>
+                        <a href="../Master/TimezoneMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Timezone Master</span></a>
                     </li>
                     <li>
                         <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
@@ -464,7 +470,7 @@
                     
                     <div class="row">
                         <div class="col-lg-8">
-                            <div class="card ">
+                            <div class="card h-100">
                                 <div class="card-content">
                                     <div class="card-body">
                                         <div class="cal-category-bullets d-none">
@@ -492,7 +498,7 @@
                           
                         </div>
                         <div class="col-lg-4">
-                            <div class="card">
+                            <div class="card h-100">
                                 <div class="card-header d-flex justify-content-between pb-0">
                                     <h4>Attendance Status</h4>
                                     <div class="dropdown chart-dropdown">
@@ -509,7 +515,7 @@
                                 <div class="card-content">
                                     <div class="card-body">
                                         <div id="chart" class="mb-2"></div>
-                                        <div class="chart-info d-flex justify-content-between mb-1">
+                                        <div class="chart-info d-flex justify-content-between mb-1 mt-5">
                                             <div class="series-info d-flex align-items-center">
                                                 <i class="fa fa-circle-o text-bold-700 text-success"></i>
                                                 <span class="text-bold-600 ml-50">Present</span>
@@ -518,7 +524,7 @@
                                                 <span>60</span>
                                             </div>
                                         </div>
-                                        <div class="chart-info d-flex justify-content-between mb-1">
+                                        <!-- <div class="chart-info d-flex justify-content-between mb-1">
                                             <div class="series-info d-flex align-items-center">
                                                 <i class="fa fa-circle-o text-bold-700 text-primary"></i>
                                                 <span class="text-bold-600 ml-50">Late</span>
@@ -526,7 +532,7 @@
                                             <div class="product-result">
                                                 <span>05</span>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="chart-info d-flex justify-content-between mb-75">
                                             <div class="series-info d-flex align-items-center">
                                                 <i class="fa fa-circle-o text-bold-700 text-info"></i>
@@ -713,7 +719,7 @@ var options ={
       height: 350,
       type: 'radialBar',
     },
-    colors: ["#188754","#0d6efd","#0dcaf0", "#fec107", "#dc3546"],
+    colors: ["#188754","#0dcaf0", "#fec107", "#dc3546"],
     fill: {
       type: 'gradient',
       gradient: {
@@ -721,7 +727,7 @@ var options ={
         shade: 'dark',
         type: 'vertical',
         shadeIntensity: 0.5,
-        gradientToColors: ["#28c76f","#7367f0","#00cfe8", "#ff9f43", "#ea5455"],
+        gradientToColors: ["#28c76f","#00cfe8", "#ff9f43", "#ea5455"],
         inverseColors: false,
         opacityFrom: 1,
         opacityTo: 1,
@@ -757,14 +763,14 @@ var options ={
 
             formatter: function (w) {
               // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-              return 42459
+              return 424 + " Emp."
             }
           }
         }
       }
     },
-    series: [70, 52, 26, 5, 8],
-    labels: ['Present', 'Late', 'Absent','CL','SL'],
+    series: [70, 26, 5, 8],
+    labels: ['Present', 'Absent','CL','SL'],
 
   };
 

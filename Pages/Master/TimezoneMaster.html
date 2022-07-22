@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -6,24 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <title>Create Employee</title>
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Bank Master</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+     <!-- BEGIN: Vendor CSS-->
+   <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+   <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
     <!-- END: Vendor CSS-->
+
+    <link rel="stylesheet" href="../../Content/assets/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
@@ -36,15 +37,14 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
-    <!-- END: Page CSS-->
 
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+    <!-- END: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
+    
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
-
-    <style>
-        
-    </style>
 
 </head>
 <!-- END: Head-->
@@ -157,7 +157,7 @@
                 <li class=" navigation-header">
                     <span>Menu</span>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="Master" >
                     <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
                     <ul class="menu-content">
                         <li>
@@ -181,7 +181,7 @@
                         <li>
                             <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
                         </li>
-                        <li>
+                        <li id="Timezone">
                             <a href="../Master/TimezoneMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Timezone Master</span></a>
                         </li>
                         <li>
@@ -189,7 +189,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item" id="Employee">
+                <li class=" nav-item">
                     <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
                     <ul class="menu-content">
                         <li>
@@ -198,10 +198,9 @@
                         <li>
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
-                        <li id="Editemp">
+                        <li>
                             <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
                         </li>
-
                         <li>
 
                             <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
@@ -210,7 +209,7 @@
                     </ul>
                 </li>
                 <li class=" nav-item">
-                    <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+                    <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                     <ul class="menu-content">
                         <li>
                             <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
@@ -242,7 +241,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="leave">
                     <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                     <ul class="menu-content">
                         
@@ -349,36 +348,37 @@
     </div>
     <!-- END: Main Menu-->
     <!-- BEGIN: Content-->
-    <div class="app-content content">
+    <section class="app-content content" id="column-selectors">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
+                <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Edit Employee</h2>
-                            <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a>Employee</a>
-                                    </li>
-                            </ol>
+                            <h2 class="content-header-title float-left mb-0">Timezone Master</h2>
                             <div class="breadcrumb-wrapper col-12">
-                                
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="../Dashboard/Index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        Master
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="content-body">
-                <!-- users edit start -->
-
+                
+                
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h5 class="card-basic">Employee Details</h5>
+                        <h5 class="card-basic">Add Timezone Name</h5>
+                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
                                 <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
@@ -386,276 +386,190 @@
                         </div>
                     </div>
                     <div class="card-content collapse show">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-1 pl-1 pr-1 pb-1 pt-0">
-                                    <div class=" text-left">
-                                        <label class=" cursor-pointer" for="UserImage">
-                                            <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="60" width="60">
-                                        </label>
-                                        <input type="file" id="UserImage" hidden>
+                        <div class="card-body pt-0 pb-0">
+                            <form class="form-horizontal" novalidate>
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Timezone Id</label>
+                                                <input type="text"  class="form-control"  placeholder="Timezone Id">
+                                           </div>
                                     </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                        <label>Timezone Name</label>
+                                        <input type="text"  class="form-control"  placeholder="Timezone Name" required data-validation-required-message="This Timezone Name field is required">
+                                        </div>
+                                     </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-12 col-lg-4">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label for="users-list-status">Country Name</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control" id="users-list-status">
+                                                        <option value="">Select Country Name</option>
+                                                        <option value="Active">IND</option>
+                                                        <option value="Blocked">UAE</option>
+                                                        <option value="deactivated">USA</option>
+                                                    </select>
+                                                </fieldset>
+                                        </div>
+                                     </div>
+                                    </div>
+
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Employee Code :</div>
-                                        <div class="col-6">EMP-101</div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">HR</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">City :</div>
-                                        <div class="col-6">Delhi</div>
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">Admin</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Company :</div>
-                                        <div class="col-6">Acquara</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                                
-                            </div>
-    
-    
+                               <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
+                                <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
+                               </div>
                             </form>
                         </div>
-                 </div>
-                <section class="users-edit">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <ul class="nav nav-pills mb-3" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center" href="../Employee/HRMS_EditEmployees.html">
-                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">General</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center " href="../Employee/CreateEmployee_Personal.html">
-                                            <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">Personal</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Passport_CreateEmployee.html">
-                                            <i class="feather icon-book mr-25"></i><span class="d-none d-sm-block">Passport/Visa </span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center active"  href="../Employee/Qualification_CreateEmployee.html">
-                                            <i class="feather icon-award mr-25"></i><span class="d-none d-sm-block">Qualification</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/PreviousJob_CreateEmployee.html">
-                                            <i class="feather icon-rotate-ccw mr-25"></i><span class="d-none d-sm-block">Previous Job</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Documents_CreateEmployee.html">
-                                            <i class="feather icon-sidebar mr-25"></i><span class="d-none d-sm-block">Documents</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                                <div class="tab-content">
-
-                                    <div class="tab-pane  active" id="qualification" aria-labelledby="qualification-tab" role="tabpanel">
-
-                                        <form class="form-horizontal" novalidate>
-
-                                            <div class="col-12 mt-1">
-                                                <div class="border rounded   px-1">
-                                                    <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-award"></i> Qualification Details</h6>
-                                                    <div class="row">
-
-
-
-
-                                                        <div class="col-12 col-sm-12 col-lg-6">
-                                                            <fieldset class="form-group">
-                                                                <label>Highest Qualification</label>
-                                                                <select class="form-control" id="users-list-status">
-                                                                    <option>Select Qualification</option>
-                                                                    <option value="1">PostGraduation</option>
-                                                                    <option value="2">Graduation</option>
-                                                                    <option value="3">Intermediate</option>
-
-
-                                                                </select>
-                                                            </fieldset>
-                                                        </div>
-
-                                                        <div class="col-12 col-sm-12 col-lg-6">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>University Name</label>
-                                                                    <input type="text" name="text" class="form-control" placeholder="University Name" required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                    </div>
-
-                                                    <div class="row">
-
-
-
-
-
-
-                                                        <div class="col-12 col-sm-12 col-lg-6">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>Institute Name</label>
-                                                                    <input type="text" name="text" class="form-control" placeholder="Institute Name" required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-
-
-                                                        <div class="col-12 col-sm-12 col-lg-6">
-
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>Year of Passing</label>
-                                                                    <input type="text" id="datepicker" class="form-control" placeholder="Year Of Passing " required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
-
-
-
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="row">
-
-
-
-
-
-                                                        <div class="col-12 col-sm-12 col-lg-6">
-
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>Duration</label>
-                                                                    <input type="text" class="form-control" placeholder="Duration" required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
-
-
-
-                                                        </div>
-
-                                                        <div class="col-12 col-sm-12 col-lg-6">
-                                                            <label>Status</label>
-                                                            <fieldset class="form-group">
-                                                                <select class="form-control" id="users-list-status" required data-validation-required-message="This field is required">
-                                                                    <option value="">Select Status</option>
-                                                                    <option value="Active">Active</option>
-                                                                    <option value="Blocked">InActive</option>
-
-                                                                </select>
-                                                            </fieldset>
-                                                        </div>
-
-
-
-
-                                                    </div>
-
-                                                    <div class="row">
-
-
-
-
-
-                                                        <div class="col-12 col-sm-6 col-lg-4">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>Country</label>
-                                                                    <input type="text" class="form-control" placeholder="Country" required data-validation-required-message="This field is required">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-12 col-sm-6 col-lg-4">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>State</label>
-                                                                    <input type="text" class="form-control" placeholder="State" required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
-
-
-                                                        </div>
-                                                        <div class="col-12 col-sm-12 col-lg-4">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>City</label>
-                                                                    <input type="text" class="form-control" placeholder="City" required data-validation-required-message="This field is required">
-
-
-                                                                </div>
-                                                            </div>
-
-
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                <button type="submit" class="btn btn-primary glow m-1">Submit</button>
-                                                <button type="reset" class="btn btn-outline-primary m-1">Reset</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-
-
-
-
-
-                                </div>
-
-
-
-
-                            </div>
-                        </div>
                     </div>
-                    </section>
-            </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                          <div class="card-body card-dashboard">
+
+                              <div class="table-responsive">
+                                  <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
+                                      <thead>
+                                          <tr>
+                                            <th>Timezone Id</th>
+                                            <th>Timezone Name</th>
+                                            <th>Country Code</th>
+                                            <th>IsActive</th>
+                                            <th>Action</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                           <td>7</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                           <td>8</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>India</td>
+                                            <td>IND</td>
+                                            <td>Yes</td>
+                                            <td >
+                                                <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+               
+          
+
+       
+            
+               
+                       
+             
+
+
         </div>
 
-        <!-- users edit ends -->
+        </div>
+    </section>
 
-    </div>
-    
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
@@ -673,27 +587,25 @@
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
     <script src="../../Content/app-assets/js/custom-js.js"></script>
     <!-- BEGIN Vendor JS-->
-    <!-- BEGIN: Page Vendor JS-->
-    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+    <!--  <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
     <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
-    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+    <!--<script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>-->
     <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
 
+      <!--Pooja BEGIN: Page Vendor JS-->
+      <script src="../../Content/app-assets/vendors/js/extensions/toastr.min.js"></script>
+      <!-- END: Page Vendor JS-->
 
     <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
     <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-
     <!-- END: Page Vendor JS-->
     <!-- BEGIN: Theme JS-->
     <script src="../../Content/app-assets/js/core/app-menu.js"></script>
@@ -704,16 +616,39 @@
 
     <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-
-    <!-- BEGIN: Page JS-->
-    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
-    <script src="../../Content/app-assets/js/scripts/navs/navs.js"></script>
     <!-- END: Page JS-->
+      <!--Pooja BEGIN: Page JS -->
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+    <!-- END: Page JS-->
+  
 
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
-    
+
+   
 
     <script>
+
+$(document).ready(function () {
+        $("#type-submit").on("click", function () {
+          if ($("#bankName").val() === "") {
+            toastr.remove();
+            toastr.error(
+              "Please Enter Bank Name",
+              "Form Not Submitted",
+              { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+            );
+          } else {
+            toastr.remove();
+            toastr.success(
+              "Hurray!!",
+              "Form Submitted",
+              { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+            );
+          }
+        });
+      });
+
+
+
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
@@ -722,95 +657,23 @@
                 "buttons": ["excel", "print", "copy", "pdf", "colvis"]
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
+
         });
 
-
-
-
-        $(function()
-{ 
-    var today = new Date(); 
-    var dd = today.getDate();
-    // console.log(dd);
-    $('.dob-picker').pickadate(
-    {
-        selectYears: 150,
-        today: '',
-        selectMonths: true,
-        min: new Date(1900,1,1),
-        max: new Date(((new Date()).getFullYear()), -210,dd)
-}
-    );
-});
-
-
-var date = new Date();
-date.setDate( date.getDate() - 6 );
-date.setFullYear( date.getFullYear() - 1 );
-$("#datepicker").val((date.getMonth() ) + '/' + (date.getDate()) + '/' + (date.getFullYear()));
     </script>
 
+    <!-- Code for menu active Yash 04/06/22 -->
     <script>
         window.onload = function () {
-            document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("Editemp").className = 'active';
-        }
-    </script>
-
-    
-        <script type="text/javascript">
- $(document).ready(function() {
-	
-    var readURL = function(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('.profile-pic').attr('src', e.target.result);
-            }
-    
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-   
-    $(".file-upload").on('change', function(){
-        readURL(this);
-    });
-    
-    $(".upload-button").on('click', function() {
-       $(".file-upload").click();
-    });
-});
-
-</script>
- <script type="text/javascript">
-    $(document).ready(function() {
-       
-       var readURL = function(input) {
-           if (input.files && input.files[0]) {
-               var reader = new FileReader();
-   
-               reader.onload = function (e) {
-                   $('.profile-pic1').attr('src', e.target.result);
-               }
-       
-               reader.readAsDataURL(input.files[0]);
+            document.getElementById("Master").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("Timezone").className = 'active';
            }
-       }
-      
-       $(".file-upload1").on('change', function(){
-           readURL(this);
-       });
-       
-       $(".upload-button1").on('click', function() {
-          $(".file-upload1").click();
-       });
-   });
-   </script> 
-    
 
+
+    </script>
+   
 
 </body>
-
+<!-- END: Body-->
 
 </html>
