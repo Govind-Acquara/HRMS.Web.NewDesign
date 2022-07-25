@@ -42,6 +42,10 @@
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
+     <!-- Dropdown Search CSS -->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+
+
     <style>
         
     </style>
@@ -460,7 +464,7 @@
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <label for="users-list-status" class="required">Designation</label>
                                                                 <fieldset class="form-group">
-                                                                    <select class="form-control" id="users-list-status">
+                                                                    <select class="select2 form-control">
                                                                         <option value="">Select Designation</option>
                                                                         <option value="0">HR</option>
                                                                         <option value="1">Accountant</option>
@@ -473,7 +477,7 @@
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <label for="users-list-status" class="required">Department</label>
                                                                 <fieldset class="form-group">
-                                                                    <select class="form-control" id="users-list-status">
+                                                                    <select class="select2 form-control" id="users-list-status">
                                                                         <option value="">Select Department</option>
                                                                         <option value="Active">Sales</option>
                                                                         <option value="Blocked">Accounts</option>
@@ -483,7 +487,7 @@
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <label for="users-list-status" class="required">Reporting Person Name</label>
                                                                 <fieldset class="form-group">
-                                                                    <select class="form-control" id="users-list-status">
+                                                                    <select class="select2 form-control" >
                                                                         <option value="">Select Person Name</option>
                                                                         <option value="0">Demor 1</option>
                                                                         <option value="1">Demo 2</option>
@@ -504,7 +508,7 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>Regulation Date</label>
-                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Regulation Date" data-validation-required-message="This birthdate field is required">
+                                                                        <input type="text" class="form-control " disabled required placeholder="Regulation Date" data-validation-required-message="This birthdate field is required">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -513,7 +517,7 @@
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <label for="users-list-status" class="required">Office Location</label>
                                                                 <fieldset class="form-group">
-                                                                    <select class="form-control" id="users-list-status">
+                                                                    <select class="select2 form-control" >
                                                                         <option value="">Select Office Location</option>
                                                                         <option value="Active">Gurgaon</option>
                                                                         <option value="Blocked">Mumbai</option>
@@ -535,7 +539,7 @@
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <label for="users-list-status" class="required">Employee Category</label>
                                                                 <fieldset class="form-group">
-                                                                    <select class="form-control" id="users-list-status">
+                                                                    <select class="select2 form-control" id="users-list-status">
                                                                         <option value="">Select Category</option>
                                                                         <option value="Active">Probation</option>
                                                                         <option value="Blocked">Regularisation</option>
@@ -617,7 +621,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
+                                                        <!-- <div class="row">
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
@@ -634,7 +638,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
                                                     </div>
                                                 </div>
@@ -717,6 +721,12 @@
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
     
+
+        
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+
 
     <script>
         $('#OfficeEmail').change(function () {

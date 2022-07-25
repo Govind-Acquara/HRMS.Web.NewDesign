@@ -393,7 +393,7 @@
 
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h4 class="card-basic">Week Definition</h4>
+                        <h4 class="card-basic">Calendar Year</h4>
                         <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -405,65 +405,53 @@
                     <div class="card-content collapse show">
                         <div class="card-body">
                             <form class="form-horizontal" novalidate>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                                <label>Week Starts On</label>
-                                                <select class="form-control" id="users-list-status">
-                                                    <option value="">Sunday</option>
-                                                    <option value="">Monday</option>
-                                                    <option value="">Tuesday</option>
-                                                    <option value="">Wednesday</option>
-                                                    <option value="">Thursday</option>
-                                                    <option value="">Friday</option>
-                                                    <option value="">Saturday</option>
-                                                </select>
-                                            
+                                <div>
+
+                                    <div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" checked=checked name="customRadio" id="currentYear">
+                                            <label class="custom-control-label font-weight-bold" for="currentYear">Calendar Year (January to December)</label>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label>Work Week Starts On</label>
-                                            <select class="form-control" id="users-list-status">
-                                                <option value="">Monday</option>
-                                                <option value="">Tuesday</option>
-                                                <option value="">Wednesday</option>
-                                                <option value="">Thursday</option>
-                                                <option value="">Friday</option>
-                                                <option value="">Saturday</option>
-                                                <option value="">Sunday</option>
-
-                                            </select>
                                         
                                     </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label>Work Week Ends On</label>
-                                            <select class="form-control" id="users-list-status">
-                                                <option value="">Friday</option>
-                                                <option value="">Saturday</option>
-                                                <option value="">Sunday</option>
-                                                <option value="">Monday</option>
-                                                <option value="">Tuesday</option>
-                                                <option value="">Wednesday</option>
-                                                <option value="">Thursday</option>
 
-                                            </select>
+
+                                    <div class="custom-control custom-radio pt-2">
+                                        <input type="radio" class="custom-control-input" name="customRadio" id="customYear">
+                                        <label class="custom-control-label font-weight-bold "  for="customYear">Custom Year</label>
+                                    </div>
+                                    <div class="row pt-2">
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="font-weight-bold" for="first-name-vertical">The year starts from</label>
+                                                 <input type="text"  name="datepicker" id="yearStartMonth" disabled = disabled class="form-control Monthdatepicker" required placeholder="Select Starting Month" >
+                                               </div> 
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="font-weight-bold" for="first-name-vertical">and year ends on</label>
+                                                 <input type="text"  name="datepicker" id="yearEndMonth" disabled = disabled class="form-control Monthdatepicker" required placeholder="Select Ending Month" >
+                                               </div> 
+                                        </div>
                                         
                                     </div>
-                                    </div>
+
+
+    
+
                                 </div>
 
                                 <div class="d-flex justify-content-between border-bottom my-1">
                                     <div >
-                                        <h4>Weekend Definition</h4>
+                                        <h6>* This will be Apply to all Months</h6>
 
                                     </div>
-                                    <div class=" my-auto">
-                                        <!-- <input type="checkbox" class="custom-control-input" name="customCheck" id="allMonths"> -->
+                                    <!-- <div class=" my-auto">
+                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="allMonths">
                                         <span class=" font-weight-bold" >* This will be Apply to all Months</span>
-                                    </div>
+                                    </div> -->
 
                                 </div>
 
@@ -776,46 +764,7 @@
                                       </tbody>
                                     </table>
                                 </div>
-                                <div>
-                                    <div class="mt-2">
-                                        <h4>Calendar Year</h4>
-                                        <hr>
-                                    </div>
-                                    <div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input" checked=checked name="customRadio" id="currentYear">
-                                            <label class="custom-control-label font-weight-bold" for="currentYear">Calendar Year (January to December)</label>
-                                        </div>
-                                        
-                                    </div>
 
-
-                                    <div class="custom-control custom-radio pt-2">
-                                        <input type="radio" class="custom-control-input" name="customRadio" id="customYear">
-                                        <label class="custom-control-label font-weight-bold "  for="customYear">Custom Year</label>
-                                    </div>
-                                    <div class="row pt-2">
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="font-weight-bold" for="first-name-vertical">The year starts from</label>
-                                                 <input type="text"  name="datepicker" id="yearStartMonth" disabled = disabled class="form-control Monthdatepicker" required placeholder="Select Starting Month" >
-                                               </div> 
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="font-weight-bold" for="first-name-vertical">and year ends on</label>
-                                                 <input type="text"  name="datepicker" id="yearEndMonth" disabled = disabled class="form-control Monthdatepicker" required placeholder="Select Ending Month" >
-                                               </div> 
-                                        </div>
-                                        
-                                    </div>
-
-
-    
-
-                                </div>
 
                                 <!-- <div>
                                     <div >

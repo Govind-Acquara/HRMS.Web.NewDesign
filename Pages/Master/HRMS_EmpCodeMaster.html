@@ -44,6 +44,10 @@
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
+     <!-- Dropdown Search CSS -->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+
+
 </head>
 <!-- END: Head-->
 
@@ -383,10 +387,10 @@
                             <form class="form-horizontal" novalidate>
 
                                 <div class="row">
-                                    <div class="col-12 col-sm-12 col-lg-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
                                         <label for="users-list-status">Mapping With</label>
                                         <fieldset class="form-group">
-                                            <select class="form-control" id="users-list-status">
+                                            <select class="select2 form-control" id="users-list-status">
                                                 <option value="">Select Employee Name</option>
                                                 <option value="0">Rajender</option>
                                                 <option value="1">Karan</option>
@@ -394,7 +398,7 @@
                                         </fieldset>
                                     </div>
 
-                                    <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Prefix</label>
@@ -405,7 +409,7 @@
                                    
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Date as Year/Month</label>
@@ -414,7 +418,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Starting Number/Month</label>
@@ -427,7 +431,7 @@
 
 
                                 <div class="row">
-                                    <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Suffix</label>
@@ -600,6 +604,10 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
+        <!-- Dropdown search JS -->
+        <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+        <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+    
     <script>
         $(function () {
             $("#example1").DataTable({

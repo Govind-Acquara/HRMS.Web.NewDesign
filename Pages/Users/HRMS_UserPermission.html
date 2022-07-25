@@ -44,6 +44,10 @@
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
+             <!-- Dropdown Search CSS -->
+             <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+
+
 </head>
 <!-- END: Head-->
 
@@ -392,7 +396,7 @@
                                             <div class="controls">
                                                 <label>Employee Name</label>
                                                 <fieldset class="form-group">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <select class="select2 form-control" >
                                                         <option value="">Select Employee Name</option>
                                                         <option value="Active">ABC</option>
                                                         <option value="Blocked">XYZ</option>
@@ -407,7 +411,7 @@
                                             <div class="controls">
                                                 <label>Permission</label>
                                                 <fieldset class="form-group">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <select class="select2 form-control" >
                                                         <option value="">Select Permission</option>
                                                         <option value="Active">HR Management</option>
                                                         <option value="Blocked">Employee Management</option>
@@ -420,10 +424,10 @@
 
 
                                 </div>
-                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                    <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Submit</button>
-                                    <button type="reset" class="btn btn-outline-primary mb-1 mt-0.5">Reset</button>
-                                </div>
+                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
+                                    <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
+                                    <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
+                            </div>
                             </form>
                         </div>
                     </div>
@@ -581,6 +585,12 @@
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
 
+
+        <!-- Dropdown search JS -->
+        <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+        <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+
+        
     <script>
         $(function () {
             $("#example1").DataTable({

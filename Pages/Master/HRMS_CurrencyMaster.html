@@ -40,6 +40,9 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
  
+         <!-- Dropdown Search CSS -->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+    
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
      <!-- END: Custom CSS-->
@@ -389,7 +392,7 @@
                             <form class="form-horizontal" novalidate>
                                 <div class="row">
                                     <input type="text" hidden name="text" class="form-control" placeholder="Currency Id">
-                                    <div class="col-12 col-sm-4 col-lg-3">
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Currency Name</label>
@@ -398,7 +401,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-sm-4 col-lg-3">
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Currency Symbol</label>
@@ -407,12 +410,12 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-sm-4 col-lg-3">
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Country Name</label>
                                                 <fieldset class="form-group">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <select class="select2 form-control" id="users-list-status">
                                                         <option value="">Select Country Name</option>
                                                         <option value="Active">IND</option>
                                                         <option value="Blocked">UAE</option>
@@ -607,6 +610,11 @@
     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+
+    
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
 
     <script>
         $(function () {
