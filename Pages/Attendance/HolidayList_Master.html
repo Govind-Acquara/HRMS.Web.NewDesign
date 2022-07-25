@@ -586,9 +586,90 @@
                                 </div>
                               </div>
                             <div class="col-12 col-sm-4 col-lg-4">
-                             <button type="submit" class="btn btn-primary glow  mr-1 mt-2">View</button>
+                             <button type="button" data-toggle="modal" data-target="#primary" class="btn btn-primary glow  mr-1 mt-2">View</button>
                             </div>
                            </div>
+
+                           
+                           <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-primary white">
+                                        <h4 class="modal-title" id="myModalLabel17">Holidays for Year 2021</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <table class="table  table-striped ">
+                                                <thead>
+                                                <tr>
+                                                <th>DAY</th>
+                                                <th>HOLIDAY</th>
+                                                <th>DATE (MM-DD-YYYY)</th>
+                                                <th>Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                <td><span>Tuesday</span></td>
+                                                <td><span>New Year's Day</span></td>
+                                                <td><input type="text" class="form-control bootstrapdatepicker" value="01-01-2021"/></td>
+                                                <td><button class="btn btn-primary"><i class="feather icon-plus"></i> Add</button></td>
+
+                                                </tr>
+                                                <tr>
+                                                <td><span>Monday</span></td>
+
+                                                <td><span>Makar Sankranti / Pongal</span></td>
+                                                <td><input type="text" class="form-control bootstrapdatepicker" value="01-14-2021"/></td>
+                                                </tr>
+                                                <tr>
+                                                <td><span>Saturday</span></td>
+
+                                                <td><span>Republic Day</span></td>
+                                                <td><input type="text" class="form-control bootstrapdatepicker" value="01-26-2021"/></td>
+                                                </tr>
+                                                <tr>
+                                                <td><span>Monday</span></td>
+
+                                                <td><span>Maha Shivaratri</span></td>
+                                                <td><input type="text" class="form-control bootstrapdatepicker" value="03-04-2021"/></td>
+                                                </tr>
+                                                <tr>
+                                                <td><span>Thursday</span></td>
+
+                                                <td><span>Holi</span></td>
+                                                <td><input type="text" class="form-control bootstrapdatepicker" value="03-21-2021"/></td>
+                                                </tr>
+                                                <tr>
+                                                <td><span>Friday</span></td>
+
+                                                <td><span>Good Friday</span></td>
+                                                <td><input type="text" class="form-control bootstrapdatepicker" value="04-19-2021"/></td>
+                                                </tr>
+                                                <tr>
+                                                <td><span>Wednesday</span></td>
+
+                                                <td><span>Eid-ul-Fitar</span></td>
+                                                <td><input type="text" class="form-control bootstrapdatepicker" value="06-05-2021"/></td>
+                                                </tr>
+                                                <tr>
+                                                <td><span>Thursday</span></td>
+
+                                                <td><span>Independence Day</span></td>
+                                                <td> <input type="text" class="form-control bootstrapdatepicker" value="08-15-2021"/></td>
+                                                </tr>
+
+                                                </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                            </form>
                     </div>
                 </div>
@@ -853,12 +934,7 @@ $('#test2').pickadate({
         document.getElementById(".currentYear").value = thisYear;
     
     });
-    $(".currentYear").datepicker( {
-        format: "yyyy",
-        viewMode: "years", 
-        minViewMode: "years",
-        autoclose:true //to close picker once year is selected
-    }); 
+    $(".bootstrapdatepicker").datepicker(); 
     </script>
 
 </body>
