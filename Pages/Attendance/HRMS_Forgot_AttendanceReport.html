@@ -247,32 +247,38 @@
                 <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
                 <ul class="menu-content">
                     <li>
-                        <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                        <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Designation Master</span></a>
                     </li>
                     <li>
-                        <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
+                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
                     </li>
-                    <li>
-                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Deparment Master</span></a>
-                    </li>
-                    <li>
-                        <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
-                    </li>
+                   
                     <li>
                         <a href="../Master/HRMS_DocumentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Document Master</span></a>
                     </li>
                     <li>
                         <a href="../Master/HRMS_EmployeeTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
                     </li>
+                    
                     <li>
-                        <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
+                        <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                    </li>
+
+                    <li>
+                        <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
                     </li>
                     <li>
                         <a href="../Master/TimezoneMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Timezone Master</span></a>
                     </li>
+                   
+                    <li>
+                        <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
+                    </li>
+                   
                     <li>
                         <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
                     </li>
+
                 </ul>
             </li>
             <li class=" nav-item">
@@ -294,7 +300,7 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item">
+            <li class=" nav-item" id="attendance">
                 <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
                     <li>
@@ -310,7 +316,7 @@
                     <li>
                         <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                     </li>
-                    <li>
+                    <li id="forget_attendance">
                         <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                     </li>
                     <li>
@@ -327,7 +333,7 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item" id="leave">
+            <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                 <ul class="menu-content">
                     
@@ -343,7 +349,7 @@
                      <li>
                         <a href="../Leave/HRMS_LeaveBalanceMonth.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Balance</span></a>
                      </li>
-                     <li id="leave_view">
+                     <li>
                          <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Leave </span></a>
                          
                       </li>
@@ -356,10 +362,10 @@
                 </ul>
                 
             </li>
-            <li class=" nav-item" id="shift">
+            <li class=" nav-item">
                 <a href="#"><i class="feather icon-clock"></i><span class="menu-title" data-i18n="User">Shift</span></a>
                 <ul class="menu-content">
-                    <li id="addShiftPage">
+                    <li>
                         <a href="../Shift/AddShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Add Shift</span></a>
                     </li>
                     <li>
@@ -818,13 +824,10 @@
 
     <script>
         window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_view").className = 'active';
+            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("forget_attendance").className = 'active';
         }
-
-      
     </script>
-
 </body>
 <!-- END: Body-->
 
