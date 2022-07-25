@@ -689,11 +689,35 @@
                                                                     </select>
                                                                 </fieldset>
                                                             </div>
-                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                            <div class="col-12 col-sm-12 col-lg-5">
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>Probation End Date</label>
-                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Probation End Date" data-validation-required-message="This birthdate field is required">
+                                                                     <div class="d-flex gap-1rem">
+                                                                        <input type="text" class="form-control w-75 birthdate-picker" required placeholder="Probation End Date" data-validation-required-message="This birthdate field is required">
+                                                                        <button type="button" class="btn w-25 btn-sm btn-primary p-1" data-toggle="modal" data-target="#default">Extend</button>
+
+                                                                    </div>
+                                                                         <!-- Modal -->
+                                                                         <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                                                                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h4 class="modal-title" id="myModalLabel1">Basic Modal</h4>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">&times;</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <label>Update Probation Date:</label>
+                                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Probation End Date">
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Accept</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
