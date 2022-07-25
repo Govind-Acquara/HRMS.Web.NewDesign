@@ -42,9 +42,10 @@
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
-    <style>
-        
-    </style>
+
+        <!-- link for year date picker -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
 
 </head>
 <!-- END: Head-->
@@ -545,7 +546,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Year of Passing</label>
-                                                                    <input type="text" id="datepicker" class="form-control" placeholder="Year Of Passing " required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="yearPicker form-control" placeholder="Year Of Passing " required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
 
@@ -719,7 +720,22 @@
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
     
 
+    <!-- js liink for year date picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
     <script>
+
+
+$(".yearPicker").datepicker( {
+    format: "yyyy",
+    viewMode: "years", 
+    minViewMode: "years",
+    autoclose:true //to close picker once year is selected
+}); 
+
+
+
+
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
