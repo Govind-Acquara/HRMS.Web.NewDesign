@@ -384,7 +384,7 @@
                                     
                                     <div class="card-body">
                                         
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-4 col-sm-6 col-12 fonticon-container">
                                                 <div class="fonticon-wrap cursor-pointer">
                                                     <i class="fa fa-check-square-o"></i>
@@ -401,23 +401,221 @@
                                               <a href="#"><label class="cursor-pointer fonticon-classname mt-1">Activity Report</label></a>
                                             </div>
                                             
-                                        </div>
+                                        </div> -->
                                        
+
+                                        <div class="row">
+                                           
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card border-info text-center bg-transparent">
+                                                    <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="col-12 col-sm-6 col-lg-12 ">
+                                                            <div class="avatar-content">
+                                                                <i class="fa fa-calendar-check-o  fa-3x  text-info "></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-lg-12">
+                                                            <h4 class="card-title mt-1">Attendance  Report</h4>
+                                                            <p class="card-text mb-25">Get attendance Report of all Employee</p>
+                                                            <button class="btn bg-gradient-info mt-1"><a href="../Attendance/AttendanceReport.html" class="text-white" >Click Me</a></button>
+                                                        </div>
+                                                     </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card border-success text-center bg-transparent">
+                                                    <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="col-12 col-sm-6 col-lg-12 ">
+                                                            <div class="avatar-content">
+                                                                <i class="feather icon-activity fa-3x  text-success "></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-lg-12">
+                                                            <h4 class="card-title mt-1">Activity Report</h4>
+                                                            <p class="card-text mb-25">Get Activity Report of all Employee</p>
+                                                            <button class="btn bg-gradient-success mt-1"><a href="../Attendance/AttendanceReport.html" class="text-white" >Click Me</a></button>
+                                                        </div>
+                                                     </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card border-success text-center bg-transparent">
+                                                    <div class="card-content d-flex justify-content-between">
+                                                        <div class="pb-50 p-50 m-0 mb-1">
+                                                            <div class="avatar-content">
+                                                                <i class="feather icon-activity fa-3x  text-success"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mt-3">Activity Report</h4>
+                                                            <p class="card-text mb-25">Get Activity Report of all Employee</p>
+                                                            <button class="btn bg-gradient-success  mt-1"><a href="../Attendance/AttendanceReport.html" class="text-white" >Click Me</a></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="card border-warning text-center bg-transparent">
+                                                    <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="col-12 col-sm-6 col-lg-12 ">
+                                                            <div class="avatar-content">
+                                                                <i class=" fa fa-amazon fa-3x  text-warning "></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-lg-12">
+                                                            <h4 class="card-title mt-1">Dummy Report</h4>
+                                                            <p class="card-text mb-25">Get Dummy Report of all Employee</p>
+                                                            <button class="btn bg-gradient-warning mt-1"><a href="../Attendance/AttendanceReport.html" class="text-white" >Click Me</a></button>
+                                                        </div>
+                                                     </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                            
+                                        </div>
+
                                         
-                                     <div class="row">
-                                     <div class="col-md-12 col-sm-12 col-12">
-                                      <button type="button" class="btn  w-50 bg-gradient-warning">
-                                         Activity Report
-                                         <i class="feather icon-activity "></i>
-                                      </button>
-                                     </div>
-                                     </div>
 
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                 
+                        <div class="col-xl-12 col-md-8 col-sm-6">
+                           <div class="card">
+                               <div class="card-content">
+                                   <div class="card-body ">
+                                     
+                                       <h4 class="card-title bg-gradient-primary p-1 text-white rounded-lg">Employee Attendance List:</h4>
+                                       <div class="row pt-1 pb-1">
+                                           <div class="col-12 col-sm-4 col-lg-4">
+                                               <label class="" for="shiftDate">Select Date</label>
+                                               <input type="text" class="form-control" id="LeaveDate" placeholder="Enter Leave Starting and Ending Date">
+                                           </div>
+                                          
+                                           <div class="col-12 col-sm-4 col-lg-3">
+                                               <button type="search" class="btn btn-primary glow mt-2"><i class="feather icon-search"></i> Search</button>
+                                              </div>
+                                          
+                                       </div> 
+                                       <div class="table-responsive mt-1 overflow-auto table" style="height: 300px;">
+                                           <table class="table mb-0">
+                                               <thead style="position: sticky;top: 0">
+                                                   <tr>
+                                                       <th>Sr.No.</th>
+                                                       <th>Employee Name</th>
+                                                       <th>Department</th>
+                                                       <th>Location</th>
+                                                       <th>Log-In</th>
+                                                       <th>Log-out</th>
+                                                   </tr>
+                                               </thead>
+                                               <tbody>
+                                                   <tr>
+                                                       <td>1</td>
+                                                       <td> <div class="d-flex justify-content-start align-items-center">
+                                                           <div class="avatar mr-50">
+                                                               <img src="../../Content/app-assets/images/portrait/small/avatar-s-8.jpg" alt="avtar img holder" height="35" width="35">
+                                                           </div>
+                                                           <div class="user-page-info">
+                                                               <h6 class="mb-0">Pooja Jain</h6>
+                                                               <h6 class="mb-0">Emp-101</h6>
+                                                           </div>
+                                                       </div></td>
+                                                       <td>IT</td>
+                                                       <td>Gurgaon</td>
+                                                       <td>10:00</td>
+                                                       <td>7:30</td>
+                                                   </tr>
+       
+                                                   <tr>
+                                                       <td>2</td>
+                                                       <td> <div class="d-flex justify-content-start align-items-center">
+                                                           <div class="avatar mr-50">
+                                                               <img src="../../Content/app-assets/images/portrait/small/avatar-s-9.jpg" alt="avtar img holder" height="35" width="35">
+                                                           </div>
+                                                           <div class="user-page-info">
+                                                               <h6 class="mb-0">Yash Sharma</h6>
+                                                               <h6 class="mb-0">Emp-102</h6>
+                                                           </div>
+                                                       </div></td>
+                                                       <td>IT</td>
+                                                       <td>Gurgaon</td>
+                                                       <td>10:05</td>
+                                                       <td>7:35</td>
+                                                   </tr>
+       
+                                                   <tr>
+                                                       <td>3</td>
+                                                       <td> <div class="d-flex justify-content-start align-items-center">
+                                                           <div class="avatar mr-50">
+                                                               <img src="../../Content/app-assets/images/portrait/small/avatar-s-13.jpg" alt="avtar img holder" height="35" width="35">
+                                                           </div>
+                                                           <div class="user-page-info">
+                                                               <h6 class="mb-0">Rohit Sharma</h6>
+                                                               <h6 class="mb-0">Emp-103</h6>
+                                                           </div>
+                                                       </div></td>
+                                                       <td>IT</td>
+                                                       <td>Gurgaon</td>
+                                                       <td>10:10</td>
+                                                       <td>7:37</td>
+                                                   </tr>
+       
+                                                   <tr>
+                                                       <td>4</td>
+                                                       <td> <div class="d-flex justify-content-start align-items-center">
+                                                           <div class="avatar mr-50">
+                                                               <img src="../../Content/app-assets/images/portrait/small/avatar-s-15.jpg" alt="avtar img holder" height="35" width="35">
+                                                           </div>
+                                                           <div class="user-page-info">
+                                                               <h6 class="mb-0">Manisha</h6>
+                                                               <h6 class="mb-0">Emp-104</h6>
+                                                           </div>
+                                                       </div></td>
+                                                       <td>Marketing</td>
+                                                       <td>Gurgaon</td>
+                                                       <td>10:15</td>
+                                                       <td>7:30</td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td>5</td>
+                                                       <td> <div class="d-flex justify-content-start align-items-center">
+                                                           <div class="avatar mr-50">
+                                                               <img src="../../Content/app-assets/images/portrait/small/avatar-s-11.jpg" alt="avtar img holder" height="35" width="35">
+                                                           </div>
+                                                           <div class="user-page-info">
+                                                               <h6 class="mb-0">Arpit Sharma</h6>
+                                                               <h6 class="mb-0">Emp-105</h6>
+                                                           </div>
+                                                       </div></td>
+                                                       <td>IT</td>
+                                                       <td>Gurgaon</td>
+                                                       <td>10:07</td>
+                                                       <td>7:40</td>
+                                                   </tr>
+                                               </tbody>
+                                           </table>
+                                       </div>
+                                      
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+       
+                 </div>
                 </section>
             </div>
 

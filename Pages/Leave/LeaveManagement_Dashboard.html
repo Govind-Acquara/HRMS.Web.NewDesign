@@ -17,6 +17,9 @@
     
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
     <!-- END: Vendor CSS-->
+    <!-- range picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
@@ -39,8 +42,7 @@
 
 
     <style>
-
-
+ 
     </style>
 </head>
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
@@ -414,7 +416,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="small-box-footer border-top" href="#">More info <i class="fa fa-arrow-circle-right"></i></a> 
+                                <a class="small-box-footer border-top" href="../Leave/HRMS_Leave_View.html">More info <i class="fa fa-arrow-circle-right"></i></a> 
                             </div>
                         </div>
 
@@ -431,7 +433,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="small-box-footer border-top" href="#">More info <i class="fa fa-arrow-circle-right"></i></a> 
+                                <a class="small-box-footer border-top" href="../Leave/HRMS_Leave_View.html">More info <i class="fa fa-arrow-circle-right"></i></a> 
                             </div>
                         </div>
 
@@ -448,7 +450,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="small-box-footer border-top" href="#">More info <i class="fa fa-arrow-circle-right"></i></a> 
+                                <a class="small-box-footer border-top" href="../Leave/HRMS_Leave_View.html">More info <i class="fa fa-arrow-circle-right"></i></a> 
                             </div>
                         </div>
                       
@@ -456,20 +458,17 @@
   
                     <hr class="mt-0">
 
-                   <div class="row">
+                   <!-- <div class="row">
                     <div class="col-xl-12 col-md-12 col-sm-6">
                         <div class="card mb-1">
                             <div class="card-content">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-3 col-sm-3 col-6">
-                                             <label style="font-weight: bold;"> From Date</label>
-                                             <input type="text" class="form-control birthdate-picker">
+                                            <label class="" for="shiftDate">Select Leave Date</label>
+                                            <input type="text" class="form-control" id="LeaveDate" placeholder="Enter Leave Starting and Ending Date">
                                         </div>
-                                        <div class="col-lg-3 col-sm-3 col-6">
-                                            <label style="font-weight: bold;"> To Date</label>
-                                            <input type="text" class="form-control birthdate-picker">
-                                        </div>
+                                       
                                         <div class="col-12 col-sm-12 col-lg-4">
                                             <button type="search" class="btn btn-primary glow mt-2"><i class="feather icon-search"></i> Search</button>
                                            </div>
@@ -479,121 +478,109 @@
                             </div>
                         </div>
                     </div>
-                   </div>
+                   </div> -->
             
                   <div class="row">
                  
-                  <div class="col-xl-4 col-md-4 col-sm-6">
+                 <div class="col-xl-4 col-md-4 col-sm-6">
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title bg-gradient-success p-1 text-white rounded-lg">Today Leaves :</h4>
-                                <div class="row d-flex justify-content-around">
-                                 <h5>Employee Name</h5>
-                                 <h5>Type</h5>
-                               </div>
-                                <div class="card-body suggested-block overflow-auto" style="height: 300px;">
-                                    
-                                    <div class="d-flex justify-content-between border-bottom align-items-center mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Pooja Jain</h6>
-                                            <h6 class="mb-0">Emp-101</h6>
-                                        </div>
-                                        <span class="font-small-5">Casual Leave</span>
+                                <h4 class="card-title bg-gradient-success p-1 text-white rounded-lg">Approved Today Leaves :</h4>
+                                <div class="table-responsive mt-1" style="height: 478px;">
+                                    <table class="table mb-0">
+                                        <thead style="position: sticky;top: 0">
+                                            <tr>
+                                                <th>Sr.No.</th>
+                                                <th>Employee Name</th>
+                                                <th>Leave Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                               <td><div class="user-page-info">
+                                                <h6 class="mb-0">Pooja Jain</h6>
+                                                <h6 class="mb-0">Emp-101</h6></div>
+                                               </td>
+                                                <td>Casual Leave</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                               <td><div class="user-page-info">
+                                                <h6 class="mb-0">Yash Sharma</h6>
+                                                <h6 class="mb-0">Emp-102</h6>
+                                               </td>
+                                                <td>Sick Leave</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                               <td><div class="user-page-info">
+                                                <h6 class="mb-0">Arpit Sharma</h6>
+                                                <h6 class="mb-0">Emp-103</h6>
+                                               </td>
+                                                <td>Half Day</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                               <td><div class="user-page-info">
+                                                <h6 class="mb-0">Rohit Sharma</h6>
+                                                <h6 class="mb-0">Emp-104</h6>
+                                               </td>
+                                                <td>Casual Leave</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                               <td><div class="user-page-info">
+                                                <h6 class="mb-0">Geeta Pathak</h6>
+                                                <h6 class="mb-0">Emp-105</h6>
+                                               </td>
+                                                <td>Casual Leave</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                               <td><div class="user-page-info">
+                                                <h6 class="mb-0">Govind Sharma</h6>
+                                               <h6 class="mb-0">Emp-106</h6>
+                                               </td>
+                                                <td>Casual Leave</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                               <td><div class="user-page-info">
+                                                <h6 class="mb-0">Nidhi Agrawal</h6>
+                                                <h6 class="mb-0">Emp-107</h6></div>
+                                               </td>
+                                                <td>Casual Leave</td>
+                                            </tr>
+                                            
+                                       </tbody>
+                                       </table>
                                     </div>
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Yash Sharma</h6>
-                                            <h6 class="mb-0">Emp-102</h6>
-                                        </div>
-                                        <span class="font-small-5">Sick Leave</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between border-bottom  align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Arpit Sharma</h6>
-                                            <h6 class="mb-0">Emp-103</h6>
-                                        </div>
-                                        <span class="font-small-5">Half Day Leave</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Govind Sharma</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Geeta Pathak</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Rohit Sharma</h6>
-                                            <h6 class="mb-0">Emp-105</h6>
-                                        </div>
-                                        <span class="font-small-5">Sick Leave</span>
-                                    </div>
-
-                                    
-                                    <div class="d-flex justify-content-between border-bottom  align-items-center mb-1">
-                                        <div class="user-page-info ">
-                                            <h6 class="mb-0">Pooja Jain</h6>
-                                            <h6 class="mb-0">Emp-101</h6>
-                                        </div>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Yash Sharma</h6>
-                                            <h6 class="mb-0">Emp-102</h6>
-                                        </div>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-                                   
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Govind Sharma</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Geeta Pathak</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Rohit Sharma</h6>
-                                            <h6 class="mb-0">Emp-105</h6>
-                                        </div>
-                                        <span class="font-small-5">Sick Leave</span>
-                                    </div>
-                                    
-
-                                </div>
-                          </div>
-                        </div>
+                            </div>
+                         </div>
                     </div>
                  </div>
-
                  <div class="col-xl-8 col-md-7 col-sm-6">
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body ">
-                                <h4 class="card-title bg-gradient-info p-1 text-white rounded-lg">Upcoming Leaves :</h4>
-                                <div class="table-responsive mt-1 overflow-auto" style="height: 317px;">
-                                    <table class="table table-hover-animation mb-0">
-                                        <thead>
+                              
+                                <h4 class="card-title bg-gradient-info p-1 text-white rounded-lg">Approved Upcoming Leaves :</h4>
+                                <div class="row pt-1 pb-1">
+                                    <div class="col-6 col-sm-4 col-lg-9">
+                                        <label class="" for="shiftDate">Select Leave Date</label>
+                                        <input type="text" class="form-control" id="LeaveDate" placeholder="Enter Leave Starting and Ending Date">
+                                    </div>
+                                   
+                                    <div class="col-12 col-sm-4 col-lg-3">
+                                        <button type="search" class="btn btn-primary glow mt-2"><i class="feather icon-search"></i> Search</button>
+                                       </div>
+                                   
+                                </div> 
+                                <div class="table-responsive mt-1 overflow-auto table" style="height: 370px;">
+                                    <table class="table mb-0">
+                                        <thead style="position: sticky;top: 0">
                                             <tr>
                                                 <th>Sr.No.</th>
                                                 <th>Employee Name</th>
@@ -684,106 +671,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                 <!-- <div class="card-body suggested-block overflow-auto" style="height: 300px;">
-                                    
-                                    <div class="d-flex justify-content-between border-bottom align-items-center mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Pooja Jain</h6>
-                                            <h6 class="mb-0">Emp-101</h6>
-                                        </div>
-                                        <span class="font-small-5">20-07-2022 To 25-07-2022</span>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Yash Sharma</h6>
-                                            <h6 class="mb-0">Emp-102</h6>
-                                        </div>
-                                        <span class="font-small-5">21-07-2022 To 26-07-2022</span>
-                                        <span class="font-small-5">Sick Leave</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between border-bottom  align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Arpit Sharma</h6>
-                                            <h6 class="mb-0">Emp-103</h6>
-                                        </div>
-                                        <span class="font-small-5">23-07-2022 To 23-07-2022</span>
-                                        <span class="font-small-5">Half Day Leave</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Govind Sharma</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">22-07-2022 To 25-07-2022</span>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Geeta Pathak</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">20-07-2022  To  25-07-2022</span>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Rohit Sharma</h6>
-                                            <h6 class="mb-0">Emp-105</h6>
-                                        </div>
-                                        <span class="font-small-5">27-07-2022  To  01-08-2022</span>
-                                        <span class="font-small-5">Sick Leave</span>
-                                    </div>
-
-                                    
-                                    <div class="d-flex justify-content-between border-bottom  align-items-center mb-1">
-                                        <div class="user-page-info ">
-                                            <h6 class="mb-0">Pooja Jain</h6>
-                                            <h6 class="mb-0">Emp-101</h6>
-                                        </div>
-                                        <span class="font-small-5">20-07-2022 To 25-07-2022</span>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Yash Sharma</h6>
-                                            <h6 class="mb-0">Emp-102</h6>
-                                        </div>
-                                        <span class="font-small-5">21-07-2022 To 26-07-2022</span>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-                                   
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Govind Sharma</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">22-07-2022 To 25-07-2022</span>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Geeta Pathak</h6>
-                                            <h6 class="mb-0">Emp-104</h6>
-                                        </div>
-                                        <span class="font-small-5">20-07-2022  To  25-07-2022</span>
-                                        <span class="font-small-5">Casual Leave</span>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between border-bottom align-items-center  mb-1">
-                                        <div class="user-page-info">
-                                            <h6 class="mb-0">Rohit Sharma</h6>
-                                            <h6 class="mb-0">Emp-105</h6>
-                                        </div>
-                                        <span class="font-small-5">27-07-2022  To  01-08-2022</span>
-                                        <span class="font-small-5">Sick Leave</span>
-                                    </div>
-                                    
-
-                                </div> -->
+                               
                           </div>
                         </div>
                     </div>
@@ -854,8 +742,14 @@
    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
     
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <!-- <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script> -->
+
+
+    <!-- range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
     <script>
 
 window.onload = function () {
@@ -919,6 +813,29 @@ window.onload = function () {
       }
     });
     </script>
+
+
+<!-- dateRangepicker -->
+<script>
+    $(function() {
+
+$('#LeaveDate').daterangepicker({
+    autoUpdateInput: false,
+    locale: {
+        cancelLabel: 'Clear'
+    }
+});
+
+$('#LeaveDate').on('apply.daterangepicker', function(ev, picker) {
+    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+});
+
+$('#LeaveDate').on('cancel.daterangepicker', function(ev, picker) {
+    $(this).val('');
+});
+
+});
+</script>
 </body>
 <!-- END: Body-->
 </html>
