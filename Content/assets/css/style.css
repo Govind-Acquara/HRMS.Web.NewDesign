@@ -574,6 +574,15 @@ i.fa.fa-times.close-icon {
     gap: 1rem;
    }
 
+   .p-5rem{
+    padding: 0.5rem !important;
+   }
+
+
+   .theadgradient{
+    background-color: #334363;
+
+   }
 
    /* Table Search CSS */
 
