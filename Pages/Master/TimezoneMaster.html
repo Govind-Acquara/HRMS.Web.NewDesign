@@ -318,15 +318,14 @@
                     <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
                     <ul class="menu-content">
                         <li>
-                            <a href="../Company/HRMS_CompanyDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
-                        </li>
-                        <li>
                             <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
                         </li>
                         <li>
-                            <a href="../Company/HRMS_Branch_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Branch Master</span></a>
+                            <a href="../Company/HRMS_CompanyDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
                         </li>
-                      
+                        <li>
+                            <a href="../Company/HRMS_Branch_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">New Branch</span></a>
+                        </li>
                         <li>
                             <a href="../Company/HRMS_BranchDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Branch List</span></a>
                         </li>
@@ -397,14 +396,14 @@
                         <div class="card-body pt-0 pb-0">
                             <form class="form-horizontal" novalidate>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-12 col-lg-4">
+                                    <!-- <div class="col-md-4 col-sm-12 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Timezone Id</label>
                                                 <input type="text"  class="form-control"  placeholder="Timezone Id">
                                            </div>
                                     </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md-4 col-sm-12 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
@@ -419,7 +418,7 @@
                                             <div class="controls">
                                                 <label for="users-list-status">Country Name</label>
                                                 <fieldset class="form-group">
-                                                    <select class="form-control" id="users-list-status">
+                                                    <select class="select2 form-control" id="users-list-status">
                                                         <option value="">Select Country Name</option>
                                                         <option value="Active">IND</option>
                                                         <option value="Blocked">UAE</option>
@@ -462,7 +461,7 @@
                                             <td>IND</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                <input type="checkbox" class="custom-control-input" checked id="customSwitch1">
                                                 
                                                 <label class="custom-control-label" for="customSwitch1">
                                                 
@@ -504,7 +503,7 @@
                                             <td>UK</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                <input type="checkbox" class="custom-control-input" checked id="customSwitch3">
                                                 
                                                 <label class="custom-control-label" for="customSwitch3">
                                                 
@@ -595,6 +594,9 @@
     <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
     <!-- END: Page JS-->
   
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
 
 
    
