@@ -468,8 +468,9 @@
             <div class="content-body">
                 <!-- <button type="button" class="btn btn-outline-success mr-1 mb-1" id="type-success">Success</button> -->
 
-                <div class="my-2 dt-buttons btn-group">
-                    <button class="sidebar-toggle btn btn-primary ml-0 mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Holiday</button>
+                <div class="my-2 d-flex gap-1rem">
+                    <button class="sidebar-toggle w-auto btn btn-primary  waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Holiday</button>
+                    <button data-toggle="modal" data-target="#primary" class="btn btn-primary w-auto">View Previous Year Holidays</button>
                 </div>
                 <div class="sidebar-content">
 
@@ -566,114 +567,132 @@
 
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                 <h5 class="card-basic">Yearly Holidays:</h5>
-                 <div class="heading-elements">
-                   <ul class="list-inline mb-0">
-                     <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                   </ul>
-                 </div>
-                </div>  
-                <div class="card-content collapse show">
-                    <div class="card-body">
-                        <form class="form-horizontal" novalidate>
-                          <div class="row">
-                             <div class="col-12 col-sm-8 col-lg-4">
-                                <div class="form-group">
-                                    <label>Select Year</label>
-                                    <input type="text"  name="datepicker" class="form-control" id="currentYear" required placeholder="Year" data-validation-required-message="This birthdate field is required" >
-                                </div>
+
+            <div class="modal fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg width-90-per" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                            <h5 class="modal-title" id="exampleModalScrollableTitle">Previous Year Holidays</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row border-bottom">
+                                <div class="col-12 col-sm-8 col-lg-4">
+                                   <div class="form-group">
+                                       <label>Select Year</label>
+                                       <input type="text"  name="datepicker" class="form-control" id="currentYear" required placeholder="Year" data-validation-required-message="This birthdate field is required" >
+                                   </div>
+                                 </div>
+                               <div class="col-12 col-sm-4 col-lg-4">
+                                <button type="button"  class="btn btn-primary glow  mr-1 mt-2">View</button>
+                               </div>
                               </div>
-                            <div class="col-12 col-sm-4 col-lg-4">
-                             <button type="button" data-toggle="modal" data-target="#primary" class="btn btn-primary glow  mr-1 mt-2">View</button>
-                            </div>
-                           </div>
+                            <div class="mt-1 ">
+                                <table class="table table-striped ">
+                                    <thead class="theadgradient text-white" >
+                                    <tr>
+                                    <th>DAY</th>
+                                    <th>HOLIDAY</th>
+                                    <th>DATE (MM-DD-YYYY)</th>
+                                    <th>Update Date</th>
+                                    <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                    <td class="p-5rem">Tuesday</td>
+                                    <td class="p-5rem">New Year's Day</td>
+                                    <td class="p-5rem">01-01-2021</td>
+                                    <td class="p-5rem"><input type="text" class="form-control bootstrapdatepicker" placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                           
-                           <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header bg-primary white">
-                                        <h4 class="modal-title" id="myModalLabel17">Holidays for Year 2021</h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div>
-                                            <table class="table  table-striped ">
-                                                <thead>
-                                                <tr>
-                                                <th>DAY</th>
-                                                <th>HOLIDAY</th>
-                                                <th>DATE (MM-DD-YYYY)</th>
-                                                <th>Action</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                <td><span>Tuesday</span></td>
-                                                <td><span>New Year's Day</span></td>
-                                                <td><input type="text" class="form-control bootstrapdatepicker" value="01-01-2021"/></td>
-                                                <td><button class="btn btn-primary p-1"><i class="feather icon-plus"></i> Add</button></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="p-5rem"><span>Monday</span></td>
+                                    <td class="p-5rem"><span>Makar Sankranti / Pongal</span></td>
+                                    <td class="p-5rem">01-14-2021</td>
+                                    <td class="p-5rem"><input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                </tr>
-                                                <tr>
-                                                <td><span>Monday</span></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="p-5rem"><span>Saturday</span></td>
+                                    <td class="p-5rem"><span>Republic Day</span></td>
+                                    <td class="p-5rem">01-26-2021</td>
+                                    <td class="p-5rem"><input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                <td><span>Makar Sankranti / Pongal</span></td>
-                                                <td><input type="text" class="form-control bootstrapdatepicker" value="01-14-2021"/></td>
-                                                </tr>
-                                                <tr>
-                                                <td><span>Saturday</span></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="p-5rem"><span>Monday</span></td>
+                                    <td class="p-5rem"><span>Maha Shivaratri</span></td>
+                                    <td class="p-5rem">03-04-2021</td>
+                                    <td class="p-5rem"><input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                <td><span>Republic Day</span></td>
-                                                <td><input type="text" class="form-control bootstrapdatepicker" value="01-26-2021"/></td>
-                                                </tr>
-                                                <tr>
-                                                <td><span>Monday</span></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="p-5rem"><span>Thursday</span></td>
+                                    <td class="p-5rem"><span>Holi</span></td>
+                                    <td class="p-5rem">03-21-2021</td>
+                                    <td class="p-5rem"><input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                <td><span>Maha Shivaratri</span></td>
-                                                <td><input type="text" class="form-control bootstrapdatepicker" value="03-04-2021"/></td>
-                                                </tr>
-                                                <tr>
-                                                <td><span>Thursday</span></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="p-5rem"><span>Friday</span></td>
+                                    <td class="p-5rem"><span>Good Friday</span></td>
+                                    <td class="p-5rem">04-19-2021</td>
+                                    <td class="p-5rem"><input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                <td><span>Holi</span></td>
-                                                <td><input type="text" class="form-control bootstrapdatepicker" value="03-21-2021"/></td>
-                                                </tr>
-                                                <tr>
-                                                <td><span>Friday</span></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="p-5rem"><span>Wednesday</span></td>
+                                    <td class="p-5rem"><span>Eid-ul-Fitar</span></td>
+                                    <td class="p-5rem">06-05-2021</td>
+                                    <td class="p-5rem"><input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                <td><span>Good Friday</span></td>
-                                                <td><input type="text" class="form-control bootstrapdatepicker" value="04-19-2021"/></td>
-                                                </tr>
-                                                <tr>
-                                                <td><span>Wednesday</span></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="p-5rem"><span>Thursday</span></td>
+                                    <td class="p-5rem"><span>Independence Day</span></td>
+                                    <td class="p-5rem">08-15-2021</td>
+                                    <td class="p-5rem"> <input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                <td><span>Eid-ul-Fitar</span></td>
-                                                <td><input type="text" class="form-control bootstrapdatepicker" value="06-05-2021"/></td>
-                                                </tr>
-                                                <tr>
-                                                <td><span>Thursday</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-5rem"><span>Wednesday</span></td>
+                                        <td class="p-5rem"><span>Mahatma Gandhi Jayanti</span></td>
+                                        <td class="p-5rem">10-02-2021</td>
+                                        <td class="p-5rem"> <input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                        <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
+    
+                                        </tr>
+                                <tr>
+                                    <td class="p-5rem"><span>Wednesday</span></td>
+                                    <td class="p-5rem"><span>Christmas</span></td>
+                                    <td class="p-5rem">12-25-2021</td>
+                                    <td class="p-5rem"> <input type="text" class="form-control bootstrapdatepicker"  placeholder="Select Holiday"/></td>
+                                    <td class="p-5rem"><button class="btn btn-primary p-5rem"><i class="feather icon-plus"></i> Add</button></td>
 
-                                                <td><span>Independence Day</span></td>
-                                                <td> <input type="text" class="form-control bootstrapdatepicker" value="08-15-2021"/></td>
-                                                </tr>
+                                    </tr>
 
-                                                </tbody>
-                                                </table>
-                                        </div>
-                                    </div>
 
-                                </div>
+
+                                    </tbody>
+                                    </table>
                             </div>
                         </div>
-                           </form>
+
                     </div>
                 </div>
-           </div>
+            </div>
 
                     <div class="card">
                         <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
@@ -682,7 +701,7 @@
                                 <div class="table-responsive">
                                     <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
                                         <thead>
-                                            <tr>
+                                            <tr  class=" text-white" style="background-color: #384D59;">
                                                   <th>Sr. No.</th>
                                                   <th>Holiday Date</th>
                                                   <th>Holiday Name</th>
