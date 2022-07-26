@@ -45,6 +45,11 @@
      <!-- Dropdown Search CSS -->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
 
+           <!-- link for date picker -->
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
+
+
     <style>
         
     </style>
@@ -507,7 +512,7 @@
 
                                               <div class="col-lg-6">
                                                 <div class="row">
-                                                    <div class="col-lg-2">
+                                                    <div class="col-lg-3">
                                                         <label for="SignatureImage">
                                                             <div class=" my-25 border rounded">
                                                                 <img src="../../Content/app-assets/images/portrait/small/avatar-s-28.png" class="users-avatar-shadow rounded" height="80" width="120">
@@ -693,15 +698,14 @@
                                                                         <label>Probation End Date</label>
                                                                      <div class="d-flex gap-1rem">
                                                                         <input type="text" class="form-control w-75 birthdate-picker" required placeholder="Probation End Date" data-validation-required-message="This birthdate field is required">
-                                                                        <button type="button" class="btn w-25 btn-sm btn-primary p-1  cursor-pointer" data-toggle="modal" data-target="#primary">Extend</button>
-
+                                                                        <button type="button" class="btn w-25 btn-sm btn-primary p-1" data-toggle="modal" data-target="#primary">Extend</button>
                                                                     </div>
                                                               <!-- Modal Call on modify -->
                                                              <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
                                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable " role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header bg-primary white">
-                                                                        <h4 class="modal-title" id="myModalLabel17">Update Probation Date:</h4>
+                                                                        <h4 class="modal-title" id="myModalLabel17">Update Probation Date</h4>
                                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -711,8 +715,8 @@
                                                                         <div class="row">
                                                                             <div class="col-lg-12">
                                                                                 <div class="form-group">
-                                                                                    <label>Update Probation Date</label>
-                                                                                    <input type="date"  class="form-control w-100" required >
+                                                                                    <label>Select Probation Extended Date</label>
+                                                                                    <input type="text"  class="form-control w-100 bootstrapdatepicker" placeholder="Select Probation Extended Date" required >
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -883,7 +887,18 @@
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
 
+
+         <!-- js link for date picker -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
     <script>
+
+$(".bootstrapdatepicker").datepicker(); 
+
+
+
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
