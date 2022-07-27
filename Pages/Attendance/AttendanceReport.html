@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    
 
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
@@ -39,6 +40,8 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
 
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -378,18 +381,122 @@
             </div>
             <div class="content-body">
                 <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Attendance Report</h4>
+                    <div class="card-header pb-1">
+                        <h5 class="card-basic">Attendance Report</h5>
+                      
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
-                                
-                                <li><a href="../Attendance/Report.html" style="color:#3b3d55;"><i class="fa fa-reply"></i>&nbsp;&nbsp;Back</a></li>
-                                <li><a data-action="expand"><i class="feather icon-maximize" ></i></a></li>
-                                
-                                
+                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
                             </ul>
                         </div>
                     </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body pt-0 pb-0">
+                            <form class="form-horizontal" novalidate>
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Employee Name</label>
+                                                <fieldset class="form-group">
+                                                    <select class="select2 form-control" id="users-list-status1">
+                                                        <option value="">Select Employee Name</option>
+                                                        <option value="Active">Pooja</option>
+                                                        <option value="Blocked">Yash</option>
+                                                        <option value="deactivated">Arpit</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Employee Code</label>
+                                                <fieldset class="form-group">
+                                                    <select class="select2 form-control" id="users-list-status2">
+                                                        <option value="">Select Employee Code</option>
+                                                        <option value="Active">Emp-101</option>
+                                                        <option value="Blocked">Emp-102</option>
+                                                        <option value="deactivated">Emp-103</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label> Status</label>
+                                                <fieldset class="form-group">
+                                                    <select class="select2 form-control" id="users-list-status3">
+                                                        <option value="">Select Status</option>
+                                                        <option value="Active">Active</option>
+                                                        <option value="Blocked">In-Active</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Location</label>
+                                                <fieldset class="form-group">
+                                                    <select class="select2 form-control" id="users-list-status">
+                                                        <option value="">Select Location</option>
+                                                        <option value="Active">Gurgaon</option>
+                                                        <option value="Blocked">Dubai</option>
+                                                        <option value="deactivated">Mumbai</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </div>
+
+
+                                    <div class="row">
+                                    
+                                        <div class="col-sm-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>From Date</label>
+                                                   <input type="text" class="form-control birthdate-picker" placeholder="From Date">
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                       
+                                        <div class="col-sm-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>To Date</label>
+                                                    <input type="text" class="form-control birthdate-picker" placeholder="To Date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                           
+                                        <div class="col-sm-12 col-md-4 col-lg-3">
+                                            <button type="submit" class="btn btn-primary glow  mr-1 mt-2 mb-1 ">Search</button>
+                                        </div>
+
+                                        </div>
+
+                                    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                
                     <div class="card-content">
                         <div class="card-body card-dashboard">
 
@@ -526,7 +633,9 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
     <!-- END: Page JS-->
-
+ <!-- Dropdown search JS -->
+ <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+ <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
 
         <!-- Importing Custom Script.js  -->
         <script src="../../Content/assets/js/scripts.js"></script>
