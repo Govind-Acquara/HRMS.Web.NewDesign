@@ -592,7 +592,7 @@
                               </div>
                             <div class="mt-1 ">
                                 <table class="table table-striped ">
-                                    <thead class="theadgradient text-white" >
+                                    <thead class="theadclr text-white" >
                                     <tr>
                                     <th>DAY</th>
                                     <th>HOLIDAY</th>
@@ -601,7 +601,7 @@
                                     <th>Action</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="HolidaysModTab">
                                     <tr>
                                     <td class="p-5rem">Tuesday</td>
                                     <td class="p-5rem">New Year's Day</td>
@@ -701,7 +701,7 @@
                                 <div class="table-responsive">
                                     <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
                                         <thead>
-                                            <tr  class=" text-white" style="background-color: #384D59;">
+                                            <tr  class="theadclr text-white">
                                                   <th>Sr. No.</th>
                                                   <th>Holiday Date (DD-MM-YYYY)</th>
                                                   <th>Holiday Name</th>
@@ -890,6 +890,12 @@
         </script>
     
     <script>
+
+
+
+$('#HolidaysModTab').on('click',function(){
+
+});
 
 
 $('#type-success').on('click', function () {
