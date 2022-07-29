@@ -908,4 +908,17 @@ $('#customYear').click(function(){
           // Induction Page Script End
 
 
+          if ($('#GSelectAll').length != 0) {
+    
+            $('#GSelectAll').click(function(){
+              if ($(this).is(':checked')) {
+                $('#GeneralInputs').parent(".custom-checkbox").parent( ".custom-control-input" ).prop("disabled", false);
+              } else {
+                $('#GeneralInputs').parent(".custom-checkbox").parent( ".custom-control-input" ).prop("disabled", true);
+
+              }
+            });
+            
+            }
+
 })(window);
