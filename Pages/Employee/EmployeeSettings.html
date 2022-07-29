@@ -383,13 +383,11 @@
 
                 <div class="card">
                     <div class="card-content">
-                        
-                        <div class="card-body card-dashboard">
-                            <div>
-                                <h4>Employee Settings</h4>
-                            </div>
-                             <div class="card-header pb-1">
-
+                        <div class="card-dashboard">
+                            <div class="card-header ">
+                                <div>
+                                    <h4>Employee Settings</h4>
+                                </div>
                                 <div class="heading-elements">
 
                                     <ul class="list-inline mb-0">
@@ -400,10 +398,160 @@
                                     </ul>
                                 </div>
                             </div>
-
-                            <div>
-                                <h4>Employee Rule Page</h4>
+                        </div>
+                        
+                        <div class="card-body">
+                            <div class="col-lg-6">
+                                <label>Regulation Date Applicable from:</label>
+                                <fieldset id="WBRadio">
+                                <div class="row pt-1 form-group">
+                                        <div class="col-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMAX" checked>
+                                                    <label class="custom-control-label" for="OTMAX">Joining Date</label>
+                                                </div>
+                                        </div>
+                                        <div class="col-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMIN">
+                                                    <label class="custom-control-label" for="OTMIN">Confirmation Date</label>
+                                                </div>
+                                        </div>
+                                </div>
+                            </fieldset>
                             </div>
+                            <div class="border-bottom border-bottom-2">
+                                <h4>Edit Mandatory Fields for Employee</h4>
+                            </div>
+
+                            <div class="border rounded  px-1 my-1">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-user mr-25"></i>General</h6>
+                                    <div class="custom-control custom-checkbox pt-1">
+                                        <input type="checkbox" class="custom-control-input" name="GSelectAll" id="GSelectAll" >
+                                        <label class="custom-control-label" for="GSelectAll" >Select All</label>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap gap-1rem form-group" id="GeneralInputs">
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck1" id="customcheck1" >
+                                        <label class="custom-control-label" for="customcheck1" >First Name</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck2" id="customcheck2" >
+                                        <label class="custom-control-label" for="customcheck2">Last Name</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck5" id="customcheck5" >
+                                        <label class="custom-control-label" for="customcheck5">Employee Code</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck6" id="customcheck6" >
+                                        <label class="custom-control-label" for="customcheck6">Status</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck7" id="customcheck7" >
+                                        <label class="custom-control-label" for="customcheck7">Date of Joining</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck8" id="customcheck8" >
+                                        <label class="custom-control-label" for="customcheck8">Designation</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck9" id="customcheck9" >
+                                        <label class="custom-control-label" for="customcheck9">Department</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck10" id="customcheck10" >
+                                        <label class="custom-control-label" for="customcheck10">Reporting Persom</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck11" id="customcheck11" >
+                                        <label class="custom-control-label" for="customcheck11">Mobile Number</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck12" id="customcheck12" >
+                                        <label class="custom-control-label" for="customcheck12">Office Location</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck13" id="customcheck13" >
+                                        <label class="custom-control-label" for="customcheck13">Office Email</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck14" id="customcheck14" >
+                                        <label class="custom-control-label" for="customcheck14">Employee Category</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck15" id="customcheck15" >
+                                        <label class="custom-control-label" for="customcheck15">Bank Name</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck16" id="customcheck16" >
+                                        <label class="custom-control-label" for="customcheck16">Bank A/c Number</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck17" id="customcheck17" >
+                                        <label class="custom-control-label" for="customcheck17">IFSC Code</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck18" id="customcheck18" >
+                                        <label class="custom-control-label" for="customcheck18">Branch Name</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck19" id="customcheck19" >
+                                        <label class="custom-control-label" for="customcheck19">Pan Number</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck20" id="customcheck20" >
+                                        <label class="custom-control-label" for="customcheck20">Aadhar Number</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="border rounded  px-1 my-1">
+                                <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-info mr-25"></i>Personal</h6>
+
+                                <div class="d-flex flex-wrap gap-1rem form-group">
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input"  name="customcheck3" id="customcheck3" >
+                                        <label class="custom-control-label" for="customcheck3">Personal Id</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customcheck4" id="customcheck4" >
+                                        <label class="custom-control-label" for="customcheck4">Gender</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
+                                <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
+                                <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
+                        </div>
 
                         </div>
                     </div>
