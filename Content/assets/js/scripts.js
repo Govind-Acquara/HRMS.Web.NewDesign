@@ -116,6 +116,50 @@
     });
   }
 
+
+
+  if ($("#ProbationListTable").length != 0) {
+    // View Employee Table Script
+
+    $(document).ready(function () {
+      $("#ProbationListTable tfoot th")
+        .not("th:nth-child(1)")
+        .not("th:nth-child(9)")
+        .each(function () {
+          var title = $("#ProbationListTable tfoot th")
+            .eq($(this).index())
+            .text();
+          $(this).html(
+            '<input type="text" class="form-control" placeholder="Search ' +
+              title +
+              '" />'
+          );
+        });
+
+      $("#ProbationListTable")
+        .DataTable({
+          responsive: true,
+          autoWidth: true,
+          lengthChange: false,
+          buttons: ["excel", "print", "copy", "pdf", "colvis"],
+        })
+        .buttons()
+        .container()
+        .appendTo(" .col-md-6:eq(0)");
+
+      var table = $("#ProbationListTable").DataTable();
+
+      table.columns().every(function () {
+        var that = this;
+
+        $("input", this.footer()).on("keyup change", function () {
+          that.search(this.value).draw();
+        });
+      });
+    });
+  }
+
+
   if ($("#ViewEmployeeTable").length != 0) {
     // View Employee Table Script
 
