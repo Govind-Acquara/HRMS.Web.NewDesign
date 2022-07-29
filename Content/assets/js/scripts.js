@@ -887,4 +887,25 @@ $('#customYear').click(function(){
         
         }
 
+
+        // Induction Page Script Start
+
+        if ($('#InductionCompleted').length != 0) {
+    
+          $('#InductionCompleted').click(function(){
+            if ($(this).is(':checked')) {
+                  $('#ICD').prop("disabled", false);
+                  $('#IENC').prop("disabled", false);
+            } else {
+                  $('#ICD').prop("disabled", true);
+                  $('#IENC').prop("disabled", true);
+
+            }
+          });
+          
+          }
+
+          // Induction Page Script End
+
+
 })(window);

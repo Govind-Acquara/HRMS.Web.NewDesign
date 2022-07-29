@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Create Employee</title>
+    <title>Edit Employees</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -42,9 +42,17 @@
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
-         <!-- Dropdown Search CSS -->
-         <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+     <!-- Dropdown Search CSS -->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
 
+           <!-- link for date picker -->
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
+
+
+    <style>
+        
+    </style>
 
 </head>
 <!-- END: Head-->
@@ -198,7 +206,7 @@
                 <li class=" nav-item" id="Employee">
                     <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
                     <ul class="menu-content">
-                        <li id="createemp">
+                        <li>
                             <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
                         </li>
                         <li id="Editemp">
@@ -207,7 +215,6 @@
                         <li>
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
-                    
                         <li>
                             <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
                         </li>
@@ -366,7 +373,7 @@
                                         <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item">
-                                        <a>Employee</a>
+                                        <a>Employee </a>
                                     </li>
                             </ol>
                             <div class="breadcrumb-wrapper col-12">
@@ -393,7 +400,7 @@
                             <div class="row">
                                 <div class="col-lg-1 pl-1 pr-1 pb-1 pt-0">
                                     <div class=" text-left">
-                                        <label class=" cursor-pointer" for="UserImage">
+                                        <label class="cursor-pointer" for="UserImage">
                                             <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="60" width="60">
                                         </label>
                                         <input type="file" id="UserImage" hidden>
@@ -436,6 +443,8 @@
                             </form>
                         </div>
                  </div>
+
+
                 <section class="users-edit">
                     <div class="card">
                         <div class="card-content">
@@ -472,192 +481,64 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center active"  href="../Employee/Documents_CreateEmployee.html">
+                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Documents_CreateEmployee.html">
                                             <i class="feather icon-sidebar mr-25"></i><span class="d-none d-sm-block">Documents</span>
                                         </a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Induction_EditEmployee.html">
+                                        <a class="nav-link d-flex align-items-center active"   href="../Employee/Documents_CreateEmployee.html">
                                             <i class="feather icon-tv mr-25"></i><span class="d-none d-sm-block">Induction</span>
                                         </a>
                                     </li>
 
                                 </ul>
                                 <div class="tab-content">
-                                    <div class="tab-pane active" id="documents" aria-labelledby="documents-tab" role="tabpanel">
-
-                                        <div class="card border-secondary">
-                                            <div class="card-header py-1">
-                                                <h5 class="card-basic primary"><i class="feather icon-file mr-25"></i>Employee Documents</h5>
-                                                <div class="heading-elements">
-                                                    <ul class="list-inline mb-0">
-                                                        <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                                                    </ul>
+                                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
+                                        <!-- users edit account form start -->
+                                        <div class="col-12 mt-1">
+                                            <div class="border rounded  px-1">
+                                                <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-tv mr-25"></i>Employee Induction Details</h6>
+                                          
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox pt-1">
+                                                        <input type="checkbox" class="custom-control-input" name="InductionCompleted" id="InductionCompleted">
+                                                        <label class="custom-control-label" for="InductionCompleted">Is Induction Completed?</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="card-content collapse show">
-                                                <div class="card-body pt-0 pb-0">
-                                                    <form class="form-horizontal" novalidate>
-                                                        <div class="row">
 
-                                                            <div class="col-12 col-sm-6 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Document Name</label>
-                                                                        <input type="text" class="form-control" placeholder="Document Name" required data-validation-required-message="This field is required">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 col-sm-6 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Document Type</label>
-                                                                        <fieldset class="form-group">
-                                                                            <select class="select2 form-control" id="users-list-status">
-                                                                                <option value="">Select Document Type</option>
-                                                                                <option value="Active">Aadhar card</option>
-                                                                                <option value="Blocked">Pan Card</option>
-                                                                                <option value="deactivated">Passport</option>
-                                                                                <option value="deactivated">Visa</option>
-                                                                                <option value="deactivated">Labour Card</option>
-                                                                                <option value="deactivated">Educational Certificates</option>
-                                                                                <option value="deactivated">Relieving Letter</option>
-                                                                                <option value="deactivated">Feedback Copy</option>
-                                                                                <option value="deactivated">Salary Slip</option>
-                                                                                <option value="deactivated">Bank Statement</option>
-                                                                                <option value="deactivated">Appointment Letter</option>
-                                                                            </select>
-                                                                        </fieldset>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-
-
-
+                                                <div class="row form-group">
+                                                    <div class="col-lg-6">
+                                                        <div>
+                                                            <label>Induction Completed Date</label>
+                                                            <input type="date" id="ICD" disabled="disabled" class="form-control">
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-12 col-sm-6 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Document No.</label>
-                                                                        <input type="text" class="form-control" placeholder="Document No." required data-validation-required-message="This field is required">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12 col-sm-6 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Valid Upto (DD-MM-YYYY)</label>
-                                                                        <input type="text" class="form-control birthdate-picker" placeholder="Valid Upto" required data-validation-required-message="This field is required">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div>
+                                                            <label>Employee Name / Code</label>
+                                                            <select class="select2 form-control" disabled="disabled" id="IENC">
+                                                                 <option value="Active">Select Employee Name</option>
+                                                                 <option value="Blocked">Bhumi EMP 101</option>
+                                                                 <option value="deactivated">rahul EMP 102</option>
+                                                                 <option value="Blocked">yash EMP 103</option>
+                                                                 <option value="deactivated">pooja EMP 104</option>
+                                                                 <option value="deactivated">somya EMP 105</option>
+                                                            </select>
                                                         </div>
-
-                                                        <div class="row">
-                                                            <div class="col-12 col-sm-6 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Remark</label>
-                                                                        <input type="text" class="form-control" placeholder="Remark" required data-validation-required-message="This field is required">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12 col-sm-6 col-lg-6">
-                                                                <fieldset class="form-group">
-                                                                    <label for="basicInputFile">Attach Document</label>
-                                                                    <div class="custom-file">
-                                                                        <input type="file" class="custom-file-input" id="inputGroupFile01">
-                                                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                                    </div>
-                                                                </fieldset>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-12 d-flex flex-sm-row flex-column justify-content-end ">
-
-                                                            <label class="btn btn-primary glow m-1 cursor-pointer" for="document-upload">Submit</label>
-                                                            <input type="file" id="document-upload" hidden>
-                                                            <button type="reset" class="btn btn-outline-primary m-1">Reset</button>
-                                                        </div>
-
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="card-body card-dashboard">
-
-
-                                                    <div class="table-responsive">
-                                                        <table id="example1" class="table border-secondary table-striped dataex-html5-selectors">
-                                                            <thead>
-                                                                <tr class="theadclr text-white">
-                                                                    <th>SrNo.</th>
-                                                                    <th>Document Type</th>
-                                                                    <th>Remark</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>Aadhar Card</td>
-                                                                    <td>Test</td>
-                                                                    <td>
-                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>Pan Card</td>
-                                                                    <td>Test</td>
-                                                                    <td>
-                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td>Voter Id</td>
-                                                                    <td>Test</td>
-                                                                    <td>
-                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td>Aadhar Card</td>
-                                                                    <td>Test</td>
-                                                                    <td>
-                                                                        <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
-                                                                    </td>
-                                                                </tr>
-                                                                
-
-
-                                                            </tbody>
-
-
-                                                        </table>
-
                                                     </div>
 
-
                                                 </div>
+
                                             </div>
+
                                         </div>
 
-
+                                        <div class="col-12 d-flex flex-sm-row flex-column justify-content-end ">
+                                            <button type="submit" class="btn btn-primary glow m-1">Submit</button>
+                                            <button type="reset" class="btn btn-outline-primary m-1">Reset</button>
+                                        </div>
+                                        <!-- users edit account form ends -->
                                     </div>
 
                                 </div>
@@ -732,11 +613,25 @@
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
     
+    
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
 
+
+         <!-- js link for date picker -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
+
+         <!-- Importing Custom Script.js  -->
+         <script src="../../Content/assets/js/scripts.js"></script>
+
     <script>
+
+$(".bootstrapdatepicker").datepicker(); 
+
+
+
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
