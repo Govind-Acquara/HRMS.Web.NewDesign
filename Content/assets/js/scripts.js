@@ -41,7 +41,7 @@
     $(document).ready(function () {
       $("#ViewLeaveTable tfoot th")
         .not("th:nth-child(1)")
-        .not("th:nth-child(8)")
+        .not("th:nth-child(9)")
         .each(function () {
           var title = $("#ViewLeaveTable tfoot th").eq($(this).index()).text();
           $(this).html(

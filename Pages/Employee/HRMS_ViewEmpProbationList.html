@@ -644,7 +644,7 @@
                                                        </div>
                                                       </div>
                                                      </div>
-                                               </td>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
@@ -682,11 +682,13 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-between">
+                                                  <div id="myDIV">
                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                   <button type="submit" class="btn btn-success btn-sm">Confirm</button>
-                                                 </div>
-   
-                                                   <!-- Modal Call on modify -->
+                                                  </div>
+                                                    <button type="submit" class="btn btn-success btn-sm" onclick="myFunction()">Confirm</button>
+                                                </div>
+                                                
+                                                      <!-- Modal Call on modify -->
                                                    <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable " role="document">
                                                         <div class="modal-content">
@@ -806,6 +808,16 @@
         }
     </script>
 
+<script>
+    function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 <!-- END: Body-->
 

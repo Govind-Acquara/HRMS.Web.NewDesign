@@ -629,6 +629,7 @@
                                                 <th>Leave Type</th>
                                                 <th>Department</th>
                                                 <th>Reporting Person</th>
+                                                <th>Remaining Leaves</th>
                                                 <th>Status</th>
                                                 <th class="pl-5 w-25">Action</th>
                                             </tr>
@@ -641,6 +642,7 @@
                                                 <th>Leave Type</th>
                                                 <th>Department</th>
                                                 <th>Reporting Person</th>
+                                                <th>Remaining Leaves</th>
                                                 <th>Status</th>
                                                 <th></th>
                                             </tr>
@@ -662,6 +664,13 @@
                                                 <td>SL</td>
                                                 <td>IT</td>
                                                 <td>Geeta</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-between">
+                                                       <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#RemaingInfo">Info</button>
+                                                     </div>
+                                                      
+                                                </td>
+
                                                 <td><div class="chip chip-warning">
                                                     <div class="chip-body">
                                                         <div class="chip-text">Pending</div>
@@ -687,6 +696,11 @@
                                                             <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-info "></i>&nbsp;Modify</div>
                                                         </div>
                                                     </div>
+                                                    <div class="chip chip-primary cursor-pointer">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-primary "></i>&nbsp;Cancel</div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -705,6 +719,12 @@
                                                 <td>CL</td>
                                                 <td>Accounts</td>
                                                 <td>ABCD</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-between">
+                                                       <button type="button" class="btn btn-outline-primary btn-sm btn-sm" data-toggle="modal" data-target="#RemaingInfo">Info</button>
+                                                     </div>
+                                                      
+                                                </td>
                                                 <td><div class="chip chip-danger">
                                                     <div class="chip-body">
                                                         <div class="chip-text">Reject</div>
@@ -721,6 +741,11 @@
                                                     <div class="chip chip-danger cursor-pointer">
                                                         <div class="chip-body">
                                                             <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chip chip-primary cursor-pointer">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-primary "></i>&nbsp;Cancel</div>
                                                         </div>
                                                     </div>
                                                     <!-- <div class="chip chip-info cursor-pointer" data-toggle="modal" data-target="#primary">
@@ -747,6 +772,12 @@
                                                 <td>CL</td>
                                                 <td>Sales</td>
                                                 <td>ABCD</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-between">
+                                                       <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#RemaingInfo">Info</button>
+                                                     </div>
+                                                      
+                                                </td>
                                                 <td><div class="chip chip-success">
                                                     <div class="chip-body">
                                                         <div class="chip-text">Approved</div>
@@ -794,6 +825,12 @@
                                                 <td>SL</td>
                                                 <td>Developer</td>
                                                 <td>Geeta</td>
+                                                <td>
+                                                    <div class="d-flex justify-content-between">
+                                                       <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#RemaingInfo">Info</button>
+                                                     </div>
+                                                      
+                                                </td>
                                                 <td><div class="chip chip-warning ">
                                                     <div class="chip-body">
                                                         <div class="chip-text">Pending</div>
@@ -816,11 +853,68 @@
                                                             <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-info "></i>&nbsp;Modify</div>
                                                         </div>
                                                     </div>
+                                                    <div class="chip chip-primary cursor-pointer">
+                                                        <div class="chip-body">
+                                                            <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-primary "></i>&nbsp;Cancel</div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
     
                                         </tbody>
                                     </table>
+                                    
+                                    <!-- Modal Call on modify -->
+                                    <div class="modal fade text-left" id="RemaingInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary white">
+                                                <h4 class="modal-title" id="myModalLabel17">Employee Remaining Leaves</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Employee Name :</label>
+                                                            <span>Pooja Jain</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Employee Code :</label>
+                                                            <span>EMP-101</span>
+                                                        </div>
+                                                    </div>
+                                                </div>     
+                                                
+                                                <h5 class="text-warning">Remaining Leaves:</h5>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="font-weight-bold">CL :</label>
+                                                            <span class="pl-2">5</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label  class="font-weight-bold">SL :</label>
+                                                            <span class="pl-2">4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                    
+                                    
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                     <!-- Modal Call on modify -->
                                     <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
@@ -894,6 +988,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+
                                 </div>
                               </div>
                           </div>
