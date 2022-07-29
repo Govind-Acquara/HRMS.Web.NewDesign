@@ -523,7 +523,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
-                                                            <input type="text" id="WFOmins" class="form-control timePicker" disabled="disabled" placeholder="Enter Mins">
+                                                            <input type="text" id="WFOmins" class="form-control singleTimePicker" disabled="disabled" placeholder="Enter Mins">
                                                         </div>
                                                     </div>
 
@@ -537,7 +537,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
-                                                            <input type="text" id="WFHmins" class="form-control timePicker" disabled="disabled" placeholder="Enter Mins">
+                                                            <input type="text" id="WFHmins" class="form-control singleTimePicker" disabled="disabled" placeholder="Enter Mins">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -836,13 +836,25 @@
 
 <script>
 
-$('.timePicker').daterangepicker({
+       $('.timePicker').daterangepicker({
             timePicker: true,
             // timePicker24Hour : true,
-
             locale: {
                 format: 'HH:mm'
             }
+        }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });
+
+
+        $('.singleTimePicker').daterangepicker({
+            timePicker: true,
+            singleDatePicker: true,
+            timePicker24Hour : true,
+            locale: {
+                format: 'HH:mm'
+            }
+            
         }).on('show.daterangepicker', function (ev, picker) {
             picker.container.find(".calendar-table").hide();
         });
