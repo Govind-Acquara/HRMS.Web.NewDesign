@@ -452,7 +452,7 @@
                                             <td>
                                              <div class="d-flex justify-content-between">
                                                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                <button type="submit" class="btn btn-success btn-sm">Confirm</button>
+                                                <button type="button" data-toggle="modal" data-target="#confirm" class="btn btn-success btn-sm">Confirm</button>
                                               </div>
 
                                                 <!-- Modal Call on modify -->
@@ -553,7 +553,7 @@
                                             <td>
                                                 <div class="d-flex justify-content-between">
                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                   <button type="submit" class="btn btn-success btn-sm">Confirm</button>
+                                                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirm">Confirm</button>
                                                  </div>
    
                                                </td>
@@ -579,7 +579,7 @@
                                             <td>
                                                 <div class="d-flex justify-content-between">
                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                   <button type="submit" class="btn btn-success btn-sm">Confirm</button>
+                                                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirm">Confirm</button>
                                                  </div>
    
 
@@ -606,7 +606,7 @@
                                             <td>
                                                 <div class="d-flex justify-content-between gap-1rem">
                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                   <button type="submit" class="btn btn-success btn-sm">Confirm</button>
+                                                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirm">Confirm</button>
                                                  </div>
 
                                                </td>
@@ -616,6 +616,28 @@
 
 
                                 </table>
+
+                                <div class="modal fade text-left" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="false"  aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h4 class="modal-title" id="myModalLabel1">Confirm Employee?</h4>
+                                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button> -->
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Confirm Employee </h5>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -688,6 +710,18 @@
    <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
+
+$(document).ready(function () {
+
+// Attach Button click event listener 
+$("#EmpConfirm").click(function(){
+
+    // show Modal
+    $('#default').modal('show');
+});
+});
+
+
         window.onload = function () {
             document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
             document.getElementById("ViewEmployee").className = 'active';

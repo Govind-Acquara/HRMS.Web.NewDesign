@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Leave Setup</title>
+    <title>Import Holidays</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -19,6 +19,8 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+      <!-- link for year date picker -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
      <!-- END: Vendor CSS-->
  
      <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
@@ -37,7 +39,13 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
- 
+
+
+     <!-- Toast CSS -->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
+     <!-- Toast CSS -->
+
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
  
@@ -45,23 +53,6 @@
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
-    <!-- <link rel="stylesheet" type="text/css" href="http://kp.bkd.sidoarjokab.go.id/website/lib/DataTables-1.10.7/media/css/jquery.dataTables.css">
-
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> -->
-
-
-             <!-- Dropdown Search CSS -->
-             <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
-
-
-<style>
-    tfoot input {
-        width: 100%;
-        padding: 3px;
-        box-sizing: border-box;
-    }
-</style>
 </head>
 <!-- END: Head-->
 
@@ -320,15 +311,16 @@
                    </li>
                 </ul>
             </li>
-            <li class=" nav-item">
+            <li class=" nav-item" id="attendance">
                 <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
                     <li>
                         <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
                     </li>
-                    <li>
+                    <li id="holiday_master">
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
+                    
                     <li>
                         <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
                     </li>
@@ -338,29 +330,28 @@
                     <li>
                         <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                     </li>
-                        <li>
-                            <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
-                        </li>
-                        <li>
-                            <a href="../Attendance/Overtime.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Overtime</span></a>
-                        </li>
-                        <li>
-                            <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item">Report</span></a>
-                        </li>
+                    <li>
+                        <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
+                    </li>
+                    <li>
+                        <a href="../Attendance/Overtime.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Overtime</span></a>
+                    </li>
+                    <li>
+                        <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports </span></a>
+                    </li>
                     <li>
                         <a href="../Attendance/AttendanceSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Attendance Settings</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item" id="leave">
+            <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                 <ul class="menu-content">
-                        
                     <li>
-                            <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
-                     </li>
-                   
-                     <li>
+                     <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                    </li>
+
+                    <li>
                         <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type</span></a>
                         
                      </li>
@@ -374,7 +365,7 @@
                      <li>
                         <a href="../Leave/HRMS_Yearly_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Update</span></a>
                      </li>
-                     <li id="LeaveSetup">
+                     <li>
                         <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
                      </li>
                       <li>
@@ -388,7 +379,6 @@
                         <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
                      </li> -->
                 </ul>
-                
             </li>
             <li class=" nav-item" id="shift">
                 <a href="#"><i class="feather icon-clock"></i><span class="menu-title" data-i18n="User">Shift</span></a>
@@ -467,12 +457,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Leave Setup</h2>
+                            <h2 class="content-header-title float-left mb-0">Holiday Master</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Leave 
+                                    <li class="breadcrumb-item active">Attendance
                                     </li>
                                 </ol>
                             </div>
@@ -482,323 +472,128 @@
                 
             </div>
             <div class="content-body">
-                
+                <!-- <button type="button" class="btn btn-outline-success mr-1 mb-1" id="type-success">Success</button> -->
 
-                <div class="my-2 dt-buttons btn-group">
-                    <button class="btn btn-primary ml-0 sidebar-toggle mb-50 mb-sm-0 cursor-pointer waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Setup Leave</button>
+                <div class="my-2 d-flex gap-1rem">
+                    <button class="sidebar-toggle w-auto btn btn-primary  waves-effect sidebar waves-light "><i class=" feather icon-plus"></i> Add Holiday</button>
+                    <button data-toggle="modal" data-target="#primary" class="btn btn-primary w-auto">View Previous Year Holidays</button>
                 </div>
                 <div class="sidebar-content">
 
-
-                    <div class="d-flex">
-                        <div class="CloseBTN">&times;</div>
-                    </div>
-
-
+                    <div class="CloseBTN">&times;</div>
                     
                     <div>
                         <form id="sideform" class="sidebar-form">
-                            <h4 class="font-weight-bold mb-2">Setup Leave</h4>
-
+                            <h4 class="font-weight-bold mb-2">Add Holiday</h4>
                             <div class="form-group">
-                                <label for="data-status">Policy Name</label>
-                                <select class="select2 form-control" id="data-status">
-                                    <option>Select Policy Name</option>
-                                    <option>Leave Policy</option>
-                                    <option>Company Policy</option>
-                                    <option>Asset Policy</option>
-                                </select>
-                              </div>
-
-                              
-
-                              <div class="form-group">
-                                <label for="data-status">Leave Type</label>
-                                <select class="select2 form-control" id="data-status">
-                                    <option>Select Leave Type</option>
-                                    <option>CL</option>
-                                    <option>SL</option>
-                                    <option>ML</option>
-                                    <option>PL</option>
-                                </select>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="data-status">Types of Employee</label>
-                                <select class="select2 form-control" id="data-status">
-                                    <option>Select Employee Type</option>
-                                    <option>Regular</option>
-                                    <option>WFH</option>
-                                    <option>Part-Time</option>
-                                </select>
-                              </div>
-                            
-                              <div class="form-group">
-                                <label>Per Year Leaves</label>
-                                 <input type="text"  class="form-control"  placeholder="Leave Per Year" required >
-                              </div>
-
-                              <div class="form-group">
-                                <label>Per Month Leaves</label>
-                                 <input type="text"  class="form-control"  placeholder="Leave Per Month" required disabled>
-                              </div>
-
-
-                              <div class="form-group">
-                                <label for="">Leaves Should be credited on</label>
-                                <div class="custom-control custom-checkbox pt-1">
-                                    <input type="checkbox" class="custom-control-input" name="customCheck1" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Pro Rata Basis</label>
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="">Applicable in Notice/Probation Period</label>
-                                <div class="custom-control custom-checkbox pt-1">
-                                    <input type="checkbox" class="custom-control-input" name="customCheck2" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">NO</label>
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="">Leave Cancellable by Employee</label>
-                                <div class="custom-control custom-checkbox pt-1">
-                                    <input type="checkbox" class="custom-control-input" name="customCheck4" id="customCheck4">
-                                    <label class="custom-control-label" for="customCheck4">YES</label>
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="">Can Take in Starting of the year (Balance to be shown as Negative)</label>
-                                <div class="custom-control custom-checkbox pt-1">
-                                    <input type="checkbox" class="custom-control-input" name="customCheck5" id="customCheck5">
-                                    <label class="custom-control-label" for="customCheck5">NO</label>
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="" class=" my-auto">To Be applied Before</label>
-                                <div class="d-flex gap-1rem pt-1">
-                                    <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter Days">
-                                    <label for="" class=" my-auto">Days</label>
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="" class=" my-auto">Medical Certificate Required After</label>
-                                <div class="d-flex gap-1rem pt-1">
-                                    <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter No. of Leaves">
-                                    <label for="" class=" my-auto">Days</label>
-                                </div>
-                              </div>
-
-                              <div>
-                                <label>Present Consider by :</label>
-                                <fieldset id="WBRadio">
-                                <div class="row pt-1 form-group">
-                                        <div class="col-6">
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMAX" checked>
-                                                    <label class="custom-control-label" for="OTMAX">Calendar Days (Weekoff's are applicable as calendar not by custom)</label>
-                                                </div>
-                                        </div>
-                                        <div class="col-6">
-                                                <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMIN">
-                                                    <label class="custom-control-label" for="OTMIN">Working Days</label>
-                                                </div>
-                                        </div>
-                                </div>
-                            </fieldset>
+                                <label>Holiday Date (DD-MM-YYYY)</label>
+                                <input type="date" name="text" id="hday" value="2022-07-30" class="form-control">
                             </div>
-
-                              <!-- <div class="form-group">
-                                <div class="d-flex gap-1rem">
-                                    <label for="" class=" my-auto">CL to be applied Before: </label>
-                                    <input type="text" class="form-control d-inline-block w-25" name="" id="" placeholder="Enter Days">
-                                    <label for="" class=" my-auto">Days</label>
-                                </div>
+    
+                            <div class="form-group">
+                                <label>Holiday Name</label>
+                                 <input type="text"  class="form-control"  placeholder="Holiday Name" required >
                               </div>
-
                               <div class="form-group">
-                                <div class="d-flex gap-1rem">
-                                    <label for="" class=" my-auto">SL Without Medical Certificate</label>
-                                    <input type="text" class="form-control d-inline-block w-25" name="" id="" placeholder="Enter Days">
-                                    <label for="" class=" my-auto">Days</label>
-                                </div>
-                              </div> -->
-
-
-
-
-
-                              <div  class="form-group ">
-                                <label>Valid From Date (DD-MM-YYYY)</label>
-                                 <input type="date"  class="form-control" id="PAVFD" required >
+                                <label>Short Name</label>
+                                 <input type="text"  class="form-control"  placeholder="Short Name" required >
                               </div>
-
                               <div class="form-group">
-                                <div class="custom-control custom-checkbox ">
-                                    <input type="checkbox" class="custom-control-input" name="PACY" id="PACY">
-                                    <label data-toggle="tooltip" data-placement="top" title="Check for Enter Policy Applicable Date" class="custom-control-label" for="PACY">Valid Upto Date (DD-MM-YYYY) <i  class="feather icon-alert-circle"></i></label>
-                                </div>
-                                <input type="date"  class="form-control" disabled="disabled" id="PAVTD" required >
+                                <label>Remark</label>
+                                 <input type="text"  class="form-control"  placeholder="Remark" required >
                               </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <label>Background Color</label>
+                                    <input type="color" id="background" list="backgroundColors" value="#ea5656" required >
+                                    <datalist id="backgroundColors">
+                                      <option value="#fe9f41"/>
+                                      <option value="#9CE3AB"/>
+                                      <option value="#219EBC"/>
+                                      <option value="#FFB703"/>
+                                      <option value="#FCA311"/>
+                                      <option value="#FCA311"/>
+                                      <option value="#F95738"/>
+                                      <option value="#9e224f"/>
+                                      <option value="#0D3B66"/>
+                                      <option value="#F4D35E"/>
+                                      <option value="#023047"/>
+                                      <option value="#14213D"/>
+                                      <option value="#242F9B"/>
+                                      <option value="#8ECAE6"/>
+                                      <option value="#ea5656"/>
+                                      <option value="#9BA3EB"/>
+                                    </datalist>
+
+                                </div>
+
+                                <div class="col-12 col-sm-4">
+
+                                    <label>Font Color</label>
+                                                                         
+                                    <input type="color" id="font" list="fontColors" value="#ffffff" required>
+                                    <datalist id="fontColors">
+                                        <option value="#fe9f41"/>
+                                        <option value="#9CE3AB"/>
+                                        <option value="#219EBC"/>
+                                        <option value="#FFB703"/>
+                                        <option value="#FCA311"/>
+                                        <option value="#FCA311"/>
+                                        <option value="#F95738"/>
+                                        <option value="#9e224f"/>
+                                        <option value="#0D3B66"/>
+                                        <option value="#F4D35E"/>
+                                        <option value="#023047"/>
+                                        <option value="#14213D"/>
+                                        <option value="#242F9B"/>
+                                        <option value="#8ECAE6"/>
+                                        <option value="#ea5656"/>
+                                        <option value="#9BA3EB"/>
+                                      </datalist>
+
+                                </div>
+
+                                <div class="col-sm-1 col-12 mt-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck2" onclick="change_status(this)">
+                                        <label class="custom-control-label" for="customCheck2"></label>
+                                    </div>
+                                 </div>
+                            </div>
     
                               <div class="d-flex my-2  justify-content-center ">
                                 <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
                                 <button type="reset" class="btn w-50 btn-outline-primary mb-1 mt-0.5">Reset</button>
-                             </div>
+                            </div>
     
     
                           </form> 
                     </div>
                 </div>
+
             </div>
+
+
+
 
                     <div class="card">
                         <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
                         <div class="card-content">
                               <div class="card-body card-dashboard">
+
                                 <div class="table-responsive">
-                                    <table id="example1" cellspacing="0" width="100%" class=" display table border-secondary data-list-view">
+                                    <table id="ImportTable" class="table border-secondary table-striped dataex-html5-selectors">
                                         <thead>
-                                          <tr class="theadclr text-white">
-                                            <th>Sr. No.</th>
-                                            <th>Policy Name</th>
-                                            <th>Employee Type</th>
-                                            <th>Leave Type</th>
-                                            <th>Per Year Leaves</th>
-                                            <th>Per Month Leaves</th>
-                                            <th>From Date (DD-MM-YYYY)</th>
-                                            <th>To Date (DD-MM-YYYY) </th>
-                                            <th>IsActive</th>
-                                            <th>Action</th>
+                                            <tr>
+                                                <th>Sr No.</th>
+                                                <th>Holiday Date</th>
+                                                <th>Holiday Name</th>
                                             </tr>
                                         </thead>
-                                        <!-- <tfoot>
-                                            <tr>
-                                                <th>Sr. No.</th>
-                                                <th>Policy Name</th>
-                                                <th>Leave Type</th>
-                                                <th>Employee Type</th>
-                                                <th>From Date</th>
-                                                <th>To Date</th>
-                                            </tr>
-                                        </tfoot> -->
                                         <tbody>
-                                          <tr>
-                                              <td>1</td>
-                                              <td>Company Policy</td>
-                                              <td>Regular</td>
-                                              <td>Sick Leave</td>
-                                              <td>15</td>
-                                              <td>0.83</td>
-                                              <td>01-07-2022</td>
-                                              <td>30-07-2022</td>
-                                              <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" checked class="custom-control-input" id="customSwitch1">
-                                                  
-                                                  <label class="custom-control-label" for="customSwitch1">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
-                                                  </label>
-                                                  
-                                                  </div></td>
-                                              <td >
-                                                  <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
 
-                                          <tr>
-                                            <td>2</td>
-                                            <td>Leave Policy</td>
-                                            <td>Regular</td>
-                                            <td>Casual Leave</td>
-                                            <td>15</td>
-                                            <td>1.25</td>
-                                            <td>01-07-2022</td>
-                                            <td>30-07-2022</td>
-                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                            
-                                                <input type="checkbox" checked class="custom-control-input" id="customSwitch2">
-                                                
-                                                <label class="custom-control-label" for="customSwitch2">
-                                                
-                                                <span class="switch-text-left">Active</span>
-                                                
-                                                <span class="switch-text-right">InActive</span>
-                                                
-                                                </label>
-                                                
-                                                </div></td>
-                                            <td >
-                                                <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Asset Policy</td>
-                                            <td>wfh</td>
-                                            <td>Casual Leave</td>
-                                            <td>15</td>
-                                            <td>1.25</td>
-                                            <td>01-07-2022</td>
-                                            <td>30-07-2022</td>
-                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                            
-                                                <input type="checkbox" checked class="custom-control-input" id="customSwitch3">
-                                                
-                                                <label class="custom-control-label" for="customSwitch3">
-                                                
-                                                <span class="switch-text-left">Active</span>
-                                                
-                                                <span class="switch-text-right">InActive</span>
-                                                
-                                                </label>
-                                                
-                                                </div></td>
-                                            <td >
-                                                <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Company Policy</td>
-                                            <td>Regular</td>
-                                            <td>Sick Leave</td>
-                                            <td>15</td>
-                                            <td>.83</td>
-                                            <td>01-07-2022</td>
-                                            <td>30-07-2022</td>
-                                            <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                            
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                                
-                                                <label class="custom-control-label" for="customSwitch4">
-                                                
-                                                <span class="switch-text-left">Active</span>
-                                                
-                                                <span class="switch-text-right">InActive</span>
-                                                
-                                                </label>
-                                                
-                                                </div></td>
-                                            <td >
-                                                <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                            </td>
-                                        </tr>
-                                          
-                                      </tbody>
+                                        </tbody>
                                     </table>
-
-
                                 </div>
                               </div>
                           </div>
@@ -865,48 +660,93 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-
+     <!-- js link for month date picker -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
 
-  
-<!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script> -->
+    <!-- Toast JS -->
+
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+        <!-- Toast JS -->
+
+    <script>
+
+var table = $('#ImportTable').DataTable();
+ 
+ table.rows.add( [
+     {
+         "name": "Garrett Winters",
+         "position": "Director",
+         "salary": "$5,300",
+     }
+     ] ).draw();
 
 
-    <!-- <script src="http://kp.bkd.sidoarjokab.go.id/website/lib/DataTables-1.10.7/media/js/jquery.js"></script>
-    <script src="http://kp.bkd.sidoarjokab.go.id/website/lib/DataTables-1.10.7/media/js/jquery.dataTables.js"></script> -->
-    <!-- <script src="../../Content/assets/DataTableSearching/DataTables_jquery.js"></script>
-    <script src="../../Content/assets/DataTableSearching/jquery.dataTables.js"></script> -->
-
-    <!-- Dropdown search JS -->
-    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
-
+        $(function () {
+        $("#example1").DataTable({
+          "responsive": true, "lengthChange": false, "autoWidth": true,
+          
+          
+          "buttons": ["excel","print", "copy","pdf","colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        
+        });
+        </script>
     
     <script>
 
 
-$(function () {
-                $("#example1").DataTable({
-                  "responsive": true, "lengthChange": false, "autoWidth": true,
-                  
-                  
-                  "buttons": ["excel","print", "copy","pdf","colvis"]
-                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-                
-                });
-        </script>
 
-    <script>
-       window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("LeaveSetup").className = 'active';
+$('#HolidaysModTab').on('click',function(){
+
+});
+
+
+$('#type-success').on('click', function () {
+    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+  });
+
+// // Success Type
+// $('#type-success').on('click', function () {
+//     $.toast({
+//     heading: 'Information',
+//     text: 'Loaders are enabled by default. Use `loader`, `loaderBg` to change the default behavior',
+//     icon: 'info',
+//     loader: true,        // Change it to false to disable loader
+//     loaderBg: '#9EC600'  // To change the background
+// })
+// });
+
+        window.onload = function () {
+            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("holiday_master").className = 'active';
         }
 
-      
+        function change_status(status)
+        {
+           
+            var txt = document.getElementById("background");
+            var txt2 = document.getElementById("font");
+            txt.disabled=status.checked?false:true;
+            txt2.disabled=status.checked?false:true;
+
+
+        }
     </script>
     <!-- END: Page JS-->
+
 <script>
+
+
+$(document).ready(function() {
+    $('#type-success').on('click', function () {
+    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+  });
+})
+    
+
     $('#test').pickadate({
     min: true
 });
@@ -915,6 +755,24 @@ $('#test2').pickadate({
     min: true
 });
 </script>
+
+<script>
+$(document).ready(function(){
+
+var currYear = new Date();
+ var thisYear =currYear.getFullYear();
+document.getElementById("currentYear").value = thisYear;
+
+});
+$("#currentYear").datepicker( {
+format: "yyyy",
+viewMode: "years", 
+minViewMode: "years",
+autoclose:true //to close picker once year is selected
+}); 
+    $(".bootstrapdatepicker").datepicker(); 
+    </script>
+
 </body>
 <!-- END: Body-->
 
