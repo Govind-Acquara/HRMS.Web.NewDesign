@@ -20,7 +20,9 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
      <!-- END: Vendor CSS-->
- 
+      <!-- link for year date picker -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
      <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
      <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
      <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
@@ -52,7 +54,7 @@
 <!-- END: Head-->
 
 <!-- BEGIN: Body-->
-
+ <!-- BEGIN: Main Menu-->
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
  <!-- BEGIN: Header-->
  <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
@@ -219,12 +221,11 @@
     </li>
 </ul>
 <!-- END: Header-->
-<!-- BEGIN: Main Menu-->
 <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto">
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="../Dashboard/Index.html">
                     <!-- <div class="brand-logo"></div> -->
                     <h2 class="brand-text mb-0">HRMS Portal</h2>
                 </a>
@@ -247,29 +248,38 @@
                 <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
                 <ul class="menu-content">
                     <li>
-                        <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                        <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Designation Master</span></a>
                     </li>
                     <li>
-                        <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
+                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Department Master</span></a>
                     </li>
-                    <li>
-                        <a href="../Master/HRMS_DepartmentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Deparment Master</span></a>
-                    </li>
-                    <li>
-                        <a href="../Master/HRMS_DesignationMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">DesignationMaster</span></a>
-                    </li>
+                   
                     <li>
                         <a href="../Master/HRMS_DocumentMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Document Master</span></a>
                     </li>
                     <li>
                         <a href="../Master/HRMS_EmployeeTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Employee Category</span></a>
                     </li>
+                    
+                    <li>
+                        <a href="../Master/HRMS_BankMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Bank Master</span></a>
+                    </li>
+
+                    <li>
+                        <a href="../Master/HRMS_CurrencyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Currency Master</span></a>
+                    </li>
+                    <li>
+                        <a href="../Master/TimezoneMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Timezone Master</span></a>
+                    </li>
+                   
                     <li>
                         <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
                     </li>
+                   
                     <li>
                         <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
                     </li>
+
                 </ul>
             </li>
             <li class=" nav-item">
@@ -279,36 +289,36 @@
                         <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
                     </li>
                     <li>
-                        <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
-                    </li>
-                    <li>
                         <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
                     </li>
                     <li>
-
-                        <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
-
+                        <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                     </li>
+                    <li>
+                        <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
+                    </li>
+                    <li>
+                        <a href="../Employee/EmployeeSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Employee Settings</span></a>
+                   </li>
                 </ul>
             </li>
-            <li class=" nav-item" >
-                <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+            <li class=" nav-item">
+                <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
+                    <li>
+                        <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                    </li>
                     <li>
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
-                    <li>
-                        <a href="../Attendance/LeaveTypeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type Master </span></a>
-                    </li>
+                   
                     <li>
                         <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
                     </li>
                     <li>
                         <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                     </li>
-                    <li>
-                        <a href="../Attendance/HRMS_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Leave Apply </span></a>
-                    </li>
+
                     <li>
                         <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                     </li>
@@ -316,9 +326,68 @@
                         <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
                     </li>
                     <li>
+                        <a href="../Attendance/Overtime.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Overtime</span></a>
+                    </li>
+                    <li>
                         <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports </span></a>
                     </li>
+                    <li>
+                        <a href="../Attendance/AttendanceSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Attendance Settings</span></a>
+                    </li>
                     
+                </ul>
+            </li>
+
+            <li class=" nav-item" id="leave">
+                <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
+                <ul class="menu-content">
+                    
+                    <li id="dashboard">
+                            <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                     </li>
+                   
+                     <li>
+                        <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type</span></a>
+                        
+                     </li>
+                     <li>
+                        <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List"> Leave Application </span></a>
+                        
+                     </li>
+                     <li>
+                        <a href="../Leave/HRMS_LeaveBalanceMonth.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Balance</span></a>
+                     </li>
+                     <li id="UpdateLeave">
+                        <a href="../Leave/HRMS_Yearly_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Update</span></a>
+                     </li>
+                     <li>
+                        <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
+                     </li>
+                      <li>
+                        <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
+                     </li>
+                    
+                     <!-- <li>
+                        <a href="../Leave/HRMS_New_LeaveType.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
+                     </li>
+                     <li>
+                        <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
+                     </li> -->
+                </ul>
+                
+            </li>
+            <li class=" nav-item" >
+                <a href="#"><i class="feather icon-clock"></i><span class="menu-title" data-i18n="User">Shift</span></a>
+                <ul class="menu-content">
+                    <li>
+                        <a href="../Shift/AddShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Add Shift</span></a>
+                    </li>
+                    <li>
+                        <a href="../Shift/AssignShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Assign Shift</span></a>
+                    </li>
+                    <li>
+                        <a href="../Shift/ViewShift.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Shift</span></a>
+                    </li>
                 </ul>
             </li>
             <li class=" nav-item">
@@ -331,7 +400,7 @@
                         <a href="../Users/HRMS_User_Profile_List.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View User </span></a>
                     </li>
                     <li>
-                        <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Role & Permission </span></a>
+                        <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">User Permission </span></a>
                     </li>
                 </ul>
             </li>
@@ -339,10 +408,16 @@
                 <a href="#"><i class="fa fa-industry"></i><span class="menu-title" data-i18n="User">Company Details</span></a>
                 <ul class="menu-content">
                     <li>
+                        <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
+                    </li>
+                    <li>
                         <a href="../Company/HRMS_CompanyDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Company List</span></a>
                     </li>
                     <li>
-                        <a href="../Company/HRMS_CompanyDetails.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Company Details</span></a>
+                        <a href="../Company/HRMS_Branch_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">New Branch</span></a>
+                    </li>
+                    <li>
+                        <a href="../Company/HRMS_BranchDetailsList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Branch List</span></a>
                     </li>
                 </ul>
             </li>
@@ -415,47 +490,21 @@
                             <div class="card-body pt-0 pb-0">
                                 <form class="form-horizontal" novalidate>
                                 <div class="row">
+                                  
                                     <div class="col-12 col-sm-12 col-lg-6">
                                         <div class="form-group">
-                                            <label>Employee Name /Code</label>
-                                            <fieldset class="form-group">
-                                                <select class="select2 form-control" id="users-list-status">
-                                                    <option value="">Select Employee Name</option>
-                                                    <option value="Active">Pooja EMP 101</option>
-                                                    <option value="Blocked">Yash EMP 102</option>
-                                                    <option value="deactivated">Arpit EMP 103</option>
-                                                </select>
-                                            </fieldset>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="col-12 col-sm-6 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>Location</label>
-                                                <fieldset class="form-group">
-                                                    <select class="form-control" id="users-list-status">
-                                                      <option value="">Select Location</option>
-                                                    </select>
-                                                  </fieldset>
-                                            </div>
-                                        </div>
-                                     </div> -->
-                                    <div class="col-12 col-sm-12 col-lg-6">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label class="">Date</label>
-                                                <input type="text" class="form-control birthdate-picker" placeholder="Date">
+                                            <div class="form-group">
+                                                <label>Year</label>
+                                                <input type="text"  name="datepicker" class="form-control currentYear" required placeholder="Year" data-validation-required-message="This birthdate field is required" >
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="col-lg-3 my-auto">
+                                        <button class="btn btn-primary"><i class="feather icon-search"></i>&nbsp;&nbsp;Search</button>
+                                    </div>
+    
                                 </div>
 
-                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                    <!-- <button type="button" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">New Employee</button> -->
-                                    <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Search</button>
-                                   
-                                </div>
 
                                 </form>
                             </div>
@@ -673,13 +722,18 @@
      <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
      <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
 
+      <!-- js link for month date picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
     <!-- END: Page JS-->
     <script>
+
         window.onload = function () {
-            document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("forget_attendance").className = 'active';
-        }
-    </script>
+                    document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
+                    document.getElementById("UpdateLeave").className = 'active';
+                }
+            </script>
+        
    <script>
     $(function () {
     $("#example1").DataTable({
@@ -691,6 +745,24 @@
     
     });
     </script>
+
+<script>
+    
+    $(document).ready(function(){
+    
+        var currYear = new Date();
+         var thisYear =currYear.getFullYear();
+        document.getElementById(".currentYear").value = thisYear;
+    
+    });
+    $(".currentYear").datepicker( {
+        format: "yyyy",
+        viewMode: "years", 
+        minViewMode: "years",
+        autoclose:true //to close picker once year is selected
+    }); 
+    </script>
+
 </body>
 <!-- END: Body-->
 
