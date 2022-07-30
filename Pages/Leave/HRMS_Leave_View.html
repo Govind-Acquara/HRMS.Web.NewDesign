@@ -46,6 +46,12 @@
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
+    <style>
+       .tooltip{
+    z-index: 99999;
+    position: fixed;
+}
+    </style>
 </head>
 <!-- END: Head-->
 
@@ -875,7 +881,7 @@
                                     
                                     <!-- Modal Call on modify -->
                                     <div class="modal fade text-left" id="RemaingInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header bg-primary white">
                                                 <h4 class="modal-title" id="myModalLabel17">Employee Remaining Leaves</h4>
@@ -889,7 +895,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label>Employee Name :</label>
-                                                            <span>Pooja Jain</span>
+                                                            <span>Carissa Dolle</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -899,22 +905,82 @@
                                                         </div>
                                                     </div>
                                                 </div>     
-                                                
-                                                <h5 class="text-warning">Remaining Leaves:</h5>
+
                                                 <div class="row">
                                                     <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label class="font-weight-bold">CL :</label>
-                                                            <span class="pl-2">5</span>
-                                                        </div>
+                                                        <h5 class="text-warning">Remaining Leaves:</h5>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-weight-bold">CL :</label>
+                                                                    <span class="pl-1">5</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label  class="font-weight-bold">SL :</label>
+                                                                    <span class="pl-1">4</span>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
                                                     </div>
+
                                                     <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label  class="font-weight-bold">SL :</label>
-                                                            <span class="pl-2">4</span>
-                                                        </div>
+                                                        <h5 class="text-warning">Total Leaves Taken:</h5>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-weight-bold">CL :</label>
+                                                                    <span class="pl-1">10</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label  class="font-weight-bold">SL :</label>
+                                                                    <span class="pl-1">6</span>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+
                                                     </div>
-                                                </div>    
+                                                </div>
+
+                                                <div class="table-responsive">
+                                                    <table class="table  border-secondary table-striped ">
+                                                        <thead>
+                                                            <tr class="theadclr text-white">
+                                                                <th>Sr. No.</th>
+                                                                <th>Date (DD-MM-YYYY)</th>
+                                                                <th>Leave Type</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                           
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>12/5/2022</td>
+                                                                <td>
+                                                                    <label data-toggle="tooltip" data-placement="top" title="Sick Leave"  class="mytop_Class  bg-gradient-dark text-white">SL</label>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>05/4/2022</td>
+                                                                <td>
+                                                                    <label data-toggle="tooltip" data-placement="top" title="Casual Leave" class="mytop_Class  bg-gradient-info text-white">CL</label>
+                                                                </td>
+                                                            </tr>
+        
+
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
+                                                
+   
                                             </div>
                                     
                                     
