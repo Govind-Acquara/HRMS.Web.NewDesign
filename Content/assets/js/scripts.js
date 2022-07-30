@@ -290,7 +290,7 @@
     $(document).ready(function () {
       $("#ForgetAttendanceTable tfoot th")
         .not("th:nth-child(1)")
-        .not("th:nth-child(5)")
+        .not("th:nth-child(4)")
         .each(function () {
           var title = $("#ForgetAttendanceTable tfoot th")
             .eq($(this).index())
