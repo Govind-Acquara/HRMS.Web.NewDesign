@@ -593,7 +593,7 @@
                               </div>
 
                               <!-- <div class="form-group">
-                                <div class="d-flex gap-1rem ">
+                                <div class="d-flex gap-1rem">
                                     <label for="" class=" my-auto">CL to be applied Before: </label>
                                     <input type="text" class="form-control d-inline-block w-25" name="" id="" placeholder="Enter Days">
                                     <label for="" class=" my-auto">Days</label>
@@ -601,7 +601,7 @@
                               </div>
 
                               <div class="form-group">
-                                <div class="d-flex gap-1rem ">
+                                <div class="d-flex gap-1rem">
                                     <label for="" class=" my-auto">SL Without Medical Certificate</label>
                                     <input type="text" class="form-control d-inline-block w-25" name="" id="" placeholder="Enter Days">
                                     <label for="" class=" my-auto">Days</label>
@@ -611,20 +611,24 @@
 
 
 
-                              <div class="form-group">
-                                <label>From Date (DD-MM-YYYY)</label>
-                                 <input type="date"  class="form-control" required >
+
+                              <div  class="form-group ">
+                                <label>Valid From Date (DD-MM-YYYY)</label>
+                                 <input type="date"  class="form-control" id="PAVFD" required >
                               </div>
 
                               <div class="form-group">
-                                <label>To Date (DD-MM-YYYY)</label>
-                                 <input type="date"  class="form-control" required >
+                                <div class="custom-control custom-checkbox ">
+                                    <input type="checkbox" class="custom-control-input" name="PACY" id="PACY">
+                                    <label data-toggle="tooltip" data-placement="top" title="Check for Enter Policy Applicable Date" class="custom-control-label" for="PACY">Valid Upto Date (DD-MM-YYYY) <i  class="feather icon-alert-circle"></i></label>
+                                </div>
+                                <input type="date"  class="form-control" disabled="disabled" id="PAVTD" required >
                               </div>
     
                               <div class="d-flex my-2  justify-content-center ">
                                 <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
                                 <button type="reset" class="btn w-50 btn-outline-primary mb-1 mt-0.5">Reset</button>
-                            </div>
+                             </div>
     
     
                           </form> 
