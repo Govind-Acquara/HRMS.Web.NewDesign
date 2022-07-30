@@ -422,15 +422,7 @@
                                    
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-lg-6">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>Date as Year/Month(DD-MM-YYYY)</label>
-                                                <input type="text" class="form-control birthdate-picker">
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                   
                                     <div class="col-md-6 col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
@@ -439,11 +431,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
-                                </div>
 
-
-                                <div class="row">
                                     <div class="col-md-6 col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <div class="controls">
@@ -452,7 +440,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                   
                                 </div>
+
 
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
                                     <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
@@ -471,20 +461,21 @@
                                     <thead>
                                         <tr class="theadclr text-white">
                                             <th>Mapping With</th>
-                                            <th>Emp. code Prefix</th>
-                                            <th>Emp. code Date (DD-MM-YYYY)</th>
+                                            <th>codePrefix</th>
                                             <th>Starting Number</th>
+                                            <th>CodeSuffix</th>
                                             <th>Generated Code</th>
+                                            <th>IsActive</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Rajender</td>
-                                            <td>Emp</td>
-                                            <td>24-07-2022</td>
-                                            <td>3</td>
-                                            <td>EMP2022-07-073</td>
+                                            <td>Employee</td>
+                                            <td>Emp-</td>
+                                            <td>102</td>
+                                            <td>acq</td>
+                                            <td>EMP-102acq</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" checked class="custom-control-input" id="customSwitch1">
@@ -498,16 +489,19 @@
                                                 </label>
                                                 
                                                 </div></td>
+                                                <td>
+                                                    <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                </td>
                                         </tr>
                                         <tr>
-                                            <td>Karan</td>
-                                            <td>Emp</td>
-                                            <td>24-07-2022</td>
-                                            <td>3</td>
-                                            <td>EMP2022-07-073</td>
+                                            <td>Employee</td>
+                                            <td>Emp-</td>
+                                            <td>103</td>
+                                            <td>acq</td>
+                                            <td>EMP-103acq</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
-                                                <input type="checkbox" checked class="custom-control-input" id="customSwitch1">
+                                                <input type="checkbox" checked class="custom-control-input" id="customSwitch2">
                                                 
                                                 <label class="custom-control-label" for="customSwitch2">
                                                 
@@ -518,16 +512,19 @@
                                                 </label>
                                                 
                                                 </div></td>
+                                                <td>
+                                                    <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                </td>
                                         </tr>
                                         <tr>
-                                            <td>Rahul</td>
-                                            <td>Emp</td>
-                                            <td>24-07-2022</td>
-                                            <td>3</td>
-                                            <td>EMP2022-07-073</td>
+                                            <td>Employee</td>
+                                            <td>Emp-</td>
+                                            <td>104</td>
+                                            <td>acq</td>
+                                            <td>EMP-104acq</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                <input type="checkbox" checked class="custom-control-input" id="customSwitch3">
                                                 
                                                 <label class="custom-control-label" for="customSwitch3">
                                                 
@@ -538,16 +535,19 @@
                                                 </label>
                                                 
                                                 </div></td>
+                                                <td>
+                                                    <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                </td>
                                         </tr>
                                         <tr>
-                                            <td>kajal</td>
-                                            <td>Emp</td>
-                                            <td>24-07-2022</td>
-                                            <td>3</td>
-                                            <td>EMP2022-07-073</td>
+                                            <td>Employee</td>
+                                            <td>Emp-</td>
+                                            <td>105</td>
+                                            <td>acq</td>
+                                            <td>EMP-105acq</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                <input type="checkbox" checked class="custom-control-input" id="customSwitch4">
                                                 
                                                 <label class="custom-control-label" for="customSwitch4">
                                                 
@@ -558,6 +558,9 @@
                                                 </label>
                                                 
                                                 </div></td>
+                                                <td>
+                                                    <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                </td>
                                         </tr>
                                   </tbody>
                                 </table>
