@@ -921,4 +921,18 @@ $('#customYear').click(function(){
             
             }
 
+            // Leave Setup Script
+
+            if ($('#PACY').length != 0) {
+    
+              $('#PACY').click(function(){
+                if ($(this).is(':checked')) {
+                      $(' #PAVTD').prop("disabled", false);
+                } else {
+                  $(' #PAVTD').prop("disabled", true);
+                }
+              });
+              
+              }
+
 })(window);
