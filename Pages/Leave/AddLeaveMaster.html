@@ -40,7 +40,7 @@
  
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
- 
+    
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -438,268 +438,287 @@
     </div>
 </div> 
     <!-- END: Main Menu-->
-<!-- BEGIN: Content-->
-    <section class="app-content content" id="column-selectors">
-        <div class="content-overlay"></div>
-        <div class="header-navbar-shadow"></div>
-        <div class="content-wrapper">
-            <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-1">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">LeaveType Master</h2>
-                            <div class="breadcrumb-wrapper col-12">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Leave
-                                    </li>
-                                </ol>
-                            </div>
+ <!-- BEGIN: Content-->
+ <section class="app-content content" id="column-selectors">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-9 col-12 mb-1">
+                <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0">Add Leave Type</h2>
+                        <div class="breadcrumb-wrapper col-12">
+                            <ol class="breadcrumb mb-1">
+                                <li class="breadcrumb-item">
+                                    <a href="../Dashboard/Index.html">Dashboard</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    Master
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
-                
-            </div>
-            <div class="content-body">
-                
-
-                <div class="my-2 dt-buttons btn-group">
-                    <button class="btn btn-primary ml-0"><i class=" feather icon-plus"></i> <a href="../Leave/AddLeaveMaster.html" class="text-white">Leave Type</a></button>
-                </div>
-                <!-- <div class="sidebar-content">
-
-                    <div class="CloseBTN">&times;</div>
-                    
-                    <div>
-                        <form id="sideform" class="sidebar-form">
-                            <h4 class="font-weight-bold mb-2">Add Leave Type</h4>
-                            
-    
-                            <div class="form-group">
-                                <label>Leave Type Name</label>
-                                 <input type="text"  class="form-control"  placeholder="Leave Type Name" required >
-                              </div>
-                              <div class="form-group">
-                                <label>Short Name</label>
-                                 <input type="text"  class="form-control"  placeholder="Short Name" required >
-                              </div>
-                              
-                              <div class="form-group">
-                                <label for="">Leaves Should be credited on</label>
-                                <div class="custom-control custom-checkbox pt-1">
-                                    <input type="checkbox" class="custom-control-input" name="customCheck1" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Pro Rata Basis</label>
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="">Applicable in Notice/Probation Period</label>
-                                <div class="custom-control custom-checkbox pt-1">
-                                    <input type="checkbox" class="custom-control-input" name="customCheck2" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">NO</label>
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label>Remark</label>
-                                 <input type="text"  class="form-control"  placeholder="Remark" required >
-                              </div>
-                            <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <label>Background Color</label>
-                                    <input type="color" id="background" list="backgroundColors" value="#ea5656" required >
-                                    <datalist id="backgroundColors">
-                                      <option value="#fe9f41"/>
-                                      <option value="#9CE3AB"/>
-                                      <option value="#219EBC"/>
-                                      <option value="#FFB703"/>
-                                      <option value="#FCA311"/>
-                                      <option value="#FCA311"/>
-                                      <option value="#F95738"/>
-                                      <option value="#9e224f"/>
-                                      <option value="#0D3B66"/>
-                                      <option value="#F4D35E"/>
-                                      <option value="#023047"/>
-                                      <option value="#14213D"/>
-                                      <option value="#242F9B"/>
-                                      <option value="#8ECAE6"/>
-                                      <option value="#ea5656"/>
-                                      <option value="#9BA3EB"/>
-                                    </datalist>
-
-                                </div>
-
-                                <div class="col-12 col-sm-4">
-
-                                    <label>Font Color</label>
-                                                                         
-                                    <input type="color" id="font" list="fontColors" value="#ffffff" required>
-                                    <datalist id="fontColors">
-                                        <option value="#fe9f41"/>
-                                        <option value="#9CE3AB"/>
-                                        <option value="#219EBC"/>
-                                        <option value="#FFB703"/>
-                                        <option value="#FCA311"/>
-                                        <option value="#FCA311"/>
-                                        <option value="#F95738"/>
-                                        <option value="#9e224f"/>
-                                        <option value="#0D3B66"/>
-                                        <option value="#F4D35E"/>
-                                        <option value="#023047"/>
-                                        <option value="#14213D"/>
-                                        <option value="#242F9B"/>
-                                        <option value="#8ECAE6"/>
-                                        <option value="#ea5656"/>
-                                        <option value="#9BA3EB"/>
-                                      </datalist>
-
-                                </div>
-
-                                <div class="col-sm-1 col-12 mt-2">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheck2" onclick="change_status(this)">
-                                        <label class="custom-control-label" for="customCheck2"></label>
-                                    </div>
-                                 </div>
-                            </div>
-    
-                              <div class="d-flex my-2  justify-content-center ">
-                                <button type="submit" class="btn w-50 btn-primary glow  mr-1 mt-0.5 mb-1 side-form-submit">Submit</button>
-                                <button type="reset" class="btn w-50 btn-outline-dark mb-1 mt-0.5">Reset</button>
-                            </div>
-    
-    
-                          </form> 
-                    </div>
-                </div> -->
             </div>
 
-                    <div class="card">
-                        <span><a><i class="fa fa-times close-icon" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></span>
-                        <div class="card-content">
-                              <div class="card-body card-dashboard">
-                                <div class="table-responsive">
-                                    <table id="example1" class="table border-secondary data-list-view">
-                                        <thead>
-                                          <tr class="theadclr text-white">
-                                              <th>Sr. No.</th>
-                                                  <th>LeaveTypeName</th>
-                                                  <th>ShortName</th>
-                                                  <th>IsActive</th>
-                                                  <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                              <td>1</td>
-                                              <td>Sick Leave</td>
-                                              <td>SL</td>
-                                              <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" checked class="custom-control-input" id="customSwitch1">
-                                                  
-                                                  <label class="custom-control-label" for="customSwitch1">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
-                                                  </label>
-                                                  
-                                                  </div></td>
-                                              <td >
-                                                  <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td>2</td>
-                                              <td>Casual Leave</td>
-                                           
-                                              <td>CL</td>
-                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" checked class="custom-control-input" id="customSwitch2">
-                                                  
-                                                  <label class="custom-control-label" for="customSwitch2">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
-                                                  </label>
-                                                  
-                                                  </div></td>
-               
-                                              <td >
-                                                  <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td>3</td>
-                                              <td>Maternity Leave</td>
-                                             
-                                              <td>ML</td>
-                                              <td>  <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" checked class="custom-control-input" id="customSwitch3">
-                                                  
-                                                  <label class="custom-control-label" for="customSwitch3">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
-                                                  </label>
-                                                  
-                                                  </div></td>
-                                              <td >
-                                                  <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-               
-                                          <tr>
-                                              <td>4</td>
-                                              <td>Parental Leave</td>
-                                             
-                                              <td>PL</td>
-                                              <td> 
-                                                 <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                                  <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                                                  
-                                                  <label class="custom-control-label" for="customSwitch4">
-                                                  
-                                                  <span class="switch-text-left">Active</span>
-                                                  
-                                                  <span class="switch-text-right">InActive</span>
-                                                  
-                                                  </label>
-                                                  
-                                                  </div>
-                                                </td>
-                                              <td >
-                                                  <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                              </td>
-                                          </tr>
-                                          
-                                      </tbody>
-                                    </table>
-                                </div>
-                              </div>
-                          </div>
-                    </div>
-
-                    
-                   
-              
-
-            </div>
-           
         </div>
-    </section>
-    
-    <!-- END: Content-->
+        <div class="content-body">
+            <div class="card">
+                <div class="card-header pb-1">
+                    <h5 class="card-basic">Add Leave Type</h5>
+                    <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                            <li><a><i class="feather icon-x" onclick="window.location.href='../Leave/LeaveMaster.html'"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body pt-0 pb-0">
+                        <form class="form-horizontal" novalidate>
+                            <div class="row">
+                               
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <label>Leave Type Name</label>
+                                            <input type="text"  class="form-control"  placeholder="Leave Type Name" required >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <label>Short Name</label>
+                                            <input type="text"  class="form-control"  placeholder="Short Name" required >
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                             <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="data-status">Policy Name</label>
+                                    <select class="select2 form-control" id="data-status">
+                                        <option>Select Policy Name</option>
+                                        <option>Leave Policy</option>
+                                        <option>Company Policy</option>
+                                        <option>Asset Policy</option>
+                                    </select>
+                                  </div>
+                            </div>
+                               
+                         </div>
+                        
+                         <div class="row">
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label>Per Year Leaves</label>
+                                    <input type="text"  class="form-control"  placeholder="Leave Per Year" required >
+                                </div>
+                                </div>
+
+                              <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label>Per Month Leaves</label>
+                                    <input type="text"  class="form-control"  placeholder="Leave Per Month" required disabled>
+                                </div>
+                             </div>
+
+                             <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="col-12">
+                                     <label>Leaves Should Be Credited On :</label>
+                                     <fieldset id="WBRadio">
+                                     <div class="row  form-group">
+                                       <div class="col-6">
+                                           <div class="custom-control custom-checkbox pt-1">
+                                               <input type="checkbox" class="custom-control-input" name="customCheck8" id="customCheck8">
+                                               <label class="custom-control-label" for="customCheck8">Opening Quota</label>
+                                           </div>
+                                       </div>
+                                     </div>
+                                 </fieldset>
+                                </div>
+                              </div>   
+                        </div>
+
+                         <div class="row">
+                           
+                               <div class="col-sm-12 col-md-4 col-lg-4">
+                                 <div class="col-12">
+                                   <label>Applicable In Notice/Probation Period :</label>
+                                   <fieldset id="WBRadio">
+                                   <div class="row pt-1 form-group">
+                                        <div class="col-6">
+                                            <div class="custom-control custom-checkbox pt-1">
+                                                <input type="checkbox" class="custom-control-input" name="customCheck2" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">YES</label>
+                                            </div>
+                                        </div>
+                                   </div>
+                               </fieldset>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                 <div class="col-12">
+                                   <label>Leave Cancellable By Employee :</label>
+                                   <fieldset id="WBRadio">
+                                   <div class="row pt-1 form-group">
+                                        <div class="col-6">
+                                            <div class="custom-control custom-checkbox pt-1">
+                                                <input type="checkbox" class="custom-control-input" name="customCheck4" id="customCheck4">
+                                                <label class="custom-control-label" for="customCheck4">YES</label>
+                                            </div>
+                                        </div>
+                                   </div>
+                               </fieldset>
+                              </div>
+                            </div>
+
+                            
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label for="" class=" my-auto">Leave To Be Applied Before</label>
+                                    <div class="d-flex gap-1rem pt-1">
+                                        <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter Days">
+                                        <label for="" class=" my-auto">Days</label>
+                                    </div>
+                                  </div>
+                            </div>
+                         </div>
+
+                           <div class="row">
+                                
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="" class=" my-auto">Medical Certificate Required After</label>
+                                        <div class="d-flex gap-1rem pt-1">
+                                            <div class="custom-control custom-checkbox pt-0">
+                                                <input type="checkbox" class="custom-control-input" name="customCheckyes" id="customCheckyes">
+                                                <label class="custom-control-label pb-1" for="customCheckyes">YES</label>
+                                            </div>
+                                            <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter No. of Leaves">
+                                            <label for="" class=" my-auto">Days</label>
+                                        </div>
+                                      </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-12">
+                                        <label>Present Consider By :</label>
+                                        <fieldset id="WBRadio">
+                                        <div class="row pt-1 form-group">
+                                                <div class="col-6">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="precal" checked>
+                                                            <label class="custom-control-label"  data-toggle="tooltip" data-placement="top" title="(Weekoff's are applicable as calendar not by custom)" for="precal">Calendar Days </label>
+                                                        </div>
+                                                </div>
+                                                <div class="col-6">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input" name="WBRadio" id="precal2">
+                                                            <label class="custom-control-label" for="precal2">Working Days</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </fieldset>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="row">
+                                      
+                                          <div class="col-sm-12 col-md-4 col-lg-6">
+                                              <label>Background Color</label>
+                                              <input type="color"  class="form-control" id="background" list="backgroundColors" value="#ea5656" required >
+                                              <datalist id="backgroundColors">
+                                                <option value="#fe9f41"/>
+                                                <option value="#9CE3AB"/>
+                                                <option value="#219EBC"/>
+                                                <option value="#FFB703"/>
+                                                <option value="#FCA311"/>
+                                                <option value="#FCA311"/>
+                                                <option value="#F95738"/>
+                                                <option value="#9e224f"/>
+                                                <option value="#0D3B66"/>
+                                                <option value="#F4D35E"/>
+                                                <option value="#023047"/>
+                                                <option value="#14213D"/>
+                                                <option value="#242F9B"/>
+                                                <option value="#8ECAE6"/>
+                                                <option value="#ea5656"/>
+                                                <option value="#9BA3EB"/>
+                                              </datalist>
+              
+                                          </div>
+              
+                                          <div class="col-sm-12 col-md-4 col-lg-4">
+                                           <div class="form-group">
+                                              <label>Font Color</label>
+                                              <input type="color" id="font" class="form-control" list="fontColors" value="#ffffff" required>
+                                              <datalist id="fontColors">
+                                                  <option value="#fe9f41"/>
+                                                  <option value="#9CE3AB"/>
+                                                  <option value="#219EBC"/>
+                                                  <option value="#FFB703"/>
+                                                  <option value="#FCA311"/>
+                                                  <option value="#FCA311"/>
+                                                  <option value="#F95738"/>
+                                                  <option value="#9e224f"/>
+                                                  <option value="#0D3B66"/>
+                                                  <option value="#F4D35E"/>
+                                                  <option value="#023047"/>
+                                                  <option value="#14213D"/>
+                                                  <option value="#242F9B"/>
+                                                  <option value="#8ECAE6"/>
+                                                  <option value="#ea5656"/>
+                                                  <option value="#9BA3EB"/>
+                                                </datalist>
+                                              </div>
+                                          </div>
+                        
+                                          <div class=" pr-1 mt-2">
+                                              <div class="custom-control custom-checkbox">
+                                                  <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheckforColr" onclick="change_status(this)">
+                                                  <label class="custom-control-label" for="customCheckforColr"></label>
+                                              </div>
+                                          </div>
+                                      </div>
+                                   </div>
+                        </div>
+
+                        
+
+                        <div class="row"> 
+                           
+                             <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label>Remark</label>
+                                     <input type="text"  class="form-control"  placeholder="Remark" required >
+                                  </div>
+                            </div>
+                        </div>
+                                
+                        
+                               
+                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                    <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
+                                    <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+
+   
+</section>
+
+<!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
@@ -751,7 +770,7 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-
+   
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
     

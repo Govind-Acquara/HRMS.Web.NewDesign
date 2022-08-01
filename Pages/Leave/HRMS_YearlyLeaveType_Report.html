@@ -6,11 +6,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Acquara">
-    <title>Employee Probation List</title>
+    <title>Yearly LeaveType Report</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -19,7 +19,8 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-
+     <!-- link for year date picker -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
     <!-- END: Vendor CSS-->
 
     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
@@ -41,7 +42,8 @@
 
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
     <!-- END: Page CSS-->
-
+   <!-- Dropdown Search CSS -->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -52,8 +54,6 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
-
-
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
         <div class="navbar-wrapper">
@@ -196,24 +196,20 @@
 
                     </ul>
                 </li>
-                <li class=" nav-item" id="Employee">
+                <li class=" nav-item">
                     <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
                     <ul class="menu-content">
                         <li>
                             <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
                         </li>
-                       
                         <li>
                             <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
                         </li>
-                        <li id="ViewEmployee">
+                        <li>
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
-                        
                         <li>
-
-                        <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
-
+                            <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
                         </li>
                         <li>
                             <a href="../Employee/EmployeeSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Employee Settings</span></a>
@@ -221,7 +217,7 @@
                     </ul>
                 </li>
                 <li class=" nav-item">
-                    <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+                    <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                     <ul class="menu-content">
                         <li>
                             <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
@@ -236,7 +232,6 @@
                         <li>
                             <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                         </li>
-
                         <li>
                             <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                         </li>
@@ -254,14 +249,15 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="leave">
                     <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                     <ul class="menu-content">
+                        
                         <li>
-                         <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
-                        </li>
-    
-                        <li>
+                                <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                         </li>
+                       
+                         <li>
                             <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Type</span></a>
                             
                          </li>
@@ -269,7 +265,7 @@
                             <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List"> Leave Application </span></a>
                             
                          </li>
-                         <li>
+                         <li >
                             <a href="../Leave/HRMS_LeaveBalanceMonth.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Balance</span></a>
                          </li>
                          <li>
@@ -368,295 +364,178 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Employee Probation List</h2>
+                            <h2 class="content-header-title float-left mb-0">Yearly LeaveType Report</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
                                         <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item active">
-                                        Employee
+                                        Leave
                                     </li>
                                 </ol>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div class="content-body">
 
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-body card-dashboard">
-                              <div>
-                                <a  class="btn btn-primary" href="HRMS_ViewEmployeeList.html">View Employee List</a>
-                              </div>
-                             <div class="card-header pb-1">
-                                <div class="heading-elements"> 
-                                    <ul class="list-inline mb-0">
-                                        
-                                        <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
-                                        <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
-                                        <li><a><i class="feather icon-x" onclick="window.location.href='HRMS_ViewEmployeeList.html'"></i></a></li>
-                                    </ul>
-                                </div>
+            <ul class="nav nav-pills mb-3" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center " href="../Leave/HRMS_MonthlyLeaveType_Report.html">
+                        <i class="feather icon-calendar mr-25"></i><span class="d-none d-sm-block">Monthly</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center active" href="../Leave/HRMS_YearlyLeaveType_Report.html">
+                        <i class="fa fa-calendar mr-25"></i><span class="d-none d-sm-block">Yearly</span>
+                    </a>
+                </li>                                  
+                          
+
+            </ul>
+            
+              <!-- side content -->
+                           
+                <div class="tab-content">
+                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
+                        <div class="content-body">
+                            <div class="card">
+
+                                <div class="card-header pb-1">
+                                    <h5 class="card-basic">Year</h5>
+                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                                    <div class="heading-elements">
+                            <ul class="list-inline mb-0">
+                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                            </ul>
                             </div>
-                            <div class="table-responsive">
-                                <table id="ProbationListTable" class="table border-secondary table-striped dataex-html5-selectors">
-                                    <thead>
-                                        <tr class="theadclr text-white">
-                                            <th>SrNo.</th>
-                                            <th>Photo</th>
-                                            <th>Name</th>
-                                            <th>Department</th>
-                                            <th>Designation</th>
-                                            <th>Date Of Joining (DD-MM-YYYY)</th>
-                                            <th>Probation End Date (DD-MM-YYYY)</th>
-                                            <th>Email</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot class="tableSearchFoot">
-                                        <tr>
-                                            <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
-                                            <th>Photo</th>
-                                            <th>Name</th>
-                                            <th>Department</th>
-                                            <th>Designation</th>
-                                            <th>Date Of Join</th>
-                                            <th>Probation End Date</th>
-                                            <th>Email</th>
-                                            <th></th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td> <div class="d-flex justify-content-start align-items-center">
-                                                <div class="avatar mr-50">
-                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
-                                                </div>
-                                            </div></td>
-                                            <td> <div class="user-page-info">
-                                                <h6 class="mb-0">Pooja Jain</h6>
-                                                <h6 class="mb-0 text-secondary">Emp-101</h6>
-                                            </div></td>
-                                            <td>IT</td>
-                                            <td>Software Developer</td>
-                                            <td>24-10-2022</td>
-                                            <td>1-02-2022</td>
-                                            <td>Pooja.jain@acquara.com</td>
-                                            
-
-
-                                            <td>
-                                             <div class="d-flex justify-content-between">
-                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                <button type="button" data-toggle="modal" data-target="#confirm" class="btn btn-success btn-sm">Confirm</button>
-                                              </div>
-
-                                                <!-- Modal Call on modify -->
-                                                <div class="modal fade text-left" id="primary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  modal-lg" role="document">
-                                                     <div class="modal-content">
-                                                         <div class="modal-header bg-primary white">
-                                                             <h4 class="modal-title" id="myModalLabel17">Update Probation Date (DD-MM-YYYY)</h4>
-                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                 <span aria-hidden="true">&times;</span>
-                                                             </button>
-                                                         </div>
-                                                         <div class="modal-body">
-                                                             
-                                                            <div class="row ">
-                                                                <div class="col-lg-6">
-                                                                    <div class="row mb-1">
-                                                                        <div class="col-6">
-                                                                            <h6>Employee Name</h6>
-                                                                        </div>
-                                                                        <div class="col-6">
-                                                                            <p>Pooja</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row mb-1">
-                                                                        <div class="col-6">
-                                                                            <h6>Designation</h6>
-                                                                        </div>
-                                                                        <div class="col-6">
-                                                                            <p>Software developer</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <div class="row mb-1">
-                                                                        <div class="col-6">
-                                                                            <h6>DOJ (DD-MM-YYYY)</h6>
-                                                                        </div>
-                                                                        <div class="col-6">
-                                                                            <p>24-10-2022</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row mb-1">
-                                                                        <div class="col-6">
-                                                                            <h6>Reporting Manager</h6>
-                                                                        </div>
-                                                                        <div class="col-6">
-                                                                            <p>Geeta Pathak</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-md-6">
-                                                                    <h6>Existing Probation End Date (DD-MM-YYYY)</h6>
-                                                                    <p>	1-02-2022</p>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-6">
-                                                                    <div class="form-group">
-                                                                        <label>Select Extended Date (DD-MM-YYYY)</label>
-                                                                        <input type="date" class="form-control w-100" placeholder="Select Probation Extended Date" required >
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                                     <div class="form-group">
-                                                                        <label>Reason</label>
-                                                                        <textarea class="form-control" id="textAreaExample1" rows="2" placeholder="Reason"></textarea>
-                                                                    </div>
-                                                         <div class="modal-footer">
-                                                             <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
-                                                         </div>
-                                                     </div>
-                                                    </div>
-                                                   </div>
-                                                  </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td> <div class="d-flex justify-content-start align-items-center">
-                                                <div class="avatar mr-50">
-                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
-                                                </div>
-                                            </div></td>
-                                            <td> <div class="user-page-info">
-                                                <h6 class="mb-0">Yash Sharma</h6>
-                                                <h6 class="mb-0 text-secondary">Emp-102</h6>
-                                            </div></td>
-                                            <td>IT</td>
-                                            <td>Software Developer</td>
-                                            <td>24-10-2022</td>
-                                            <td>1-02-2022</td>
-                                            <td>Yash.Sharma@acquara.com</td>
-                                           
-
-                                            <td>
-                                                <div class="d-flex justify-content-between">
-                                                   <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirm">Confirm</button>
-                                                 </div>
-   
-                                               </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td> <div class="d-flex justify-content-start align-items-center">
-                                                <div class="avatar mr-50">
-                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
-                                                </div>
-                                            </div></td>
-                                            <td> <div class="user-page-info">
-                                                <h6 class="mb-0">Arpit Sharma</h6>
-                                                <h6 class="mb-0 text-secondary">Emp-103</h6>
-                                            </div></td>
-                                            <td>IT</td>
-                                            <td>Devloper</td>
-                                            <td>24-07-2022</td>
-                                            <td>1-11-2022</td>
-                                            <td>Arpit.sharma@acquara.com</td>
-                                           
-
-                                            <td>
-                                                <div class="d-flex justify-content-between">
-                                                   <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirm">Confirm</button>
-                                                 </div>
-   
-
-                                               </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td> <div class="d-flex justify-content-start align-items-center">
-                                                <div class="avatar mr-50">
-                                                    <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" alt="avtar img holder" height="40" width="40">
-                                                </div>
-                                            </div></td>
-                                            <td> <div class="user-page-info">
-                                                <h6 class="mb-0">Somya</h6>
-                                                <h6 class="mb-0 text-secondary">Emp-104</h6>
-                                            </div></td>
-                                            <td>Accounts</td>
-                                            <td>sales</td>
-                                            <td>02-06-2022</td>
-                                            <td>1-11-2022</td>
-                                            <td>Neha@Acquara.com</td>
-                                           
-
-                                            <td>
-                                                <div class="d-flex justify-content-between gap-1rem">
-                                                   <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#primary">Extend</button>
-                                                   <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirm">Confirm</button>
-                                                 </div>
-
-                                               </td>
-                                        </tr>
-
-                                    </tbody>
-
-
-                                </table>
-
-                                <div class="modal fade text-left" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="false"  aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-scrollable" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header bg-primary">
-                                                <h4 class="modal-title" id="myModalLabel1">Confirm Employee?</h4>
-                                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button> -->
-                                            </div>
-                                            <div class="modal-body">
-                                                <h5>Confirm Employee </h5>
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>  
+                        <div class="card-content collapse show">
+                            <div class="card-body">
+                                <form class="form-horizontal" novalidate>
+                                    <div class="row">
+                                        <div class=" col-md-4 col-sm-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label>Employee Name / Code</label>
+                                                <select class="select2 form-control" id="default-select">
+                                                     <option value="Active">Select Employee Name</option>
+                                                     <option value="Blocked">Bhumi EMP-101</option>
+                                                     <option value="deactivated">rahul EMP-102</option>
+                                                     <option value="Active">Arunima EMP-103</option>
+                                                     <option value="Blocked">yash EMP-104</option>
+                                                     <option value="deactivated">pooja EMP-105</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
+                                        <div class="col-12  col-sm-12 col-lg-4">
+                                             <div class="form-group">
+                                                 <label>Select Year</label>
+                                                 <input type="text"  name="datepicker" class="form-control currentYear" required placeholder="Year" data-validation-required-message="This birthdate field is required" >
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-12  col-sm-12 col-lg-4">
+                                            <button type="submit" class="btn btn-primary glow  mr-1 mt-2">View</button>
+                                          </div>
+            
+                                     </div>
+                                    
+                                   
+                                </form>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body card-dashboard">
+                                    <div class="d-flex gap-1rem pt-1">
+                                        <h5 class="border-right-primary pr-1 border-right-2">Year Leave Type : <span class="font-weight-normal">2022</span></h5>
+                                        <h5 class="border-right-primary pr-1 border-right-2">Employee Name : <span class="font-weight-normal">Pooja Jain</span></h5>
+                                        <h5 class="">Employee Code  : <span class="font-weight-normal">EMP-105</span></h5>
+
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table id="LeaveTypeReportTable" class="table  border-secondary table-striped dataex-html5-selectors">
+                                            <thead>
+                                                <tr class="theadclr text-white">
+                                                    <th >Sr. No.</th>
+                                                    <th>Leave Type</th>
+                                                    <th>From (DD-MM-YYYY)</th>
+                                                    <th>To (DD-MM-YYYY)</th>
+                                                    <th>No. Of Days</th>
+                                                   
+                                                </tr>
+                                            </thead>
+                                            <tfoot class="tableSearchFoot">
+                                                <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                                <th>Leave Type</th>
+                                                <th>From (DD-MM-YYYY)</th>
+                                                <th>To (DD-MM-YYYY)</th>
+                                                <th>No Of Days</th>
+                                               
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Casual Leave</td>
+                                                    <td>1-01-2022</td>
+                                                    <td>3-01-2022</td>
+                                                    <td>3</td>
+                                                    
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Sick Leave</td>
+                                                    <td>2-03-2022</td>
+                                                    <td>2-03-2022</td>
+                                                    <td>1</td>
+                                                </tr>
+        
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Casual Leave</td>
+                                                    <td>10-05-2022</td>
+                                                    <td>12-05-2022</td>
+                                                    <td>2</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Casual Leave</td>
+                                                    <td>9-06-2022</td>
+                                                    <td>12-06-2022</td>
+                                                    <td>4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
 
 
+                        
+                                        <!-- users edit account form start -->
+                                        
+
+                                       
+
+                                        
+                                        <!-- users edit account form ends -->
+                    </div>
+
+                                </div>                 
             </div>
 
         </div>
     </section>
 
     <!-- END: Content-->
-
-    <div class="sidenav-overlay"></div>
-    <div class="drag-target"></div>
-
- 
-
-
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
         <p class="clearfix blue-grey lighten-2 mb-0">
@@ -665,8 +544,7 @@
         </p>
     </footer>
     <!-- END: Footer-->
-
-
+    <!-- BEGIN: Vendor JS-->
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
     <script src="../../Content/app-assets/js/custom-js.js"></script>
     <!-- BEGIN Vendor JS-->
@@ -674,8 +552,6 @@
 
     <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
     <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-    
-
     <!-- END: Page Vendor JS-->
     <!-- BEGIN: Theme JS-->
     <script src="../../Content/app-assets/js/core/app-menu.js"></script>
@@ -699,45 +575,54 @@
     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
-
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-    <!-- END: Page JS-->
-
-
-   <!-- Importing Custom Script.js  -->
-   <script src="../../Content/assets/js/scripts.js"></script>
+    <!-- js link for month date picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+     <!-- Importing Custom Script.js  -->
+     <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
-
-$(document).ready(function () {
-
-// Attach Button click event listener 
-$("#EmpConfirm").click(function(){
-
-    // show Modal
-    $('#default').modal('show');
-});
-});
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": true,
 
 
+                "buttons": ["excel", "print", "copy", "pdf", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        });
+    </script>
+
+    <script>
         window.onload = function () {
-            document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("ViewEmployee").className = 'active';
+            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("leave_balance").className = 'active';
         }
     </script>
 
+
 <script>
-    function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+    
+    $(document).ready(function(){
+    
+        var currYear = new Date();
+         var thisYear =currYear.getFullYear();
+        document.getElementById(".currentYear").value = thisYear;
+    
+    });
+    $(".currentYear").datepicker( {
+        format: "yyyy",
+        viewMode: "years", 
+        minViewMode: "years",
+        autoclose:true //to close picker once year is selected
+    }); 
+    </script>
+
 </body>
 <!-- END: Body-->
 
