@@ -594,15 +594,19 @@
 
 
                                                         </div>
-                                                        <div class="row">
 
 
-                                                            <div class="col-12 col-sm-6 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label>Valid Upto (DD-MM-YYYY)</label>
-                                                                        <input type="text" class="form-control birthdate-picker" placeholder="Valid Upto" required data-validation-required-message="This field is required">
+                                                         <div class="row">
+                                                            <div class=" col-md-6 col-lg-6">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <label>Valid Upto (DD-MM-YYYY)</label>
+                                                                    <div class="custom-control custom-checkbox ">
+                                                                        <input type="checkbox" class="custom-control-input" name="DocumentCompleted" id="DocumentCompleted">
+                                                                        <label class="custom-control-label" for="DocumentCompleted">If Validity Required</label>
                                                                     </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                  <input type="text" class="form-control birthdate-picker" id="DCI" disabled="disabled" placeholder="Valid Upto" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
 
@@ -784,6 +788,9 @@
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+
+       <!-- Importing Custom Script.js  -->
+       <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
         $(function () {

@@ -888,6 +888,24 @@ $('#customYear').click(function(){
         }
 
 
+        //document page script start
+       
+            if ($('#DocumentCompleted').length != 0) {
+    
+              $('#DocumentCompleted').click(function(){
+                if ($(this).is(':checked')) {
+                      $('#DCI').prop("disabled", false);
+                     
+                } else {
+                      $('#DCI').prop("disabled", true);
+                     
+                }
+              });
+              
+              }
+
+
+
         // Induction Page Script Start
 
         if ($('#InductionCompleted').length != 0) {
