@@ -531,11 +531,13 @@
                                         </div>
                                     </div>
 
+                                    
+
                                     <div class=" col-md-4 col-sm-12 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
-                                                <label>Max Carry Forward Leave</label>
-                                                <input type="text" class="form-control" placeholder="Max Carry Forward Leave">
+                                                <label>Max Leave Quota</label>
+                                                <input type="text" class="form-control" placeholder="Max Leave Quota">
                                             </div>
                                         </div>
                                     </div>
@@ -594,7 +596,9 @@
                                         <th >Sr. No.</th>
                                         <th>Leave Type</th>
                                         <th>Assign Annual Leave</th>
-                                        <th>Max Carry Forward Leave</th>
+                                        <th>Max Leave Quota</th>
+                                        <th>Carry Forward Leave</th>
+                                        <th>Calculation</th>
                                         <th>IsActive</th>
                                         <th>Action</th>
                                         
@@ -605,7 +609,9 @@
                                     <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
                                     <th>Leave Type</th>
                                     <th>Assign Annual Leave</th>
-                                    <th>Max Carry Forward Leave</th>
+                                    <th>Max Leave Quota</th>
+                                    <th>Carry Forward Leave</th>
+                                    <th>Calculation</th>
                                     <th></th>
                                     <th></th>
                                    
@@ -615,6 +621,8 @@
                                         <td>1</td>
                                         <td  data-toggle="tooltip" data-placement="top" title="multiple Select">Casual Leave</td>
                                         <td>15</td>
+                                        <td>10</td>
+                                        <td>CL+PL</td>
                                         <td>10</td>
                                         <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
@@ -639,6 +647,8 @@
                                         <td>Sick Leave</td>
                                         <td>15</td>
                                         <td>10</td>
+                                        <td>CL+SL</td>
+                                        <td>15</td>
                                         <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                             <input type="checkbox" checked class="custom-control-input" id="chkLeaveQuota">
@@ -661,6 +671,8 @@
                                         <td>3</td>
                                         <td>Maternity Leave</td>
                                         <td>60</td>
+                                        <td>0</td>
+                                        <td>ML</td>
                                         <td>0</td>
                                         <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
@@ -687,11 +699,7 @@
                 </div>
             </div> 
 
-                    
-                   
-              
-
-            </div>
+         </div>
            
         </div>
     </section>
@@ -770,8 +778,8 @@
         $(document).ready(function () {
           $("#LeaveQuota tfoot th")
             .not("th:nth-child(1)")
-            .not("th:nth-child(5)")
-            .not("th:nth-child(6)")
+            .not("th:nth-child(7)")
+            .not("th:nth-child(8)")
             .each(function () {
               var title = $("#LeaveQuota tfoot th")
                 .eq($(this).index())
