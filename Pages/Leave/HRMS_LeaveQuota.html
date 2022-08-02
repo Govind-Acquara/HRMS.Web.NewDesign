@@ -281,7 +281,9 @@
                     <li>
                         <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
                     </li>
-                   
+                    <li>
+                        <a href="../Master/HRMS_PolicyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Policy Master</span></a>
+                    </li>
                     <li>
                         <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
                     </li>
@@ -366,8 +368,15 @@
                      <li>
                         <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
                      </li>
+                     <li  id="Leave_quota">
+                        <a href="../Leave/HRMS_LeaveQuota.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Quota</span></a>
+                     </li>
                       <li>
                         <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
+                     </li>
+
+                     <li>
+                        <a href="../Leave/HRMS_MonthlyLeaveType_Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Report</span></a>
                      </li>
                     
                      <!-- <li>
@@ -474,11 +483,11 @@
                 
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h4 class="card-basic">Apply Leave for Employee</h4>
+                        <h4 class="card-basic">Add Leave Quota</h4>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
                                 <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                                <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
+                                <li><a><i class="feather icon-x" onclick="window.location.href='../Leave/LeaveManagement_Dashboard.html'"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -511,21 +520,37 @@
                                         </div>
                                     </div>
 
-                                     <!-- <div class="form-group col-lg-6 col-md-6">
-                                        <label>Assign for Department</label>
-                                        <select class="select2 form-control" multiple="multiple">
-                                            <option value="it">IT</option>
-                                            <option value="accounts">Accounts</option>
-                                            <option value="sales">Sales</option>
-                                            <option value="hr">HR</option>
-                                        </select>
-                                    </div> -->
-                
+                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                        <div class="form-group">
+                                            <label>Carry Forward</label>
+                                            <select class="select2 form-control" multiple="multiple">
+                                                <option value="cl">CL</option>
+                                                <option value="sl">SL</option>
+                                                <option value="hd">HD</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                   
+
+                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label>Calculation</label>
+                                                <input type="text" class="form-control" placeholder="Calculation">
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
+
+                               
                 
-                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
+                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                    <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
+                                    <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
+                                </div>
                 
                             </form>
                         </div>
@@ -534,6 +559,53 @@
     
               
             </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body card-dashboard">
+                        <div class="table-responsive">
+                            <table id="LeaveTypeReportTable" class="table  border-secondary table-striped dataex-html5-selectors">
+                                <thead>
+                                    <tr class="theadclr text-white">
+                                        <th >Sr. No.</th>
+                                        <th>Leave Type</th>
+                                        <th>Max Leave</th>
+                                        
+                                       
+                                    </tr>
+                                </thead>
+                                <tfoot class="tableSearchFoot">
+                                    <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                    <th>Leave Type</th>
+                                    <th>Max Leave</th>
+                                    
+                                   
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Casual Leave</td>
+                                        <td>15</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Sick Leave</td>
+                                        <td>15</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Maternity Leave</td>
+                                        <td>60</td>
+                                    </tr>
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> 
 
         </div>
            
@@ -615,7 +687,7 @@
     <script>
         window.onload = function () {
             document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_view").className = 'active';
+            document.getElementById("Leave_quota").className = 'active';
         }
 
       
