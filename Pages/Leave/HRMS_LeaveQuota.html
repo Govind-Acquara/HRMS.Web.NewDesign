@@ -497,7 +497,7 @@
                 
                                 <div class="row">
                                    
-                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                    <div class=" col-md-4 col-sm-12 col-lg-4">
                                         <div class="form-group">
                                             <label>Leave Type</label>
                                             <select class="select2 form-control" id="default-select">
@@ -511,18 +511,31 @@
                                         </div>
                                     </div>
 
-                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                    <div class=" col-md-4 col-sm-12 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
-                                                <label>Max Leave</label>
-                                                <input type="text" class="form-control" placeholder="Max Leave">
+                                                <label>Assign Annual Leave</label>
+                                                <input type="text" class="form-control" placeholder="Assign Annual Leave">
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                    <div class=" col-md-4 col-sm-12 col-lg-4">
                                         <div class="form-group">
-                                            <label>Carry Forward</label>
+                                            <div class="controls">
+                                                <label>Max Carry Forward Leave</label>
+                                                <input type="text" class="form-control" placeholder="Max Carry Forward Leave">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                             </div>
+                                
+                             <div class="row">
+
+                                    <div class="col-md-4 col-sm-12 col-lg-4">
+                                        <div class="form-group">
+                                            <label  data-toggle="tooltip" data-placement="top" title="multiple Select">Carry Forward Leave</label>
                                             <select class="select2 form-control" multiple="multiple">
                                                 <option value="cl">CL</option>
                                                 <option value="sl">SL</option>
@@ -534,7 +547,7 @@
 
                                    
 
-                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                    <div class=" col-md-4 col-sm-12 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Calculation</label>
@@ -569,35 +582,90 @@
                                     <tr class="theadclr text-white">
                                         <th >Sr. No.</th>
                                         <th>Leave Type</th>
-                                        <th>Max Leave</th>
+                                        <th>Assign Annual Leave</th>
+                                        <th>Max Carry Forward Leave</th>
+                                        <th>IsActive</th>
+                                        <th>Action</th>
                                         
                                        
                                     </tr>
                                 </thead>
-                                <tfoot class="tableSearchFoot">
+                                <!-- <tfoot class="tableSearchFoot">
                                     <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
                                     <th>Leave Type</th>
-                                    <th>Max Leave</th>
+                                    <th>Assign Annual Leave</th>
+                                    <th>Max Carry Forward Leave</th>
                                     
                                    
-                                </tfoot>
+                                </tfoot> -->
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Casual Leave</td>
+                                        <td  data-toggle="tooltip" data-placement="top" title="multiple Select">Casual Leave</td>
                                         <td>15</td>
+                                        <td>10</td>
+                                        <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                            <input type="checkbox" checked class="custom-control-input" id="customSwitch1">
+                                            
+                                            <label class="custom-control-label" for="customSwitch1">
+                                            
+                                            <span class="switch-text-left">Active</span>
+                                            
+                                            <span class="switch-text-right">InActive</span>
+                                            
+                                            </label>
+                                            
+                                            </div></td>
+                                        <td >
+                                            <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                        </td>
                                     </tr>
 
                                     <tr>
                                         <td>2</td>
                                         <td>Sick Leave</td>
                                         <td>15</td>
+                                        <td>10</td>
+                                        <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                            <input type="checkbox" checked class="custom-control-input" id="customSwitch2">
+                                            
+                                            <label class="custom-control-label" for="customSwitch2">
+                                            
+                                            <span class="switch-text-left">Active</span>
+                                            
+                                            <span class="switch-text-right">InActive</span>
+                                            
+                                            </label>
+                                            
+                                            </div></td>
+                                        <td >
+                                            <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                        </td>
                                     </tr>
 
                                     <tr>
                                         <td>3</td>
                                         <td>Maternity Leave</td>
                                         <td>60</td>
+                                        <td>0</td>
+                                        <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                              
+                                            <input type="checkbox" checked class="custom-control-input" id="customSwitch3">
+                                            
+                                            <label class="custom-control-label" for="customSwitch3">
+                                            
+                                            <span class="switch-text-left">Active</span>
+                                            
+                                            <span class="switch-text-right">InActive</span>
+                                            
+                                            </label>
+                                            
+                                            </div></td>
+                                        <td >
+                                            <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                        </td>
                                     </tr>
                                   
                                 </tbody>
@@ -765,7 +833,7 @@
     <script>
         window.onload = function () {
             document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("leave_view").className = 'active';
+            document.getElementById("Leave_quota").className = 'active';
         }
 
       
