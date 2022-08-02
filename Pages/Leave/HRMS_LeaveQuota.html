@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Leave Quota</title>
+    <title>Leave Setup</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -40,18 +40,28 @@
  
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
-     <!-- Dropdown Search CSS -->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+ 
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
 
-    <style>
-       .tooltip{
-    z-index: 99999;
-    position: fixed;
-}
-    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="http://kp.bkd.sidoarjokab.go.id/website/lib/DataTables-1.10.7/media/css/jquery.dataTables.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> -->
+
+
+             <!-- Dropdown Search CSS -->
+             <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+
+
+<style>
+    tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+</style>
 </head>
 <!-- END: Head-->
 
@@ -287,6 +297,7 @@
                     <li>
                         <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
                     </li>
+
                 </ul>
             </li>
             <li class=" nav-item">
@@ -301,7 +312,6 @@
                     <li>
                         <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                     </li>
-                 
                     <li>
 
                         <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
@@ -321,7 +331,6 @@
                     <li>
                         <a href="../Attendance/HolidayList_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Holiday Master </span></a>
                     </li>
-                    
                     <li>
                         <a href="../Attendance/WeeklyOff_Master.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Weekly Off Master </span></a>
                     </li>
@@ -340,7 +349,9 @@
                         <li>
                             <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item">Report</span></a>
                         </li>
-                   
+                    <li>
+                        <a href="../Attendance/AttendanceSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Attendance Settings</span></a>
+                    </li>
                 </ul>
             </li>
             <li class=" nav-item" id="leave">
@@ -470,7 +481,7 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Leave
+                                    <li class="breadcrumb-item active">Leave 
                                     </li>
                                 </ol>
                             </div>
@@ -577,7 +588,7 @@
                 <div class="card-content">
                     <div class="card-body card-dashboard">
                         <div class="table-responsive">
-                            <table id="LeaveTypeReportTable" class="table  border-secondary table-striped dataex-html5-selectors">
+                            <table id="LeaveQuota" class="table  border-secondary table-striped ">
                                 <thead>
                                     <tr class="theadclr text-white">
                                         <th >Sr. No.</th>
@@ -590,14 +601,14 @@
                                        
                                     </tr>
                                 </thead>
-                                <!-- <tfoot class="tableSearchFoot">
+                                 <tfoot class="tableSearchFoot">
                                     <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
                                     <th>Leave Type</th>
                                     <th>Assign Annual Leave</th>
                                     <th>Max Carry Forward Leave</th>
                                     
                                    
-                                </tfoot> -->
+                                </tfoot>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
@@ -617,9 +628,9 @@
                                             </label>
                                             
                                             </div></td>
-                                        <td >
-                                            <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
-                                        </td>
+                                            <td>
+                                                <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                            </td>
                                     </tr>
 
                                     <tr>
@@ -675,8 +686,13 @@
                 </div>
             </div> 
 
-        </div>
+                    
+                   
+              
+
+            </div>
            
+        </div>
     </section>
     
     <!-- END: Content-->
@@ -731,114 +747,88 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
+
+    <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
+
+  
+<!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script> -->
+
+
+    <!-- <script src="http://kp.bkd.sidoarjokab.go.id/website/lib/DataTables-1.10.7/media/js/jquery.js"></script>
+    <script src="http://kp.bkd.sidoarjokab.go.id/website/lib/DataTables-1.10.7/media/js/jquery.dataTables.js"></script> -->
+    <!-- <script src="../../Content/assets/DataTableSearching/DataTables_jquery.js"></script>
+    <script src="../../Content/assets/DataTableSearching/jquery.dataTables.js"></script> -->
+
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
-    <!-- Importing Custom Script.js  -->
-    <script src="../../Content/assets/js/scripts.js"></script>
-     <!-- js link for find diferrence between date-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     
     <script>
-        $(function () {
-        $("#example1").DataTable({
-          "responsive": true, "lengthChange": false, "autoWidth": true,
-          
-          
-          "buttons": ["excel","print", "copy","pdf","colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        
+        $(document).ready(function () {
+          $("#LeaveQuota tfoot th")
+            .not("th:nth-child(1)")
+            .not("th:nth-child(5)")
+            .not("th:nth-child(6)")
+            .each(function () {
+              var title = $("#LeaveQuota tfoot th")
+                .eq($(this).index())
+                .text();
+              $(this).html(
+                '<input type="text" class="form-control" placeholder="Search ' +
+                  title +
+                  '" />'
+              );
+            });
+    
+          $("#LeaveQuota")
+            .DataTable({
+              responsive: true,
+              autoWidth: true,
+              lengthChange: false,
+              buttons: [
+                { extend: 'excel', className: 'p-1 ' },
+                { extend: 'print', className: 'p-1 ' },
+                { extend: 'copy', className: 'p-1 ' },
+                { extend: 'pdf', className: 'p-1 ' },
+                { extend: 'colvis', className: 'p-1' }
+            ],      
+            })
+            .buttons()
+            .container()
+            .appendTo(".col-md-6:eq(0)");
+    
+          var table = $("#LeaveQuota").DataTable();
+    
+          table.columns().every(function () {
+            var that = this;
+    
+            $("input", this.footer()).on("keyup change", function () {
+              that.search(this.value).draw();
+            });
+          });
         });
-        </script>
-    
-    <script>
-        window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("Leave_quota").className = 'active';
-        }
-
+          </script>
       
-    </script>
-
-<script>
-    $('.datepicker').datepicker({
-      dateFormat: 'yy-mm-dd',
-      changeMonth: true,
-      changeYear: true,
-    });
- 
-    $(document).on('change', '#todate', function () {
-      var fromdate = $("#fromdate").val();
-      var todate = $("#todate").val();
- 
-      if ((fromdate == "") || (todate == "")) {
-        $("#result").html("Please enter Both dates");
-        return false
-      }
- 
-      var dt1 = new Date(fromdate);
-      var dt2 = new Date(todate);
- 
-      var time_difference = dt2.getTime() - dt1.getTime();
-      var result = time_difference / (1000 * 60 * 60 * 24)+1;
- 
-      var output =  result +" Day";
-      $("#result").val(output);
-    });
-  </script>
-<!-- for date disable(pooja) -->
-  <script language="javascript">
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-
-    today = yyyy + '-' + mm + '-' + dd;
-    $('#fromdate').attr('min',today);
-  </script>
-
- <script language="javascript">
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-
-    today = yyyy + '-' + mm + '-' + dd;
-    $('#todate').attr('min',today);
-</script>
- 
-<!-- end date disable js(pooja) -->
-    <script>
-     function selectDate(date) {
-    $('#calendar-wrapper').updateCalendarOptions({
-        date: date
-    });
-    console.log(calendar.getSelectedDate());
-    }
-
-    var defaultConfig = {
-    weekDayLength: 1,
-    
-    onClickDate: selectDate,
-    showYearDropdown: true,
-    startOnMonday: false,
-    };
-
-    var calendar = $('#calendar-wrapper').calendar(defaultConfig);
-    console.log(calendar.getSelectedDate());
-    </script>
+      <script>
+          window.onload = function () {
+              document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
+              document.getElementById("Leave_quota").className = 'active';
+          }
+  
+        
+      </script>
     <!-- END: Page JS-->
+<script>
+    $('#test').pickadate({
+    min: true
+});
 
-    <script>
-        window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("Leave_quota").className = 'active';
-        }
-
-      
-    </script>
-
+$('#test2').pickadate({
+    min: true
+});
+</script>
 </body>
 <!-- END: Body-->
 

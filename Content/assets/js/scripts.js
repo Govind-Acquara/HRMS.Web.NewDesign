@@ -601,6 +601,56 @@
       });
     }
 
+
+    //Leave quota Page Table Script
+
+    if ($("#LeaveQuota").length != 0) {
+      $(document).ready(function () {
+        $("#LeaveQuota tfoot th")
+          .not("th:nth-child(1)")
+          .not("th:nth-child(4)")
+          .not("th:nth-child(5)")
+          .each(function () {
+            var title = $("#LeaveQuota tfoot th")
+              .eq($(this).index())
+              .text();
+            $(this).html(
+              '<input type="text" class="form-control" placeholder="Search ' +
+                title +
+                '" />'
+            );
+          });
+  
+        $("#LeaveQuota")
+          .DataTable({
+            responsive: true,
+            autoWidth: true,
+            lengthChange: false,
+            buttons: [
+              { extend: 'excel', className: 'p-1 ' },
+              { extend: 'print', className: 'p-1 ' },
+              { extend: 'copy', className: 'p-1 ' },
+              { extend: 'pdf', className: 'p-1 ' },
+              { extend: 'colvis', className: 'p-1' }
+          ],      
+          })
+          .buttons()
+          .container()
+          .appendTo(".col-md-6:eq(0)");
+  
+        var table = $("#LeaveQuota").DataTable();
+  
+        table.columns().every(function () {
+          var that = this;
+  
+          $("input", this.footer()).on("keyup change", function () {
+            that.search(this.value).draw();
+          });
+        });
+      });
+    }
+
+
 //Leave Type report Page Table Script
 
 if ($("#LeaveTypeReportTable").length != 0) {
