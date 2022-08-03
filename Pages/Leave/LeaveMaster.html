@@ -343,10 +343,7 @@
                             <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
                      </li>
                    
-                     <li id="LeaveType">
-                        <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
-                        
-                     </li>
+                    
                      <li>
                         <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List"> Leave Application </span></a>
                         
@@ -357,11 +354,15 @@
                      <li>
                         <a href="../Leave/HRMS_Yearly_Leave.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Update</span></a>
                      </li>
-                     <li>
+                     <!-- <li>
                         <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
-                     </li>
+                     </li> -->
                      <li>
                         <a href="../Leave/HRMS_LeaveQuota.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Quota</span></a>
+                     </li>
+                     <li id="LeaveType">
+                        <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
+                        
                      </li>
                       <li>
                         <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
@@ -492,7 +493,7 @@
                             <form class="form-horizontal" novalidate>
                                 <div class="row">
                                    
-                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Leave Type Name</label>
@@ -501,7 +502,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Short Name</label>
@@ -509,138 +510,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                  
-                                 <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="data-status">Policy Name</label>
-                                        <select class="select2 form-control" id="data-status">
-                                            <option>Select Policy Name</option>
-                                            <option>Leave Policy</option>
-                                            <option>Company Policy</option>
-                                            <option>Asset Policy</option>
-                                        </select>
-                                      </div>
-                                </div>
-                                   
-                             </div>
-                            
-                             <div class="row">
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Per Year Leaves</label>
-                                        <input type="text"  class="form-control"  placeholder="Leave Per Year" required >
-                                    </div>
-                                    </div>
-    
-                                  <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Per Month Leaves</label>
-                                        <input type="text"  class="form-control"  placeholder="Leave Per Month" required disabled>
-                                    </div>
-                                 </div>
-    
-                                 <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div class="col-12">
-                                         <label>Leaves Should Be Credited On :</label>
-                                         <fieldset id="WBRadio">
-                                         <div class="row  form-group">
-                                           <div class="col-6">
-                                               <div class="custom-control custom-checkbox pt-1">
-                                                   <input type="checkbox" class="custom-control-input" name="customCheck8" id="customCheck8">
-                                                   <label class="custom-control-label" for="customCheck8">Monthly Earning Leave</label>
-                                               </div>
-                                           </div>
-                                         </div>
-                                     </fieldset>
-                                    </div>
-                                  </div>   
-                            </div>
-    
-                             <div class="row">
-                               
-                                   <div class="col-sm-12 col-md-4 col-lg-4">
-                                     <div class="col-12">
-                                       <label>Applicable In Notice/Probation Period :</label>
-                                       <fieldset id="WBRadio">
-                                       <div class="row pt-1 form-group">
-                                            <div class="col-6">
-                                                <div class="custom-control custom-checkbox pt-1">
-                                                    <input type="checkbox" class="custom-control-input" name="customCheck2" id="customCheck2">
-                                                    <label class="custom-control-label" for="customCheck2">YES</label>
-                                                </div>
-                                            </div>
-                                       </div>
-                                   </fieldset>
-                                  </div>
-                                  </div>
-    
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                     <div class="col-12">
-                                       <label>Leave Cancellable By Employee :</label>
-                                       <fieldset id="WBRadio">
-                                       <div class="row pt-1 form-group">
-                                            <div class="col-6">
-                                                <div class="custom-control custom-checkbox pt-1">
-                                                    <input type="checkbox" class="custom-control-input" name="customCheck4" id="customCheck4">
-                                                    <label class="custom-control-label" for="customCheck4">YES</label>
-                                                </div>
-                                            </div>
-                                       </div>
-                                   </fieldset>
-                                  </div>
-                                </div>
-    
-                                
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="" class=" my-auto">Leave To Be Applied Before</label>
-                                        <div class="d-flex gap-1rem pt-1">
-                                            <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter Days">
-                                            <label for="" class=" my-auto">Days</label>
-                                        </div>
-                                      </div>
-                                </div>
-                             </div>
-    
-                               <div class="row">
-                                    
-                                    <div class="col-sm-12 col-md-4 col-lg-4">
+
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
                                         <div class="form-group">
-                                            <label for="" class=" my-auto">Medical Certificate Required After</label>
-                                            <div class="d-flex gap-1rem pt-1">
-                                                <div class="custom-control custom-checkbox pt-0">
-                                                    <input type="checkbox" class="custom-control-input" name="customCheckyes" id="customCheckyes">
-                                                    <label class="custom-control-label pb-1" for="customCheckyes">YES</label>
-                                                </div>
-                                                <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter No. of Leaves">
-                                                <label for="" class=" my-auto">Days</label>
-                                            </div>
+                                            <label>Remark</label>
+                                             <input type="text"  class="form-control"  placeholder="Remark" required >
                                           </div>
                                     </div>
-                                    
-    
-                                    <div class="col-sm-12 col-md-4 col-lg-4">
-                                        <div class="col-12">
-                                            <label>Present Consider By :</label>
-                                            <fieldset id="WBRadio">
-                                            <div class="row pt-1 form-group">
-                                                    <div class="col-6">
-                                                            <div class="custom-control custom-radio">
-                                                                <input type="radio" class="custom-control-input" name="WBRadio" id="precal" checked>
-                                                                <label class="custom-control-label"  data-toggle="tooltip" data-placement="top" title="(Weekoff's are applicable as calendar not by custom)" for="precal">Calendar Days </label>
-                                                            </div>
-                                                    </div>
-                                                    <div class="col-6">
-                                                            <div class="custom-control custom-radio">
-                                                                <input type="radio" class="custom-control-input" name="WBRadio" id="precal2">
-                                                                <label class="custom-control-label" for="precal2">Working Days</label>
-                                                            </div>
-                                                    </div>
-                                            </div>
-                                        </fieldset>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 col-lg-4">
+                                  
+                                    <div class="col-12 col-md-4 col-lg-3">
                                         <div class="row">
                                           
                                               <div class="col-sm-12 col-md-4 col-lg-6">
@@ -693,26 +571,211 @@
                                                   </div>
                                               </div>
                             
-                                              <div class=" pr-1 mt-2">
-                                                  <div class="custom-control custom-checkbox">
-                                                      <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheckforColr" onclick="change_status(this)">
-                                                      <label class="custom-control-label" for="customCheckforColr"></label>
-                                                  </div>
-                                              </div>
+                                            
                                           </div>
+                                    </div>
+                                   
+                               </div>
+
+                               <hr class="mt-0">
+
+                             <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="data-status">Policy Name</label>
+                                        <select class="select2 form-control" id="data-status">
+                                            <option>Select Policy Name</option>
+                                            <option>Leave Policy</option>
+                                            <option>Company Policy</option>
+                                            <option>Asset Policy</option>
+                                        </select>
+                                      </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="data-status">Employee Name</label>
+                                        <select class="select2 form-control" id="data-status">
+                                            <option>Select Employee Name</option>
+                                            <option>Pooja Jain</option>
+                                            <option>Yash Sharma</option>
+                                            <option>Arpit Sharma</option>
+                                        </select>
+                                      </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Per Year Leaves</label>
+                                        <input type="text"  class="form-control"  placeholder="Leave Per Year" required >
+                                    </div>
+                                </div>
+    
+                                  <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Per Month Leaves</label>
+                                        <input type="text"  class="form-control"  placeholder="Leave Per Month" required disabled>
+                                    </div>
+                                 </div>
+    
+                                
+                            </div>
+    
+                             <div class="row">
+
+                                <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="col-12">
+                                         <label>Leaves Should Be Credited On :</label>
+                                         <fieldset id="WBRadio">
+                                         <div class="row  form-group">
+                                           <div class="col-6">
+                                               <div class="custom-control custom-checkbox pt-1">
+                                                   <input type="checkbox" class="custom-control-input" name="customCheck8" id="customCheck8">
+                                                   <label class="custom-control-label" for="customCheck8">Monthly Earning Leave</label>
+                                               </div>
+                                           </div>
+                                         </div>
+                                     </fieldset>
+                                    </div>
+                                  </div>   
+                               
+                                   <div class="col-sm-12 col-md-4 col-lg-3">
+                                     <div class="col-12">
+                                       <label>Applicable In Notice :</label>
+                                       <fieldset id="WBRadio">
+                                       <div class="row pt-1 form-group">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-checkbox pt-1">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheck2" id="customCheck2">
+                                                    <label class="custom-control-label" for="customCheck2">YES</label>
+                                                </div>
+                                            </div>
                                        </div>
+                                   </fieldset>
+                                  </div>
+                                  </div>
+
+                                  <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="col-12">
+                                      <label>Applicable In Probation Period :</label>
+                                      <fieldset id="WBRadio">
+                                      <div class="row pt-1 form-group">
+                                           <div class="col-6">
+                                               <div class="custom-control custom-checkbox pt-1">
+                                                   <input type="checkbox" class="custom-control-input" name="customCheckpro" id="customCheckpro">
+                                                   <label class="custom-control-label" for="customCheckpro">YES</label>
+                                               </div>
+                                           </div>
+                                      </div>
+                                  </fieldset>
+                                 </div>
+                                 </div>
+
+                                 <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="col-12">
+                                      <label>Leave Cancellable By Employee :</label>
+                                      <fieldset id="WBRadio">
+                                      <div class="row pt-1 form-group">
+                                           <div class="col-6">
+                                               <div class="custom-control custom-checkbox pt-1">
+                                                   <input type="checkbox" class="custom-control-input" name="customCheck4" id="customCheck4">
+                                                   <label class="custom-control-label" for="customCheck4">YES</label>
+                                               </div>
+                                           </div>
+                                      </div>
+                                  </fieldset>
+                                 </div>
+                               </div>
+    
+                             </div>
+    
+                               <div class="row">
+
+                                <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="col-12">
+                                      <label>Can Take in Starting of the year :</label>
+                                      <fieldset id="WBRadio">
+                                      <div class="row pt-1 form-group">
+                                           <div class="col-6">
+                                               <div class="custom-control custom-checkbox pt-1">
+                                                   <input type="checkbox" class="custom-control-input" name="customCheck4" id="customCheck4">
+                                                   <label class="custom-control-label" for="customCheck4" data-toggle="tooltip" data-placement="top" title="(Balance to be shown as Negative)">No</label>
+                                               </div>
+                                           </div>
+                                      </div>
+                                  </fieldset>
+                                 </div>
+                               </div>
+
+                                <div class="col-sm-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <label for="" class=" my-auto">Leave To Be Applied Before</label>
+                                        <div class="d-flex gap-1rem pt-1">
+                                            <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter Days">
+                                            <label for="" class=" my-auto">Days</label>
+                                        </div>
+                                      </div>
+                                </div>
+                                    
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <label for="" class=" my-auto">Medical Certificate Required After</label>
+                                            <div class="d-flex gap-1rem pt-1">
+                                                <div class="custom-control custom-checkbox pt-0">
+                                                    <input type="checkbox" class="custom-control-input" name="customCheckyes" id="customCheckyes">
+                                                    <label class="custom-control-label pb-1" for="customCheckyes">YES</label>
+                                                </div>
+                                                <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter No. of Days">
+                                                <label for="" class=" my-auto">Days</label>
+                                            </div>
+                                          </div>
+                                    </div>
+                                   
+                                    <div class="col-sm-12 col-md-4 col-lg-3">
+                                        <div class="col-12">
+                                            <label>Present Consider By :</label>
+                                            <fieldset id="WBRadio">
+                                            <div class="row pt-1 form-group">
+                                                    <div class="col-6">
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" class="custom-control-input" name="WBRadio" id="precal" checked>
+                                                                <label class="custom-control-label"  data-toggle="tooltip" data-placement="top" title="(Weekoff's are applicable as calendar not by custom)" for="precal">Calendar Days </label>
+                                                            </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" class="custom-control-input" name="WBRadio" id="precal2">
+                                                                <label class="custom-control-label" for="precal2">Working Days</label>
+                                                            </div>
+                                                    </div>
+                                            </div>
+                                        </fieldset>
+                                        </div>
+                                    </div>
+                                   
                             </div>
     
                             
     
-                            <div class="row"> 
-                               
-                                 <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Remark</label>
-                                         <input type="text"  class="form-control"  placeholder="Remark" required >
-                                      </div>
-                                </div>
+                            <div class="row" hidden> 
+                             <div class="col-sm-12 col-md-4 col-lg-3">
+                                <div  class="form-group ">
+                                    <label>Valid From Date (DD-MM-YYYY)</label>
+                                     <input type="date"  class="form-control" id="PAVFD" required >
+                                  </div>
+                              </div>
+
+                              <div class="col-sm-12 col-md-4 col-lg-3">
+                                  <div class="form-group">
+                                    <div class="custom-control custom-checkbox ">
+                                        <input type="checkbox" class="custom-control-input" name="PACY" id="PACY">
+                                        <label data-toggle="tooltip" data-placement="top" title="Check for Enter Policy Applicable Date" class="custom-control-label" for="PACY">Valid Upto Date (DD-MM-YYYY) <i  class="feather icon-alert-circle"></i></label>
+                                    </div>
+                                    <input type="date"  class="form-control" disabled="disabled" id="PAVTD" required >
+                                  </div>
+                              </div>
+                              
+
                             </div>
                                     
                             
