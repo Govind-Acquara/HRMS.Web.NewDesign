@@ -10,17 +10,17 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Acquara">
-    <title>Monthly LeaveType Report</title>
+    <title>Earning Leave Quota</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
-    <!-- link for month date picker -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-
+     <!-- link for year date picker -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
     <!-- END: Vendor CSS-->
 
     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
@@ -211,9 +211,7 @@
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
                         <li>
-
                             <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
-
                         </li>
                         <li>
                             <a href="../Employee/EmployeeSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Employee Settings</span></a>
@@ -278,14 +276,14 @@
                          <li>
                             <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
                          </li>
-                          <li>
+                          <li id="Leave_quota">
                             <a href="../Leave/HRMS_LeaveQuota.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Quota</span></a>
                          </li>
                           <li>
                             <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
                          </li>
     
-                         <li id="LeaveReport">
+                         <li>
                             <a href="../Leave/HRMS_MonthlyLeaveType_Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Report</span></a>
                          </li>                    
                          <!-- <li>
@@ -374,7 +372,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Monthly LeaveType Report</h2>
+                            <h2 class="content-header-title float-left mb-0">Earning Leave Quota</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
@@ -390,171 +388,252 @@
                 </div>
 
             </div>
+
             <ul class="nav nav-pills mb-3" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center active" href="../Leave/HRMS_MonthlyLeave_typeReport.html">
-                        <i class="feather icon-calendar mr-25"></i><span class="d-none d-sm-block">Monthly</span>
+                    <a class="nav-link d-flex align-items-center " href="../Leave/HRMS_LeaveQuota.html">
+                        <i class="feather icon-calendar mr-25"></i><span class="d-none d-sm-block">Leave Quota</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center " href="../Leave/HRMS_YearlyLeaveType_Report.html">
-                        <i class="fa fa-calendar mr-25"></i><span class="d-none d-sm-block">Yearly</span>
+                    <a class="nav-link d-flex align-items-center active" href="../Leave/HRMS_EarningLeave_Quota.html">
+                        <i class="fa fa-calendar mr-25"></i><span class="d-none d-sm-block">Earning Leave Quota</span>
                     </a>
                 </li>                                  
+                          
 
             </ul>
-          
-            <div class="tab-content">
-                <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
-                    <div class="content-body">             
-                        <div class="card">
-                            <div class="card-header pb-1">
-                                <h5 class="card-basic">Month</h5>
-                    <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
-                                <div class="heading-elements">
-                        <ul class="list-inline mb-0">
-                            <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                        </ul>
-                        </div>
-                    </div>          
-                                                   
-                        <div class="card-content collapse show">
-                            <div class="card-body">
-                                <form class="form-horizontal" novalidate>
-                                    <div class="row">
-                                        <!-- <h5 class="pb-1">LB Carry Forward:</h5> -->
-                                        <div class=" col-md-4 col-sm-12 col-lg-4">
-                                            <div class="form-group">
-                                                <label >Employee Name / Code</label>
-                                                <select class="select2 form-control" id="default-select">
-                                                     <option value="Active">Select Employee Name</option>
-                                                     <option value="Blocked">Bhumi EMP-101</option>
-                                                     <option value="deactivated">rahul EMP-102</option>
-                                                     <option value="Active">Arunima EMP-103</option>
-                                                     <option value="Blocked">yash EMP-104</option>
-                                                     <option value="deactivated">pooja EMP-105</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12  col-sm-12 col-lg-4">
-                                            <div class="form-group">
-                                                    <label>Select Month </label>
-                                                    <input type="text"  name="datepicker" id="" class="form-control Monthdatepicker " required placeholder="Monthly-Date" data-validation-required-message="This birthdate field is required" >
-                                                </div>
-                                         </div>
-                                        
-                                            
-                                            <div class="col-12  col-sm-12 col-lg-4">
-                                            <button type="submit" class="btn btn-primary glow  mr-1 mt-2">View</button>
-                                            </div>
             
-                                        </div>
-                                    
-                                    
-                                </form>
-                            </div>
-                        </div>
-                     </div>
-
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="card-body card-dashboard">
-                                                    <h5>Leave Type for Month :<span class="text-uppercase">&nbsp;&nbsp;June</span></h5>
-
-                                                    <div class="table-responsive">
-                                                        <table id="LeaveTypeReportTable" class="table  border-secondary table-striped dataex-html5-selectors">
-                                                            <thead>
-                                                                <tr class="theadclr text-white">
-                                                                    <th >Sr. No.</th>
-                                                                    <th>Name</th>
-                                                                    <th>Emp. Code</th>
-                                                                    <th>City</th>
-                                                                    <th>Leave Type</th>
-                                                                    <th>From (DD-MM-YYYY)</th>
-                                                                    <th>To (DD-MM-YYYY)</th>
-                                                                    <th>No. Of Days</th>
-                                                                   
-                                                                </tr>
-                                                            </thead>
-                                                            <tfoot class="tableSearchFoot">
-                                                                <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
-                                                                <th>Name</th>
-                                                                <th>Emp. Code</th>
-                                                                <th>City</th>
-                                                                <th>Leave Type</th>
-                                                                <th>From (DD-MM-YYYY)</th>
-                                                                <th>To (DD-MM-YYYY)</th>
-                                                                <th>No Of Days</th>
-                                                               
-                                                            </tfoot>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>Pooja Jain</td>
-                                                                    <td class="pl-1">Gur101</td>
-                                                                    <td>Gurgaon</td>
-                                                                    <td>Casual Leave</td>
-                                                                    <td>1-08-2022</td>
-                                                                    <td>3-08-2022</td>
-                                                                    <td>3</td>
-                                                                    
-                                                                </tr>
-                        
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>Yash Sharma</td>
-                                                                    <td class="pl-1">Gur102</td>
-                                                                    <td>Gurgaon</td>
-                                                                    <td>Sick Leave</td>
-                                                                    <td>2-08-2022</td>
-                                                                    <td>2-08-2022</td>
-                                                                    <td>1</td>
-                                                                </tr>
-                        
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td>Arpit Sharma</td>
-                                                                    <td class="pl-1">Gur103</td>
-                                                                    <td>Gurgaon</td>
-                                                                    <td>Casual Leave</td>
-                                                                    <td>10-08-2022</td>
-                                                                    <td>12-08-2022</td>
-                                                                    <td>2</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td>Rohit Sharma</td>
-                                                                    <td class="pl-1">Gur104</td>
-                                                                    <td>Gurgaon</td>
-                                                                    <td>Casual Leave</td>
-                                                                    <td>9-08-2022</td>
-                                                                    <td>12-08-2022</td>
-                                                                    <td>4</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+              <!-- side content -->
+                           
+                <div class="tab-content">
+                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
+                        <div class="content-body">
+                
+                            <div class="card">
+                                <div class="card-header pb-1">
+                                    <h4 class="card-basic">Add Earning Leave Quota</h4>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
+                                            <li><a><i class="feather icon-x" onclick="window.location.href='../Leave/LeaveManagement_Dashboard.html'"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <form class="form-horizontal" novalidate>
+                            
+                                            <div class="row">
+                                               
+                                                <div class=" col-md-4 col-sm-12 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label>Earning Leave Type</label>
+                                                        <select class="select2 form-control" id="default-select">
+                                                             <option value="Active">Select Earning Leave Type</option>
+                                                             <option value="Blocked"></option>
+                                                             <option value="deactivated"></option>
+                                                             <option value="Active"></option>
+                                                           
+                                                        </select>
                                                     </div>
                                                 </div>
+            
+                                                <div class=" col-md-4 col-sm-12 col-lg-4">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Assign Annual Leave</label>
+                                                            <input type="text" class="form-control" placeholder="Assign Annual Leave">
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                
+            
+                                                <div class=" col-md-4 col-sm-12 col-lg-4">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Max Earning Leave Quota</label>
+                                                            <input type="text" class="form-control" placeholder="Max Leave Quota">
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                         </div>
+                                            
+                                         <div class="row">
+            
+                                                <div class="col-md-4 col-sm-12 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label  data-toggle="tooltip" data-placement="top" title="multiple Select">Carry Forward Leave</label>
+                                                        <select class="select2 form-control" multiple="multiple">
+                                                            <option value="cl">CL</option>
+                                                            <option value="sl">SL</option>
+                                                            <option value="hd">HD</option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+            
+                                               
+            
+                                                <div class=" col-md-4 col-sm-12 col-lg-4">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Calculation</label>
+                                                            <input type="text" class="form-control" placeholder="Calculation">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class=" col-md-4 col-sm-12 col-lg-4">
+                                                    <div class="col-12">
+                                                      <fieldset id="WBRadio">
+                                                      <div class="row pt-1 form-group">
+                                                           <div class="col-6">
+                                                               <div class="custom-control custom-checkbox pt-1">
+                                                                   <input type="checkbox" class="custom-control-input" name="customCheck4" id="customCheck4">
+                                                                   <label class="custom-control-label" for="customCheck4">In Cash</label>
+                                                               </div>
+                                                           </div>
+                                                      </div>
+                                                  </fieldset>
+                                                 </div>
+                                               </div>
+            
                                             </div>
-                                        </div>                               
-                                       
+            
+                                           
+                            
+                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
+                                                <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
+                                                <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
+                                            </div>
+                            
+                                        </form>
                                     </div>
-
+                                </div>
                             </div>
-                        </div>                  
                 
-              
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <div class="table-responsive">
+                                            <table id="LeaveQuota" class="table  border-secondary table-striped ">
+                                                <thead>
+                                                    <tr class="theadclr text-white">
+                                                        <th >Sr. No.</th>
+                                                        <th>Earning Leave Type</th>
+                                                        <th>Assign Annual Leave</th>
+                                                        <th>Max Earning Leave Quota</th>
+                                                        <th>Carry Forward Leave</th>
+                                                        <th>Calculation</th>
+                                                        <th>IsActive</th>
+                                                        <th>Action</th>
+                                                        
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                 <tfoot class="tableSearchFoot">
+                                                    <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                                    <th>Earning Leave Type</th>
+                                                    <th>Assign Annual Leave</th>
+                                                    <th>Max Earning Leave Quota</th>
+                                                    <th>Carry Forward Leave</th>
+                                                    <th>Calculation</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                   
+                                                </tfoot>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td  data-toggle="tooltip" data-placement="top" title="multiple Select">Casual Leave</td>
+                                                        <td>15</td>
+                                                        <td>10</td>
+                                                        <td>CL+PL</td>
+                                                        <td>10</td>
+                                                        <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                              
+                                                            <input type="checkbox" checked class="custom-control-input" id="chkLeave">
+                                                            
+                                                            <label class="custom-control-label" for="chkLeave">
+                                                            
+                                                            <span class="switch-text-left">Active</span>
+                                                            
+                                                            <span class="switch-text-right">InActive</span>
+                                                            
+                                                            </label>
+                                                            
+                                                            </div></td>
+                                                            <td>
+                                                                <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit"><a href="#" class="feather icon-edit"></a></span>
+                                                            </td>
+                                                    </tr>
                 
-               
-            </div>       
-        
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Sick Leave</td>
+                                                        <td>15</td>
+                                                        <td>10</td>
+                                                        <td>CL+SL</td>
+                                                        <td>15</td>
+                                                        <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                              
+                                                            <input type="checkbox" checked class="custom-control-input" id="chkLeaveQuota">
+                                                            
+                                                            <label class="custom-control-label" for="chkLeaveQuota">
+                                                            
+                                                            <span class="switch-text-left">Active</span>
+                                                            
+                                                            <span class="switch-text-right">InActive</span>
+                                                            
+                                                            </label>
+                                                            
+                                                            </div></td>
+                                                        <td >
+                                                            <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                        </td>
+                                                    </tr>
+                
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Maternity Leave</td>
+                                                        <td>60</td>
+                                                        <td>0</td>
+                                                        <td>ML</td>
+                                                        <td>0</td>
+                                                        <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+                                              
+                                                            <input type="checkbox" checked class="custom-control-input" id="LeaveQuotaChk">
+                                                            
+                                                            <label class="custom-control-label" for="LeaveQuotaChk">
+                                                            
+                                                            <span class="switch-text-left">Active</span>
+                                                            
+                                                            <span class="switch-text-right">InActive</span>
+                                                            
+                                                            </label>
+                                                            
+                                                            </div></td>
+                                                        <td >
+                                                            <span data-toggle="tooltip" data-placement="top" title="Edit" class="action-edit sidebar-toggle cursor-pointer"><i class="feather icon-edit"></i></span>
+                                                        </td>
+                                                    </tr>
+                                                  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                
+                        </div>
 
-               
-                
-
-            </div>
+                    </div>                 
+                </div>
 
         </div>
     </section>
@@ -601,50 +680,83 @@
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
-     <!-- js link for month date picker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
 
-     <!-- Dropdown search JS -->
-     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+    <!-- js link for month date picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
      <!-- Importing Custom Script.js  -->
      <script src="../../Content/assets/js/scripts.js"></script>
-
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true, "lengthChange": false, "autoWidth": true,
-
-
-                "buttons": ["excel", "print", "copy", "pdf", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
+     <script>
+        $(document).ready(function () {
+          $("#LeaveQuota tfoot th")
+            .not("th:nth-child(1)")
+            .not("th:nth-child(7)")
+            .not("th:nth-child(8)")
+            .each(function () {
+              var title = $("#LeaveQuota tfoot th")
+                .eq($(this).index())
+                .text();
+              $(this).html(
+                '<input type="text" class="form-control" placeholder="Search ' +
+                  title +
+                  '" />'
+              );
+            });
+    
+          $("#LeaveQuota")
+            .DataTable({
+              responsive: true,
+              autoWidth: true,
+              lengthChange: false,
+              buttons: [
+                { extend: 'excel', className: 'p-1 ' },
+                { extend: 'print', className: 'p-1 ' },
+                { extend: 'copy', className: 'p-1 ' },
+                { extend: 'pdf', className: 'p-1 ' },
+                { extend: 'colvis', className: 'p-1' }
+            ],      
+            })
+            .buttons()
+            .container()
+            .appendTo(".col-md-6:eq(0)");
+    
+          var table = $("#LeaveQuota").DataTable();
+    
+          table.columns().every(function () {
+            var that = this;
+    
+            $("input", this.footer()).on("keyup change", function () {
+              that.search(this.value).draw();
+            });
+          });
         });
-    </script>
+          </script>
+      
+      <script>
+          window.onload = function () {
+              document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
+              document.getElementById("Leave_quota").className = 'active';
+          }
+  
+        
+      </script>
 
-    <script>
-        window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("LeaveReport").className = 'active';
-        }
-    </script>
-   <script>
-
+<script>
+    
     $(document).ready(function(){
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
-        var currMonYear = new Date();
-         var currentMonth = monthNames[currMonYear.getMonth()] + "-" + currMonYear.getFullYear();
-        // console.log(currentDateValue);
-        document.getElementById("Monthdatepicker").value = currentMonth;
+    
+        var currYear = new Date();
+         var thisYear =currYear.getFullYear();
+        document.getElementById(".currentYear").value = thisYear;
     
     });
-    
-        $(".Monthdatepicker").datepicker( {
-        format: "mm-yyyy",
-        startView: "months", 
-        minViewMode: "months"
+    $(".currentYear").datepicker( {
+        format: "yyyy",
+        viewMode: "years", 
+        minViewMode: "years",
+        autoclose:true //to close picker once year is selected
     }); 
     </script>
 
