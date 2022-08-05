@@ -402,9 +402,9 @@
                     <div class="card-content collapse show">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-lg-1  pl-1 pr-1 pb-1 pt-0">
+                                <div class="col-lg-1 pl-1 pr-1 pb-1 pt-0">
                                     <div class=" text-left">
-                                        <label class=" cursor-pointer" for="UserImage">
+                                        <label class="cursor-pointer" for="UserImage">
                                             <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="60" width="60">
                                         </label>
                                         <input type="file" id="UserImage" hidden>
@@ -412,34 +412,40 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Employee Code :</div>
-                                        <div class="col-6">EMP-101</div>
+                                        <div class="col-6 font-weight-bold">Employee Name/Code :</div>
+                                        <div class="col-6">Swati Sharma/EMP-101</div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">HR</div>
+                                        <div class="col-6">HR Manager</div>
+                                    </div>
+                                     
+                                    <div class="row">
+                                        <div class="col-6 font-weight-bold">Mobile :</div>
+                                        <div class="col-6">99814900000</div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">City :</div>
-                                        <div class="col-6">Delhi</div>
-                                    </div>
+                                  
 
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">Admin</div>
+                                        <div class="col-6 font-weight-bold">Department :</div>
+                                        <div class="col-6">HR</div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-6 font-weight-bold">Email :</div>
+                                        <div class="col-6">swati.sharma@acquara.com</div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Company :</div>
-                                        <div class="col-6">Acquara</div>
+                                        <div class="col-6 font-weight-bold">Branch :</div>
+                                        <div class="col-6">Gurgaon</div>
                                     </div>
                                 </div>
                             </div>
-
                                 
                             </div>
     
@@ -510,7 +516,7 @@
 
 
                                                     <div class="row">
-                                                        <div class="col-12 col-sm-12 col-lg-6">
+                                                        <div class="col-12 col-sm-12 col-lg-6" hidden>
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Personal Id</label>
@@ -524,8 +530,8 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Gender</label>
-                                                                    <select class="form-control" id="users-list-status">
+                                                                    <label class="required">Gender</label>
+                                                                    <select class="form-control" id="users-list-status"required>
                                                                         <option value="">Select Gender</option>
                                                                         <option value="1">Male</option>
                                                                         <option value="2">Female+</option>
@@ -534,71 +540,66 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
-
-                                                    </div>
-                                                    <div class="row">
-
+                                                         
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Date of Birth (DD-MM-YYYY)</label>
-                                                                    <input type="text"  class="form-control dob-picker" placeholder="Date of Birth">
+                                                                    <label class="required">Date of Birth (DD-MM-YYYY)</label>
+                                                                    <input type="text"  class="form-control dob-picker" placeholder="Date of Birth" required>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                    </div>
+                                                    <div class="row">
 
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Place Of Birth</label>
-                                                                    <input type="text" name="text" class="form-control" placeholder="Place Of Birth" required data-validation-required-message="This field is required">
+                                                                    <input type="text" name="text" class="form-control" placeholder="Place Of Birth">
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="row">
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Nationality</label>
+                                                                    <label class="required">Nationality</label>
                                                                     <input type="text" name="text" class="form-control" placeholder="Nationality" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
                                                         </div>
 
+                                                    </div>
+
+                                                    <div class="row">
+                                                       
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Personal Mobile No.</label>
+                                                                    <label class="required">Personal Mobile No.</label>
                                                                     <input type="text" class="form-control" placeholder="Personal Mobile No." required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
                                                         </div>
 
-
-                                                    </div>
-
-                                                    <div class="row">
-
-
-
-
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Personal Email</label>
+                                                                    <label class="required">Personal Email</label>
                                                                     <input type="text" class="form-control" placeholder="Personal Email" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
                                                         </div>
 
+                                                    </div>
+
+                                                    <div class="row">
+
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Marital Status</label>
-
                                                                     <select class="form-control" id="users-list-status">
                                                                         <option value="">Select Marital Status</option>
                                                                         <option value="Active">Maried</option>
@@ -608,19 +609,17 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-
-
+                                                       
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Citizenship</label>
+                                                                    <label class="required">Citizenship</label>
                                                                     <input type="text" class="form-control" placeholder="Citizenship" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
                                                         </div>
-
+                                                    </div>
+                                                    <div class="row">
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
@@ -647,7 +646,7 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Emergency Contact No.</label>
+                                                                    <label class="required">Emergency Contact No.</label>
                                                                     <input type="text" class="form-control" placeholder="Emergency Contact No." required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -656,7 +655,7 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label> Contact Name</label>
+                                                                    <label class="required">Contact Name</label>
                                                                     <input type="text" class="form-control" placeholder="Contact Name" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -667,7 +666,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Relation Mailing Address</label>
-                                                                    <input type="text" class="form-control" placeholder="Relation Mailing Address" required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="Relation Mailing Address">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -675,8 +674,8 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Family Member Name</label>
-                                                                    <input type="text" class="form-control" placeholder="Family Member Name" required data-validation-required-message="This field is required">
+                                                                    <label class="">Family Member Name</label>
+                                                                    <input type="text" class="form-control" placeholder="Family Member Name">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -687,7 +686,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Family Member Relation</label>
-                                                                    <input type="text" class="form-control" placeholder="Family Member Relation" required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="Family Member Relation">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -696,7 +695,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Family Member Contact</label>
-                                                                    <input type="text" class="form-control" placeholder="Family Member Contact" required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="Family Member Contact">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -713,34 +712,46 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Present Address</label>
+                                                                    <label class="required">Present Address</label>
                                                                     <input type="text" class="form-control" placeholder="Present Address" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-12 col-sm-12 col-lg-6">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>Present Country</label>
-                                                                    <input type="text" class="form-control" placeholder="Present Country" required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
+                                                            <label for="users-list-status" class="required">Present Country</label>
+                                                            <fieldset class="form-group">
+                                                                <select class="select2 form-control" required>
+                                                                    <option value="">Select Present Country</option>
+                                                                    <option value="0">India</option>
+                                                                    <option value="1">Dubai</option>
+                                                                </select>
+                                                            </fieldset>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-12 col-sm-12 col-lg-6">
+                                                        <!-- <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Present State</label>
+                                                                    <label class="required">Present State</label>
                                                                     <input type="text" class="form-control" placeholder="Present State" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
+                                                        </div> -->
+                                                        <div class="col-12 col-sm-12 col-lg-6">
+                                                            <label for="users-list-status" class="required">Present State</label>
+                                                            <fieldset class="form-group">
+                                                                <select class="select2 form-control" required>
+                                                                    <option value="">Select Present State</option>
+                                                                    <option value="0">Madhya Pradesh</option>
+                                                                    <option value="1">U.P</option>
+                                                                </select>
+                                                            </fieldset>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Present City</label>
+                                                                    <label class="required">Present City</label>
                                                                     <input type="text" class="form-control" placeholder="Present City" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -754,7 +765,7 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Present Pin</label>
+                                                                    <label class="required">Present Pin</label>
                                                                     <input type="text" class="form-control" placeholder="Present Pin" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -762,8 +773,8 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Present Mobile No.</label>
-                                                                    <input type="text" class="form-control" placeholder="Present Mobile No." required data-validation-required-message="This field is required">
+                                                                    <label class="">Present Mobile No.</label>
+                                                                    <input type="text" class="form-control" placeholder="Present Mobile No.">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -774,8 +785,8 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Present PhoneNo.</label>
-                                                                    <input type="text" class="form-control" placeholder="Present PhoneNo." required data-validation-required-message="This field is required">
+                                                                    <label class="">Present PhoneNo.</label>
+                                                                    <input type="text" class="form-control" placeholder="Present PhoneNo.">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -811,35 +822,39 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Permanent Address</label>
-                                                                    <input type="text" class="form-control" placeholder="Permanent Address" required data-validation-required-message="This field is required">
+                                                                    <label class="required">Permanent Address</label>
+                                                                    <input type="text" class="form-control" placeholder="Permanent Address" required>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-12 col-sm-12 col-lg-6">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>Permanent Country</label>
-                                                                    <input type="text" class="form-control" placeholder="Permanent Country" required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
+                                                            <label for="users-list-status" class="required">Permanent Country</label>
+                                                            <fieldset class="form-group">
+                                                                <select class="select2 form-control" required>
+                                                                    <option value="">Select Permanent Country</option>
+                                                                    <option value="0">India</option>
+                                                                    <option value="1">Dubai</option>
+                                                                </select>
+                                                            </fieldset>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-12 col-sm-12 col-lg-6">
-                                                            <div class="form-group">
-                                                                <div class="controls">
-                                                                    <label>Permanent State</label>
-                                                                    <input type="text" class="form-control" placeholder="Permanent State" required data-validation-required-message="This field is required">
-                                                                </div>
-                                                            </div>
+                                                            <label for="users-list-status" class="required">Permanent State</label>
+                                                            <fieldset class="form-group">
+                                                                <select class="select2 form-control" required>
+                                                                    <option value="">Select Permanent State</option>
+                                                                    <option value="0">Madhya Pradesh</option>
+                                                                    <option value="1">U.P</option>
+                                                                </select>
+                                                            </fieldset>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Permanent City</label>
-                                                                    <input type="text" class="form-control" placeholder="Permanent City" required data-validation-required-message="This field is required">
+                                                                    <label class="required">Permanent City</label>
+                                                                    <input type="text" class="form-control" placeholder="Permanent City" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -852,16 +867,16 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Permanent Pin</label>
-                                                                    <input type="text" class="form-control" placeholder="Permanent Pin" required data-validation-required-message="This field is required">
+                                                                    <label class="required">Permanent Pin</label>
+                                                                    <input type="text" class="form-control" placeholder="Permanent Pin" required>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Permanent Mobile No.</label>
-                                                                    <input type="text" class="form-control" placeholder="Permanent Mobile No." required data-validation-required-message="This field is required">
+                                                                    <label class="">Permanent Mobile No.</label>
+                                                                    <input type="text" class="form-control" placeholder="Permanent Mobile No.">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -873,7 +888,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Permanent PhoneNo.</label>
-                                                                    <input type="text" class="form-control" placeholder="Permanent PhoneNo." required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="Permanent PhoneNo.">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -968,7 +983,9 @@
     <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
     <script src="../../Content/app-assets/js/scripts/navs/navs.js"></script>
     <!-- END: Page JS-->
-
+<!-- Dropdown search JS -->
+<script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+<script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
     
 

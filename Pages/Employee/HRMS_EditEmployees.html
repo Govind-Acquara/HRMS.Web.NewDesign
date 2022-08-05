@@ -421,30 +421,37 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Employee Code :</div>
-                                        <div class="col-6">EMP-101</div>
+                                        <div class="col-6 font-weight-bold">Employee Name/Code :</div>
+                                        <div class="col-6">Swati Sharma/EMP-101</div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">HR</div>
+                                        <div class="col-6">HR Manager</div>
+                                    </div>
+                                     
+                                    <div class="row">
+                                        <div class="col-6 font-weight-bold">Mobile :</div>
+                                        <div class="col-6">99814900000</div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">City :</div>
-                                        <div class="col-6">Delhi</div>
-                                    </div>
+                                  
 
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">Admin</div>
+                                        <div class="col-6 font-weight-bold">Department :</div>
+                                        <div class="col-6">HR</div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-6 font-weight-bold">Email :</div>
+                                        <div class="col-6">swati.sharma@acquara.com</div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Company :</div>
-                                        <div class="col-6">Acquara</div>
+                                        <div class="col-6 font-weight-bold">Branch :</div>
+                                        <div class="col-6">Gurgaon</div>
                                     </div>
                                 </div>
                             </div>
@@ -524,14 +531,14 @@
                                                         </label>
                                                     </div>
                                                     
-                                                    <div class="col-lg-6 pt-1">
+                                                    <!-- <div class="col-lg-6 pt-1">
                                                      <div class="form-group">
                                                          <div class="custom-file">
                                                             <input type="file" asp-for="ProfilePic" class="custom-file-input" id="inputGroupFile01">
                                                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                                          </div>
                                                      </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
 
                                               </div>
@@ -547,14 +554,14 @@
                                                         </label>
                                                     </div>
                                                     
-                                                    <div class="col-lg-6 pt-1">
+                                                    <!-- <div class="col-lg-6 pt-1">
                                                      <div class="form-group">
                                                          <div class="custom-file">
                                                             <input type="file" asp-for="Signature" class="custom-file-input" id="inputGroupFile01">
                                                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                                          </div>
                                                      </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
 
                                               </div>
@@ -591,7 +598,7 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label class="required">First Name</label>
-                                                                        <input type="text" class="form-control" placeholder="First Name" required data-validation-required-message="This username field is required">
+                                                                        <input type="text" class="form-control" placeholder="First Name" required data-validation-required-message="This First Name field is required">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -599,7 +606,7 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>Last Name</label>
-                                                                        <input type="text" class="form-control" placeholder="Last Name" required data-validation-required-message="This username field is required">
+                                                                        <input type="text" class="form-control" placeholder="Last Name" required data-validation-required-message="This Last Name field is required">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -609,7 +616,7 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label class="required">Emp. Code</label>
-                                                                        <input type="text" class="form-control" placeholder="Emp. Code" required data-validation-required-message="This username field is required">
+                                                                        <input type="text" class="form-control" placeholder="Emp. Code" required data-validation-required-message="This Emp. Code field is required">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -624,37 +631,99 @@
                                                                 </fieldset>
                                                             </div>
                                                         </div>
+
                                                         <div class="row">
+
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label class="required">Date of Join (DD-MM-YYYY)</label>
-                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Date of Join" data-validation-required-message="This birthdate field is required">
+                                                                        <input type="text" class="form-control birthdate-picker" required placeholder="Date of Join" data-validation-required-message="This Date of Join field is required">
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                          
+                                                            <div class="col-12 col-sm-12 col-lg-6 mb-1">
                                                                 <label for="users-list-status" class="required">Designation</label>
-                                                                <fieldset class="form-group">
-                                                                    <select class="select2 form-control">
-                                                                        <option value="">Select Designation</option>
-                                                                        <option value="0">HR</option>
-                                                                        <option value="1">Accountant</option>
-                                                                    </select>
-                                                                </fieldset>
+                                                                    <div class="d-flex">
+                                                                        <select class="select2 " aria-describedby="button-addon2" required>
+                                                                            <option value="">Select Designation</option>
+                                                                            <option value="0">HR</option>
+                                                                            <option value="1">Accountant</option>
+                                                                        </select>
+                                                                        <div class="input-group-append" id="button-addon2" data-toggle="tooltip" data-placement="top" title="Add Employee Designation">
+                                                                            <button class="btn btn-primary rounded-0 " type="button" data-toggle="modal" data-target="#designation"><i class="feather icon-plus"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                            <!-- Modal Call on modify -->
+                                                                    <div class="modal fade text-left" id="designation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable " role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header bg-primary white">
+                                                                                <h4 class="modal-title" id="myModalLabel17">Add Designation</h4>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-12">
+                                                                                        <div class="form-group">
+                                                                                            <label>Designation</label>
+                                                                                            <input type="text"  class="form-control w-100" placeholder="Designation" data-validation-required-message="Designation field is required" required>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
                                                             </div>
                                                         </div>
 
                                                         <div class="row">
-                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                           
+                                                            <div class="col-12 col-sm-12 col-lg-6 mb-1">
                                                                 <label for="users-list-status" class="required">Department</label>
-                                                                <fieldset class="form-group">
-                                                                    <select class="select2 form-control" >
-                                                                        <option value="">Select Department</option>
-                                                                        <option value="Active">Sales</option>
-                                                                        <option value="Blocked">Accounts</option>
-                                                                    </select>
-                                                                </fieldset>
+                                                                    <div class="d-flex">
+                                                                        <select class="select2 form-control" required>
+                                                                            <option value="">Select Department</option>
+                                                                            <option value="0">Sales</option>
+                                                                            <option value="1">Accounts</option>
+                                                                        </select>
+                                                                        <div class="input-group-append" id="button-addon2" data-toggle="tooltip" data-placement="top" title="Add Employee Department">
+                                                                            <button class="btn btn-primary rounded-0 " type="button" data-toggle="modal" data-target="#department"><i class="feather icon-plus"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                            <!-- Modal Call on modify -->
+                                                                    <div class="modal fade text-left" id="department" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable " role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header bg-primary white">
+                                                                                <h4 class="modal-title" id="myModalLabel17">Add Department</h4>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-12">
+                                                                                        <div class="form-group">
+                                                                                            <label>Department</label>
+                                                                                            <input type="text"  class="form-control w-100" placeholder="Department" required>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
                                                             </div>
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <label for="users-list-status" class="required">Reporting Person Name</label>
@@ -666,13 +735,15 @@
                                                                     </select>
                                                                 </fieldset>
                                                             </div>
+
                                                         </div>
+
                                                         <div class="row">
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>Mobile No.</label>
-                                                                        <input type="text" class="form-control" placeholder="Mobile No." required data-validation-required-message="This username field is required">
+                                                                        <input type="text" class="form-control" placeholder="Mobile No.">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -680,16 +751,17 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>Regulation Date (DD-MM-YYYY)</label>
-                                                                        <input type="text" class="form-control " disabled required placeholder="Regulation Date" data-validation-required-message="This birthdate field is required">
+                                                                        <input type="text" class="form-control " disabled  placeholder="Regulation Date">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                         <div class="row">
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <label for="users-list-status" class="required">Office Location</label>
                                                                 <fieldset class="form-group">
-                                                                    <select class="select2 form-control" >
+                                                                    <select class="select2 form-control" required>
                                                                         <option value="">Select Office Location</option>
                                                                         <option value="Active">Gurgaon</option>
                                                                         <option value="Blocked">Mumbai</option>
@@ -702,28 +774,84 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label class="required">Office Email</label>
-                                                                        <input type="email" class="form-control" placeholder="Office Email" required data-validation-required-message="This username field is required">
+                                                                        <input type="email" class="form-control" placeholder="Office Email" required data-validation-required-message="This Office Email field is required">
                                                                     </div>
                                                                 </div>
                                                             </div>
+
                                                         </div>
+
                                                         <div class="row">
-                                                            <div class="col-12 col-sm-12 col-lg-6">
+                                                        
+                                                            <div class="col-12 col-sm-12 col-lg-6 mb-1">
                                                                 <label for="users-list-status" class="required">Employee Category</label>
-                                                                <fieldset class="form-group">
-                                                                    <select class="form-control" id="users-list-status">
-                                                                        <option value="">Select Category</option>
-                                                                        <option value="Active">Probation</option>
-                                                                        <option value="Blocked">Regularisation</option>
-                                                                    </select>
-                                                                </fieldset>
+                                                                    <div class="d-flex">
+                                                                        <select class="select2 form-control" required>
+                                                                            <option value="">Select Employee Category</option>
+                                                                            <option value="0">Probation</option>
+                                                                            <option value="1">Full Time</option>
+                                                                        </select>
+                                                                        <div class="input-group-append" id="button-addon2" data-toggle="tooltip" data-placement="top" title="Add Employee Category">
+                                                                            <button class="btn btn-primary rounded-0 " type="button" data-toggle="modal" data-target="#Category"><i class="feather icon-plus" ></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                            <!-- Modal Call on modify -->
+                                                                    <div class="modal fade text-left" id="Category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable " role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header bg-primary white">
+                                                                                <h4 class="modal-title" id="myModalLabel17">Employee Category</h4>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-6">
+                                                                                        <div class="form-group">
+                                                                                            <label>Category Name</label>
+                                                                                            <input type="text" class="form-control" placeholder="Category Name" required data-validation-required-message="This Probation NameCategory Name field is required">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6 pt-2">
+                                                                                        <div class="form-group">
+                                                                                            <div class="custom-control  custom-checkbox">
+                                                                                                <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck1">
+                                                                                                <label class="custom-control-label" for="customCheck1">Is Probation Apply</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                    <div class="col-lg-12">
+                                                                                        <div class="form-group">
+                                                                                            <label>Probation Month</label>
+                                                                                            <fieldset class="form-group">
+                                                                                                <select class="select2 form-control" id="users-list-status">
+                                                                                                    <option value="">Select Probation Month</option>
+                                                                                                    <option value="Active">1</option>
+                                                                                                    <option value="Blocked">2</option>
+                                                                                                    <option value="deactivated">3</option>
+                                                                                                </select>
+                                                                                            </fieldset>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
                                                             </div>
+
                                                             <div class="col-12 col-sm-12 col-lg-5">
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>Probation End Date (DD-MM-YYYY)</label>
                                                                      <div class="d-flex gap-1rem">
-                                                                        <input type="text" class="form-control w-75 birthdate-picker" required placeholder="Probation End Date" data-validation-required-message="This birthdate field is required">
+                                                                        <input type="text" class="form-control w-75 birthdate-picker"  placeholder="Probation End Date">
                                                                         <button type="button" class="btn w-25 btn-sm btn-primary p-1" data-toggle="modal" data-target="#primary">Extend</button>
                                                                     </div>
                                                               <!-- Modal Call on modify -->
@@ -742,7 +870,7 @@
                                                                             <div class="col-lg-12">
                                                                                 <div class="form-group">
                                                                                     <label>Select Probation Extended Date (DD-MM-YYYY)</label>
-                                                                                    <input type="text"  class="form-control w-100 bootstrapdatepicker" placeholder="Select Probation Extended Date" required >
+                                                                                    <input type="text"  class="form-control w-100 bootstrapdatepicker" placeholder="Select Probation Extended Date">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -763,19 +891,48 @@
                                                     <div class=" border rounded px-1 ">
                                                         <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="fa fa-university mr-50 "></i>Bank Details</h6>
                                                         <div class="row">
-                                                            <div class="col-12 col-sm-12 col-lg-6">
-                                                                <div class="form-group">
-                                                                    <div class="controls">
-                                                                        <label class="required">Bank Name</label>
-                                                                        <input type="text" class="form-control" placeholder="Bank Name" required data-validation-required-message="This username field is required">
+                                                            <div class="col-12 col-sm-12 col-lg-6 mb-1">
+                                                                <fieldset>
+                                                                    <label class="">Bank Name</label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" placeholder="Bank Name">
+                                                                        <div class="input-group-append" id="button-addon2" data-toggle="tooltip" data-placement="top" title="Add  Bank Name">
+                                                                            <button class="btn btn-primary rounded-0 " type="button" data-toggle="modal" data-target="#Bank"><i class="feather icon-plus"></i></button>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
+                                                                </fieldset>
+                                                                           <!-- Modal Call on modify -->
+                                                                           <div class="modal fade text-left" id="Bank" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                                                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable " role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header bg-primary white">
+                                                                                    <h4 class="modal-title" id="myModalLabel17">Add Bank Name</h4>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                        <span aria-hidden="true">&times;</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-12">
+                                                                                            <div class="form-group">
+                                                                                                <label>Bank Name</label>
+                                                                                                <input type="text"  class="form-control w-100" placeholder="Bank Name">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
                                                             </div>
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
-                                                                        <label>Bank Account No.</label>
-                                                                        <input type="text" class="form-control" placeholder="Bank Account No." required data-validation-required-message="This username field is required">
+                                                                        <label class="">Bank Account No.</label>
+                                                                        <input type="text" class="form-control" placeholder="Bank Account No.">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -784,16 +941,16 @@
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
-                                                                        <label>IFSC Code</label>
-                                                                        <input type="text" class="form-control" placeholder="IFSC Code" required data-validation-required-message="This username field is required">
+                                                                        <label class="">IFSC Code</label>
+                                                                        <input type="text" class="form-control" placeholder="IFSC Code">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
-                                                                        <label>Branch Name</label>
-                                                                        <input type="text" class="form-control" placeholder="Branch Name" required data-validation-required-message="This username field is required">
+                                                                        <label class="">Branch Name</label>
+                                                                        <input type="text" class="form-control" placeholder="Branch Name">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -810,15 +967,15 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>PAN Number</label>
-                                                                        <input type="text" class="form-control" placeholder="PAN Number" required data-validation-required-message="This username field is required">
+                                                                        <input type="text" class="form-control" placeholder="PAN Number">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-12 col-sm-12 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
-                                                                        <label>Aadhar Number</label>
-                                                                        <input type="text" class="form-control" placeholder="Aadhar Number" required data-validation-required-message="This username field is required">
+                                                                        <label class="required">Aadhar Number</label>
+                                                                        <input type="text" class="form-control" placeholder="Aadhar Number" required data-validation-required-message="This Aadhar Number field is required">
                                                                     </div>
                                                                 </div>
                                                             </div>

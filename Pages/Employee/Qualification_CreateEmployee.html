@@ -409,7 +409,7 @@
                             <div class="row">
                                 <div class="col-lg-1 pl-1 pr-1 pb-1 pt-0">
                                     <div class=" text-left">
-                                        <label class=" cursor-pointer" for="UserImage">
+                                        <label class="cursor-pointer" for="UserImage">
                                             <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="60" width="60">
                                         </label>
                                         <input type="file" id="UserImage" hidden>
@@ -417,30 +417,37 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Employee Code :</div>
-                                        <div class="col-6">EMP-101</div>
+                                        <div class="col-6 font-weight-bold">Employee Name/Code :</div>
+                                        <div class="col-6">Swati Sharma/EMP-101</div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">HR</div>
+                                        <div class="col-6">HR Manager</div>
+                                    </div>
+                                     
+                                    <div class="row">
+                                        <div class="col-6 font-weight-bold">Mobile :</div>
+                                        <div class="col-6">99814900000</div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">City :</div>
-                                        <div class="col-6">Delhi</div>
-                                    </div>
+                                  
 
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">Admin</div>
+                                        <div class="col-6 font-weight-bold">Department :</div>
+                                        <div class="col-6">HR</div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-6 font-weight-bold">Email :</div>
+                                        <div class="col-6">swati.sharma@acquara.com</div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Company :</div>
-                                        <div class="col-6">Acquara</div>
+                                        <div class="col-6 font-weight-bold">Branch :</div>
+                                        <div class="col-6">Gurgaon</div>
                                     </div>
                                 </div>
                             </div>
@@ -515,19 +522,14 @@
                                                     <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-award"></i> Qualification Details</h6>
                                                     <div class="row">
 
-
-
-
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <fieldset class="form-group">
-                                                                <label>Highest Qualification</label>
-                                                                <select class="form-control" id="users-list-status">
+                                                                <label class="required">Highest Qualification</label>
+                                                                <select class="form-control" id="users-list-status" required>
                                                                     <option>Select Qualification</option>
                                                                     <option value="1">PostGraduation</option>
                                                                     <option value="2">Graduation</option>
                                                                     <option value="3">Intermediate</option>
-
-
                                                                 </select>
                                                             </fieldset>
                                                         </div>
@@ -535,7 +537,7 @@
                                                         <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>University Name</label>
+                                                                    <label class="required">University Name</label>
                                                                     <input type="text" name="text" class="form-control" placeholder="University Name" required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -555,7 +557,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Institute Name</label>
-                                                                    <input type="text" name="text" class="form-control" placeholder="Institute Name" required data-validation-required-message="This field is required">
+                                                                    <input type="text" name="text" class="form-control" placeholder="Institute Name">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -567,7 +569,7 @@
 
                                                             <div class="form-group">
                                                                 <div class="controls">
-                                                                    <label>Year of Passing (DD-MM-YYYY)</label>
+                                                                    <label class="required">Year of Passing (DD-MM-YYYY)</label>
                                                                     <input type="text" class="yearPicker form-control" placeholder="Year Of Passing " required data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -589,7 +591,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Duration</label>
-                                                                    <input type="text" class="form-control" placeholder="Duration" required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="Duration">
                                                                 </div>
                                                             </div>
 
@@ -598,7 +600,7 @@
                                                         </div>
 
                                                         <div class="col-12 col-sm-12 col-lg-6">
-                                                            <label>Status</label>
+                                                            <label class="required">Status</label>
                                                             <fieldset class="form-group">
                                                                 <select class="form-control" id="users-list-status" required data-validation-required-message="This field is required">
                                                                     <option value="">Select Status</option>
@@ -624,7 +626,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>Country</label>
-                                                                    <input type="text" class="form-control" placeholder="Country" required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="Country">
 
                                                                 </div>
                                                             </div>
@@ -634,7 +636,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>State</label>
-                                                                    <input type="text" class="form-control" placeholder="State" required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="State">
                                                                 </div>
                                                             </div>
 
@@ -644,7 +646,7 @@
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label>City</label>
-                                                                    <input type="text" class="form-control" placeholder="City" required data-validation-required-message="This field is required">
+                                                                    <input type="text" class="form-control" placeholder="City">
 
 
                                                                 </div>
