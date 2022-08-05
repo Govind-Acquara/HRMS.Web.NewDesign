@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
     <!-- END: Page CSS-->
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -418,31 +418,31 @@
                                 <div class="col-lg-4">
                                     <div class="row">
                                         <div class="col-6 font-weight-bold">Employee Name/Code :</div>
-                                        <div class="col-6">Swati Sharma/EMP-101</div>
+                                        <div class="col-6">Pooja Jain/EMP-101</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-6 font-weight-bold">Department :</div>
+                                        <div class="col-6">IT</div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">HR Manager</div>
+                                        <div class="col-6">Developer</div>
                                     </div>
                                      
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Mobile :</div>
-                                        <div class="col-6">99814900000</div>
-                                    </div>
-
-                                  
-
+                                    
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="row">
-                                        <div class="col-6 font-weight-bold">Department :</div>
-                                        <div class="col-6">HR</div>
+                                        <div class="col-6 font-weight-bold">Employee Status :</div>
+                                        <div class="col-6">InActive</div>
                                     </div>
+                                    
                                     
                                     <div class="row">
                                         <div class="col-6 font-weight-bold">Email :</div>
-                                        <div class="col-6">swati.sharma@acquara.com</div>
+                                        <div class="col-6">Pooja.Jain@acquara.com</div>
                                     </div>
 
                                     <div class="row">
@@ -451,7 +451,6 @@
                                     </div>
                                 </div>
                             </div>
-
                                 
                             </div>
     
@@ -518,7 +517,7 @@
                                         <form novalidate>
                                             <div class="col-12 mt-1">
                                                 <div class="border rounded px-1">
-                                                    <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-book mr-50 "></i>Visa Details</h6>
+                                                    <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-book mr-50 "></i>Passport/Visa Details</h6>
 
                                                     <div class="row">
                                                         <div class="col-12 col-sm-12 col-lg-6">
@@ -558,7 +557,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-12 col-sm-6 col-lg-3">
+                                                        <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label class="">Visa Issue/Start Date (DD-MM-YYYY)</label>
@@ -566,14 +565,31 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-lg-3">
+                                                        <!-- <div class="col-12 col-sm-6 col-lg-3">
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label  class="">Visa Expiry Date (DD-MM-YYYY)</label>
                                                                     <input type="text" class="form-control birthdate-picker" placeholder="Visa Expiry Date">
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
+
+                                                      
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-12 col-lg-6">
+                                                            <div class="d-flex justify-content-between">
+                                                                <label>Visa Expiry Date (DD-MM-YYYY)</label>
+                                                                <div class="custom-control custom-checkbox ">
+                                                                    <input type="checkbox" class="custom-control-input" name="DocumentCompleted" id="DocumentCompleted">
+                                                                    <label class="custom-control-label" for="DocumentCompleted">If Visa Expiry Required</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                              <input type="text" class="form-control bootstrapdatepicker" id="DCI" disabled="disabled" placeholder="Valid Upto" required data-validation-required-message="This field is required">
+                                                            </div>
+                                                        </div> 
                                                     </div>
 
 
@@ -584,7 +600,7 @@
 
                                             <div class="col-12 mt-1">
                                                 <div class="border rounded  px-1">
-                                                    <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-book mr-50 "></i>Passport Details</h6>
+                                                    <!-- <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-book mr-50 "></i></h6> -->
 
                                                     <div class="row">
                                                         <div class="col-12 col-sm-12 col-lg-6">
@@ -596,12 +612,24 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-12 col-sm-12 col-lg-6">
+                                                        <!-- <div class="col-12 col-sm-12 col-lg-6">
                                                             <div class="form-group">
                                                                 <div class="controls">
                                                                     <label class="">Passport Expiry Date (DD-MM-YYYY)</label>
                                                                     <input type="text" class="form-control birthdate-picker" placeholder="Passport Expiry Date">
                                                                 </div>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class=" col-md-6 col-lg-6">
+                                                            <div class="d-flex justify-content-between">
+                                                                <label>Passport Expiry Date (DD-MM-YYYY)</label>
+                                                                <div class="custom-control custom-checkbox ">
+                                                                    <input type="checkbox" class="custom-control-input" name="InductionCompleted" id="InductionCompleted">
+                                                                    <label class="custom-control-label" for="InductionCompleted">If Expiry Required</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                              <input type="text" class="form-control bootstrapdatepicker" id="ICD" disabled="disabled" placeholder="Valid Upto" required data-validation-required-message="This field is required">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -712,9 +740,14 @@
     <!-- END: Page JS-->
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
-    
+     <!-- Importing Custom Script.js  -->
+     <script src="../../Content/assets/js/scripts.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
 
     <script>
+        $(".bootstrapdatepicker").datepicker();
+
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,

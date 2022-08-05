@@ -985,6 +985,40 @@ $('#customYear').click(function(){
         }
 
 
+        //  //passport page script start
+       
+        //  if ($('#PassportCompleted').length != 0) {
+    
+        //   $('#PassportCompleted').click(function(){
+        //     if ($(this).is(':checked')) {
+        //           $('#PSP').prop("disabled", false);
+                 
+        //     } else {
+        //           $('#PSP').prop("disabled", true);
+                 
+        //     }
+        //   });
+          
+        //   }
+
+
+        //     //Visa page script start
+       
+        //  if ($('#VisaCompleted').length != 0) {
+    
+        //   $('#VisaCompleted').click(function(){
+        //     if ($(this).is(':checked')) {
+        //           $('#VSA').prop("disabled", false);
+                 
+        //     } else {
+        //           $('#VSA').prop("disabled", true);
+                 
+        //     }
+        //   });
+          
+        //   }
+
+
         //document page script start
        
             if ($('#DocumentCompleted').length != 0) {
