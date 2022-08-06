@@ -603,7 +603,7 @@
                                                             <div class="col-12 col-sm-6 col-lg-6">
                                                                 <div class="form-group">
                                                                     <div class="controls">
-                                                                        <label>Document No.</label>
+                                                                        <label class="required">Document No.</label>
                                                                         <input type="text" class="form-control" placeholder="Document No." required data-validation-required-message="This field is required">
                                                                     </div>
                                                                 </div>
@@ -622,7 +622,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                  <input type="text" class="form-control bootstrapdatepicker" id="DCI" disabled="disabled" placeholder="Valid Upto" required data-validation-required-message="This field is required">
+                                                                  <input type="text" class="form-control bootstrapdatepicker" id="DCI" disabled="disabled" placeholder="Valid Upto">
                                                                 </div>
                                                             </div>
 
@@ -630,7 +630,7 @@
                                                                 <div class="form-group">
                                                                     <div class="controls">
                                                                         <label>Remark</label>
-                                                                        <input type="text" class="form-control" placeholder="Remark" required data-validation-required-message="This field is required">
+                                                                        <input type="text" class="form-control" placeholder="Remark">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -648,12 +648,16 @@
                                                                 </fieldset>
                                                             </div>
                                                         </div>
+                                                        <!-- <div class="col-12 d-flex flex-sm-row flex-column justify-content-end ">
+                                                            <label class="btn btn-primary glow m-1  cursor-pointer" for="document-upload">Submit</label>
+                                                                <input type="file" id="document-upload" hidden> 
+                                                            <button type="reset" class="btn btn-outline-primary m-1">Reset</button>
+                                                        </div> -->
+
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end ">
-                                                            <label class="btn btn-primary glow m-1 cursor-pointer" for="document-upload">Submit</label>
-                                                            <input type="file" id="document-upload" hidden>
+                                                            <button type="submit" class="btn btn-primary glow m-1">Submit</button>
                                                             <button type="reset" class="btn btn-outline-primary m-1">Reset</button>
                                                         </div>
-
                                                     </form>
                                                 </div>
                                             </div>

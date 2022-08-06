@@ -39,7 +39,9 @@
 
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
     <!-- END: Page CSS-->
-
+ <!-- END: Page CSS-->
+ <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
+ <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -409,7 +411,7 @@
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Category Name</label>
-                                                <input type="text" class="form-control" placeholder="Category Name" required data-validation-required-message="This Probation Name field is required">
+                                                <input type="text" id="EmpTypeName" class="form-control" placeholder="Category Name" required data-validation-required-message="This Probation Name field is required">
                                             </div>
                                         </div>
                                     </div>
@@ -419,8 +421,8 @@
                                             <div class="controls pt-2">
                                                 <fieldset>
                                                     <div class="custom-control  custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck1">
-                                                        <label class="custom-control-label" for="customCheck1">Is Probation Apply</label>
+                                                        <input type="checkbox" class="custom-control-input"   name="InductionCompleted" id="InductionCompleted">
+                                                        <label class="custom-control-label" for="InductionCompleted">Is Probation Apply</label>
                                                     </div>
                                                 </fieldset>
                                             </div>
@@ -432,7 +434,7 @@
                                             <div class="controls">
                                                 <label>Probation Month</label>
                                                 <fieldset class="form-group">
-                                                    <select class="select2 form-control" id="users-list-status">
+                                                    <select class="select2 form-control" id="ICD" disabled="disabled">
                                                         <option value="">Select Probation Month</option>
                                                         <option value="Active">1</option>
                                                         <option value="Blocked">2</option>
@@ -445,7 +447,7 @@
 
                                 </div>
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                    <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
+                                    <button type="submit" id="type-submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
                                     <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
                                 </div>
                             </form>
@@ -462,6 +464,8 @@
                                         <tr class="theadclr text-white">
                                             <th>Sr. No.</th>
                                             <th>Categories Name</th>
+                                            <th>Probation Active</th>
+                                            <th>Probation Month</th>
                                             <th>IsActive</th>
                                             <th>Action</th>
                                         </tr>
@@ -470,6 +474,8 @@
                                         <tr>
                                             <td>1</td>
                                             <td>Probation </td>
+                                            <td>True</td>
+                                            <td>3</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" checked class="custom-control-input" id="customSwitch1">
@@ -491,6 +497,8 @@
                                         <tr>
                                             <td>2</td>
                                             <td>Full Time</td>
+                                            <td>False</td>
+                                            <td>0</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" checked class="custom-control-input" id="customSwitch2">
@@ -512,6 +520,8 @@
                                         <tr>
                                             <td>3</td>
                                             <td>Part Time</td>
+                                            <td>True</td>
+                                            <td>3</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" class="custom-control-input" id="customSwitch3">
@@ -533,6 +543,8 @@
                                         <tr>
                                             <td>4</td>
                                             <td>Regular</td>
+                                            <td>False</td>
+                                            <td>0</td>
                                             <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
                               
                                                 <input type="checkbox" checked class="custom-control-input" id="customSwitch4">
@@ -618,8 +630,34 @@
     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+
+       <!-- Importing Custom Script.js  -->
+       <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
+
+$(document).ready(function () {
+        $("#type-submit").on("click", function () {
+            if ($("#EmpTypeName").val() === "") {
+                toastr.remove();
+                toastr.error(
+                    "Please Enter EmpType Name",
+                    "Form Not Submitted",
+                    { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+                );
+            } else {
+                toastr.remove();
+                toastr.success(
+                    "Hurray!!",
+                    "Form Submitted",
+                    { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+                );
+            }
+        });
+    });
+
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,

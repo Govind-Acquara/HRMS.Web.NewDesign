@@ -39,7 +39,8 @@
  
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
- 
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
          <!-- Dropdown Search CSS -->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
 
@@ -411,7 +412,7 @@
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Policy Name</label>
-                                                <input type="text" class="form-control" placeholder="Policy Name" required data-validation-required-message="This Policy Name field is required">
+                                                <input type="text" id="PolicyName" class="form-control" placeholder="Policy Name" required data-validation-required-message="This Policy Name field is required">
                                             </div>
                                         </div>
                                     </div>
@@ -440,7 +441,7 @@
                                  </div>
 
                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                        <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
+                                        <button type="submit" id="type-submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
                                         <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
                                     </div>
                             </form>
@@ -515,15 +516,6 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-
         </div>
 
        
@@ -574,10 +566,36 @@
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
 
-    
+    <script src="../../Content/app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#type-submit").on("click", function () {
+                if ($("#PolicyName").val() === "") {
+                    toastr.remove();
+                    toastr.error(
+                        "Please Enter Policy Name",
+                        "Form Not Submitted",
+                        { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+                    );
+                } else {
+                    toastr.remove();
+                    toastr.success(
+                        "Hurray!!",
+                        "Form Submitted",
+                        { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+                    );
+                }
+            });
+        });
+     </script>
 
     <script>
         $(function () {

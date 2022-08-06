@@ -19,7 +19,7 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <!-- END: Vendor CSS-->
- 
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
      <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
      <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
      <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
@@ -39,6 +39,7 @@
  
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
      <!-- END: Page CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
  
      <!-- BEGIN: Custom CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
@@ -408,17 +409,17 @@
                             <form class="form-horizontal" novalidate>
                                 <div class="row">
                                     <input type="text" hidden name="text" class="form-control" placeholder="Designation Id">
-                                    <div class="col-12 col-sm-12 col-lg-6">
+                                    <div class="col-12 col-sm-12 col-lg-4">
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label>Designation Name</label>
-                                                <input type="text" class="form-control" placeholder="Designation Name" required data-validation-required-message="This Designation Name field is required">
+                                                <input type="text"  id="DesignationName" class="form-control" placeholder="Designation Name" required data-validation-required-message="This Designation Name field is required">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                    <button type="submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
+                                    <button type="submit" id="type-submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
                                     <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
                                 </div>
                             </form>
@@ -591,7 +592,32 @@
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
 
+    <script src="../../Content/app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#type-submit").on("click", function () {
+                if ($("#DesignationName").val() === "") {
+                    toastr.remove();
+                    toastr.error(
+                        "Please Enter Designation Name ",
+                        "Form Not Submitted",
+                        { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+                    );
+                } else {
+                    toastr.remove();
+                    toastr.success(
+                        "Hurray!!",
+                        "Form Submitted",
+                        { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
+                    );
+                }
+            });
+        });
+        </script>
     <script>
+        
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
