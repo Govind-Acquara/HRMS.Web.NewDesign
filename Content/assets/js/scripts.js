@@ -74,6 +74,89 @@
     });
   }
 
+
+//create retention table
+if ($("#RetentionTab").length != 0) {
+  // View Leave Page Table Script
+
+  $(document).ready(function () {
+    $("#RetentionTab tfoot th")
+      .not("th:nth-child(1)")
+      .not("th:nth-child(10)")
+      .each(function () {
+        var title = $("#RetentionTab tfoot th").eq($(this).index()).text();
+        $(this).html(
+          '<input type="text" class="form-control" placeholder="Search ' +
+            title +
+            '" />'
+        );
+      });
+
+    var buttons = $("#RetentionTab")
+      .DataTable({
+        responsive: true,
+        autoWidth: true,
+        lengthChange: false,
+        buttons: ["excel", "print", "copy", "pdf", "colvis"],
+      })
+      .buttons()
+      .container()
+      .appendTo(".col-md-6:eq(0)");
+
+    var table = $("#RetentionTab").DataTable();
+
+    table.columns().every(function () {
+      var that = this;
+
+      $("input", this.footer()).on("keyup change", function () {
+        that.search(this.value).draw();
+      });
+    });
+  });
+}
+//
+
+//Edit retention table
+if ($("#EditRetentionTab").length != 0) {
+  // View Leave Page Table Script
+
+  $(document).ready(function () {
+    $("#EditRetentionTab tfoot th")
+      .not("th:nth-child(1)")
+      .not("th:nth-child(11)")
+      .each(function () {
+        var title = $("#EditRetentionTab tfoot th").eq($(this).index()).text();
+        $(this).html(
+          '<input type="text" class="form-control" placeholder="Search ' +
+            title +
+            '" />'
+        );
+      });
+
+    var buttons = $("#EditRetentionTab")
+      .DataTable({
+        responsive: true,
+        autoWidth: true,
+        lengthChange: false,
+        buttons: ["excel", "print", "copy", "pdf", "colvis"],
+      })
+      .buttons()
+      .container()
+      .appendTo(".col-md-6:eq(0)");
+
+    var table = $("#EditRetentionTab").DataTable();
+
+    table.columns().every(function () {
+      var that = this;
+
+      $("input", this.footer()).on("keyup change", function () {
+        that.search(this.value).draw();
+      });
+    });
+  });
+}
+//
+
   if ($("#WFHtable").length != 0) {
     // WFH Table Script
 

@@ -10,22 +10,22 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Attendance Settings</title>
+    <title>View Retention list</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
      <!-- BEGIN: Vendor CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/fullcalendar.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/daygrid.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/calendars/extensions/timegrid.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
      <!-- END: Vendor CSS-->
  
-     <!-- BEGIN: Theme CSS-->
      <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
+     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+ 
+     <!-- BEGIN: Theme CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
@@ -36,37 +36,51 @@
      <!-- BEGIN: Page CSS-->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/calendars/fullcalendar.css">
-     <!-- END: Page CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
  
-      <!-- END: Page CSS-->
-      <!-- BEGIN: Custom CSS-->
-      <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
-     <!-- END: Custom CSS-->
+     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+     <!-- END: Page CSS-->
+     <!-- Dropdown Search CSS -->
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+     <!-- BEGIN: Custom CSS-->
 
-     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+     <!-- link for date picker -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+    <!-- END: Custom CSS-->
 
+    <style>
+       .tooltip{
+    z-index: 99999;
+    position: fixed;
+}
+    </style>
 </head>
 <!-- END: Head-->
 
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
-<!-- BEGIN: Header-->
-<nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+
+    <div class="overlay-bg"></div>
+
+   <!-- BEGIN: Header-->
+ <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
     <div class="navbar-wrapper">
         <div class="navbar-container content">
             <div class="navbar-collapse" id="navbar-mobile">
                 <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item mobile-menu  mr-auto">
-                            <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
-                                <i class="ficon feather icon-menu"></i>
-                            </a>
+                        <li class="nav-item mobile-menu  mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item nav-toggle">
+                            <!-- <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
+                                <i class=" d-block d-xl-none font-medium-4 primary "></i>
+                                <i class="  font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i>
+                            </a> -->
                         </li>
                     </ul>
-                    
                     <ul class="nav">
                         <li>
                             <select class="form-control" id="label-small" placeholder="Small Input" style="padding-right: 2rem;">
@@ -121,8 +135,91 @@
             <h6 class="text-primary mb-0">Files</h6>
         </a>
     </li>
-    
-    
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/xls.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;17kb</small>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/jpg.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;11kb</small>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/pdf.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;150kb</small>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between w-100" href="#">
+            <div class="d-flex">
+                <div class="mr-50"><img src="../../Content/app-assets/images/icons/doc.png" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
+                </div>
+            </div><small class="search-data-size mr-50 text-muted">&apos;256kb</small>
+        </a>
+    </li>
+    <li class="d-flex align-items-center">
+        <a class="pb-25" href="#">
+            <h6 class="text-primary mb-0">Members</h6>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li class="auto-suggestion d-flex align-items-center cursor-pointer">
+        <a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
+            <div class="d-flex align-items-center">
+                <div class="avatar mr-50"><img src="../../Content/app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
+                </div>
+            </div>
+        </a>
+    </li>
 </ul>
 <ul class="main-search-list-defaultlist-other-list d-none">
     <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer">
@@ -193,7 +290,6 @@
                     <li>
                         <a href="../Master/ImportDemoDataMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Import Data</span></a>
                     </li>
-
                 </ul>
             </li>
             <li class=" nav-item">
@@ -208,6 +304,7 @@
                     <li>
                         <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                     </li>
+                 
                     <li>
 
                         <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
@@ -218,7 +315,7 @@
                    </li>
                 </ul>
             </li>
-            <li class=" nav-item" id="attendance">
+            <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                 <ul class="menu-content">
                     <li>
@@ -237,27 +334,25 @@
                     <li>
                         <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                     </li>
-                    <li>
-                        <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
-                    </li>
-                    <li>
-                        <a href="../Attendance/Overtime.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Overtime</span></a>
-                    </li>
-                    <li>
-                        <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports </span></a>
-                    </li>
-                    <li id="AttendanceSettingsPage">
-                        <a href="../Attendance/AttendanceSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Attendance Settings</span></a>
-                    </li>
+                        <li>
+                            <a href="../Attendance/HRMS_Mark_Attendence.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Mark Attendance </span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/Overtime.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Overtime</span></a>
+                        </li>
+                        <li>
+                            <a href="../Attendance/Report.html"><i class="feather icon-circle"></i><span class="menu-item">Report</span></a>
+                        </li>
+                   
                 </ul>
             </li>
             <li class=" nav-item">
                 <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                 <ul class="menu-content">
+                        
                     <li>
-                     <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
-                    </li>
-
+                            <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                     </li>
                    
                      <li>
                         <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List"> Leave Application </span></a>
@@ -275,9 +370,9 @@
                      <li>
                         <a href="../Leave/HRMS_LeaveQuota.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Quota</span></a>
                      </li>
+                     
                      <li>
                         <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
-                        
                      </li>
                       <li>
                         <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
@@ -296,7 +391,7 @@
                 </ul>
                 
             </li>
-            <li class=" nav-item" >
+            <li class=" nav-item">
                 <a href="#"><i class="feather icon-clock"></i><span class="menu-title" data-i18n="User">Shift</span></a>
                 <ul class="menu-content">
                     <li>
@@ -310,7 +405,7 @@
                     </li>
                 </ul>
             </li>
-        <li class=" nav-item">
+            <li class=" nav-item">
                 <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User </span></a>
                 <ul class="menu-content">
                     <li>
@@ -322,7 +417,6 @@
                     <li>
                         <a href="../Users/HRMS_UserPermission.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">User Permission </span></a>
                     </li>
-                    
                 </ul>
             </li>
             <li class=" nav-item">
@@ -361,13 +455,14 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item">
+
+            <li class=" nav-item" id="Retention">
                 <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Retention</span></a>
                 <ul class="menu-content">
                     <li>
                         <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
                     </li>
-                    <li>
+                    <li id="EditRetention">
                         <a href="../Retention/HRMS_EditRetentionList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Edit Retention List</span></a>
                     </li>
                     <li>
@@ -377,8 +472,8 @@
             </li>
         </ul>
     </div>
-</div>
-<!-- END: Main Menu-->
+</div> 
+    <!-- END: Main Menu-->
 <!-- BEGIN: Content-->
     <section class="app-content content" id="column-selectors">
         <div class="content-overlay"></div>
@@ -388,12 +483,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Attendance Settings</h2>
+                            <h2 class="content-header-title float-left mb-0">View Retention</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="../Dashboard/Index.html">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Attendance
+                                    <li class="breadcrumb-item active">Retention
                                     </li>
                                 </ol>
                             </div>
@@ -403,227 +498,146 @@
                 
             </div>
             <div class="content-body">
-
-
+                
                 <div class="card">
-                    <div class="card-header pb-1">
-                        <h4 class="card-basic font-weight-bold">Attendance Settings</h4>
+                    <div class="card-header">
+                        <h4 class="card-basic">View Retention</h4>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
+                                <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
                                 <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                                <li><a><i class="feather icon-x" onclick="window.location.href='../Attendance/AttendanceDashboard.html'"></i></a></li>
+                                <li><a><i class="feather icon-x" onclick="window.location.href='../Retention/HRMS_ViewRetention.html'"></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="card-content collapse show">
-                        <div class="controls px-2 d-flex flex-wrap" style="gap: 1rem;">
-                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Half Day" class="mytop_Class bg-gradient-success text-white">HD</label> - Half Day</h6>
-                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present" class="mytop_Class  bg-gradient-primary text-white">P</label> - Present</h6>
-                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Holiday" class="mytop_Class bg-gradient-warning text-white">H</label> - Holiday</h6>
-                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Absent" class="mytop_Class bg-gradient-danger text-white">A</label> - Absent</h6>
-                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Weekly Off" class="mytop_Class bg-gradient-secondary text-white">WO</label> - Weekly Off</h6>
-                            <h6 class="font-weight-bold"><label data-toggle="tooltip" data-placement="top" title="Present for WFH" class="mytop_Class  bg-gradient-primary  text-white">P<span style="font-size: 0.5rem;">WFH</span></label> -WFH Present</h6>
-
-                        </div>
                         <div class="card-body">
-
-                            <div class="d-flex gap-1rem mt-1  border-bottom-secondary">
-                                <h4 class="font-weight-bold">Company : <span class="font-weight-normal">Acquara</span></h4> 
-
-                                <h4 class="font-weight-bold">Branch : <span class="font-weight-normal">Gurgaon</span></h4>
-                            </div>
-
                             <form class="form-horizontal" novalidate>
-
-                                <div class="row form-group pt-2">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div>
-                                            <label>Office Timing</label>
-                                            <div class="d-flex gap-1rem form-group">
-                                                <div class="d-flex gap-1rem w-50">
-                                                    <label for="" class="d-inline-block my-auto">In:</label>
-                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
-                                                </div>
-                                                <div class="d-flex gap-1rem w-50">
-                                                    <label for="" class="d-inline-block my-auto">Out:</label>
-                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="form-group">
-                                            <label>Present Hours</label>
-                                            <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-3">
-                                        <div>
-                                            <label>Lunch Break</label>
-                                            <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select Timing">
-                                        </div>
-                                    </div>
-                                    <!-- <div class="col-lg-4 col-md-4">
-                                        <div class="form-group">
-                                            <label>Half Day Hours</label>
-                                            <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours"> 
-                                        </div>
-                                    </div> -->
-                                </div>
-                                
-                                <div class="row form-group">
-
-
-                                    <div class="col-lg-6 ">
-                                        <div class="row form-group ">
-                                            <div class="col-6">
-                                                <div>
-                                                    <label>Half Day Hours</label>
-                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours"> 
-                                                 </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <label>Half Day Hours Applicable for :</label>
-                                                <div class="custom-control custom-checkbox pt-1">
-                                                    <input type="checkbox" class="custom-control-input" name="customCheck8" id="customCheck8">
-                                                    <label class="custom-control-label" for="customCheck8">WFH Employee</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-lg-6 ">
+                                    
+                                <div class="col-12 mt-0">
+                                    <div class="border rounded  px-1">
+                                        <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-users mr-50 "></i>Employee Details</h6>
                                         <div class="row">
-                                            <div class="col-6">
-                                                <div>
-                                                    <label>Over Time Hours</label>
-                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
+                                                <div class="form-group">
+                                                    <label>Employee Name / Code</label>
+                                                    <select class="select2 form-control" id="default-select" disabled="disabled">
+                                                         <option value="Active">Select Employee Name</option>
+                                                         <option value="Blocked">Bhumi EMP-101</option>
+                                                         <option value="deactivated">rahul EMP-102</option>
+                                                         <option value="Active">Arunima EMP-103</option>
+                                                         <option value="Blocked">yash EMP-104</option>
+                                                         <option value="deactivated">pooja EMP-105</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <label>Over Time Applicable for :</label>
-                                                <fieldset id="WBRadio">
-                                                <div class="row pt-1 form-group">
-                                                        <div class="col-6">
-                                                                <div class="custom-control custom-radio">
-                                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMAX" checked>
-                                                                    <label class="custom-control-label" for="OTMAX">Max</label>
-                                                                </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                                <div class="custom-control custom-radio">
-                                                                    <input type="radio" class="custom-control-input" name="WBRadio" id="OTMIN">
-                                                                    <label class="custom-control-label" for="OTMIN">Min</label>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                            </fieldset>
-                                            </div>
-                                        </div>
 
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
+                                                <div class="form-group">
+                                                    <label>DOJ</label>
+                                                     <input type="date" class="form-control" placeholder="Date Of Joining" disabled="disabled">
+                                                </div>
+                                            </div>
+
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
+                                                <div class="form-group">
+                                                    <label>Location</label>
+                                                     <input type="text" class="form-control" placeholder="Location" disabled="disabled">
+                                                </div>
+                                            </div>
+
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
+                                                <div class="form-group">
+                                                    <label>Gross Salary</label>
+                                                     <input type="text" class="form-control" placeholder="Gross Salary" disabled="disabled">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                  
+                                 </div>
+                               </div>
+
+                                <div class="col-12 mt-1">
+                                  <div class="border rounded  px-1">
+                                     <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-users mr-50 "></i>Retention Details</h6>
+                                      <div class="row">
+                                  
+    
+                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                        <div class="form-group">
+                                            <label>Retention Amount</label>
+                                             <input type="text" class="form-control" placeholder="Retention Amt" disabled="disabled">
+                                        </div>
+                                    </div>
+    
+                                    
+
+                                    <div class=" col-md-4 col-sm-12 col-lg-3">
+                                        <div class="form-group">
+                                            <label>Total Amount</label>
+                                             <input type="text" class="form-control" placeholder="Paid Amt" disabled="disabled">
+                                        </div>
                                     </div>
 
-
-
-
+                                    <div class="col-md-4 col-sm-12 col-lg-3">
+                                        <div class="form-group">
+                                            <label>From Date</label>
+                                            <input type="date" class="form-control" placeholder="From Date" disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12 col-lg-3">
+                                        <div class="form-group">
+                                            <label>To Date</label>
+                                            <input type="date" class="form-control " placeholder="To Date" disabled="disabled">
+                                        </div>
+                                    </div>
 
                                 </div>
 
-                                <div class="row">
-
-
-                                    <div class="col-lg-6 ">
-                                        <div class="row form-group">
-                                            <div class="col-6">
-                                                <div>
-                                                    <label>Grace Timing</label>
-                                                    <input type="text" class="form-control singleTimePicker" name="" id="" placeholder="Select hours">
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <label>Grace Timing Applicable for :</label>
-                                                <div class="custom-control custom-checkbox pt-1">
-                                                    <input type="checkbox" class="custom-control-input" name="customCheck" id="customCheckM">
-                                                    <label class="custom-control-label" for="customCheckM">WFH Employee</label>
-                                                </div>
+                                      <div class="row">
+                                        <div class=" col-md-4 col-sm-12 col-lg-3">
+                                            <div class="form-group">
+                                                <label>Paid Amount</label>
+                                                 <input type="text" class="form-control" placeholder="Paid Amt" disabled="disabled">
                                             </div>
                                         </div>
 
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="row form-group">
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label for="" class=" my-auto ">Grace Time Applicable Per Month Only For</label>
-                                                    <div class="d-flex gap-1rem">
-                                                        <input type="text" class="form-control d-inline-block w-50" name="" id="" placeholder="Enter Days">
-                                                        <label for="" class=" my-auto">Days</label>
+                                        <div class="col-lg-3 col-md-4 col-sm-12">
+                                            <label>Status</label>
+                                            <fieldset id="WBRadio">
+                                            <div class="row pt-1 form-group">
+                                                    <div class="col-6">
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" class="custom-control-input" name="WBRadio" id="WBL" checked>
+                                                                <label class="custom-control-label" for="WBL">Paid</label>
+                                                            </div>
                                                     </div>
-                                                  </div>
+                                                    <div class="col-6">
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" class="custom-control-input" name="WBRadio" id="WBS">
+                                                                <label class="custom-control-label" for="WBS">UnPaid</label>
+                                                            </div>
+                                                    </div>
                                             </div>
-                                            <div class="col-lg-3 form-group">
-                                                <div>
-                                                    <label>Break 1</label>
-                                                    <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select Timing">
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-lg-3">
-                                                <div>
-                                                    <label>Break 2</label>
-                                                    <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select Timing">
-                                                </div>
-                                            </div>
-        
+                                        </fieldset>
                                         </div>
+                                        
 
-                                    </div>
+                                      </div>
                                   
                                 </div>
-
-                                <!-- <div class="row">
-                                    <div class="col-lg-3">
-                                        <div>
-                                            <label>Lunch Break</label>
-                                            <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select Timing">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3">
-                                        <div>
-                                            <label>Break 1</label>
-                                            <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select Timing">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3">
-                                        <div>
-                                            <label>Break 2</label>
-                                            <input type="text" class="form-control timeRangePicker" name="" id="" placeholder="Select Timing">
-                                        </div>
-                                    </div>
-
-                                </div> -->
-
-                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0 mt-2">
-                                    <button type="button" class="btn btn-primary mr-1 mb-1" id="type-submit">Submit</button>
-                                    <button type="reset" class="btn btn-outline-primary border-primary mb-1 mr-1">Reset</button>    
-                            </div>
-
+                               
+                              </div>
+                             
                             </form>
                         </div>
                     </div>
                 </div>
+    
+              
+            </div>
 
-
-                    </div>
-                    
-                
             </div>
            
         </div>
@@ -642,142 +656,82 @@
 </footer>
 <!-- END: Footer-->
 
-<!-- BEGIN: Vendor JS-->
-<script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
-<script src="../../Content/app-assets/js/custom-js.js"></script>
-<!-- BEGIN Vendor JS-->
 
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../Content/app-assets/js/custom-js.js"></script>
+    <!-- BEGIN Vendor JS-->
+    
+    
+    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <!-- END: Page Vendor JS-->
+    
+    <!-- BEGIN: Theme JS-->
+    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
+    <script src="../../Content/app-assets/js/core/app.js"></script>
+    <script src="../../Content/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+    
+    <!-- BEGIN: Page JS-->
+    
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
+    
+    <!-- END: Page JS-->
+    
+    <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
+    <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
+    <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
+    <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-<script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
-<script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
-<!-- END: Page Vendor JS-->
-
-<!-- BEGIN: Theme JS-->
-<script src="../../Content/app-assets/js/core/app-menu.js"></script>
-<script src="../../Content/app-assets/js/core/app.js"></script>
-<script src="../../Content/app-assets/js/scripts/components.js"></script>
-<!-- END: Theme JS-->
-
-<!-- BEGIN: Page JS-->
-
-<script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
-<script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-
-<!-- END: Page JS-->
-
-
-
-
- <!-- BEGIN: Page Vendor JS-->
-<!-- calendar JS  -->
- <script src="../../Content/app-assets/vendors/js/calendar/fullcalendar.min.js"></script>
- <script src="../../Content/app-assets/vendors/js/calendar/extensions/daygrid.min.js"></script>
- <script src="../../Content/app-assets/vendors/js/calendar/extensions/timegrid.min.js"></script>
- <script src="../../Content/app-assets/vendors/js/calendar/extensions/interactions.min.js"></script>
- <script src="../../Content/app-assets/js/scripts/extensions/fullcalendar.js"></script>
- 
- <!-- END: Page Vendor JS-->
-
-     <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
-     <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
-     <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>  
-     <script src="../../Content/assets/Datatabel-js/dataTables.bootstrap4.min.js"></script>
-     <script src="../../Content/assets/Datatabel-js/dataTables.buttons.js"></script>
-     <script src="../../Content/assets/Datatabel-js/buttons.bootstrap4.min.js"></script>
-     <script src="../../Content/assets/Datatabel-js/jszip.min.js"></script>
-     <script src="../../Content/assets/Datatabel-js/pdfmake.min.js"></script>
-     <script src="../../Content/assets/Datatabel-js/vfs_fonts.js"></script>
-     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
-     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
-     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
-
- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
-<!-- END: Page Vendor JS-->
-
-
-
-<script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-
-<script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
-
+    <!-- Dropdown search JS -->
+    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
+     <!-- js link for find diferrence between date-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <!-- js link for date picker -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+    
+    <script>
 
+$(".bootstrapdatepicker").datepicker(); 
 
-
-
-<script>
-
-
-
-$('.timeRangePicker').daterangepicker({
-            timePicker: true,
-            timePicker24Hour : true,
-
-            locale: {
-                format: 'HH:mm'
-            }
-            
-        }).on('show.daterangepicker', function (ev, picker) {
-            picker.container.find(".calendar-table").hide();
-        });
-
-
-
-$('.singleTimePicker').daterangepicker({
-            timePicker: true,
-            singleDatePicker: true,
-            timePicker24Hour : true,
-
-            locale: {
-                format: 'HH:mm'
-            }
-            
-        }).on('show.daterangepicker', function (ev, picker) {
-            picker.container.find(".calendar-table").hide();
-        });
-
-
-$(function() {
-
-$('#shiftDate').daterangepicker({
-    autoUpdateInput: false,
-    locale: {
-        cancelLabel: 'Clear'
-    }
-});
-
-$('#shiftDate').on('apply.daterangepicker', function(ev, picker) {
-    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-});
-
-$('#shiftDate').on('cancel.daterangepicker', function(ev, picker) {
-    $(this).val('');
-});
-
-});
-
-$(function (){
-        $("#shiftTable").DataTable({
+        $(function () {
+        $("#example1").DataTable({
           "responsive": true, "lengthChange": false, "autoWidth": true,
-
+          
+          
           "buttons": ["excel","print", "copy","pdf","colvis"]
-        }).buttons().container().appendTo('#shiftTable_wrapper .col-md-6:eq(0)');
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         
         });
+        </script>
+    
+    <script>
+        window.onload = function () {
+            document.getElementById("Retention").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("EditRetention").className = 'active';
+        }
+
+      
+    </script>
 
 
-    window.onload = function () {
-        document.getElementById("attendance").classList.add("has-sub", "sidebar-group-active", "open")
-        document.getElementById("AttendanceSettingsPage").className = 'active';
-    }
-
-   
-
-</script>
-
+ 
 </body>
 <!-- END: Body-->
+
 </html>

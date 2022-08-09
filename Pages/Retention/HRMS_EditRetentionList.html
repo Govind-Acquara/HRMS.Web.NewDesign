@@ -7,46 +7,44 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
-    <title>Policy Master</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Edit Retention List</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
-     <!-- BEGIN: Vendor CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
-     <!-- END: Vendor CSS-->
- 
-     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
-     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
-     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
- 
-     <!-- BEGIN: Theme CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
- 
-     <!-- BEGIN: Page CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
- 
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
-     <!-- END: Page CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/extensions/toastr.css">
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/extensions/toastr.css">
-         <!-- Dropdown Search CSS -->
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <!-- END: Vendor CSS-->
 
-     <!-- BEGIN: Custom CSS-->
-     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
-     <!-- END: Custom CSS-->
+    <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
+
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+    <!-- END: Page CSS-->
+    <!-- Dropdown Search CSS -->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
+    <!-- END: Custom CSS-->
 
 </head>
 <!-- END: Head-->
@@ -54,7 +52,8 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
-
+    
+    <div class="overlay-bg"></div>
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
         <div class="navbar-wrapper">
@@ -151,7 +150,7 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item">
                     <a href="../Dashboard/Index.html">
-                        <i class=" active feather icon-home"></i>
+                        <i class="feather icon-home"></i>
                         <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
                         <!-- <span class="badge badge badge-warning badge-pill float-right mr-2">2</span> -->
                     </a>
@@ -159,7 +158,7 @@
                 <li class=" navigation-header">
                     <span>Menu</span>
                 </li>
-                <li class=" nav-item open" id="Master">
+                <li class=" nav-item">
                     <a href="#"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="User">Master</span></a>
                     <ul class="menu-content">
                         <li>
@@ -190,7 +189,7 @@
                         <li>
                             <a href="../Master/HRMS_EmpCodeMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Code Master</span></a>
                         </li>
-                        <li id="policy">
+                        <li>
                             <a href="../Master/HRMS_PolicyMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Policy Master</span></a>
                         </li>
                         <li>
@@ -212,14 +211,15 @@
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
                         <li>
+
                             <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
+
                         </li>
                         <li>
                             <a href="../Employee/EmployeeSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Employee Settings</span></a>
                        </li>
                     </ul>
                 </li>
-               
                 <li class=" nav-item">
                     <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                     <ul class="menu-content">
@@ -236,6 +236,7 @@
                         <li>
                             <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                         </li>
+
                         <li>
                             <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                         </li>
@@ -253,7 +254,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item" id="leave">
+                <li class=" nav-item">
                     <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                     <ul class="menu-content">
                         
@@ -261,7 +262,7 @@
                                 <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
                          </li>
                        
-                       
+                        
                          <li>
                             <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List"> Leave Application </span></a>
                             
@@ -296,6 +297,7 @@
                             <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
                          </li> -->
                     </ul>
+
                     
                 </li>
                 <li class=" nav-item" >
@@ -362,13 +364,13 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="Retention">
                     <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Retention</span></a>
                     <ul class="menu-content">
                         <li>
                             <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
                         </li>
-                        <li>
+                        <li id="EditRetention">
                             <a href="../Retention/HRMS_EditRetentionList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Edit Retention List</span></a>
                         </li>
                         <li>
@@ -381,22 +383,20 @@
     </div>
     <!-- END: Main Menu-->
     <!-- BEGIN: Content-->
-    <section class="app-content content" id="column-selectors">
+    <div class="app-content content">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-1">
+                <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Policy Master</h2>
+                            <h2 class="content-header-title float-left mb-0">Edit Retention List</h2>
                             <div class="breadcrumb-wrapper col-12">
-                                <ol class="breadcrumb mb-1">
-                                    <li class="breadcrumb-item">
-                                        <a href="../Dashboard/Index.html">Dashboard</a>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">
-                                        Master
+                                    <li class="breadcrumb-item active">Retention
                                     </li>
                                 </ol>
                             </div>
@@ -405,136 +405,116 @@
                 </div>
 
             </div>
-            <div class="content-body">
+          
+          
                 <div class="card">
-                    <div class="card-header pb-1">
-                        <h5 class="card-basic">Add Policy Name</h5>
-                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
+                    <div class="card-header">
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
-                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                                <li><a><i class="feather icon-x" onclick="window.location.href='../Dashboard/Index.html'"></i></a></li>
+                                <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="card-content collapse show">
-                        <div class="card-body pt-0 pb-0">
-                            <form class="form-horizontal" novalidate>
-                                <div class="row">
-
-                                    <div class="col-sm-12 col-md-4 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>Policy Name</label>
-                                                <input type="text" id="PolicyName" class="form-control" placeholder="Policy Name" required data-validation-required-message="This Policy Name field is required">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-
-                                    <div class="col-sm-12 col-md-4 col-lg-4">
-                                        <fieldset class="form-group">
-                                            <label for="basicInputFile">Attach Document</label>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="inputGroupFile01">
-                                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-
-                                    <div class="col-sm-12 col-md-4 col-lg-4">
-                                        <div class="form-group">
-                                            <div class="controls">
-                                                <label>Remark</label>
-                                                <input type="text" class="form-control" placeholder="Remark">
-                                            </div>
-                                        </div>
-                                    </div> 
-
-                                 </div>
-
-                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
-                                        <button type="submit" id="type-submit" class="btn btn-primary glow  mr-1 mb-1">Submit</button>
-                                        <button type="reset" class="btn btn-outline-primary mb-1 mr-1">Reset</button>
-                                    </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-body card-dashboard">
-
-                        <div class="table-responsive">
-                            <table id="example1" class="table  border-secondary table-striped dataex-html5-selectors">
-                                <thead>
-                                    <tr class="theadclr text-white">
-                                        <th>Sr. No.</th>
-                                        <th>Policy Name</th>
-                                        <th>Remark</th>
-                                        <th>IsActive</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  
+                    <div class="card-content">
+                        <div class="card-body card-dashboard">
+                            <div class="table-responsive">
+                                <table id="EditRetentionTab" class="table border-secondary table-striped dataex-html5-selectors">
+                                    <thead>
+                                        <tr class="theadclr text-white">
+                                            <th>SrNo.</th>
+                                            <th>Employee Name /code</th>
+                                            <th>DOJ</th>
+                                            <th>Gross Salary</th>
+                                            <th>Retention</th>
+                                            <th>Retention Amount</th>
+                                            <th>From  Date</th>
+                                            <th>To Date</th>
+                                            <th>Status</th>
+                                            <th>Paid Amount</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                     <tfoot class="tableSearchFoot">
+                                        <tr>
+                                            <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                            <th>Employee Name /code</th>
+                                            <th>DOJ</th>
+                                            <th>Gross Salary</th>
+                                            <th>Retention</th>
+                                            <th>Retention Amount</th>
+                                            <th>From  Date</th>
+                                            <th>To Date</th>
+                                            <th>Status</th>
+                                            <th>Paid Amount</th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot> 
+                                    <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>Leave Policy</td>
-                                            <td>Test</td>
-                                           <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                              
-                                            <input type="checkbox" checked class="custom-control-input" id="customSwitch1">
-                                            
-                                            <label class="custom-control-label" for="customSwitch1">
-                                            
-                                            <span class="switch-text-left">Active</span>
-                                            
-                                            <span class="switch-text-right">InActive</span>
-                                            
-                                            </label>
-                                            
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Pooja Jain</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-101</span>
+                                                </div>
                                             </div></td>
+                                            <td>24-10-2022</td>
+                                            <td>12000</td>
+                                            <td>500</td>
+                                            <td>6000</td>
+                                            <td>01-11-2021</td>
+                                            <td>30-11-2022</td>
+                                            <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">UnPaid</div>
+                                                </div>
+                                            </div></td>
+                                            <td>6000</td>
                                             <td>
-                                                <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
+                                                <a href="../Retention/HRMS_EditRetention.html" data-toggle="tooltip" data-placement="top" title="Edit" class="feather icon-edit"></a>
                                             </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>HR Policy</td>
-                                        <td>Test</td>
-                                       <td><div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
-                          
-                                        <input type="checkbox" checked class="custom-control-input" id="customSwitch2">
-                                        
-                                        <label class="custom-control-label" for="customSwitch2">
-                                        
-                                        <span class="switch-text-left">Active</span>
-                                        
-                                        <span class="switch-text-right">InActive</span>
-                                        
-                                        </label>
-                                        
-                                        </div></td>
-                                        <td>
-                                            <span class="action-edit"><a href="#" class="feather icon-file"></a></span>
-                                        </td>
-                                </tr>
-                                 
-                                </tbody>
-                            </table>
+                                        </tr>
+
+                                        <tr>
+                                            <td>2</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Yash Sharma</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-101</span>
+                                                </div>
+                                            </div></td>
+                                            <td>24-10-2022</td>
+                                            <td>12000</td>
+                                            <td>500</td>
+                                            <td>6000</td>
+                                            <td>01-11-2021</td>
+                                            <td>30-11-2022</td>
+                                            <td><div class="chip chip-success">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Paid</div>
+                                                </div>
+                                            </div></td>
+                                            <td>6000</td>
+                                            <td>
+                                                <a href="../Retention/HRMS_EditRetention.html" data-toggle="tooltip" data-placement="top" title="Edit" class="feather icon-edit"></a>
+                                            </td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
+
             </div>
-
         </div>
-
-       
-    </section>
-
+    </div>
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
@@ -579,37 +559,15 @@
     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-    <script src="../../Content/app-assets/vendors/js/extensions/toastr.min.js"></script>
-    <script src="../../Content/app-assets/js/scripts/extensions/toastr.js"></script>
 
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
-
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $("#type-submit").on("click", function () {
-                if ($("#PolicyName").val() === "") {
-                    toastr.remove();
-                    toastr.error(
-                        "Please Enter Policy Name",
-                        "Form Not Submitted",
-                        { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
-                    );
-                } else {
-                    toastr.remove();
-                    toastr.success(
-                        "Hurray!!",
-                        "Form Submitted",
-                        { positionClass: 'toast-top-center', containerId: 'toast-top-center' }
-                    );
-                }
-            });
-        });
-     </script>
+       <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
         $(function () {
@@ -625,9 +583,10 @@
     <!-- Code for menu active Yash 04/06/22 -->
     <script>
         window.onload = function () {
-            document.getElementById("Master").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("policy").className = 'active';
+            document.getElementById("Retention").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("EditRetention").className = 'active';
         }
+
     </script>
 
 </body>

@@ -367,6 +367,20 @@
                         </li>
                     </ul>
                 </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Retention</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                        </li>
+                        <li>
+                            <a href="../Retention/HRMS_EditRetentionList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Edit Retention List</span></a>
+                        </li>
+                        <li>
+                            <a href="../Retention/HRMS_ViewRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Retention List</span></a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -818,8 +832,8 @@
                                                                                     <div class="col-lg-6 pt-2">
                                                                                         <div class="form-group">
                                                                                             <div class="custom-control  custom-checkbox">
-                                                                                                <input type="checkbox" class="custom-control-input"  name="customCheck" id="customCheck1">
-                                                                                                <label class="custom-control-label" for="customCheck1">Is Probation Apply</label>
+                                                                                                <input type="checkbox" class="custom-control-input" name="InductionCompleted" id="InductionCompleted">
+                                                                                                <label class="custom-control-label" for="InductionCompleted">Is Probation Apply</label>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -829,7 +843,7 @@
                                                                                         <div class="form-group">
                                                                                             <label>Probation Month</label>
                                                                                             <fieldset class="form-group">
-                                                                                                <select class="select2 form-control" id="users-list-status">
+                                                                                                <select class="select2 form-control" id="ICD" disabled="disabled">
                                                                                                     <option value="">Select Probation Month</option>
                                                                                                     <option value="Active">1</option>
                                                                                                     <option value="Blocked">2</option>
@@ -1053,6 +1067,8 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
 
 
+ <!-- Importing Custom Script.js  -->
+ <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
 
