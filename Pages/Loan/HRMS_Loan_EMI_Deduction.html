@@ -549,14 +549,21 @@
                                     <div class="border rounded  px-1">
                                         <div class="row mt-1">
 
-                                            <div class=" col-md-4 col-sm-12 col-lg-4">
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label class="">Employee Name:</label>
                                                      <input id="my-field" type="text" class="form-control" placeholder="Employee Name" value="Pooja Jain">
                                                 </div>
                                             </div>
 
-                                            <div class=" col-md-4 col-sm-12 col-lg-4">
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
+                                                <div class="form-group">
+                                                    <label class="">Employee Code:</label>
+                                                     <input id="my-field" type="text" class="form-control" placeholder="Employee Code" value="Emp-101">
+                                                </div>
+                                            </div>
+
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label class="">Total Loan Amount:</label>
                                                     <!-- number -->
@@ -564,34 +571,43 @@
                                                 </div>
                                             </div>
 
-                                            <div class=" col-md-4 col-sm-12 col-lg-4">
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label class="">Next Due Date:</label>
                                                      <input type="text" class="form-control birthdate-picker" placeholder="Due Date" value="01-09-2022">
                                                 </div>
                                             </div>
-                                            
                                         
                                         </div>
 
                                         <div class="row">
-
-                                            <div class=" col-md-4 col-sm-12 col-lg-4">
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
+                                                <div class="form-group">
+                                                    <label class="">Gross Salary:</label>
+                                                     <!-- number -->
+                                                     <input type="text" class="form-control" placeholder="Gross Salary" value="50,000">
+                                                </div>
+                                            </div>
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label class="">EMI Deduction:</label>
                                                      <!-- number -->
                                                      <input type="text" class="form-control" placeholder="Loan EMI" value="15,313.80">
                                                 </div>
                                             </div>
-                                            
-                                            <div class=" col-md-4 col-sm-12 col-lg-4">
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label class="">Paid Month:</label>
                                                     <input type="text"  name="datepicker" id="" class="form-control Monthdatepicker " required placeholder="Monthly-Date" data-validation-required-message="This birthdate field is required">
                                                 </div>
                                             </div>
-
-                                            <div class=" col-md-4 col-sm-12 col-lg-4">
+                                            <div class="col-md-4 col-sm-12 col-lg-3">
+                                                <div class="form-group">
+                                                    <label>Year Of Deduction</label>
+                                                    <input type="text"  name="datepicker" class="form-control currentYear" required placeholder="Year" data-validation-required-message="This birthdate field is required" >
+                                                </div>
+                                            </div>
+                                            <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label class="">Balance Amount:</label>
                                                      <!-- number -->
@@ -727,6 +743,13 @@
         format: "mm-yyyy",
         startView: "months", 
         minViewMode: "months"
+    }); 
+
+    $(".currentYear").datepicker( {
+        format: "yyyy",
+        viewMode: "years", 
+        minViewMode: "years",
+        autoclose:true //to close picker once year is selected
     }); 
       
     </script>

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Loan Schedule List</title>
+    <title>Loan EMI List</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -381,6 +381,35 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class=" nav-item" id="Loan">
+                    <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Loan</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a href="../Loan/HRMS_DashBoardLoan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Dashboard</span></a>
+                        </li>
+                         <li>
+                            <a href="../Loan/HRMS_Loan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Settings</span></a>
+                        </li> 
+                        <li>
+                            <a href="../Loan/HRMS_Loan_EMI_Deduction.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan EMI Deduction</span></a>
+                        </li>
+    
+                        <li >
+                            <a href="../Loan/HRMS_Indivisual_Loan_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Individual Loan Report</span></a>
+                        </li>
+    
+                        <li >
+                            <a href="../Loan/HRMS_AllEmployee_LoanPending_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Pending List</span></a>
+                        </li>
+    
+                        <li>
+                            <a href="../Loan/HRMS_Loan_statusComplete_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Complete List</span></a>
+                        </li>
+                       
+                    </ul>
+                </li>
+
             </ul>
         </div>
     </div>
@@ -394,7 +423,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Loan Schedule List</h2>
+                            <h2 class="content-header-title float-left mb-0">Loan EMI List</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
@@ -426,34 +455,33 @@
                                 <thead>
                                     <tr class="theadclr text-white">
                                         <th>SrNo.</th>
+                                        <th>Year</th>
                                         <th>Employee Name /code</th>
                                         <th>Disbursal Date</th>
-                                        <th>Principal</th>
-                                        <th>Interest</th>
-                                        <th>Total Amount</th>
-                                        <th>EMI Amount</th>
-                                        <th>Due Date</th>
-                                        <th>Outstanding</th>
+                                        <th>Total Loan Amount</th>
+                                        <th>EMI Deduction</th>
+                                        <th>Paid Month</th>
+                                        <th>Remaining Balance</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                  <tfoot class="tableSearchFoot">
                                     <tr>
                                         <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                        <th>Year</th>
                                         <th>Employee Name /code</th>
                                         <th>Disbursal Date</th>
-                                        <th>Principal</th>
-                                        <th>Interest</th>
-                                        <th>Total Amount</th>
-                                        <th>EMI Amount</th>
-                                        <th>Due Date</th>
-                                        <th>Outstanding</th>
+                                        <th>Total Loan Amount</th>
+                                        <th>EMI Deduction</th>
+                                        <th>Paid Month</th>
+                                        <th>Remaining Balance</th>
                                         <th></th>
                                     </tr>
                                 </tfoot> 
                                 <tbody>
                                     <tr>
                                         <td>1</td>
+                                        <td>2022</td>
                                         <td><div class="d-flex justify-content-start align-items-center">
                                             <div class="user-page-info">
                                                 <span>Pooja Jain</span>
@@ -462,15 +490,13 @@
                                             </div>
                                         </div></td>
                                         <td>01-07-2022</td>
-                                        <td>60,000</td>
-                                        <td>1,255.19</td>
                                         <td>61,255.19</td>
                                         <td>15,313.80</td>
-                                        <td>01-08-2022</td>
+                                        <td>August</td>
                                         <td>45,941.39</td>
                                         <td>
-                                            <div data-toggle="tooltip" data-placement="top" title="Edit" >
-                                                <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                            <div data-toggle="tooltip" data-placement="top" title="view" >
+                                                <a href="HRMS_Loan_EMI_Deduction.html"><i  class="fa fa-eye" ></i></a>
                                             </div>
                                         </td>
                                     </tr>

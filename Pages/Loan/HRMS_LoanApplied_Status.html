@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Employee Loan Complete List</title>
+    <title>Loan Applied List</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -394,16 +394,16 @@
                         <li>
                             <a href="../Loan/HRMS_Loan_EMI_Deduction.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan EMI Deduction</span></a>
                         </li>
-    
-                        <li >
+
+                        <li>
                             <a href="../Loan/HRMS_Indivisual_Loan_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Individual Loan Report</span></a>
                         </li>
-    
-                        <li >
+
+                        <li id="LoanPending">
                             <a href="../Loan/HRMS_AllEmployee_LoanPending_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Pending List</span></a>
                         </li>
-    
-                        <li id="LoanComp">
+
+                        <li>
                             <a href="../Loan/HRMS_Loan_statusComplete_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Complete List</span></a>
                         </li>
                        
@@ -423,7 +423,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0"> Loan Complete List</h2>
+                            <h2 class="content-header-title float-left mb-0">Loan Applied List</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
@@ -435,7 +435,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
           
 
@@ -455,20 +454,18 @@
                                 <thead>
                                     <tr class="theadclr text-white">
                                         <th>SrNo.</th>
-                                        <th>Year</th>
                                         <th>Employee Name /code</th>
-                                        <th>Disbursal Date</th>
-                                        <th>Principal</th>
-                                        <th>Interest</th>
-                                        <th>Total Amount</th>
-                                        <th>EMI Amount</th>
-                                        <th>Last EMI Paid(DD-MM-YYYY)</th>
-                                        <th>Balance</th>
+                                        <th>Year In Organization</th>
+                                        <th>Reporting Person</th>
+                                        <th>Application Date</th>
+                                        <th>Loan Amount</th>
+                                        <th>Loan Duration(In Month)</th>
+                                        <th>Loan Required Date</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+                                        <th class="pl-5 w-25">Action</th>
                                     </tr>
                                 </thead>
-                                 <tfoot class="tableSearchFoot">
+                                 <!-- <tfoot class="tableSearchFoot">
                                     <tr>
                                         <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
                                         <th>Year</th>
@@ -478,72 +475,86 @@
                                         <th>Interest</th>
                                         <th>Total Amount</th>
                                         <th>EMI Amount</th>
-                                        <th>Last EMI Paid(DD-MM-YYYY)</th>
+                                        <th>Due Date</th>
                                         <th>Balance</th>
                                         <th>Status</th>
                                         <th></th>
                                         
                                     </tr>
-                                </tfoot> 
+                                </tfoot>  -->
                                 <tbody>
-                                   
-                                     <tr>
+                                    <tr>
                                         <td>1</td>
-                                        <td>2022</td>
+                                       
                                         <td><div class="d-flex justify-content-start align-items-center">
                                             <div class="user-page-info">
-                                                <span>Rohit Sharma</span>
+                                                <span>Neha</span>
                                                 <br>
-                                                <span class="font-small-2">Emp-103</span>
+                                                <span class="font-small-2">Emp-131</span>
                                             </div>
                                         </div></td>
-                                        <td>01-01-2022</td>
-                                        <td>50,000</td>
-                                        <td>1,151.08</td>
-                                        <td>51,151.08</td>
-                                        <td>12787.77</td>
-                                        <td>01-05-2022</td>
-                                        <td>0</td>
-                                        <td><div class="chip chip-success">
+                                        <td>2</td>
+                                        <td>Geeta Pathak</td>
+                                        <td>18-08-2022</td>
+                                        <td>100000</td>
+                                        <td>6 </td>
+                                        <td>01-09-2022</td>
+                                        <td><div class="chip chip-warning">
                                             <div class="chip-body">
-                                                <div class="chip-text">Complete</div>
+                                                <div class="chip-text">Pending</div>
                                             </div>
                                         </div></td>
                                         <td>
-                                            <div data-toggle="tooltip" data-placement="top" title="Edit" >
-                                                <a href="HRMS_Retention_Settings.html"><i  class="fa fa-eye text-dark" ></i></a>
+                                            <div class="chip chip-success">
+                                                <div class="chip-body cursor-pointer">
+                                                    <div class="chip-text"><a href="HRMS_Loan.html" class="text-white"><i class="fa fa-check rounded-circle bg-white text-success "></i>&nbsp;Approved</a></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="chip chip-danger cursor-pointer">
+                                                <div class="chip-body">
+                                                    <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
+                                                </div>
                                             </div>
                                         </td>
-                                    </tr> 
-
+                                   
+                                    </tr>
+                                    
                                     <tr>
                                         <td>2</td>
-                                        <td>2022</td>
                                         <td><div class="d-flex justify-content-start align-items-center">
                                             <div class="user-page-info">
-                                                <span>Arpit</span>
+                                                <span>Rohan</span>
                                                 <br>
-                                                <span class="font-small-2">Emp-113</span>
+                                                <span class="font-small-2">Emp-111</span>
                                             </div>
                                         </div></td>
-                                        <td>01-02-2022</td>
-                                        <td>55,000</td>
-                                        <td>1,521.70</td>
-                                        <td>56,521.70</td>
-                                        <td>11304.34</td>
-                                        <td>01-07-2022</td>
-                                        <td>0</td>
-                                        <td><div class="chip chip-success">
+                                        <td>1</td>
+                                        <td>Geeta Pathak</td>
+                                        <td>18-08-2022</td>
+                                        <td>50,000</td>
+                                        <td>3</td>
+                                        <td>01-09-2022</td>
+
+                                        <td><div class="chip chip-warning">
                                             <div class="chip-body">
-                                                <div class="chip-text">Complete</div>
+                                                <div class="chip-text">Pending</div>
                                             </div>
                                         </div></td>
                                         <td>
-                                            <div data-toggle="tooltip" data-placement="top" title="Edit" >
-                                                <a href="HRMS_Retention_Settings.html"><i  class="fa fa-eye text-dark" ></i></a>
+                                            <div class="chip chip-success">
+                                                <div class="chip-body cursor-pointer">
+                                                    <div class="chip-text"><a href="HRMS_Loan.html" class="text-white"><i class="fa fa-check rounded-circle bg-white text-success "></i>&nbsp;Approved</a></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="chip chip-danger cursor-pointer">
+                                                <div class="chip-body">
+                                                    <div class="chip-text"><i class="feather icon-x rounded-circle bg-white text-danger "></i>&nbsp;Reject</div>
+                                                </div>
                                             </div>
                                         </td>
-                                    </tr> 
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -626,7 +637,7 @@
     <script>
         window.onload = function () {
             document.getElementById("Loan").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("LoanComp").className = 'active';
+            document.getElementById("LoanPending").className = 'active';
         }
 
     </script>

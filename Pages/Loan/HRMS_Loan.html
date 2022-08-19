@@ -20,6 +20,9 @@
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
      <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
      <!-- END: Vendor CSS-->
+
+
+     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/spinner/jquery.bootstrap-touchspin.css">
  
      <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
      <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
@@ -560,7 +563,6 @@
                                                 </div>
                                             </div>
                                             
-                                          
                                             <div class="col-md-4 col-sm-12 col-lg-2">
                                                 <div class=" form-group">
                                                     <h5  class="">Location:</h5>
@@ -590,49 +592,22 @@
                                                 </div>
                                             </div>
 
-                                            <!-- <div class=" col-md-4 col-sm-12 col-lg-3">
-                                                <div class="col-12">
-                                                    <label>Type Of Pay :</label>
-                                                    <fieldset id="WBRadiobtn">
-                                                    <div class="row pt-1 form-group">
-                                                            <div class="col-6">
-                                                                    <div class="custom-control custom-radio">
-                                                                        <input type="radio" class="custom-control-input" name="WBRadiobtn" id="precal" checked>
-                                                                        <label class="custom-control-label"  for="precal">Monthly </label>
-                                                                    </div>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                    <div class="custom-control custom-radio">
-                                                                        <input type="radio" class="custom-control-input" name="WBRadiobtn" id="precal2">
-                                                                        <label class="custom-control-label" for="precal2">Yearly</label>
-                                                                    </div>
-                                                            </div>
-                                                    </div>
-                                                </fieldset>
-                                                </div>
-                                            </div> -->
-                                            
                                         </div>
 
-                                       <div class="row">
-
+                                    <div class="row">
                                         <div class="col-md-4 col-sm-12 col-lg-3">
                                             <div class=" form-group ">
                                                 <h5 class="">Reporting person:</h5>
                                                  <p class="border">Geeta Pathak</p>
                                             </div>
                                         </div>
-
-                                            <div class="col-md-4 col-sm-12 col-lg-2">
-                                                <div class=" form-group ">
-                                                    <h5 class="">Years in Organization:</h5>
-                                                     <p class="border">1</p>
-                                                </div>
+                                        <div class="col-md-4 col-sm-12 col-lg-2">
+                                            <div class=" form-group ">
+                                                <h5 class="">Years in Organization:</h5>
+                                                <p class="border">1</p>
                                             </div>
-                                           
-                                     </div> 
-
-                                     
+                                        </div>
+                                    </div> 
                                  </div>
                                </div>
 
@@ -743,12 +718,20 @@
                                   
                                          
                                      <div class=" col-md-4 col-sm-12 col-lg-3">
-                                        <div class="form-group">
+                                        <div class="form-group pl-5">
                                             <label class="">Tenure(In Months):</label>
-                                             <input type="number" class="form-control" placeholder="Tenure" value="4">
-                                          
+                                            <div class="input-group input-group-lg">
+                                                <input type="number" class="touchspin" value="1">
+                                            </div>
                                         </div>
                                     </div> 
+                                      
+                                      <!-- <div class="d-flex align-items-center mb-1">
+                                        <label class="">Tenure(In Months):</label>
+                                                <div class="input-group input-group-lg">
+                                                    <input type="number" class="touchspin" value="4">
+                                                </div>
+                                            </div> -->
 
                                     
                                       <div class=" col-md-4 col-sm-12 col-lg-3">
@@ -833,7 +816,7 @@
                               
                             </form>
                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end ">
-                                <button type="submit" class="btn btn-primary glow m-1">Submit</button>
+                                <button type="submit" class="btn btn-primary glow m-1"><a href="HRMS_LoanEMI_List.html" class="text-white">Submit</a> </button>
                                 <button type="reset" class="btn btn-outline-primary m-1">Reset</button>
                             </div>
                         </div>
@@ -904,6 +887,11 @@
 
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/spinner/jquery.bootstrap-touchspin.js"></script>
+
+      <!-- BEGIN: Page JS-->
+      <script src="../../Content/app-assets/js/scripts/forms/number-input.js"></script>
+
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
     <!-- Importing Custom Script.js  -->
     <script src="../../Content/assets/js/scripts.js"></script>
