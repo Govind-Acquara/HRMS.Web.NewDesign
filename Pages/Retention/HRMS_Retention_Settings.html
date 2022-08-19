@@ -456,14 +456,43 @@
             <li class=" nav-item" id="Retention">
                 <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Retention</span></a>
                 <ul class="menu-content">
-                    <li id="Create_retention">
-                        <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                    <li id="Re_setting">
+                        <a href="../Retention/HRMS_Retention_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Retention Settings</span></a>
                     </li>
+                    <!-- <li>
+                        <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                    </li> -->
                     <li>
                         <a href="../Retention/HRMS_EditRetentionList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Edit Retention List</span></a>
                     </li>
                     <li>
                         <a href="../Retention/HRMS_ViewRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Retention List</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item">
+                <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Loan</span></a>
+                <ul class="menu-content">
+                    <li>
+                        <a href="../Loan/HRMS_DashBoardLoan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Dashboard</span></a>
+                    </li>
+                     <li>
+                        <a href="../Loan/HRMS_Loan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Settings</span></a>
+                    </li> 
+                    <li>
+                        <a href="../Loan/HRMS_Loan_EMI_Deduction.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan EMI Deduction</span></a>
+                    </li>
+
+                    <li >
+                        <a href="../Loan/HRMS_Indivisual_Loan_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Individual Loan Report</span></a>
+                    </li>
+
+                    <li >
+                        <a href="../Loan/HRMS_AllEmployee_LoanPending_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Pending List</span></a>
+                    </li>
+
+                    <li>
+                        <a href="../Loan/HRMS_Loan_statusComplete_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Complete List</span></a>
                     </li>
                 </ul>
             </li>
@@ -514,7 +543,7 @@
                                     <div class="border rounded  px-1">
                                         <h6 class=" py-1 mb-0 font-medium-2 primary"><i class="feather icon-users mr-50 "></i>Employee Details</h6>
                                         <div class="row">
-                                            <div class=" col-md-4 col-sm-12 col-lg-3">
+                                            <div class="col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label>Employee Name / Code</label>
                                                     <select class="select2 form-control" id="default-select">
@@ -529,14 +558,14 @@
                                             </div>
                                             
                                           
-                                            <div class=" col-md-2 col-sm-6 col-lg-2">
+                                            <div class="col-md-4 col-sm-12 col-lg-2">
                                                 <div class=" form-group">
                                                     <h5  class="">Location:</h5>
                                                      <p class="border">Gurgaon</p>
                                                 </div>
                                             </div>
 
-                                            <div class=" col-mdfa-rotate-270 col-sm-6 col-lg-2">
+                                            <div class="col-md-4 col-sm-12 col-lg-2">
                                                 <div class=" form-group ">
                                                     <h5 class="">Date Of Joinig:</h5>
                                                      <p class="border">24-10-2021</p>
@@ -544,7 +573,7 @@
                                             </div>
 
                                            
-                                            <div class=" col-md-2 col-sm-6 col-lg-2">
+                                            <div class=" col-md-4 col-sm-12 col-lg-2">
                                                 <div class="form-group ">
                                                     <label class="">Retention Amount:</label>
                                                      <input type="text" class="form-control" placeholder="Retention Amount">
@@ -577,7 +606,6 @@
 
                                         <div class="row">
                                           
-
                                             <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
                                                     <label class="">End Date:</label>
@@ -585,7 +613,6 @@
                                                   
                                                 </div>
                                             </div>
-
 
                                             <div class=" col-md-4 col-sm-12 col-lg-3">
                                                 <div class="form-group">
@@ -646,7 +673,7 @@
 
                                     <div class="col-md-4 col-sm-12 col-lg-3">
                                         <div class="form-group">
-                                            <label>No. Of Months</label>
+                                            <label>No. Of Months(Paid)</label>
                                             <input type="text" class="form-control" placeholder="No Of Months" value="4">
                                         </div>
                                     </div>
@@ -751,7 +778,7 @@
     <script>
         window.onload = function () {
             document.getElementById("Retention").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("Create_retention").className = 'active';
+            document.getElementById("Re_setting").className = 'active';
         }
 
       

@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Acquara">
-    <title>Yearly LeaveType Report</title>
+    <meta name="author" content="">
+    <title>Indivisual Loan List</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -19,8 +19,6 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-     <!-- link for year date picker -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
     <!-- END: Vendor CSS-->
 
     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
@@ -42,7 +40,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
     <!-- END: Page CSS-->
-   <!-- Dropdown Search CSS -->
+    <!-- Dropdown Search CSS -->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
@@ -54,6 +52,8 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
+    
+    <div class="overlay-bg"></div>
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
         <div class="navbar-wrapper">
@@ -211,7 +211,9 @@
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
                         <li>
+
                             <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
+
                         </li>
                         <li>
                             <a href="../Employee/EmployeeSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Employee Settings</span></a>
@@ -234,6 +236,7 @@
                         <li>
                             <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                         </li>
+
                         <li>
                             <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                         </li>
@@ -251,19 +254,20 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item" id="leave">
+                <li class=" nav-item">
                     <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                     <ul class="menu-content">
                         
                         <li>
                                 <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
                          </li>
-                    
+                       
+                        
                          <li>
                             <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List"> Leave Application </span></a>
                             
                          </li>
-                         <li >
+                         <li>
                             <a href="../Leave/HRMS_LeaveBalanceMonth.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Balance</span></a>
                          </li>
                          <li>
@@ -275,7 +279,6 @@
                           <li>
                             <a href="../Leave/HRMS_LeaveQuota.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Quota</span></a>
                          </li>
-                            
                          <li>
                             <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
                             
@@ -284,7 +287,7 @@
                             <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
                          </li>
     
-                         <li id="LeaveReport">
+                         <li>
                             <a href="../Leave/HRMS_MonthlyLeaveType_Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Report</span></a>
                          </li>                    
                          <!-- <li>
@@ -294,6 +297,7 @@
                             <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
                          </li> -->
                     </ul>
+
                     
                 </li>
                 <li class=" nav-item" >
@@ -360,12 +364,15 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="">
                     <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Retention</span></a>
                     <ul class="menu-content">
                         <li>
-                            <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                            <a href="../Retention/HRMS_Retention_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Retention Settings</span></a>
                         </li>
+                        <!-- <li>
+                            <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                        </li> -->
                         <li>
                             <a href="../Retention/HRMS_EditRetentionList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Edit Retention List</span></a>
                         </li>
@@ -374,7 +381,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+
+                <li class=" nav-item" id="Loan">
                     <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Loan</span></a>
                     <ul class="menu-content">
                         <li>
@@ -386,42 +394,41 @@
                         <li>
                             <a href="../Loan/HRMS_Loan_EMI_Deduction.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan EMI Deduction</span></a>
                         </li>
-    
-                        <li >
+
+                        <li id="LoanIndiv">
                             <a href="../Loan/HRMS_Indivisual_Loan_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Individual Loan Report</span></a>
                         </li>
-    
+
                         <li >
                             <a href="../Loan/HRMS_AllEmployee_LoanPending_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Pending List</span></a>
                         </li>
-    
+
                         <li>
                             <a href="../Loan/HRMS_Loan_statusComplete_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Complete List</span></a>
                         </li>
                        
                     </ul>
                 </li>
+
             </ul>
         </div>
     </div>
     <!-- END: Main Menu-->
     <!-- BEGIN: Content-->
-    <section class="app-content content" id="column-selectors">
+    <div class="app-content content">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-1">
+                <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Yearly LeaveType Report</h2>
+                            <h2 class="content-header-title float-left mb-0">Indivisual Loan List</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">
-                                        Leave
+                                    <li class="breadcrumb-item active">Loan
                                     </li>
                                 </ol>
                             </div>
@@ -430,153 +437,363 @@
                 </div>
 
             </div>
+          
 
-            <ul class="nav nav-pills mb-3" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center " href="../Leave/HRMS_MonthlyLeaveType_Report.html">
-                        <i class="feather icon-calendar mr-25"></i><span class="d-none d-sm-block">Monthly</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center active" href="../Leave/HRMS_YearlyLeaveType_Report.html">
-                        <i class="fa fa-calendar mr-25"></i><span class="d-none d-sm-block">Yearly</span>
-                    </a>
-                </li>                                  
-                          
-
-            </ul>
-            
-              <!-- side content -->
-                           
-                <div class="tab-content">
-                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
-                        <div class="content-body">
-                            <div class="card">
-
-                                <div class="card-header pb-1">
-                                    <h5 class="card-basic">Year</h5>
-                        <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
-                                    <div class="heading-elements">
-                            <ul class="list-inline mb-0">
-                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                            </ul>
-                            </div>
-                        </div>  
-                        <div class="card-content collapse show">
-                            <div class="card-body">
-                                <form class="form-horizontal" novalidate>
-                                    <div class="row">
-                                        <div class=" col-md-4 col-sm-12 col-lg-4">
-                                            <div class="form-group">
-                                                <label>Employee Name / Code</label>
-                                                <select class="select2 form-control" id="default-select">
-                                                     <option value="Active">Select Employee Name</option>
-                                                     <option value="Blocked">Bhumi EMP-101</option>
-                                                     <option value="deactivated">rahul EMP-102</option>
-                                                     <option value="Active">Arunima EMP-103</option>
-                                                     <option value="Blocked">yash EMP-104</option>
-                                                     <option value="deactivated">pooja EMP-105</option>
-                                                </select>
+            <div class="card">
+                <div class="card-header">
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
+                            <li><a><i class="feather icon-x" onclick="window.location.href='HRMS_DashBoardLoan.html' "></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-body card-dashboard">
+                        <div class="table-responsive">
+                            <table id="LoanTab" class="table border-secondary  dataex-html5-selectors">
+                                <thead>
+                                    <tr class="theadclr text-white">
+                                        <th>SrNo.</th>
+                                        <th>Year</th>
+                                        <th>Employee Name /code</th>
+                                        <th>Principal</th>
+                                        <th>Interest</th>
+                                        <th>Total Amount</th>
+                                        <th>EMI Amount</th>
+                                        <th>Due Date</th>
+                                        <th>Balance</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                 <tfoot class="tableSearchFoot">
+                                    <tr>
+                                        <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                        <th>Year</th>
+                                        <th>Employee Name /code</th>
+                                        <th>Principal</th>
+                                        <th>Interest</th>
+                                        <th>Total Amount</th>
+                                        <th>EMI Amount</th>
+                                        <th>Due Date</th>
+                                        <th>Balance</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot> 
+                                <tbody>
+                                    <tr>
+                                        <td data-toggle="collapse" data-target="#demo" > <i  class="fa fa-plus-square-o" ></i></td>
+                                        <td>2022</td>
+                                        <td><div class="d-flex justify-content-start align-items-center">
+                                            <div class="user-page-info">
+                                                <span>Pooja Jain</span>
+                                                <br>
+                                                <span class="font-small-2">Emp-101</span>
                                             </div>
-                                        </div>
-                                        <div class="col-12  col-sm-12 col-lg-4">
-                                             <div class="form-group">
-                                                 <label>Select Year</label>
-                                                 <input type="text"  name="datepicker" class="form-control currentYear" required placeholder="Year" data-validation-required-message="This birthdate field is required" >
-                                             </div>
-                                         </div>
-                                         
-                                         <div class="col-12  col-sm-12 col-lg-4">
-                                            <button type="submit" class="btn btn-primary glow  mr-1 mt-2">View</button>
-                                          </div>
-            
-                                     </div>
-                                    
+                                        </div></td>
+                                        <td>60,000</td>
+                                        <td>1,255.19</td>
+                                        <td>61,255.19</td>
+                                        <td>15,313.80</td>
+                                        <td>01-11-2022</td>
+                                        <td>15,313.80</td>
+                                        <td><div class="chip chip-warning">
+                                            <div class="chip-body">
+                                                <div class="chip-text">Pending</div>
+                                            </div>
+                                        </div></td>
+                                        <td>
+                                            <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                            </div>
+                                        </td>
+
+    
+                                    </tr>
+                                    <tbody  id="demo" class="collapse table-secondary">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Aug</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Pooja Jain</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-101</span>
+                                                </div>
+                                            </div></td>
+                                           
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-08-2022</td>
+                                            <td>45,941.39</td>
+                                            <td><div class="chip chip-success">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">completed</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Sep</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Pooja Jain</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-101</span>
+                                                </div>
+                                            </div></td>
+                                           
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-09-2022</td>
+                                            <td>30,627.59</td>
+                                            <td><div class="chip chip-success">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">completed</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Oct</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Pooja Jain</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-101</span>
+                                                </div>
+                                            </div></td>
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-10-2022</td>
+                                            <td>15,313.79</td>
+                                            <td><div class="chip chip-success">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">completed</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Nov</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Pooja Jain</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-101</span>
+                                                </div>
+                                            </div></td>
+                                           
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-11-2022</td>
+                                            <td>15,313.80</td>
+                                            <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Pending</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                    
-                                </form>
-                            </div>
+                                    <tr>
+                                        <td data-toggle="collapse" data-target="#demo2" > <i  class="fa fa-plus-square-o" ></i></td>
+                                        <td>2022</td>
+                                        <td><div class="d-flex justify-content-start align-items-center">
+                                            <div class="user-page-info">
+                                                <span>Rahul Sharma</span>
+                                                <br>
+                                                <span class="font-small-2">Emp-121</span>
+                                            </div>
+                                        </div></td>
+                                        <td>60,000</td>
+                                        <td>1,255.19</td>
+                                        <td>61,255.19</td>
+                                        <td>15,313.80</td>
+                                        <td>01-10-2022</td>
+                                        <td>30,627.59</td>
+                                        <td><div class="chip chip-warning">
+                                            <div class="chip-body">
+                                                <div class="chip-text">Pending</div>
+                                            </div>
+                                        </div></td>
+                                        <td>
+                                            <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                            </div>
+                                        </td>
+
+    
+                                    </tr>
+
+                                    <tbody id="demo2" class="collapse table-secondary">
+                                        <tr >
+                                            <td>1</td>
+                                            <td>Aug</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Rahul Sharma</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-121</span>
+                                                </div>
+                                            </div></td>
+                                           
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-08-2022</td>
+                                            <td>45,941.39</td>
+                                            <td><div class="chip chip-success">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">completed</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr >
+                                            <td>2</td>
+                                            <td>Sep</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Rahul Sharma</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-121</span>
+                                                </div>
+                                            </div></td>
+                                           
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-09-2022</td>
+                                            <td>30,627.59</td>
+                                            <td><div class="chip chip-success">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">completed</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr  >
+                                            <td>3</td>
+                                            <td>Oct</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Rahul Sharma</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-121</span>
+                                                </div>
+                                            </div></td>
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-10-2022</td>
+                                            <td>30,627.59</td>
+                                            <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">pending</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr  >
+                                            <td>4</td>
+                                            <td>Nov</td>
+                                            <td><div class="d-flex justify-content-start align-items-center">
+                                                <div class="user-page-info">
+                                                    <span>Rahul Sharma</span>
+                                                    <br>
+                                                    <span class="font-small-2">Emp-121</span>
+                                                </div>
+                                            </div></td>
+                                           
+                                            <td>15000</td>
+                                            <td>313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>15,313.80</td>
+                                            <td>01-11-2022</td>
+                                            <td>30,627.59</td>
+                                            <td><div class="chip chip-warning">
+                                                <div class="chip-body">
+                                                    <div class="chip-text">Pending</div>
+                                                </div>
+                                            </div></td>
+                                            <td>
+                                                <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                    <a href="HRMS_Retention_Settings.html"><i  class="feather icon-edit" ></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </tbody>
+                            </table>
                         </div>
+
                     </div>
-
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body card-dashboard">
-                                    <div class="d-flex gap-1rem pt-1">
-                                        <h5 class="border-right-primary pr-1 border-right-2">Year Leave Type : <span class="font-weight-normal">2022</span></h5>
-                                        <h5 class="border-right-primary pr-1 border-right-2">Employee Name : <span class="font-weight-normal">Pooja Jain</span></h5>
-                                        <h5 class="">Employee Code  : <span class="font-weight-normal">EMP-105</span></h5>
-
-                                    </div>
-                                    <div class="table-responsive">
-                                        <table id="LeaveTypeReportTable" class="table  border-secondary table-striped dataex-html5-selectors">
-                                            <thead>
-                                                <tr class="theadclr text-white">
-                                                    <th >Sr. No.</th>
-                                                    <th>Leave Type</th>
-                                                    <th>From (DD-MM-YYYY)</th>
-                                                    <th>To (DD-MM-YYYY)</th>
-                                                    <th>No. Of Days</th>
-                                                   
-                                                </tr>
-                                            </thead>
-                                            <tfoot class="tableSearchFoot">
-                                                <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
-                                                <th>Leave Type</th>
-                                                <th>From (DD-MM-YYYY)</th>
-                                                <th>To (DD-MM-YYYY)</th>
-                                                <th>No Of Days</th>
-                                               
-                                            </tfoot>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Casual Leave</td>
-                                                    <td>1-01-2022</td>
-                                                    <td>3-01-2022</td>
-                                                    <td>3</td>
-                                                    
-                                                </tr>
-        
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Sick Leave</td>
-                                                    <td>2-03-2022</td>
-                                                    <td>2-03-2022</td>
-                                                    <td>1</td>
-                                                </tr>
-        
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Casual Leave</td>
-                                                    <td>10-05-2022</td>
-                                                    <td>12-05-2022</td>
-                                                    <td>2</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Casual Leave</td>
-                                                    <td>9-06-2022</td>
-                                                    <td>12-06-2022</td>
-                                                    <td>4</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        
-                    </div>
-
-                                </div>                 
+                </div>
             </div>
+ 
+          
 
+            </div>
         </div>
-    </section>
-
+    </div>
     <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
         <p class="clearfix blue-grey lighten-2 mb-0">
@@ -619,13 +836,12 @@
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
 
-    <!-- js link for month date picker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
-     <!-- Importing Custom Script.js  -->
-     <script src="../../Content/assets/js/scripts.js"></script>
+       <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
         $(function () {
@@ -638,30 +854,13 @@
 
         });
     </script>
-
+    <!-- Code for menu active Yash 04/06/22 -->
     <script>
         window.onload = function () {
-            document.getElementById("leave").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("LeaveReport").className = 'active';
+            document.getElementById("Loan").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("LoanIndiv").className = 'active';
         }
-    </script>
 
-
-<script>
-    
-    $(document).ready(function(){
-    
-        var currYear = new Date();
-         var thisYear =currYear.getFullYear();
-        document.getElementById(".currentYear").value = thisYear;
-    
-    });
-    $(".currentYear").datepicker( {
-        format: "yyyy",
-        viewMode: "years", 
-        minViewMode: "years",
-        autoclose:true //to close picker once year is selected
-    }); 
     </script>
 
 </body>

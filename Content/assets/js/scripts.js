@@ -117,15 +117,15 @@ if ($("#RetentionTab").length != 0) {
 //
 
 //Edit retention table
-if ($("#EditRetentionTab").length != 0) {
+if ($("#ProcessRetentionTab").length != 0) {
   // View Leave Page Table Script
 
   $(document).ready(function () {
-    $("#EditRetentionTab tfoot th")
+    $("#ProcessRetentionTab tfoot th")
       .not("th:nth-child(1)")
-      .not("th:nth-child(11)")
+      .not("th:nth-child(14)")
       .each(function () {
-        var title = $("#EditRetentionTab tfoot th").eq($(this).index()).text();
+        var title = $("#ProcessRetentionTab tfoot th").eq($(this).index()).text();
         $(this).html(
           '<input type="text" class="form-control" placeholder="Search ' +
             title +
@@ -133,7 +133,7 @@ if ($("#EditRetentionTab").length != 0) {
         );
       });
 
-    var buttons = $("#EditRetentionTab")
+    var buttons = $("#ProcessRetentionTab")
       .DataTable({
         responsive: true,
         autoWidth: true,
@@ -144,7 +144,47 @@ if ($("#EditRetentionTab").length != 0) {
       .container()
       .appendTo(".col-md-6:eq(0)");
 
-    var table = $("#EditRetentionTab").DataTable();
+    var table = $("#ProcessRetentionTab").DataTable();
+
+    table.columns().every(function () {
+      var that = this;
+
+      $("input", this.footer()).on("keyup change", function () {
+        that.search(this.value).draw();
+      });
+    });
+  });
+}
+
+//Edit loan table
+if ($("#LoanTab").length != 0) {
+  // View Leave Page Table Script
+
+  $(document).ready(function () {
+    $("#LoanTab tfoot th")
+      .not("th:nth-child(1)")
+      .not("th:nth-child(11)")
+      .each(function () {
+        var title = $("#LoanTab tfoot th").eq($(this).index()).text();
+        $(this).html(
+          '<input type="text" class="form-control" placeholder="Search ' +
+            title +
+            '" />'
+        );
+      });
+
+    var buttons = $("#LoanTab")
+      .DataTable({
+        responsive: true,
+        autoWidth: true,
+        lengthChange: false,
+        buttons: ["excel", "print", "copy", "pdf", "colvis"],
+      })
+      .buttons()
+      .container()
+      .appendTo(".col-md-6:eq(0)");
+
+    var table = $("#LoanTab").DataTable();
 
     table.columns().every(function () {
       var that = this;
@@ -156,6 +196,46 @@ if ($("#EditRetentionTab").length != 0) {
   });
 }
 //
+
+//Emp loan process table
+if ($("#LoanProcess").length != 0) {
+  // View Leave Page Table Script
+
+  $(document).ready(function () {
+    $("#LoanProcess tfoot th")
+      .not("th:nth-child(1)")
+      .not("th:nth-child(12)")
+      .each(function () {
+        var title = $("#LoanProcess tfoot th").eq($(this).index()).text();
+        $(this).html(
+          '<input type="text" class="form-control" placeholder="Search ' +
+            title +
+            '" />'
+        );
+      });
+
+    var buttons = $("#LoanProcess")
+      .DataTable({
+        responsive: true,
+        autoWidth: true,
+        lengthChange: false,
+        buttons: ["excel", "print", "copy", "pdf", "colvis"],
+      })
+      .buttons()
+      .container()
+      .appendTo(".col-md-6:eq(0)");
+
+    var table = $("#LoanProcess").DataTable();
+
+    table.columns().every(function () {
+      var that = this;
+
+      $("input", this.footer()).on("keyup change", function () {
+        that.search(this.value).draw();
+      });
+    });
+  });
+}
 
   if ($("#WFHtable").length != 0) {
     // WFH Table Script

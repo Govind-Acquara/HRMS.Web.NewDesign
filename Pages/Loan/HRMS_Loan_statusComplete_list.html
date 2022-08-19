@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -9,21 +10,21 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Edit Employees</title>
+    <title>Employee Loan Complete List</title>
     <link rel="apple-touch-icon" href="../../Content/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../Content/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/tables/datatable/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/pickers/pickadate/pickadate.css">
     <!-- END: Vendor CSS-->
+
     <link rel="stylesheet" href="../../Content/assets/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../Content/assets/css/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../../Content/assets/css/buttons.bootstrap4.min.css">
+
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/bootstrap-extended.css">
@@ -36,23 +37,14 @@
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/core/colors/palette-gradient.css">
     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/pages/app-user.css">
-    <!-- END: Page CSS-->
 
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/css/plugins/forms/validation/form-validation.css">
+    <!-- END: Page CSS-->
+    <!-- Dropdown Search CSS -->
+    <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Content/assets/css/style.css">
     <!-- END: Custom CSS-->
-
-     <!-- Dropdown Search CSS -->
-     <link rel="stylesheet" type="text/css" href="../../Content/app-assets/vendors/css/forms/select/select2.min.css">
-
-           <!-- link for date picker -->
-           <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
-
-
-
-    <style>
-        
-    </style>
 
 </head>
 <!-- END: Head-->
@@ -60,7 +52,8 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
-
+    
+    <div class="overlay-bg"></div>
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
         <div class="navbar-wrapper">
@@ -157,7 +150,7 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item">
                     <a href="../Dashboard/Index.html">
-                        <i class=" active feather icon-home"></i>
+                        <i class="feather icon-home"></i>
                         <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
                         <!-- <span class="badge badge badge-warning badge-pill float-right mr-2">2</span> -->
                     </a>
@@ -205,20 +198,22 @@
 
                     </ul>
                 </li>
-                <li class=" nav-item" id="Employee">
+                <li class=" nav-item">
                     <a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Employee </span></a>
                     <ul class="menu-content">
                         <li>
                             <a href="../Employee/HRMS_CreateEmployee.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Employee</span></a>
                         </li>
-                        <li id="Editemp">
+                        <li>
                             <a href="../Employee/HRMS_EditEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Edit Employee</span></a>
                         </li>
                         <li>
                             <a href="../Employee/HRMS_ViewEmployeeList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Employee</span></a>
                         </li>
                         <li>
+
                             <a href="../Employee/Reports.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Reports</span></a>
+
                         </li>
                         <li>
                             <a href="../Employee/EmployeeSettings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Employee Settings</span></a>
@@ -226,7 +221,7 @@
                     </ul>
                 </li>
                 <li class=" nav-item">
-                    <a href="#"><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
+                    <a href=""><i class="fa fa-calendar"></i><span class="menu-title" data-i18n="User">Attendance</span></a>
                     <ul class="menu-content">
                         <li>
                             <a href="../Attendance/AttendanceDashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
@@ -241,6 +236,7 @@
                         <li>
                             <a href="../Attendance/HRMS_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Attendance </span></a>
                         </li>
+
                         <li>
                             <a href="../Attendance/HRMS_Forget_Attendance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Forget Attendance </span></a>
                         </li>
@@ -261,11 +257,12 @@
                 <li class=" nav-item">
                     <a href="#"><i class="fa fa-calendar-minus-o"></i><span class="menu-title" data-i18n="User">Leave</span></a>
                     <ul class="menu-content">
+                        
                         <li>
-                         <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
-                        </li>
-    
-                      
+                                <a href="../Leave/LeaveManagement_Dashboard.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Dashboard </span></a>
+                         </li>
+                       
+                        
                          <li>
                             <a href="../Leave/HRMS_Leave_View.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List"> Leave Application </span></a>
                             
@@ -279,21 +276,20 @@
                          <!-- <li>
                             <a href="../Leave/Leave_Setup.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Setup</span></a>
                          </li> -->
-                         <li>
-                          <a href="../Leave/HRMS_LeaveQuota.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Quota</span></a>
+                          <li>
+                            <a href="../Leave/HRMS_LeaveQuota.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Quota</span></a>
                          </li>
                          <li>
                             <a href="../Leave/LeaveMaster.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
                             
                          </li>
-                      <li>
-                        <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
-                     </li>
-
-                     <li>
-                        <a href="../Leave/HRMS_MonthlyLeaveType_Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Report</span></a>
-                     </li>
-                        
+                          <li>
+                            <a href="../Leave/HRMS_WFH.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">WFH</span></a>
+                         </li>
+    
+                         <li>
+                            <a href="../Leave/HRMS_MonthlyLeaveType_Report.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Report</span></a>
+                         </li>                    
                          <!-- <li>
                             <a href="../Leave/HRMS_New_LeaveType.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Leave Settings</span></a>
                          </li>
@@ -301,6 +297,7 @@
                             <a href="../Leave/HRMS_General_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">General Settings</span></a>
                          </li> -->
                     </ul>
+
                     
                 </li>
                 <li class=" nav-item" >
@@ -367,12 +364,15 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+                <li class=" nav-item" id="">
                     <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Retention</span></a>
                     <ul class="menu-content">
                         <li>
-                            <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                            <a href="../Retention/HRMS_Retention_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Retention Settings</span></a>
                         </li>
+                        <!-- <li>
+                            <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                        </li> -->
                         <li>
                             <a href="../Retention/HRMS_EditRetentionList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Edit Retention List</span></a>
                         </li>
@@ -381,33 +381,35 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item">
+
+                <li class=" nav-item" id="Loan">
                     <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Loan</span></a>
                     <ul class="menu-content">
                         <li>
-                            <a href="HRMS_DashBoardLoan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Dashboard</span></a>
+                            <a href="../Loan/HRMS_DashBoardLoan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Dashboard</span></a>
                         </li>
                          <li>
-                            <a href="HRMS_Loan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Settings</span></a>
+                            <a href="../Loan/HRMS_Loan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Settings</span></a>
                         </li> 
                         <li>
-                            <a href="HRMS_Loan_EMI_Deduction.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan EMI Deduction</span></a>
+                            <a href="../Loan/HRMS_Loan_EMI_Deduction.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan EMI Deduction</span></a>
                         </li>
     
                         <li >
-                            <a href="HRMS_Indivisual_Loan_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Individual Loan Report</span></a>
+                            <a href="../Loan/HRMS_Indivisual_Loan_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Individual Loan Report</span></a>
                         </li>
     
                         <li >
-                            <a href="HRMS_AllEmployee_LoanPending_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Pending List</span></a>
+                            <a href="../Loan/HRMS_AllEmployee_LoanPending_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Pending List</span></a>
                         </li>
     
-                        <li>
-                            <a href="HRMS_Loan_statusComplete_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Complete List</span></a>
+                        <li id="LoanComp">
+                            <a href="../Loan/HRMS_Loan_statusComplete_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Complete List</span></a>
                         </li>
                        
                     </ul>
                 </li>
+
             </ul>
         </div>
     </div>
@@ -421,206 +423,145 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Edit Employee</h2>
-                            <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="../Dashboard/HRMS_Index.html">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a>Employee </a>
-                                    </li>
-                            </ol>
+                            <h2 class="content-header-title float-left mb-0"> Loan Complete List</h2>
                             <div class="breadcrumb-wrapper col-12">
-                                
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Loan
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div class="content-body">
-                <!-- users edit start -->
+          
 
-                <div class="card">
-                    <div class="card-header pb-1">
-                        <h5 class="card-basic">Employee Details</h5>
-                        <div class="heading-elements">
-                            <ul class="list-inline mb-0">
-                                <li><a data-action="collapse"><i class="feather icon-chevron-down"></i></a></li>
-                            </ul>
-                        </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
+                            <li><a><i class="feather icon-x" onclick="window.location.href='HRMS_DashBoardLoan.html' "></i></a></li>
+                        </ul>
                     </div>
-                    <div class="card-content collapse show">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-1 pl-1 pr-1 pb-1 pt-0">
-                                    <div class=" text-left">
-                                        <label class="cursor-pointer" for="UserImage">
-                                            <img src="../../Content/app-assets/images/portrait/small/avatar-s-18.jpg" class="users-avatar-shadow rounded" height="60" width="60">
-                                        </label>
-                                        <input type="file" id="UserImage" hidden>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Employee Name/Code :</div>
-                                        <div class="col-6">Pooja Jain/EMP-101</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Department :</div>
-                                        <div class="col-6">IT</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Designation :</div>
-                                        <div class="col-6">Developer</div>
-                                    </div>
-                                     
-                                    
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Employee Status :</div>
-                                        <div class="col-6">InActive</div>
-                                    </div>
-                                    
-                                    
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Email :</div>
-                                        <div class="col-6">Pooja.Jain@acquara.com</div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-6 font-weight-bold">Branch :</div>
-                                        <div class="col-6">Gurgaon</div>
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            </div>
-    
-    
-                            </form>
-                        </div>
-                 </div>
-
-
-                <section class="users-edit">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <ul class="nav nav-pills mb-3" role="tablist">
-
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center" href="../Employee/HRMS_EditEmployees.html">
-                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">General</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center active"   href="../Employee/Documents_CreateEmployee.html">
-                                            <i class="feather icon-tv mr-25"></i><span class="d-none d-sm-block">Induction</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center " href="../Employee/CreateEmployee_Personal.html">
-                                            <i class="feather icon-info mr-25"></i><span class="d-none d-sm-block">Personal</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Passport_CreateEmployee.html">
-                                            <i class="feather icon-book mr-25"></i><span class="d-none d-sm-block">Passport/Visa </span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Qualification_CreateEmployee.html">
-                                            <i class="feather icon-award mr-25"></i><span class="d-none d-sm-block">Qualification</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/PreviousJob_CreateEmployee.html">
-                                            <i class="feather icon-rotate-ccw mr-25"></i><span class="d-none d-sm-block">Previous Job</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center"  href="../Employee/Documents_CreateEmployee.html">
-                                            <i class="feather icon-sidebar mr-25"></i><span class="d-none d-sm-block">Documents</span>
-                                        </a>
-                                    </li>
-
-
-
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
-                                        <!-- users edit account form start -->
-                                        <div class="col-12 mt-1">
-                                            <div class="border rounded  px-1">
-                                                <h6 class=" py-1  mb-0 font-medium-2 primary"><i class="feather icon-tv mr-25"></i>Employee Induction Details</h6>
-                                          
-                                                <div class="form-group">
-                                                    <div class="custom-control custom-checkbox pt-1">
-                                                        <input type="checkbox" class="custom-control-input" name="InductionCompleted" id="InductionCompleted">
-                                                        <label class="custom-control-label" for="InductionCompleted">Is Induction Completed?</label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row form-group">
-                                                    <div class="col-lg-6">
-                                                        <div>
-                                                            <label>Induction Completed Date (DD-MM-YYYY)</label>
-                                                            <input type="date" id="ICD" disabled="disabled" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div>
-                                                            <label>Induction Given By</label>
-                                                            <select class="select2 form-control" disabled="disabled" id="IENC">
-                                                                 <option value="Active">Select Name</option>
-                                                                 <option value="Blocked">Bhumi EMP 101</option>
-                                                                 <option value="deactivated">rahul EMP 102</option>
-                                                                 <option value="Blocked">yash EMP 103</option>
-                                                                 <option value="deactivated">pooja EMP 104</option>
-                                                                 <option value="deactivated">somya EMP 105</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
+                </div>
+                <div class="card-content">
+                    <div class="card-body card-dashboard">
+                        <div class="table-responsive">
+                            <table id="LoanProcess" class="table border-secondary table-striped dataex-html5-selectors">
+                                <thead>
+                                    <tr class="theadclr text-white">
+                                        <th>SrNo.</th>
+                                        <th>Year</th>
+                                        <th>Employee Name /code</th>
+                                        <th>Disbursal Date</th>
+                                        <th>Principal</th>
+                                        <th>Interest</th>
+                                        <th>Total Amount</th>
+                                        <th>EMI Amount</th>
+                                        <th>Last EMI Paid(DD-MM-YYYY)</th>
+                                        <th>Balance</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                 <tfoot class="tableSearchFoot">
+                                    <tr>
+                                        <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                        <th>Year</th>
+                                        <th>Employee Name /code</th>
+                                        <th>Disbursal Date</th>
+                                        <th>Principal</th>
+                                        <th>Interest</th>
+                                        <th>Total Amount</th>
+                                        <th>EMI Amount</th>
+                                        <th>Last EMI Paid(DD-MM-YYYY)</th>
+                                        <th>Balance</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                        
+                                    </tr>
+                                </tfoot> 
+                                <tbody>
+                                   
+                                     <tr>
+                                        <td>1</td>
+                                        <td>2022</td>
+                                        <td><div class="d-flex justify-content-start align-items-center">
+                                            <div class="user-page-info">
+                                                <span>Rohit Sharma</span>
+                                                <br>
+                                                <span class="font-small-2">Emp-103</span>
                                             </div>
+                                        </div></td>
+                                        <td>01-01-2022</td>
+                                        <td>50,000</td>
+                                        <td>1,151.08</td>
+                                        <td>51,151.08</td>
+                                        <td>12787.77</td>
+                                        <td>01-05-2022</td>
+                                        <td>0</td>
+                                        <td><div class="chip chip-success">
+                                            <div class="chip-body">
+                                                <div class="chip-text">Complete</div>
+                                            </div>
+                                        </div></td>
+                                        <td>
+                                            <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                <a href="HRMS_Retention_Settings.html"><i  class="fa fa-eye text-dark" ></i></a>
+                                            </div>
+                                        </td>
+                                   
+    
+                                    </tr> 
 
-                                        </div>
-
-                                        <div class="col-12 d-flex flex-sm-row flex-column justify-content-end ">
-                                            <button type="submit" class="btn btn-primary glow m-1">Submit</button>
-                                            <button type="reset" class="btn btn-outline-primary m-1">Reset</button>
-                                        </div>
-                                        <!-- users edit account form ends -->
-                                    </div>
-
-                                </div>
-
-
-
-
-                            </div>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2022</td>
+                                        <td><div class="d-flex justify-content-start align-items-center">
+                                            <div class="user-page-info">
+                                                <span>Arpit</span>
+                                                <br>
+                                                <span class="font-small-2">Emp-113</span>
+                                            </div>
+                                        </div></td>
+                                        <td>01-02-2022</td>
+                                        <td>55,000</td>
+                                        <td>1,521.70</td>
+                                        <td>56,521.70</td>
+                                        <td>11304.34</td>
+                                        <td>01-07-2022</td>
+                                        <td>0</td>
+                                        <td><div class="chip chip-success">
+                                            <div class="chip-body">
+                                                <div class="chip-text">Complete</div>
+                                            </div>
+                                        </div></td>
+                                        <td>
+                                            <div data-toggle="tooltip" data-placement="top" title="Edit" >
+                                                <a href="HRMS_Retention_Settings.html"><i  class="fa fa-eye text-dark" ></i></a>
+                                            </div>
+                                        </td>
+                                   
+    
+                                    </tr> 
+                                   
+                                </tbody>
+                            </table>
                         </div>
+
                     </div>
-                    </section>
+                </div>
+            </div>
+ 
+          
+
             </div>
         </div>
-
-        <!-- users edit ends -->
-
     </div>
-    
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
@@ -638,7 +579,21 @@
     <script src="../../Content/app-assets/vendors/js/vendors.min.js"></script>
     <script src="../../Content/app-assets/js/custom-js.js"></script>
     <!-- BEGIN Vendor JS-->
-    <!-- BEGIN: Page Vendor JS-->
+
+
+    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
+    <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Theme JS-->
+    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
+    <script src="../../Content/app-assets/js/core/app.js"></script>
+    <script src="../../Content/app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+    <!-- BEGIN: Page JS-->
+
+    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
+    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
+    <!-- END: Page JS-->
     <!-- <script src="../../Content/assets/Datatabel-js/bootstrap.bundle.min.js"></script> -->
     <script src="../../Content/assets/Datatabel-js/jquery.easing.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/jquery.dataTables.min.js"></script>
@@ -651,51 +606,17 @@
     <script src="../../Content/assets/Datatabel-js/buttons.html5.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.print.min.js"></script>
     <script src="../../Content/assets/Datatabel-js/buttons.colVis.min.js"></script>
-
-
-    <script src="../../Content/app-assets/vendors/js/tables/ag-grid/ag-grid-community.min.noStyle.js"></script>
-    <script src="../../Content/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
     <script src="../../Content/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
 
-    <!-- END: Page Vendor JS-->
-    <!-- BEGIN: Theme JS-->
-    <script src="../../Content/app-assets/js/core/app-menu.js"></script>
-    <script src="../../Content/app-assets/js/core/app.js"></script>
-    <script src="../../Content/app-assets/js/scripts/components.js"></script>
-    <!-- END: Theme JS-->
-    <!-- BEGIN: Page JS-->
 
-    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
-    <script src="../../Content/app-assets/js/scripts/forms/validation/form-validation.js"></script>
-
-    <!-- BEGIN: Page JS-->
-    <script src="../../Content/app-assets/js/scripts/pages/app-user.js"></script>
-    <script src="../../Content/app-assets/js/scripts/navs/navs.js"></script>
-    <!-- END: Page JS-->
-
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>   -->
-    
-    
     <!-- Dropdown search JS -->
     <script src="../../Content/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../Content/app-assets/js/scripts/forms/select/form-select2.js"></script>
-
-
-         <!-- js link for date picker -->
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
-
-
-         <!-- Importing Custom Script.js  -->
-         <script src="../../Content/assets/js/scripts.js"></script>
+       <!-- Importing Custom Script.js  -->
+    <script src="../../Content/assets/js/scripts.js"></script>
 
     <script>
-
-$(".bootstrapdatepicker").datepicker(); 
-
-
-
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": true,
@@ -705,94 +626,17 @@ $(".bootstrapdatepicker").datepicker();
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
         });
-
-
-
-
-        $(function()
-{ 
-    var today = new Date(); 
-    var dd = today.getDate();
-    // console.log(dd);
-    $('.dob-picker').pickadate(
-    {
-        selectYears: 150,
-        today: '',
-        selectMonths: true,
-        min: new Date(1900,1,1),
-        max: new Date(((new Date()).getFullYear()), -210,dd)
-}
-    );
-});
-
-
-var date = new Date();
-date.setDate( date.getDate() - 6 );
-date.setFullYear( date.getFullYear() - 1 );
-$("#datepicker").val((date.getMonth() ) + '/' + (date.getDate()) + '/' + (date.getFullYear()));
     </script>
-
+    <!-- Code for menu active Yash 04/06/22 -->
     <script>
         window.onload = function () {
-            document.getElementById("Employee").classList.add("has-sub", "sidebar-group-active", "open")
-            document.getElementById("Editemp").className = 'active';
+            document.getElementById("Loan").classList.add("has-sub", "sidebar-group-active", "open")
+            document.getElementById("LoanComp").className = 'active';
         }
+
     </script>
 
-    
-        <script type="text/javascript">
- $(document).ready(function() {
-	
-    var readURL = function(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('.profile-pic').attr('src', e.target.result);
-            }
-    
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-   
-    $(".file-upload").on('change', function(){
-        readURL(this);
-    });
-    
-    $(".upload-button").on('click', function() {
-       $(".file-upload").click();
-    });
-});
-
-</script>
- <script type="text/javascript">
-    $(document).ready(function() {
-       
-       var readURL = function(input) {
-           if (input.files && input.files[0]) {
-               var reader = new FileReader();
-   
-               reader.onload = function (e) {
-                   $('.profile-pic1').attr('src', e.target.result);
-               }
-       
-               reader.readAsDataURL(input.files[0]);
-           }
-       }
-      
-       $(".file-upload1").on('change', function(){
-           readURL(this);
-       });
-       
-       $(".upload-button1").on('click', function() {
-          $(".file-upload1").click();
-       });
-   });
-   </script> 
-    
-
-
 </body>
-
+<!-- END: Body-->
 
 </html>

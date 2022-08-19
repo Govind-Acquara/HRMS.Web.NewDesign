@@ -368,13 +368,42 @@
                     <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Retention</span></a>
                     <ul class="menu-content">
                         <li>
-                            <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                            <a href="../Retention/HRMS_Retention_Settings.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Retention Settings</span></a>
                         </li>
+                        <!-- <li>
+                            <a href="../Retention/HRMS_Create_EmpRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Create Retention</span></a>
+                        </li> -->
                         <li>
                             <a href="../Retention/HRMS_EditRetentionList.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Edit Retention List</span></a>
                         </li>
                         <li id="ViewRetention">
                             <a href="../Retention/HRMS_ViewRetention.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View Retention List</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="fa fa-adjust"></i><span class="menu-title" data-i18n="User">Loan</span></a>
+                    <ul class="menu-content">
+                         <li>
+                            <a href="../Loan/HRMS_DashBoardLoan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Dashboard</span></a>
+                        </li>
+                         <li>
+                            <a href="../Loan/HRMS_Loan.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Settings</span></a>
+                        </li> 
+                        <li>
+                            <a href="../Loan/HRMS_Loan_EMI_Deduction.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan EMI Deduction</span></a>
+                        </li>
+    
+                        <li >
+                            <a href="../Loan/HRMS_Indivisual_Loan_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Individual Loan Report</span></a>
+                        </li>
+    
+                        <li >
+                            <a href="../Loan/HRMS_AllEmployee_LoanPending_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Pending List</span></a>
+                        </li>
+    
+                        <li>
+                            <a href="../Loan/HRMS_Loan_statusComplete_list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Loan Complete List</span></a>
                         </li>
                     </ul>
                 </li>
@@ -408,11 +437,160 @@
           
           
 
+            <div class="card">
+                <div class="card-header">
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-body card-dashboard">
+                        <div class="table-responsive">
+                            <table id="ProcessRetentionTab" class="table border-secondary table-striped dataex-html5-selectors">
+                                <thead>
+                                    <tr class="theadclr text-white">
+                                        <th>SrNo.</th>
+                                        <th>Employee Name /code</th>
+                                        <th>Date Of Joinig</th>
+                                        <th>Retention Amount</th>
+                                        <th>Type Of Pay</th>
+                                        <th>Retention End  Date</th>
+                                        <th>No. Of Months</th>
+                                        <th>Frequency</th>
+                                        <th>Monthly Retention Amt</th>
+                                        <th>Balance Amt</th>
+                                        <th>Total Amt To Be Paid</th>
+                                        <th>No. Of Months(Paid)</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                 <tfoot class="tableSearchFoot">
+                                    <tr>
+                                        <th><i class="feather icon-filter text-primary"></i>&nbsp;Filter</th>
+                                        <th>Employee Name /code</th>
+                                        <th>Date Of Joinig</th>
+                                        <th>Retention Amount</th>
+                                        <th>Type Of Pay</th>
+                                        <th>Retention End  Date</th>
+                                        <th>No. Of Months</th>
+                                        <th>Frequency</th>
+                                        <th>Monthly Retention Amt</th>
+                                        <th>Balance Amt</th>
+                                        <th>Total Amt To Be Paid</th>
+                                        <th>No. Of Months(Paid)</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot> 
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><div class="d-flex justify-content-start align-items-center">
+                                            <div class="user-page-info">
+                                                <span>Pooja Jain</span>
+                                                <br>
+                                                <span class="font-small-2">Emp-101</span>
+                                            </div>
+                                        </div></td>
+                                        <td>24-10-2021</td>
+                                        <td>6000</td>
+                                        <td>Monthly</td>
+                                        <td>30-11-2022</td>
+                                        <td>12</td>
+                                        <td>4</td>
+                                        <td>500</td>
+                                        <td>4000</td>
+                                        <td>2000</td>
+                                        <td>4</td>
+                                        <td><div class="chip chip-warning">
+                                            <div class="chip-body">
+                                                <div class="chip-text">UnPaid</div>
+                                            </div>
+                                        </div></td>
+                                        <td>
+                                            <div data-toggle="tooltip" data-placement="top" title="View" >
+                                                <a href=""><i  class="fa fa-eye text-dark" ></i></a>
+                                            </div>                                      
+                                         </td>
+                                    </tr>
 
+                                    <tr>
+                                        <td>2</td>
+                                        <td><div class="d-flex justify-content-start align-items-center">
+                                            <div class="user-page-info">
+                                                <span>Yash Sharma</span>
+                                                <br>
+                                                <span class="font-small-2">Emp-102</span>
+                                            </div>
+                                        </div></td>
+                                        <td>24-10-2021</td>
+                                        <td>6000</td>
+                                        <td>Monthly</td>
+                                        <td>30-11-2022</td>
+                                        <td>12</td>
+                                        <td>4</td>
+                                        <td>500</td>
+                                        <td>4000</td>
+                                        <td>2000</td>
+                                        <td>4</td>
+                                        <td><div class="chip chip-warning">
+                                            <div class="chip-body">
+                                                <div class="chip-text">UnPaid</div>
+                                            </div>
+                                        </div></td>
+                                        <td>
+                                            <div data-toggle="tooltip" data-placement="top" title="View" >
+                                                <a href=""><i  class="fa fa-eye text-dark" ></i></a>
+                                            </div>                                        
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>3</td>
+                                        <td><div class="d-flex justify-content-start align-items-center">
+                                            <div class="user-page-info">
+                                                <span>Arpit Sharma</span>
+                                                <br>
+                                                <span class="font-small-2">Emp-103</span>
+                                            </div>
+                                        </div></td>
+                                        <td>24-06-2022</td>
+                                        <td>6000</td>
+                                        <td>Monthly</td>
+                                        <td>30-07-2022</td>
+                                        <td>12</td>
+                                        <td>4</td>
+                                        <td>500</td>
+                                        <td>6000</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td><div class="chip chip-warning">
+                                            <div class="chip-body">
+                                                <div class="chip-text">UnPaid</div>
+                                            </div>
+                                        </div></td>
+                                        <td>
+                                            <div data-toggle="tooltip" data-placement="top" title="View" >
+                                                <a href="../Retention/HRMS_viewRetentionShow.html"><i  class="fa fa-eye text-dark" ></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
  
  
 
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-header">
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -514,7 +692,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
             </div>
